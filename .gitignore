@@ -1,0 +1,23 @@
+# ===== 剑桥版权材料（公开仓库不上传） =====
+# 剑桥真题 PDF（剑10-16、18、19样题）与 Simon 课程 PDF 等全部原始资料
+*.pdf
+# 原书文本提取
+extracted/
+# 校准用的书页扫描图
+calibration/pages/
+# 剑桥原书 Task 1 图表扫描（克隆后运行 python download-t1-charts.py 拉回）
+tool/img/t1/
+
+# ===== 密钥与本地隐私 =====
+config.key.backup.txt
+
+# ===== 本地临时文件 =====
+.zcode/
+models/current-essay.txt
+models/sheet*.png
+models/v-*.png
+models/shot-*.png
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
