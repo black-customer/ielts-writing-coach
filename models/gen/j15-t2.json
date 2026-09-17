@@ -1,0 +1,374 @@
+{
+  "剑15 Test 1 T2": {
+    "source": "ZCode 知识库生成 · 2026-09-17",
+    "essay": "In many countries, buying a home is seen as one of the most important goals in adult life, and far more people dream of owning property than of renting it. There are clear reasons why this is the case, and in my view the situation it creates is a positive one overall.\n\nThe main reason is that a house is much more than a place to live; it represents security. Tenants can be asked to leave, or face rising rents, through no fault of their own, whereas owners control their own homes and are protected from this uncertainty. A second reason is financial. Although a mortgage is a heavy burden, each payment gradually builds up something valuable instead of disappearing into a landlord's pocket, and property often rises in value over time. Finally, in many cultures there is a deep-rooted belief that owning a home is a sign of success, and that only those who have bought property have truly settled down.\n\nOn balance, I believe this desire to own property is a positive situation, despite the risks involved. The security that comes from ownership gives families a stable base, and homeowners tend to put down roots in a community, which strengthens neighbourhoods as a whole. Buying a home also encourages people to save, because each mortgage payment is an investment rather than an expense. Admittedly, taking out a large loan carries obvious dangers: owners who lose their income may struggle to service their debts, and it is harder to move to another city to find work. Even so, these risks can be reduced if people borrow only what they can afford, and the benefits clearly outweigh them.\n\nIn conclusion, people want to own their homes because property provides security, control and a form of saving, and I believe the stability this creates for families and communities makes it a positive situation.",
+    "paraTeach": {
+      "2": {
+        "why": "开头两句 = 任务模板：句1 改写题目（owning a home rather than renting → buying a home... than of renting it；is very important → one of the most important goals in adult life），句2 一句话回答题目两问——'clear reasons why' 对应 Why 段，'a positive one overall' 对应评价段。改写手法：上义词替换、短语替换、语序重组。",
+        "modelPara": "In many countries, buying a home is seen as one of the most important goals in adult life, and far more people dream of owning property than of renting it. There are clear reasons why this is the case, and in my view the situation it creates is a positive one overall.",
+        "expressions": [
+          {
+            "en": "is seen as one of the most important goals in adult life",
+            "zh": "被视为成年生活中最重要的目标之一"
+          },
+          {
+            "en": "dream of owning property",
+            "zh": "梦想拥有房产"
+          },
+          {
+            "en": "There are clear reasons why this is the case",
+            "zh": "这种现象的原因很清楚（引出解释段）"
+          },
+          {
+            "en": "a positive one overall",
+            "zh": "总体上是积极的（一句话亮明评价立场）"
+          }
+        ],
+        "guideQ": "题目有两个问句——你的开头第二句是否把两个问题都概括回答了？"
+      },
+      "3": {
+        "why": "原因段用一条主线（安全感）串起三个原因，层层递进：控制权（不被赶、不涨租）→ 经济（月供变资产，租房是替房东打工）→ 文化（根深蒂固的成功标志）。衔接用 The main reason / A second reason / Finally，朴素但清晰。注意 deep-rooted belief、truly settled down 这类文化角度词伙。",
+        "modelPara": "The main reason is that a house is much more than a place to live; it represents security. Tenants can be asked to leave, or face rising rents, through no fault of their own, whereas owners control their own homes and are protected from this uncertainty. A second reason is financial. Although a mortgage is a heavy burden, each payment gradually builds up something valuable instead of disappearing into a landlord's pocket, and property often rises in value over time. Finally, in many cultures there is a deep-rooted belief that owning a home is a sign of success, and that only those who have bought property have truly settled down.",
+        "expressions": [
+          {
+            "en": "represents security",
+            "zh": "代表安全感"
+          },
+          {
+            "en": "through no fault of their own",
+            "zh": "并非他们自身的过错"
+          },
+          {
+            "en": "a heavy burden",
+            "zh": "沉重的负担"
+          },
+          {
+            "en": "disappearing into a landlord's pocket",
+            "zh": "钱白白流进房东口袋（租房=替房东打工）"
+          },
+          {
+            "en": "a deep-rooted belief",
+            "zh": "一种根深蒂固的观念"
+          },
+          {
+            "en": "truly settled down",
+            "zh": "真正安定下来"
+          }
+        ],
+        "guideQ": "三个原因分别来自什么角度？（提示：法律/经济/文化——任何'为什么人们想要X'的题都可以这样扫一遍）"
+      },
+      "4": {
+        "why": "评价段 = 立场 + 让步。先亮明 On balance... a positive situation，再给两个正面论证：心理层面（安全感→稳定→社区扎根，which 从句把个人好处推到社会层面）+ 经济层面（月供是投资不是开销）。随后 Admittedly 让步承认风险（还不起贷、锁死流动性），Even so 反驳：风险可控、利大于弊。这就是官方 7+ 描述里的 a clear and developed position。",
+        "modelPara": "On balance, I believe this desire to own property is a positive situation, despite the risks involved. The security that comes from ownership gives families a stable base, and homeowners tend to put down roots in a community, which strengthens neighbourhoods as a whole. Buying a home also encourages people to save, because each mortgage payment is an investment rather than an expense. Admittedly, taking out a large loan carries obvious dangers: owners who lose their income may struggle to service their debts, and it is harder to move to another city to find work. Even so, these risks can be reduced if people borrow only what they can afford, and the benefits clearly outweigh them.",
+        "expressions": [
+          {
+            "en": "gives families a stable base",
+            "zh": "给家庭一个稳定的基础"
+          },
+          {
+            "en": "put down roots in a community",
+            "zh": "在社区扎根"
+          },
+          {
+            "en": "an investment rather than an expense",
+            "zh": "是投资而非开销"
+          },
+          {
+            "en": "service their debts",
+            "zh": "偿还债务（band 8 级搭配）"
+          },
+          {
+            "en": "the benefits clearly outweigh them",
+            "zh": "利明显大于弊"
+          }
+        ],
+        "guideQ": "让步（Admittedly）之后，作者是用什么词把立场拉回来的？（Even so——先承认再反驳的经典结构）"
+      },
+      "5": {
+        "why": "结尾一句话完成两件事：换词概括原因（security, control and a form of saving 分别对应三个原因）+ 重申评价（a positive situation）。绝不出现新观点。'the stability this creates for families and communities' 把收束推到社会层面，格局比复读题目高一层。",
+        "modelPara": "In conclusion, people want to own their homes because property provides security, control and a form of saving, and I believe the stability this creates for families and communities makes it a positive situation.",
+        "expressions": [
+          {
+            "en": "provides security, control and a form of saving",
+            "zh": "三个原因的一句话概括（排比收束）"
+          },
+          {
+            "en": "the stability this creates for families and communities",
+            "zh": "给家庭和社区带来的稳定"
+          },
+          {
+            "en": "makes it a positive situation",
+            "zh": "重申正面评价（呼应开头）"
+          }
+        ],
+        "guideQ": "你的结论有没有出现范文里没有的新观点？（不应该有——结论只收束，不扩展）"
+      }
+    }
+  },
+  "剑15 Test 2 T2": {
+    "source": "ZCode 知识库生成 · 2026-09-17 · 食谱组装+人工审稿（待爱听写验证）",
+    "essay": "Some people predict that printed newspapers and books are likely to disappear, since readers will soon be able to read whatever they want through free online content. I completely disagree with this view for two main reasons.\n\nThe main reason for my position is that printed books and papers offer a reading experience that screens simply cannot replicate. A physical page invites deep, focused reading, free from the notifications and pop-ups that fragment attention on a screen. Paper is also considerably easier on the eyes, which matters to anyone who reads for more than a few minutes at a time. Such deep-rooted reading habits explain why so many people still buy physical books for pleasure and why new bestsellers routinely sell millions of copies. As long as this demand exists, printed media will retain a loyal audience, however advanced screens become.\n\nA second problem with the prediction is that much online content is free precisely because it is cheap to produce. Websites that rely on advertising revenue are rewarded for attracting clicks rather than for accuracy, so clickbait headlines and barely checked stories dominate. Serious newspapers, by contrast, employ trained journalists and editors who verify every claim before publication, and readers willingly pay for a reliable source of information. These professionals cannot work for nothing; publishers must invest time and money in investigating stories, and that money has to come from somewhere. If nobody paid for news or books, this investment would dry up, and the quality of public information would fall with it.\n\nIn conclusion, I firmly believe that the future of the printed word is secure because people will always value writing they have paid for.",
+    "paraTeach": {
+      "2": {
+        "why": "观点题完全不同意 → 两个理由各自成段。开头句1 改写（predict/likely to disappear 保留题意），句2 直接给立场 + 预告两个理由（for two main reasons）——考官读完开头就知道全文结构。",
+        "modelPara": "Some people predict that printed newspapers and books are likely to disappear, since readers will soon be able to read whatever they want through free online content. I completely disagree with this view for two main reasons.",
+        "expressions": [
+          {
+            "en": "I completely disagree with this view for two main reasons",
+            "zh": "立场+结构预告一句完成"
+          },
+          {
+            "en": "are likely to disappear",
+            "zh": "大概率消失（比 will disappear 更严谨）"
+          },
+          {
+            "en": "read whatever they want through free online content",
+            "zh": "免费在线内容里想读什么就读什么（题目说法的改写）"
+          }
+        ],
+        "guideQ": "你的立场句有没有预告全文结构？（两段两个理由，考官读完开头就知道你每段写什么）"
+      },
+      "3": {
+        "why": "理由1（体验）：主题句 → 两个维度展开（深度阅读 vs 碎片干扰、护眼）→ 用需求侧证据收束（畅销书销量、忠实读者）。注意 the notifications and pop-ups that fragment attention 是具体化写法——不说'屏幕不好'，说屏幕上的什么造成了什么问题。",
+        "modelPara": "The main reason for my position is that printed books and papers offer a reading experience that screens simply cannot replicate. A physical page invites deep, focused reading, free from the notifications and pop-ups that fragment attention on a screen. Paper is also considerably easier on the eyes, which matters to anyone who reads for more than a few minutes at a time. Such deep-rooted reading habits explain why so many people still buy physical books for pleasure and why new bestsellers routinely sell millions of copies. As long as this demand exists, printed media will retain a loyal audience, however advanced screens become.",
+        "expressions": [
+          {
+            "en": "a reading experience that screens simply cannot replicate",
+            "zh": "屏幕无法复制的阅读体验"
+          },
+          {
+            "en": "invites deep, focused reading",
+            "zh": "引人深度专注阅读"
+          },
+          {
+            "en": "fragment attention on a screen",
+            "zh": "在屏幕上切碎注意力"
+          },
+          {
+            "en": "retain a loyal audience",
+            "zh": "保住忠实受众"
+          },
+          {
+            "en": "however advanced screens become",
+            "zh": "无论屏幕变得多先进（让步式收尾）"
+          }
+        ],
+        "guideQ": "你的展开句有没有从'感觉'落到'机制'？（为什么屏幕会碎片化注意力——因为通知和弹窗）"
+      },
+      "4": {
+        "why": "理由2（免费=廉价）：把'免费'反转为论证武器——免费恰恰因为廉价生产 → 点击陷阱 vs 专业核实 → 付费支撑调查报道 → 推演尽头（没人付费 → 信息质量崩塌）。'free precisely because it is cheap to produce' 是全段灵魂句；分号连接的推演句是 GRA 高分样板。",
+        "modelPara": "A second problem with the prediction is that much online content is free precisely because it is cheap to produce. Websites that rely on advertising revenue are rewarded for attracting clicks rather than for accuracy, so clickbait headlines and barely checked stories dominate. Serious newspapers, by contrast, employ trained journalists and editors who verify every claim before publication, and readers willingly pay for a reliable source of information. These professionals cannot work for nothing; publishers must invest time and money in investigating stories, and that money has to come from somewhere. If nobody paid for news or books, this investment would dry up, and the quality of public information would fall with it.",
+        "expressions": [
+          {
+            "en": "free precisely because it is cheap to produce",
+            "zh": "免费恰恰因为生产成本低"
+          },
+          {
+            "en": "rewarded for attracting clicks rather than for accuracy",
+            "zh": "奖励的是点击而非准确"
+          },
+          {
+            "en": "barely checked stories dominate",
+            "zh": "缺乏核查的报道泛滥"
+          },
+          {
+            "en": "this investment would dry up",
+            "zh": "这种投入将枯竭"
+          }
+        ],
+        "guideQ": "你的反驳有没有推演到'如果成真会怎样'？（If nobody paid... would fall with it——把对方逻辑推到尽头）"
+      },
+      "5": {
+        "why": "一句话结尾：firmly believe 回应立场 + the future of the printed word is secure 换词重申 + because people will always value writing they have paid for 把两个理由压成一句。",
+        "modelPara": "In conclusion, I firmly believe that the future of the printed word is secure because people will always value writing they have paid for.",
+        "expressions": [
+          {
+            "en": "the future of the printed word is secure",
+            "zh": "纸质文字的未来依然稳固（换词重申）"
+          },
+          {
+            "en": "the future of the printed word is secure",
+            "zh": "印刷文字的未来是稳固的"
+          }
+        ],
+        "guideQ": "你的结论是复述开头，还是把两个理由压进了一句话？后者才是收束。"
+      }
+    }
+  },
+  "剑15 Test 3 T2": {
+    "source": "ZCode 知识库生成 · 2026-09-17 · 食谱组装+人工审稿（待爱听写验证）",
+    "essay": "It is often claimed that building more gyms and sports centres is the best way to encourage people to live healthier lives, while others argue that this alone would achieve little. While these facilities certainly help, I believe they are not enough on their own, and other measures are needed just as much.\n\nIt is easy to see why some people support building more facilities. Convenience removes a major barrier to exercise, since those who live near a gym or pool can fit it into their daily routine. As a result, they are much more likely to exercise regularly than people who must travel across town. In my city, for example, the opening of a free public swimming pool led to a clear rise in attendance among older residents. This suggests that access really does matter, at least for those who already want to be more active.\n\nHowever, sport is only one part of public health, and facilities do nothing about the main causes of poor health. Smoking, alcohol and poor diet cause far more illness than a lack of exercise, and these problems will not disappear simply because a new gym opens. Tackling them requires taxes on tobacco and alcohol, better food labelling, and health education that begins in schools. My own view is that a combination of measures works best: facilities for those who are already motivated, and education and regulation for the wider population. Indeed, anti-smoking campaigns and sugar taxes have improved public health far more than any single gym could. These policies reach everyone, whereas a sports centre serves only a small and often privileged minority.\n\nIn conclusion, sports facilities are certainly helpful, but lasting improvements to public health require a much broader strategy.",
+    "paraTeach": {
+      "2": {
+        "why": "讨论题开头必须预告双方：句1 引出观点A（建场馆是最好办法），句2 转折引出观点B（仅有场馆收效甚微）+ 句3 亮明立场（组合措施）。三句完成改写+双观点预告+立场。",
+        "modelPara": "It is often claimed that building more gyms and sports centres is the best way to encourage people to live healthier lives, while others argue that this alone would achieve little. While these facilities certainly help, I believe they are not enough on their own, and other measures are needed just as much.",
+        "expressions": [
+          {
+            "en": "It is often claimed that...",
+            "zh": "常有人声称……（引出观点A）"
+          },
+          {
+            "en": "while others argue that this alone would achieve little",
+            "zh": "而另一些人认为仅此而已收效甚微"
+          },
+          {
+            "en": "other measures are needed just as much",
+            "zh": "其他措施同样必要"
+          }
+        ],
+        "guideQ": "你的开头有没有把双方观点各预告一句？只写一边，讨论题的 TR 就缺一半。"
+      },
+      "3": {
+        "why": "观点A段（设施的作用）：让步式认可 → 解释便利性如何降低运动门槛 → 真实感例子（免费泳池、老年居民出勤率）→ This suggests 收束并留有余地（'对本来就想动的人'），客观不绝对——讨论题的观点段要像转述而非辩护。",
+        "modelPara": "It is easy to see why some people support building more facilities. Convenience removes a major barrier to exercise, since those who live near a gym or pool can fit it into their daily routine. As a result, they are much more likely to exercise regularly than people who must travel across town. In my city, for example, the opening of a free public swimming pool led to a clear rise in attendance among older residents. This suggests that access really does matter, at least for those who already want to be more active.",
+        "expressions": [
+          {
+            "en": "Convenience removes a major barrier to exercise",
+            "zh": "便利消除了运动的一大障碍"
+          },
+          {
+            "en": "fit it into their daily routine",
+            "zh": "把它纳入日常安排"
+          },
+          {
+            "en": "a clear rise in attendance among older residents",
+            "zh": "老年居民出勤率明显上升"
+          },
+          {
+            "en": "at least for those who already want to be more active",
+            "zh": "至少对本来就想多动的人"
+          }
+        ],
+        "guideQ": "你的例子有没有具体到'哪座城市/什么设施/哪类人'？泛泛的 for example 等于没有例子。"
+      },
+      "4": {
+        "why": "观点B段（我方立场，写得更重=暗示倾向）：指出设施管不了主因（烟酒饮食）→ 给出具体措施（烟酒税、食品标签、学校健康教育）→ 亮出组合观点（冒号列举）→ Indeed 收束并升维（政策覆盖所有人 vs 场馆只服务少数特权群体）。'reach everyone / privileged minority' 的对比是本段杀手锏。",
+        "modelPara": "However, sport is only one part of public health, and facilities do nothing about the main causes of poor health. Smoking, alcohol and poor diet cause far more illness than a lack of exercise, and these problems will not disappear simply because a new gym opens. Tackling them requires taxes on tobacco and alcohol, better food labelling, and health education that begins in schools. My own view is that a combination of measures works best: facilities for those who are already motivated, and education and regulation for the wider population. Indeed, anti-smoking campaigns and sugar taxes have improved public health far more than any single gym could. These policies reach everyone, whereas a sports centre serves only a small and often privileged minority.",
+        "expressions": [
+          {
+            "en": "do nothing about the main causes of poor health",
+            "zh": "对健康主因毫无作用"
+          },
+          {
+            "en": "Tackling them requires taxes on tobacco and alcohol",
+            "zh": "解决它们需要烟酒税"
+          },
+          {
+            "en": "better food labelling",
+            "zh": "更完善的食品标签"
+          },
+          {
+            "en": "a combination of measures works best",
+            "zh": "组合措施效果最好"
+          },
+          {
+            "en": "serves only a small and often privileged minority",
+            "zh": "只服务少数（往往是特权）群体"
+          }
+        ],
+        "guideQ": "你的措施有没有落实到'谁做什么'？（收税/标签/教育——具体主体+具体手段才算措施）"
+      },
+      "5": {
+        "why": "一句话结尾：让步（certainly helpful）+ 重申主论点（lasting improvements require a much broader strategy）——换词重申了'组合措施'的立场，不引入新观点。",
+        "modelPara": "In conclusion, sports facilities are certainly helpful, but lasting improvements to public health require a much broader strategy.",
+        "expressions": [
+          {
+            "en": "lasting improvements to public health require a much broader strategy",
+            "zh": "公共健康的持久改善需要更全面的策略"
+          },
+          {
+            "en": "sports facilities are certainly helpful",
+            "zh": "体育设施确实有用"
+          }
+        ],
+        "guideQ": "你的结论有没有出现前面没提过的新观点？（不应该有）"
+      }
+    }
+  },
+  "剑15 Test 4 T2": {
+    "source": "ZCode 知识库生成 · 2026-09-17 · 食谱组装+人工审稿（待爱听写验证）",
+    "essay": "In many cultures, children are brought up with the message that hard work guarantees success and that effort alone determines what they can achieve. This message has both clear benefits and some drawbacks for children as they grow up and begin to make their own choices.\n\nThe main advantage of this message is that it builds determination and a sense of self-belief. Children who believe effort matters tend to keep trying after failure, whether at school or in sport, instead of giving up at the first hurdle. A child who struggles with mathematics, for example, may eventually pass exams that once seemed impossible simply by continuing to practise patiently. This confidence also protects children from abandoning ambitious careers simply because of the background they were born into. In this sense, the belief that effort pays off gives them the courage to aim higher than their circumstances might otherwise allow.\n\nHowever, the same message can be harmful when success is genuinely impossible. A child who is told that effort guarantees everything may blame themselves for failures caused by circumstances, such as a lack of natural talent, money or opportunity. Not every child can become a professional footballer, however hard they train, and the disappointment can be severe. This belief may also encourage unrealistic ambitions and wasted years spent chasing goals that were never within reach. Such setbacks can damage a young person's confidence far more than an early dose of realism would have done.\n\nIn conclusion, this message inspires effort and ambition in the young, but it should be balanced with honest guidance about real limits.",
+    "paraTeach": {
+      "2": {
+        "why": "纯利弊题开头不表态：句1 改写消息本身（hard work guarantees success），句2 点明'有利有弊'并各占后文两段。全文不出现 I believe 哪边赢。",
+        "modelPara": "In many cultures, children are brought up with the message that hard work guarantees success and that effort alone determines what they can achieve. This message has both clear benefits and some drawbacks for children as they grow up and begin to make their own choices.",
+        "expressions": [
+          {
+            "en": "are brought up with the message that...",
+            "zh": "从小被灌输这样的信息"
+          },
+          {
+            "en": "hard work guarantees success",
+            "zh": "努力保证成功（题干核心改写）"
+          },
+          {
+            "en": "both clear benefits and some drawbacks",
+            "zh": "利弊并存（纯利弊题的标准开头句）"
+          }
+        ],
+        "guideQ": "你有没有把利和弊都预告了？纯利弊题开头只说'有利有弊'，不站队。"
+      },
+      "3": {
+        "why": "好处段：主线=心理机制（信念→坚持→结果）。例子具体到学科（mathematics、exams），并从个人推到背景（protects children from abandoning ambitious careers），In this sense 把好处再推一层。",
+        "modelPara": "The main advantage of this message is that it builds determination and a sense of self-belief. Children who believe effort matters tend to keep trying after failure, whether at school or in sport, instead of giving up at the first hurdle. A child who struggles with mathematics, for example, may eventually pass exams that once seemed impossible simply by continuing to practise patiently. This confidence also protects children from abandoning ambitious careers simply because of the background they were born into. In this sense, the belief that effort pays off gives them the courage to aim higher than their circumstances might otherwise allow.",
+        "expressions": [
+          {
+            "en": "builds determination and a sense of self-belief",
+            "zh": "培养决心与自信"
+          },
+          {
+            "en": "giving up at the first hurdle",
+            "zh": "遇到第一个坎就放弃"
+          },
+          {
+            "en": "continuing to practise patiently",
+            "zh": "坚持耐心练习"
+          },
+          {
+            "en": "aim higher than their circumstances might otherwise allow",
+            "zh": "超越出身的限制去争取更高目标"
+          }
+        ],
+        "guideQ": "你的好处有没有落到具体场景（学校/体育/考试）？抽象的'变得更好'不算展开。"
+      },
+      "4": {
+        "why": "坏处段：角度从心理伤害切入（把失败全归咎自己）→ 例子具体（职业球员梦）→ 追加代价（unrealistic ambitions、wasted years）→ 末句让步式收束（an early dose of realism 更好）。'genuinely impossible' 是关键限定词——坏处只在'努力确实没用'时成立，逻辑严谨。",
+        "modelPara": "However, the same message can be harmful when success is genuinely impossible. A child who is told that effort guarantees everything may blame themselves for failures caused by circumstances, such as a lack of natural talent, money or opportunity. Not every child can become a professional footballer, however hard they train, and the disappointment can be severe. This belief may also encourage unrealistic ambitions and wasted years spent chasing goals that were never within reach. Such setbacks can damage a young person's confidence far more than an early dose of realism would have done.",
+        "expressions": [
+          {
+            "en": "blame themselves for failures caused by circumstances",
+            "zh": "把环境导致的失败归咎自己"
+          },
+          {
+            "en": "a lack of natural talent, money or opportunity",
+            "zh": "天赋/金钱/机会的缺失"
+          },
+          {
+            "en": "unrealistic ambitions and wasted years",
+            "zh": "不切实际的野心与蹉跎的岁月"
+          },
+          {
+            "en": "an early dose of realism",
+            "zh": "及早一点现实感"
+          }
+        ],
+        "guideQ": "你的坏处有没有区分'努力有用但没努力'和'努力也没用'两种情况？（后者才是这个消息的真正坏处）"
+      },
+      "5": {
+        "why": "一句话结尾：inspires effort and ambition + should be balanced with honest guidance——把两段各压成半句，不加新观点、不站队。",
+        "modelPara": "In conclusion, this message inspires effort and ambition in the young, but it should be balanced with honest guidance about real limits.",
+        "expressions": [
+          {
+            "en": "should be balanced with honest guidance about real limits",
+            "zh": "应当与关于真实限度的诚实引导相平衡"
+          },
+          {
+            "en": "it should be balanced with honest guidance about real limits",
+            "zh": "应当用关于真实限度的诚实引导来平衡"
+          }
+        ],
+        "guideQ": "你的结论有没有出现前面没提过的新观点？（不应该有）"
+      }
+    }
+  }
+}

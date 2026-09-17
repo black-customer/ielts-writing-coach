@@ -1,0 +1,18 @@
+【评分任务】IELTS Academic Writing Task 2（议论文）
+【题目原文】
+Some people believe that allowing children to make their own choices on everyday matters (such as food, clothes and entertainment) is likely to result in a society of individuals who only think about their own wishes. Other people believe that it is important for children to make decisions about matters that affect them. Discuss both these views and give your own opinion.
+
+【考生作文】
+it is good to show children living a freedom environment, becouse it could help children to grow stronger and confident. But it depends on the age of the child, forexample a little children can not choose clothes and they also like to eat sweets all the time.
+
+When the children is free to their choices they could make mistakes so parents should not dictate children what want, but guide to the right path. forexample most parents in westen world teach their children arguing rather than smagging when they do something wrong. When children are taught to do their own choice could easily manage their affairs, when grow up.
+
+children may sometimes give a good opinion, so that it is good to understand rather than upsetting them. Many parents in Africa do not believe of listen children, that is cause many African children become vandals and aggressors toward the community.
+
+if we teach our youngers to determine their own choices, they will show respect to their ad community in is general because they never felt oppressed and they would not bother to any when they get older.
+
+over all, when we listen our children that we make their future personality better. parents should respect children. Same like adults. When the parents try to refuse children something they should justify to them why they refused explain to them the reasons.
+
+【输出要求】严格输出 JSON（不要 markdown 代码块），格式：
+{"scores":{"TR":x,"CC":x,"LR":x,"GRA":x},"overall":x,"reason":"每项一句话依据（中文）"}
+x 为 0-9 的分数，可带 0.5。Task 1 若图表缺失，TR 按作文内部数据一致性保守评估。

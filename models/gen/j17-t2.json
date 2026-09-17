@@ -1,0 +1,310 @@
+{
+  "剑17 Test 1 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "Taking risks is often described as an essential part of a successful life, both at work and at home. Although careless gambles can clearly damage a person's finances and relationships, I believe the advantages of taking sensible risks outweigh the disadvantages.\n\nThe case for risk-taking rests on what happens without it. Careers stall when employees only ever choose the familiar: the accountant who volunteers to lead an unfamiliar project may fail, but that project is also the only route to a promotion, and employers consistently reward those who step forward. The same logic applies to personal life. People who never risk rejection do not ask anyone on a date, move to a new city or start a friendship, and their lives shrink accordingly. Calculated risks are, in effect, the price of any meaningful change.\n\nThe disadvantages are equally real. A failed gamble can cost a family its savings, as thousands of small business owners discovered during recent economic downturns, and repeated failures slowly destroy the confidence that risk-taking depends on. There is also a moral hazard in modern life: social media celebrates the spectacular successes and hides the many quiet failures, encouraging young people to take wild chances with unrealistic expectations. This is why the type of risk matters. Weighing what can be lost against what might be gained, and never betting what one cannot afford to lose, separates entrepreneurship from mere gambling.\n\nIn conclusion, sensible risks carry the constant danger of loss, but they are the only way anyone advances professionally or grows personally. Managed with judgement, they are worth taking.",
+    "paraTeach": {
+      "2": {
+        "why": "利弊比较题开头：句1改写（essential part of a successful life↔important），句2让步+比较级表态（Although careless gambles can damage... advantages outweigh）——先认代价再表态，立场立刻显得公允（体系1.2）。",
+        "modelPara": "Taking risks is often described as an essential part of a successful life, both at work and at home. Although careless gambles can clearly damage a person's finances and relationships, I believe the advantages of taking sensible risks outweigh the disadvantages.",
+        "expressions": [
+          {
+            "en": "Although careless gambles can clearly damage",
+            "zh": "尽管鲁莽的冒险确实有害（让步开路）"
+          },
+          {
+            "en": "the advantages of taking sensible risks outweigh the disadvantages",
+            "zh": "明智冒险利大于弊（outweigh表态+sensible限定）"
+          }
+        ],
+        "guideQ": "你的表态里有没有加限定词（sensible/calculated）？裸说「冒险好」很容易被自己第二段反驳。"
+      },
+      "3": {
+        "why": "优点段核心打法：从反面论证（without it 会怎样）——职业上一条线（熟悉的路→停滞；陌生的项目→失败也可能→唯一晋升路），个人生活一条线（怕被拒→什么都不敢开始）。两个领域对应题目的 professional and personal 双场景（审题三问第2问）。",
+        "modelPara": "The case for risk-taking rests on what happens without it. Careers stall when employees only ever choose the familiar: the accountant who volunteers to lead an unfamiliar project may fail, but that project is also the only route to a promotion, and employers consistently reward those who step forward. The same logic applies to personal life. People who never risk rejection do not ask anyone on a date, move to a new city or start a friendship, and their lives shrink accordingly. Calculated risks are, in effect, the price of any meaningful change.",
+        "expressions": [
+          {
+            "en": "rests on what happens without it",
+            "zh": "理由在于「不冒险会怎样」（反面论证法）"
+          },
+          {
+            "en": "the only route to a promotion",
+            "zh": "晋升的唯一途径"
+          },
+          {
+            "en": "the price of any meaningful change",
+            "zh": "任何有意义改变的代价（点睛收口）"
+          }
+        ],
+        "guideQ": "题目要求的两个场景（职业+个人），你的优点段是不是各有一条具体的线？"
+      },
+      "4": {
+        "why": "缺点段写实+给判据：积蓄归零（衰退期小企业主）→自信被磨掉→社交媒体只报喜诱发赌徒心态，最后用 the type of risk matters 把缺点转化为标准（可承受的赌注vs赌博）——缺点段结尾服务立场，不自我拆台。",
+        "modelPara": "The disadvantages are equally real. A failed gamble can cost a family its savings, as thousands of small business owners discovered during recent economic downturns, and repeated failures slowly destroy the confidence that risk-taking depends on. There is also a moral hazard in modern life: social media celebrates the spectacular successes and hides the many quiet failures, encouraging young people to take wild chances with unrealistic expectations. This is why the type of risk matters. Weighing what can be lost against what might be gained, and never betting what one cannot afford to lose, separates entrepreneurship from mere gambling.",
+        "expressions": [
+          {
+            "en": "A failed gamble can cost a family its savings",
+            "zh": "一次失败的赌注可让家庭倾尽积蓄"
+          },
+          {
+            "en": "social media celebrates the spectacular successes and hides the many quiet failures",
+            "zh": "社交媒体只晒成功、掩盖沉默的失败（时代感例子）"
+          },
+          {
+            "en": "separates entrepreneurship from mere gambling",
+            "zh": "区分创业与赌博（判据句收口）"
+          }
+        ],
+        "guideQ": "你写完缺点后有没有给出「什么样的险值得冒」的判据？有判据，比较题才立得住。"
+      },
+      "5": {
+        "why": "一句话结尾：constant danger of loss 承认缺点、only way anyone advances 收优点、managed with judgement 呼应判据——利弊题结尾=缺点+优点+条件三合一。",
+        "modelPara": "In conclusion, sensible risks carry the constant danger of loss, but they are the only way anyone advances professionally or grows personally. Managed with judgement, they are worth taking.",
+        "expressions": [
+          {
+            "en": "carry the constant danger of loss",
+            "zh": "始终伴随损失风险（缺点换词）"
+          },
+          {
+            "en": "Managed with judgement, they are worth taking",
+            "zh": "以判断力管理就值得一试（分词开头+最终表态）"
+          }
+        ],
+        "guideQ": "你的结尾是不是「缺点一句+优点一句+最终表态」的最小闭环？"
+      }
+    }
+  },
+  "剑17 Test 2 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "Children in many families now spend several hours a day on their smartphones, often with little supervision. The main causes of this habit lie in how the devices are designed and in parents' own routines, and in my view the phenomenon is harmful on balance.\n\nThe primary cause is that apps are engineered to capture attention. Short videos and games deliver a reward every few seconds, and a developing brain finds that stream of satisfaction almost impossible to interrupt; children are not weak-willed, they are up against products built by teams of designers. The secondary cause is imitation. Parents who scroll through their own screens at dinner provide a model of constant phone use, and no household rule survives the contradiction of adults who ignore it.\n\nThe negative effects follow directly from the lost hours. Every afternoon spent in front of a feed is an afternoon not spent on sport, homework or face-to-face friendship, and the costs appear quickly: weaker eyesight, disturbed sleep, falling grades. The educational cost alone is substantial: teachers report that pupils who sleep with phones beside them arrive tired and retain less of every lesson. More worrying still is the effect on temperament. Constant novelty makes slow activities such as reading feel unbearable, and children who conduct their friendships through messages practises the skills of conversation far less than those who play together in person.\n\nIn conclusion, smartphones absorb children's time because they are designed to and because adults set the same example, and since the hours lost cannot be replaced, this is a development families and schools should actively resist.",
+    "paraTeach": {
+      "2": {
+        "why": "双问题（why+评价）开头：句1改写加细节（several hours a day, with little supervision），句2分别给原因方向（设计+家长示范）和评价立场（harmful on balance）——on balance 暗示承认有积极面但整体否定，比全盘否定更严谨。",
+        "modelPara": "Children in many families now spend several hours a day on their smartphones, often with little supervision. The main causes of this habit lie in how the devices are designed and in parents' own routines, and in my view the phenomenon is harmful on balance.",
+        "expressions": [
+          {
+            "en": "often with little supervision",
+            "zh": "常常无人监管（改写时补一刀细节）"
+          },
+          {
+            "en": "lie in how the devices are designed and in parents' own routines",
+            "zh": "原因在于设计与家长示范（两原因预告）"
+          },
+          {
+            "en": "harmful on balance",
+            "zh": "总体有害（利弊天平式表态）"
+          }
+        ],
+        "guideQ": "你的开头第二句是不是「原因方向+评价立场」一箭双雕？"
+      },
+      "3": {
+        "why": "原因段两层：主因写到「机制深度」（每几秒一次奖励→发育中的大脑停不下来→孩子不是意志弱而是对抗专业设计团队），次因一句话（家长模仿）——一详一略，主次分明（体系1.4）。children are not weak-willed, they are up against... 是让句子有态度的写法。",
+        "modelPara": "The primary cause is that apps are engineered to capture attention. Short videos and games deliver a reward every few seconds, and a developing brain finds that stream of satisfaction almost impossible to interrupt; children are not weak-willed, they are up against products built by teams of designers. The secondary cause is imitation. Parents who scroll through their own screens at dinner provide a model of constant phone use, and no household rule survives the contradiction of adults who ignore it.",
+        "expressions": [
+          {
+            "en": "apps are engineered to capture attention",
+            "zh": "应用被精心设计来抓住注意力（主因主题句）"
+          },
+          {
+            "en": "up against products built by teams of designers",
+            "zh": "对抗的是设计团队的作品（机制归因）"
+          },
+          {
+            "en": "no household rule survives the contradiction of adults who ignore it",
+            "zh": "大人带头违规，家规必然失效（次因收口）"
+          }
+        ],
+        "guideQ": "你的主原因挖到了「机制」一层（为什么停不下来），还是停在表面（因为好玩）？"
+      },
+      "4": {
+        "why": "评价段=危害链：先算时间账（刷手机的下午=不运动不写作业不见朋友），落到具体代价（视力/睡眠/成绩），再升一层讲性格代价（耐受不了慢节奏、缺少面对面练习）——从可见损失到隐性损失，层层加深（体系1.4结果意识）。",
+        "modelPara": "The negative effects follow directly from the lost hours. Every afternoon spent in front of a feed is an afternoon not spent on sport, homework or face-to-face friendship, and the costs appear quickly: weaker eyesight, disturbed sleep, falling grades. The educational cost alone is substantial: teachers report that pupils who sleep with phones beside them arrive tired and retain less of every lesson. More worrying still is the effect on temperament. Constant novelty makes slow activities such as reading feel unbearable, and children who conduct their friendships through messages practises the skills of conversation far less than those who play together in person.",
+        "expressions": [
+          {
+            "en": "is an afternoon not spent on sport, homework or face-to-face friendship",
+            "zh": "就是一个没用来运动作业友谊的下午（机会成本写法）"
+          },
+          {
+            "en": "More worrying still is the effect on temperament",
+            "zh": "更令人担忧的是对性格的影响（升层过渡句）"
+          },
+          {
+            "en": "practises the skills of conversation far less than",
+            "zh": "练习对话技能的机会远少于…（比较收口）"
+          }
+        ],
+        "guideQ": "你写危害是从「看得见的损失」推进到「看不见的损失」了吗？只列三条表面危害像记流水账。"
+      },
+      "5": {
+        "why": "一句话结尾：because they are designed to and because adults set the same example 用省略换词收回两原因，since the hours lost cannot be be replaced 把评价钉死为「应主动抵制」——结论带呼吁但不喊口号。",
+        "modelPara": "In conclusion, smartphones absorb children's time because they are designed to and because adults set the same example, and since the hours lost cannot be replaced, this is a development families and schools should actively resist.",
+        "expressions": [
+          {
+            "en": "because they are designed to and because adults set the same example",
+            "zh": "因为设计使然+大人言传身教（双原因省略式回收）"
+          },
+          {
+            "en": "a development families and schools should actively resist",
+            "zh": "家庭与学校应主动抵制的发展（negative development换词+行动导向）"
+          }
+        ],
+        "guideQ": "评价类结论你敢给出「该怎么做」吗？一句 actively resist 让结尾有落点。"
+      }
+    }
+  },
+  "剑17 Test 3 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "Some argue that doctors, engineers and other trained professionals should be obliged to work in the country that educated them, while others defend their freedom to leave. This essay will discuss both positions before arguing that restricting such movement is neither fair nor, in the long run, effective.\n\nThose who support restriction have a straightforward case. Training a doctor costs a public university hundreds of thousands in subsidies, and that investment is meant to serve local patients; when graduates depart for higher salaries abroad, the taxpayers who funded their education receive nothing in return. The problem is most acute in poorer countries. When nurses trained in Manila or Lagos take posts in London or Sydney, the hospitals that produced them are left short-staffed, and the loss of exactly the people who should be raising local standards can hold a health system back for a generation.\n\nNevertheless, I side with those who defend free movement. Talent has always travelled to where it is valued, and attempts to trap it breed resentment rather than loyalty; a doctor forced to stay against her will will never be the colleague that a willing one would have been. There are also practical benefits in departure itself. Emigrants send home money and professional contacts, and many eventually return with superior skills, as the technology sectors of India and China demonstrate. The fairer and more effective answer to brain drain is therefore not a travel ban but better pay and conditions at home.\n\nIn conclusion, while the case for requiring service at home rests on a real financial grievance, I believe professionals must remain free to choose where they work, and that source countries profit more from making staying attractive than from making leaving illegal.",
+    "paraTeach": {
+      "2": {
+        "why": "讨论题开头：句1改写并引出双方（obliged to work in the country that educated them↔required to work；defend their freedom to leave），句2用 before arguing that... 预告我方立场且立场有分量（neither fair nor effective 两把刀）——讨论题句2亮立场是TR硬要求（体系1.2）。",
+        "modelPara": "Some argue that doctors, engineers and other trained professionals should be obliged to work in the country that educated them, while others defend their freedom to leave. This essay will discuss both positions before arguing that restricting such movement is neither fair nor, in the long run, effective.",
+        "expressions": [
+          {
+            "en": "should be obliged to work in the country that educated them",
+            "zh": "应被要求在培养他们的国家工作（A方改写）"
+          },
+          {
+            "en": "defend their freedom to leave",
+            "zh": "捍卫离去的自由（B方改写）"
+          },
+          {
+            "en": "neither fair nor, in the long run, effective",
+            "zh": "既不公平、长远也无效（立场双刀预告）"
+          }
+        ],
+        "guideQ": "讨论题你的开头有没有「改写双方+亮明自己立场」三个动作？缺一个TR就丢分。"
+      },
+      "3": {
+        "why": "A方段像转述而非辩护（讨论题视角）：straightforward case 起手，算投资账（数十万补贴→纳税人颗粒无收），再用最尖锐的场景收口（马尼拉/拉各斯的护士流失→本地医疗倒退一代人）——把对方观点写到最强，我方反驳才有分量。",
+        "modelPara": "Those who support restriction have a straightforward case. Training a doctor costs a public university hundreds of thousands in subsidies, and that investment is meant to serve local patients; when graduates depart for higher salaries abroad, the taxpayers who funded their education receive nothing in return. The problem is most acute in poorer countries. When nurses trained in Manila or Lagos take posts in London or Sydney, the hospitals that produced them are left short-staffed, and the loss of exactly the people who should be raising local standards can hold a health system back for a generation.",
+        "expressions": [
+          {
+            "en": "have a straightforward case",
+            "zh": "理由直接了当（转述对方的中性起手）"
+          },
+          {
+            "en": "the taxpayers who funded their education receive nothing in return",
+            "zh": "出资的纳税人毫无回报（A方核心逻辑）"
+          },
+          {
+            "en": "hold a health system back for a generation",
+            "zh": "让医疗系统倒退一代人（后果量化）"
+          }
+        ],
+        "guideQ": "你把对方观点写到「最强」了吗？稻草人式转述再打倒，是讨论题大忌。"
+      },
+      "4": {
+        "why": "我方段三步：价值立场（自由流动是人才规律，强留养怨）→务实证据（侨汇+人脉+回归，印度中国科技业为例）→给出更优解（改善待遇而非禁令）——「解法句」让立场落地，讨论题的 own opinion 就有了建设性（体系1.4）。",
+        "modelPara": "Nevertheless, I side with those who defend free movement. Talent has always travelled to where it is valued, and attempts to trap it breed resentment rather than loyalty; a doctor forced to stay against her will will never be the colleague that a willing one would have been. There are also practical benefits in departure itself. Emigrants send home money and professional contacts, and many eventually return with superior skills, as the technology sectors of India and China demonstrate. The fairer and more effective answer to brain drain is therefore not a travel ban but better pay and conditions at home.",
+        "expressions": [
+          {
+            "en": "Talent has always travelled to where it is valued",
+            "zh": "人才总会流向被珍视之处（价值层论证）"
+          },
+          {
+            "en": "attempts to trap it breed resentment rather than loyalty",
+            "zh": "强留只养怨恨不养忠诚"
+          },
+          {
+            "en": "not a travel ban but better pay and conditions at home",
+            "zh": "不是禁令而是改善待遇（建设性对比收口）"
+          }
+        ],
+        "guideQ": "你的 own opinion 除了站队，有没有给出「更好的做法」？有解法的立场比裸立场高一档。"
+      },
+      "5": {
+        "why": "一句话结论：while 让步收回A方（real financial grievance 承认其账算得对）+ 重申自由立场 + 把结论升级为对 source countries 的建议——讨论题结尾的标准三件套。",
+        "modelPara": "In conclusion, while the case for requiring service at home rests on a real financial grievance, I believe professionals must remain free to choose where they work, and that source countries profit more from making staying attractive than from making leaving illegal.",
+        "expressions": [
+          {
+            "en": "rests on a real financial grievance",
+            "zh": "基于真实的经济委屈（让步回收A方）"
+          },
+          {
+            "en": "profit more from making staying attractive than from making leaving illegal",
+            "zh": "从「让留下有吸引力」中获益多于「让离开违法」（对仗收尾）"
+          }
+        ],
+        "guideQ": "你的结尾让步了对方一句再收束吗？全盘否定对方观点的结论显得输不起。"
+      }
+    }
+  },
+  "剑17 Test 4 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "An increasing number of people who feel unwell now reach for herbal remedies, dietary supplements or other alternative treatments rather than visiting their doctor. While some of these approaches offer comfort, I consider this shift to be a negative development overall, chiefly because it delays effective care.\n\nThe appeal of alternatives is not hard to explain. Conventional appointments are short, impersonal and increasingly expensive, whereas alternative practitioners listen at length, explain their philosophy and sell hope. For chronic complaints that mainstream medicine handles poorly, such as persistent back pain or fatigue, a treatment that promises to treat the whole person naturally feels more humane than a shelf of painkillers. It is also true that a few practices, mindfulness among them, have been validated by research and can genuinely relieve symptoms.\n\nThe danger lies in what gets delayed or replaced. Cancer patients who abandon chemotherapy for herbal cures do not merely waste money; they surrender the months in which treatment works best, and the tragic cases are well documented. Even in smaller matters the arithmetic is unforgiving. Supplements that prove useless in trials are rarely harmless in the wallet, and a patient who self-diagnoses a persistent cough as an allergy may be overlooking the early signs of something serious. The warm, attentive experience that attracts people to alternatives is precisely what mainstream clinics should be copying, not a reason to bypass them.\n\nIn conclusion, although alternative medicine fills real emotional gaps left by modern healthcare, choosing it instead of a doctor trades proven treatment for comfort, and for that reason this trend deserves to be treated with caution rather than enthusiasm.",
+    "paraTeach": {
+      "2": {
+        "why": "利弊评价题开头：句1改写（a growing number of people with health problems→An increasing number of people who feel unwell；具体化 alternative treatments 的例子），句2让步（offer comfort）+立场（negative overall）+核心理由前置（delays effective care）——把全文最硬的理由放进开头，考官立刻被钩住。",
+        "modelPara": "An increasing number of people who feel unwell now reach for herbal remedies, dietary supplements or other alternative treatments rather than visiting their doctor. While some of these approaches offer comfort, I consider this shift to be a negative development overall, chiefly because it delays effective care.",
+        "expressions": [
+          {
+            "en": "reach for herbal remedies, dietary supplements",
+            "zh": "转向草药和保健品（题目说法的具体化改写）"
+          },
+          {
+            "en": "While some of these approaches offer comfort",
+            "zh": "尽管这些方法能带来安慰（让步开路）"
+          },
+          {
+            "en": "chiefly because it delays effective care",
+            "zh": "主要因为它延误有效治疗（核心理由前置）"
+          }
+        ],
+        "guideQ": "你的立场句后面跟全文最硬的那条理由了吗？核心理由放在开头比藏在主体段更有冲击力。"
+      },
+      "3": {
+        "why": "让步段写到对方最强：先解释吸引力机制（挂号短/贵/冷漠 vs 从业者倾听/给希望），再具体到主流医学短板（慢性背痛疲劳），最后承认正念有研究背书——把「为什么大家这么选」讲透，批判段才显得公允有力（体系1.2）。",
+        "modelPara": "The appeal of alternatives is not hard to explain. Conventional appointments are short, impersonal and increasingly expensive, whereas alternative practitioners listen at length, explain their philosophy and sell hope. For chronic complaints that mainstream medicine handles poorly, such as persistent back pain or fatigue, a treatment that promises to treat the whole person naturally feels more humane than a shelf of painkillers. It is also true that a few practices, mindfulness among them, have been validated by research and can genuinely relieve symptoms.",
+        "expressions": [
+          {
+            "en": "Conventional appointments are short, impersonal and increasingly expensive",
+            "zh": "常规就诊短促冷漠且昂贵（吸引力机制一）"
+          },
+          {
+            "en": "listen at length, explain their philosophy and sell hope",
+            "zh": "长时间倾听、输出理念、贩卖希望（三个动词并列）"
+          },
+          {
+            "en": "validated by research and can genuinely relieve symptoms",
+            "zh": "经研究验证、真能缓解症状（承认对方最强点）"
+          }
+        ],
+        "guideQ": "你在批判之前，有没有把对方「为什么会赢」解释清楚？跳过这一步的批判像偏见。"
+      },
+      "4": {
+        "why": "批判段=两档危害：重（放弃化疗→错过黄金期，well documented 佐证）→轻（补品无效还烧钱；自诊咳嗽误了重症早期），收尾用对称句把对方优势反转（温暖体验该被主流诊所学走而非绕开它们）——结尾一句完成「观点反转」是本段杀手锏。",
+        "modelPara": "The danger lies in what gets delayed or replaced. Cancer patients who abandon chemotherapy for herbal cures do not merely waste money; they surrender the months in which treatment works best, and the tragic cases are well documented. Even in smaller matters the arithmetic is unforgiving. Supplements that prove useless in trials are rarely harmless in the wallet, and a patient who self-diagnoses a persistent cough as an allergy may be overlooking the early signs of something serious. The warm, attentive experience that attracts people to alternatives is precisely what mainstream clinics should be copying, not a reason to bypass them.",
+        "expressions": [
+          {
+            "en": "they surrender the months in which treatment works best",
+            "zh": "他们错过了治疗最有效的窗口期"
+          },
+          {
+            "en": "useless in trials are rarely harmless in the wallet",
+            "zh": "试验无效的补品对钱包并非无害（对仗句）"
+          },
+          {
+            "en": "precisely what mainstream clinics should be copying, not a reason to bypass them",
+            "zh": "该被主流诊所学走，而非绕开它们的理由（反转收口）"
+          }
+        ],
+        "guideQ": "你的危害是「从重到轻」排的还是随手堆的？排序本身就是论证力。"
+      },
+      "5": {
+        "why": "一句话结论：although 让步回收（fills real emotional gaps）+ trades proven treatment for comfort 一句话钉死利弊天平+ deserves caution rather than enthusiasm 收态度——结尾给出「对该趋势的正确姿势」，比重复 negative 更有信息量。",
+        "modelPara": "In conclusion, although alternative medicine fills real emotional gaps left by modern healthcare, choosing it instead of a doctor trades proven treatment for comfort, and for that reason this trend deserves to be treated with caution rather than enthusiasm.",
+        "expressions": [
+          {
+            "en": "fills real emotional gaps left by modern healthcare",
+            "zh": "填补了现代医疗留下的情感空缺（让步回收）"
+          },
+          {
+            "en": "trades proven treatment for comfort",
+            "zh": "用确证疗效换安慰（天平一句话）"
+          }
+        ],
+        "guideQ": "你的结论有没有一个「浓缩全文天平」的短语？一句 trades A for B 胜过三行重复。"
+      }
+    }
+  }
+}

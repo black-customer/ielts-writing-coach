@@ -1,0 +1,184 @@
+{
+  "剑16 Test 1 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "In many countries, growing numbers of people are curious about the history of the house or building they live in. There are two main reasons for this interest, and in most cases the answers can be found through local records and the memories of long-term residents.\n\nThe desire to know a home's past is, above all, a search for identity. A house that has stood for a century has witnessed generations of arrivals and departures, and learning about the families who lived there before gives owners a sense of belonging to a story larger than their own. My neighbours, for example, discovered that their Edwardian terrace had once housed a family of railway workers, and they now display old photographs of it in the hallway. Practical concerns reinforce this emotional appeal: the age of a property shapes how it should be maintained, so owners need to know whether the wiring, foundations or drainage date from another era before they renovate.\n\nFortunately, this information is easier to uncover than ever. Local archives and land registries hold deeds, planning applications and census records that trace a building's ownership back decades, and a single afternoon's research can reveal the original date of construction. Older neighbours are another invaluable source, since their memories often fill the gaps that documents leave, recalling the shop that once occupied the corner or the winter the river flooded. Local history groups on the internet, where enthusiasts share photographs and maps, have made this kind of detective work possible for anyone with a computer.\n\nIn conclusion, people investigate the past of their homes to satisfy both an emotional need for roots and practical worries about maintenance, and archival records together with elderly residents' memories are usually enough to tell them what they wish to know.",
+    "paraTeach": {
+      "2": {
+        "why": "双问题题的审题三问：必须回应 why 和 how 两部分。开头句1改写题目（more and more people are becoming interested→growing numbers of people are curious about），句2用一句话把两问的答案都预告出来（reasons=identity+practical；how=records+memories）——考官读完开头就知道全文结构。",
+        "modelPara": "In many countries, growing numbers of people are curious about the history of the house or building they live in. There are two main reasons for this interest, and in most cases the answers can be found through local records and the memories of long-term residents.",
+        "expressions": [
+          { "en": "growing numbers of people are curious about", "zh": "越来越多的人对…好奇（more and more 的改写）" },
+          { "en": "There are two main reasons for this interest", "zh": "这种兴趣有两个主要原因（预告why段）" },
+          { "en": "local records and the memories of long-term residents", "zh": "本地档案与老住户的记忆（预告how段）" }
+        ],
+        "guideQ": "双问题题你的开头第二句把两问都回答了吗？只预告一问，TR就缺一半。"
+      },
+      "3": {
+        "why": "why段用一条主线串两个原因：情感（identity，写透——century/generations/belonging）+实际（maintenance，一句带过）。例子按展开标准落到「谁+什么房+发现了什么」：邻居的爱德华排屋与铁路工人家庭——具体到可画面（体系1.4）。",
+        "modelPara": "The desire to know a home's past is, above all, a search for identity. A house that has stood for a century has witnessed generations of arrivals and departures, and learning about the families who lived there before gives owners a sense of belonging to a story larger than their own. My neighbours, for example, discovered that their Edwardian terrace had once housed a family of railway workers, and they now display old photographs of it in the hallway. Practical concerns reinforce this emotional appeal: the age of a property shapes how it should be maintained, so owners need to know whether the wiring, foundations or drainage date from another era before they renovate.",
+        "expressions": [
+          { "en": "a search for identity", "zh": "对身份认同的追寻（主题句核心词伙）" },
+          { "en": "a sense of belonging to a story larger than their own", "zh": "融入更大故事带来的归属感" },
+          { "en": "their Edwardian terrace had once housed a family of railway workers", "zh": "例子具体到房型+前住户职业" },
+          { "en": "Practical concerns reinforce this emotional appeal", "zh": "实际考量强化了这种情感吸引（this+名词衔接）" }
+        ],
+        "guideQ": "你的例子能画出画面吗（哪栋房、什么人、发现了什么）？「for example+泛泛现象」等于没有例子。"
+      },
+      "4": {
+        "why": "how段按「渠道」组织：档案（deeds/census records）→老邻居（记忆补档案的gap）→网络社群（让人人可做）。衔接靠 these sheets 式指代与关键词复现，无Firstly链（体系1.5）；detective work 的比喻让方法段不干瘪。",
+        "modelPara": "Fortunately, this information is easier to uncover than ever. Local archives and land registries hold deeds, planning applications and census records that trace a building's ownership back decades, and a single afternoon's research can reveal the original date of construction. Older neighbours are another invaluable source, since their memories often fill the gaps that documents leave, recalling the shop that once occupied the corner or the winter the river flooded. Local history groups on the internet, where enthusiasts share photographs and maps, have made this kind of detective work possible for anyone with a computer.",
+        "expressions": [
+          { "en": "Local archives and land registries hold deeds, planning applications and census records", "zh": "档案与土地登记处保存地契、规划申请与人口普查记录" },
+          { "en": "fill the gaps that documents leave", "zh": "填补文档留下的空白（记忆vs档案分工）" },
+          { "en": "this kind of detective work", "zh": "这种侦探式的工作（this+名词回指，高分衔接）" }
+        ],
+        "guideQ": "你写的每个「方法」都能落实到具体载体吗（哪类记录、哪类人）？只说 search online 是空的。"
+      },
+      "5": {
+        "why": "一句话结尾换词重申两问答案：investigate the past of their homes↔curiosity；emotional need for roots and practical worries↔identity+maintenance；不加任何新观点（体系1.3结尾纪律）。",
+        "modelPara": "In conclusion, people investigate the past of their homes to satisfy both an emotional need for roots and practical worries about maintenance, and archival records together with elderly residents' memories are usually enough to tell them what they wish to know.",
+        "expressions": [
+          { "en": "an emotional need for roots", "zh": "对根基的情感需求（identity的换词）" },
+          { "en": "archival records together with elderly residents' memories", "zh": "档案+老人记忆（两渠道换词重申）" }
+        ],
+        "guideQ": "你的结论有没有把两问各用换词收回来？只收一问，结构就缺角。"
+      }
+    }
+  },
+  "剑16 Test 2 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "In their advertising, companies today almost always stress that their products are new in some way, even when the change is a modest one. This happens mainly because novelty sells, and in my view the trend is a negative development overall, despite its obvious commercial logic.\n\nThe emphasis on newness exists because consumers have been taught to equate new with improved. A phone with a slightly sharper camera or a car with a redesigned dashboard can command a higher price than last year's model, so manufacturers constantly repaint small changes as breakthroughs. Competition makes this unavoidable: when every rival claims innovation, none of them can afford to say their product is simply reliable and unchanged. Advertising therefore celebrates the new because it is the easiest way to persuade customers that an upgrade is necessary.\n\nAs a development, however, I believe this does more harm than good. It manufactures dissatisfaction with possessions that work perfectly, encouraging people to replace goods years before they need to; the mountains of discarded electronics generated each year are a direct result of this cycle. It also teaches consumers to judge products by their novelty rather than their quality, which rewards marketing skill over genuine engineering. Admittedly, the pressure to appear innovative pushes companies to make real improvements as well, and some upgrades, such as safety features in cars, justify the publicity. Even so, these benefits would survive a more honest style of advertising, whereas the waste created by artificial obsolescence will not.\n\nIn conclusion, businesses promote newness because it is the most effective way to sell, but the habit of discarding useful products it encourages makes this a development we should regret.",
+    "paraTeach": {
+      "2": {
+        "why": "双问题（why+评价）开头：句1改写（emphasise that their products are new→stress that their products are new in some way），句2同时回答两问——novelty sells（原因）+ negative overall（评价立场）。利弊题必须亮比较级态度，不能骑墙（体系1.2）。",
+        "modelPara": "In their advertising, companies today almost always stress that their products are new in some way, even when the change is a modest one. This happens mainly because novelty sells, and in my view the trend is a negative development overall, despite its obvious commercial logic.",
+        "expressions": [
+          { "en": "even when the change is a modest one", "zh": "哪怕变化很微小（让步铺垫，暗含批判立场）" },
+          { "en": "novelty sells", "zh": "新奇感有市场（原因一句话）" },
+          { "en": "a negative development overall", "zh": "总体是消极发展（评价立场亮明）" }
+        ],
+        "guideQ": "「为什么」和「积极还是消极」两问，你的开头是不是各用半句都回答了？"
+      },
+      "3": {
+        "why": "why段一条因果链写到头：消费者被教会新=好→小改动能溢价→厂商把小改包装成突破→竞争让谁都说创新→所以广告只夸新。解释为主、不堆例子；sells/equate/repaint 是主题词伙不是大词（体系1.6）。",
+        "modelPara": "The emphasis on newness exists because consumers have been taught to equate new with improved. A phone with a slightly sharper camera or a car with a redesigned dashboard can command a higher price than last year's model, so manufacturers constantly repaint small changes as breakthroughs. Competition makes this unavoidable: when every rival claims innovation, none of them can afford to say their product is simply reliable and unchanged. Advertising therefore celebrates the new because it is the easiest way to persuade customers that an upgrade is necessary.",
+        "expressions": [
+          { "en": "equate new with improved", "zh": "把「新」等同于「更好」（因果链起点）" },
+          { "en": "repaint small changes as breakthroughs", "zh": "把小改动粉饰成突破（动词repaint准确生动）" },
+          { "en": "none of them can afford to say", "zh": "没人敢说（竞争逻辑收口）" }
+        ],
+        "guideQ": "你的原因段是一条连续的因果链，还是几个平行原因的清单？高分写前者。"
+      },
+      "4": {
+        "why": "评价段立场=弊大于利：先两个弊（制造不满→提前丢弃→电子垃圾；唯新论→营销胜过工程），再让步（Admittedly压力也带来真创新，如汽车安全配置），用 Even so 把让步压回去——让步式收口是讨论利弊的标准武器（体系1.2/1.4）。",
+        "modelPara": "As a development, however, I believe this does more harm than good. It manufactures dissatisfaction with possessions that work perfectly, encouraging people to replace goods years before they need to; the mountains of discarded electronics generated each year are a direct result of this cycle. It also teaches consumers to judge products by their novelty rather than their quality, which rewards marketing skill over genuine engineering. Admittedly, the pressure to appear innovative pushes companies to make real improvements as well, and some upgrades, such as safety features in cars, justify the publicity. Even so, these benefits would survive a more honest style of advertising, whereas the waste created by artificial obsolescence will not.",
+        "expressions": [
+          { "en": "It manufactures dissatisfaction with possessions that work perfectly", "zh": "它制造了对完好物品的不满（manufacture一语双关）" },
+          { "en": "the mountains of discarded electronics", "zh": "堆积如山的电子垃圾（具体后果）" },
+          { "en": "the waste created by artificial obsolescence", "zh": "人为淘汰造成的浪费（收口点题）" }
+        ],
+        "guideQ": "利弊题你给「弊」让了一步再用 Even so 压回去吗？只写一边的利弊题，GRA和TR都吃亏。"
+      },
+      "5": {
+        "why": "一句话结尾：because+it is the most effective way to sell 收原因，but+habit of discarding 收评价——两问各自换词闭合，零新观点。",
+        "modelPara": "In conclusion, businesses promote newness because it is the most effective way to sell, but the habit of discarding useful products it encourages makes this a development we should regret.",
+        "expressions": [
+          { "en": "the habit of discarding useful products", "zh": "丢弃仍可用产品的习惯（弊的换词重申）" },
+          { "en": "a development we should regret", "zh": "令人遗憾的发展（negative development换词）" }
+        ],
+        "guideQ": "你的结论句有没有同时收回「原因」和「评价」？少收一个就是结构不闭合。"
+      }
+    }
+  },
+  "剑16 Test 3 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "Many manufactured foods and drinks are loaded with sugar, and one proposed remedy is to tax these products heavily so that people consume less of them. I strongly agree with this approach, because prices change behaviour and because the money raised can fund prevention.\n\nThe clearest reason is that cost is one of the most powerful influences on what shoppers buy. When sugary drinks become noticeably more expensive than water or milk, many households gradually switch, exactly as smokers cut back when cigarettes were repeatedly taxed. Britain's sugar levy on soft drinks shows that the mechanism works: several manufacturers reformulated their recipes to stay below the taxable threshold, so the entire market became healthier without consumers needing to change their habits at all. A well-designed tax therefore reaches even those who ignore health warnings on labels.\n\nThe revenue gives the policy a second benefit. Money collected from sugary products can subsidise fruit in school canteens, fund dental treatment for children and pay for public health campaigns, meaning the harms of sugar are partly repaired by the tax itself. Critics rightly point out that such taxes are regressive, falling hardest on low-income families who spend a larger share of their budget on food. This objection is serious but not decisive: the poor also suffer most from diabetes and tooth decay, so the long-term effect of changing prices and funding prevention is likely to help them more than it costs them.\n\nIn conclusion, taxing sugary products is an effective and self-funding way to reduce consumption, and the fairness problem can be managed through how the revenue is spent.",
+    "paraTeach": {
+      "2": {
+        "why": "观点题开头两句：句1改写（are loaded with sugar 替换 contain high levels；tax heavily↔made more expensive），句2立场+两条路线预告（prices change behaviour + fund prevention）——每条路线正好各领一个主体段。",
+        "modelPara": "Many manufactured foods and drinks are loaded with sugar, and one proposed remedy is to tax these products heavily so that people consume less of them. I strongly agree with this approach, because prices change behaviour and because the money raised can fund prevention.",
+        "expressions": [
+          { "en": "are loaded with sugar", "zh": "含糖量极高（contain high levels of sugar的地道替换）" },
+          { "en": "one proposed remedy", "zh": "一种被提出的对策（题目措施的改写）" },
+          { "en": "because prices change behaviour and because the money raised can fund prevention", "zh": "价格改变行为+税款可资助预防（两条路线一句预告）" }
+        ],
+        "guideQ": "你的立场句后面的两个 because，是不是正好就是你两个主体段的主题句？这是最高效的开头写法。"
+      },
+      "3": {
+        "why": "理由一「价格改变行为」用三层证据写透：常识机制（比水贵→换购）→类比（烟税与戒烟）→真实案例（英国糖税让厂商改配方，全市场被动变健康）。例子具体到国家与机制（体系1.4），no big words。",
+        "modelPara": "The clearest reason is that cost is one of the most powerful influences on what shoppers buy. When sugary drinks become noticeably more expensive than water or milk, many households gradually switch, exactly as smokers cut back when cigarettes were repeatedly taxed. Britain's sugar levy on soft drinks shows that the mechanism works: several manufacturers reformulated their recipes to stay below the taxable threshold, so the entire market became healthier without consumers needing to change their habits at all. A well-designed tax therefore reaches even those who ignore health warnings on labels.",
+        "expressions": [
+          { "en": "exactly as smokers cut back when cigarettes were repeatedly taxed", "zh": "正如多次加税后烟民减量（类比论证）" },
+          { "en": "reformulated their recipes to stay below the taxable threshold", "zh": "改配方以低于起征点（案例机制具体）" },
+          { "en": "reaches even those who ignore health warnings", "zh": "连无视健康警告的人也覆盖到（收口）" }
+        ],
+        "guideQ": "你的例子给了「哪个国家+什么机制+什么结果」吗？泛泛的 some countries 隔靴搔痒。"
+      },
+      "4": {
+        "why": "理由二「税款自养」+让步处理反方：先展开收益（水果补贴/牙科/宣传），再 Critics rightly point out 让步（累退、伤穷人），冒号后一句驳倒（穷人也最受害→长期反而受益）——让步不弃阵地，讨论完整（体系1.2）。",
+        "modelPara": "The revenue gives the policy a second benefit. Money collected from sugary products can subsidise fruit in school canteens, fund dental treatment for children and pay for public health campaigns, meaning the harms of sugar are partly repaired by the tax itself. Critics rightly point out that such taxes are regressive, falling hardest on low-income families who spend a larger share of their budget on food. This objection is serious but not decisive: the poor also suffer most from diabetes and tooth decay, so the long-term effect of changing prices and funding prevention is likely to help them more than it costs them.",
+        "expressions": [
+          { "en": "the harms of sugar are partly repaired by the tax itself", "zh": "糖的危害由税自身部分修复（点睛句）" },
+          { "en": "such taxes are regressive, falling hardest on low-income families", "zh": "这类税是累退的，穷人负担最重（反方最强点）" },
+          { "en": "This objection is serious but not decisive", "zh": "此反对严肃但不致命（让步转折标准句）" }
+        ],
+        "guideQ": "你承认了反方最强的点再反驳吗？忽略最强反驳的观点题，考官一眼看穿。"
+      },
+      "5": {
+        "why": "一句话结尾：effective and self-funding 收两条主线，fairness problem managed through revenue 收让步段——立场原样，词汇全换（体系1.3）。",
+        "modelPara": "In conclusion, taxing sugary products is an effective and self-funding way to reduce consumption, and the fairness problem can be managed through how the revenue is spent.",
+        "expressions": [
+          { "en": "an effective and self-funding way to reduce consumption", "zh": "有效且自我造血的减耗手段（换词收立场）" },
+          { "en": "the fairness problem can be managed through how the revenue is spent", "zh": "公平性问题可通过税款用途化解（收让步）" }
+        ],
+        "guideQ": "你的结尾是不是立场不变、词汇全换？出现新观点就是违规。"
+      }
+    }
+  },
+  "剑16 Test 4 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "In the future, all cars, buses and trucks are expected to drive themselves, leaving passengers as the only people inside. I believe the advantages of this development will outweigh its disadvantages, provided that governments regulate the transition carefully.\n\nThe greatest gain is safety. Human error contributes to the overwhelming majority of road deaths, whether through tiredness, distraction or alcohol, and computer drivers never suffer from any of these. Countries that have already tested autonomous fleets report accident rates far below the national average, which suggests that removing people from the driver's seat would save hundreds of thousands of lives worldwide every year. Widespread automation would also free those who cannot drive: elderly citizens and disabled passengers would no longer depend on relatives or scarce public transport to reach a hospital or a job interview.\n\nThe disadvantages are real but manageable. Professional drivers, from taxi operators to lorry drivers, will lose their livelihoods, and this displacement will be painful for the families involved; governments will need retraining programmes to soften it. There is also the question of responsibility when a self-driving vehicle crashes, since the law must decide whether the manufacturer, the software company or the owner is to blame. Neither problem, however, argues for abandoning the technology, and both have existed in earlier transport revolutions, from railways to aeroplanes, where regulation eventually caught up.\n\nIn conclusion, driverless vehicles promise a transport system that is dramatically safer and more inclusive, and the disruption they cause is temporary and governable. I am convinced the balance of this development is firmly positive.",
+    "paraTeach": {
+      "2": {
+        "why": "利弊比较题开头必须亮「 outweigh 」态度：句1改写（all cars... will be driverless→are expected to drive themselves），句2 advantages outweigh disadvantages + provided that 条件限定——条件句让立场更严谨不吃亏（体系1.2利弊纪律）。",
+        "modelPara": "In the future, all cars, buses and trucks are expected to drive themselves, leaving passengers as the only people inside. I believe the advantages of this development will outweigh its disadvantages, provided that governments regulate the transition carefully.",
+        "expressions": [
+          { "en": "are expected to drive themselves, leaving passengers as the only people inside", "zh": "预期将自动驾驶，车内只剩乘客（题目两句并一句）" },
+          { "en": "outweigh its disadvantages", "zh": "利大于弊（利弊题必须的表态动词）" },
+          { "en": "provided that governments regulate the transition carefully", "zh": "前提是政府谨慎监管转型（条件限定立场）" }
+        ],
+        "guideQ": "利弊题你的表态是「比较级」的吗？只说优点多不算回答 outweigh 问题。"
+      },
+      "3": {
+        "why": "优点段写透一个核心（安全）：机制（人的三大失误 vs 机器不会）→证据（测试车队事故率）→量化结果（每年救几十万人），再补第二个优点（老人残疾人出行自由）收尾。一个段=一个主论点+一个副论点，主次分明（体系1.4）。",
+        "modelPara": "The greatest gain is safety. Human error contributes to the overwhelming majority of road deaths, whether through tiredness, distraction or alcohol, and computer drivers never suffer from any of these. Countries that have already tested autonomous fleets report accident rates far below the national average, which suggests that removing people from the driver's seat would save hundreds of thousands of lives worldwide every year. Widespread automation would also free those who cannot drive: elderly citizens and disabled passengers would no longer depend on relatives or scarce public transport to reach a hospital or a job interview.",
+        "expressions": [
+          { "en": "Human error contributes to the overwhelming majority of road deaths", "zh": "人为失误是绝大多数 road deaths 的主因（机制句）" },
+          { "en": "accident rates far below the national average", "zh": "事故率远低于全国平均（证据句）" },
+          { "en": "no longer depend on relatives or scarce public transport", "zh": "不再依赖亲属或稀缺公交（受益者具体化）" }
+        ],
+        "guideQ": "你的主论点有没有「机制→证据→结果」三层？只有口号没有证据的段落撑不到7分。"
+      },
+      "4": {
+        "why": "缺点段写实但不翻车：失业（具体到 taxi/lorry+家庭痛苦+对策 retraining）与责任认定（ manufacturer/software/owner 三选一的 法律难题），用 Neither problem argues for abandoning + 历史 类比（铁路飞机）把缺点按回「可控」——呼应开头 provided that。",
+        "modelPara": "The disadvantages are real but manageable. Professional drivers, from taxi operators to lorry drivers, will lose their livelihoods, and this displacement will be painful for the families involved; governments will need retraining programmes to soften it. There is also the question of responsibility when a self-driving vehicle crashes, since the law must decide whether the manufacturer, the software company or the owner is to blame. Neither problem, however, argues for abandoning the technology, and both have existed in earlier transport revolutions, from railways to aeroplanes, where regulation eventually caught up.",
+        "expressions": [
+          { "en": "The disadvantages are real but manageable", "zh": "缺点真实但可控（段落主旨句）" },
+          { "en": "governments will need retraining programmes to soften it", "zh": "需要再培训计划缓冲（给对策=严谨）" },
+          { "en": "regulation eventually caught up", "zh": "监管最终跟上了（历史类比收口）" }
+        ],
+        "guideQ": "你写的每个缺点后面有没有「为什么它挡不住结论」？没有这一步，outweigh 的比较就不成立。"
+      },
+      "5": {
+        "why": "一句话结尾：dramatically safer and more inclusive 收优点，temporary and governable 收缺点，firmly positive 最终表态——比较题的结尾就是把比较双方各用两个形容词钉死。",
+        "modelPara": "In conclusion, driverless vehicles promise a transport system that is dramatically safer and more inclusive, and the disruption they cause is temporary and governable. I am convinced the balance of this development is firmly positive.",
+        "expressions": [
+          { "en": "dramatically safer and more inclusive", "zh": "更安全、更包容（优点钉死）" },
+          { "en": "temporary and governable", "zh": "暂时且可控（缺点钉死）" },
+          { "en": "the balance of this development is firmly positive", "zh": "利弊天平坚定偏正（最终表态）" }
+        ],
+        "guideQ": "你的结论让读者一秒看到「天平向哪边倾斜」了吗？"
+      }
+    }
+  }
+}

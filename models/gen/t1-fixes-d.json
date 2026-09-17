@@ -1,0 +1,598 @@
+{
+  "剑20 Test 1 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 数据已对照剑桥原书原图核正（v2）",
+    "chartNote": "三张表（1800/1900/2000三个年份）：表1纽约五区总人口 79,216→3,437,202→8,009,185；表2曼哈顿 60,515(76%)→1,850,093(54%)→1,538,096(19%)——绝对数1900后下降；表3其他四区（Brooklyn/Bronx/Queens/Staten Island合计）18,701(24%)→1,587,109(46%)→6,471,089(81%)。",
+    "essay": "The tables show the population of New York City in 1800, 1900 and 2000, giving the total for all five districts and separate figures for Manhattan and the other four boroughs.\n\nIt is clear that the city grew enormously over the two centuries. It is also noticeable that the share of New Yorkers living in Manhattan collapsed, from more than three quarters to under a fifth.\n\nThe total population rose from 79,216 in 1800 to 3,437,202 in 1900 — a forty-three-fold increase — and reached 8,009,185 by 2000. Manhattan housed 60,515 of the 1800 total, or 76%, and grew to 1.85 million by 1900; by 2000, however, its population had actually fallen back to about 1.54 million, just 19% of the city.\n\nThe other districts tell the opposite story. From only 18,701 people in 1800, they overtook Manhattan between 1900 and 2000, soaring to 6,471,089, or 81% of the total — more than four times Manhattan's population. In short, New York's growth after 1900 happened almost entirely beyond the island of Manhattan.",
+    "paraTeach": {
+      "2": {
+        "why": "开头改写：三张表的分工在开头一句交代——giving the total... and separate figures for Manhattan and the other four boroughs（分词短语分派三表），比 the first table/the second table 更顺。",
+        "modelPara": "The tables show the population of New York City in 1800, 1900 and 2000, giving the total for all five districts and separate figures for Manhattan and the other four boroughs.",
+        "expressions": [
+          {
+            "en": "giving the total for all five districts",
+            "zh": "给出五区总人口（表一分工）"
+          },
+          {
+            "en": "separate figures for Manhattan and the other four boroughs",
+            "zh": "曼哈顿与其他四区的分开数字（表二表三分工）"
+          }
+        ],
+        "guideQ": "多表题你的开头把「每张表管什么」分派清楚了吗？"
+      },
+      "3": {
+        "why": "概括两句：句1=两个世纪的巨大增长（总量头条），句2=份额反转（曼哈顿从四分之三跌到不足五分之一）——份额句用 from more than three quarters to under a fifth 的对比结构，无绝对数却信息量十足。",
+        "modelPara": "It is clear that the city grew enormously over the two centuries. It is also noticeable that the share of New Yorkers living in Manhattan collapsed, from more than three quarters to under a fifth.",
+        "expressions": [
+          {
+            "en": "the share of New Yorkers living in Manhattan collapsed",
+            "zh": "住曼哈顿的纽约人份额暴跌（份额主语句）"
+          },
+          {
+            "en": "from more than three quarters to under a fifth",
+            "zh": "从超过四分之三到不足五分之一（对比结构）"
+          }
+        ],
+        "guideQ": "表格的概括你先算了「份额」吗？份额变化比人口数更有故事性。"
+      },
+      "4": {
+        "why": "细节一=总量+曼哈顿：总量两句（79,216→3,437,202 带 forty-three-fold 倍数；8,009,185 收）；曼哈顿两句（76% 份额→1.85m 峰值→**绝对数回落**至1.54m）——「1900年后曼哈顿人不增反降」是表二的关键细节，had actually fallen 的 actually 是点睛副词。",
+        "modelPara": "The total population rose from 79,216 in 1800 to 3,437,202 in 1900 — a forty-three-fold increase — and reached 8,009,185 by 2000. Manhattan housed 60,515 of the 1800 total, or 76%, and grew to 1.85 million by 1900; by 2000, however, its population had actually fallen back to about 1.54 million, just 19% of the city.",
+        "expressions": [
+          {
+            "en": "a forty-three-fold increase",
+            "zh": "43倍增长（同位语补倍数）"
+          },
+          {
+            "en": "its population had actually fallen back to about 1.54 million",
+            "zh": "人口竟然回落至约154万（过去完成时+actually）"
+          },
+          {
+            "en": "just 19% of the city",
+            "zh": "仅占全市19%（份额收尾）"
+          }
+        ],
+        "guideQ": "曼哈顿人口1900年后不增反降——你注意到这个「绝对数下降」了吗？"
+      },
+      "5": {
+        "why": "细节二=其他四区+收束：18,701→6,471,089（soaring）；overtook Manhattan between 1900 and 2000 点出反超时段；81% vs 曼哈顿的 more than four times 对比；In short 收束句呼应概括（增长几乎全部发生在曼哈顿之外）。",
+        "modelPara": "The other districts tell the opposite story. From only 18,701 people in 1800, they overtook Manhattan between 1900 and 2000, soaring to 6,471,089, or 81% of the total — more than four times Manhattan's population. In short, New York's growth after 1900 happened almost entirely beyond the island of Manhattan.",
+        "expressions": [
+          {
+            "en": "The other districts tell the opposite story",
+            "zh": "其他区讲着相反的故事（对照主旨句）"
+          },
+          {
+            "en": "soaring to 6,471,089, or 81% of the total",
+            "zh": "飙升至647万、占全市81%（or引出份额）"
+          },
+          {
+            "en": "happened almost entirely beyond the island of Manhattan",
+            "zh": "几乎全部发生在曼哈顿岛之外（收束句）"
+          }
+        ],
+        "guideQ": "你的收束句把「增长发生在哪里」点破了吗？表格题的最后一句是解读，不是报数。"
+      }
+    }
+  },
+  "剑20 Test 2 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 数据已对照剑桥原书原图核正（v2）",
+    "chartNote": "地图：Beechwood Farm 1950 vs today。1950：西边三块田（fruit trees/soft fruits/vegetables），北面大牧场放羊（sheep），东侧谷仓barn+农舍farmhouse+鸡群chickens，土路track网，河（西/南），main road（西北）。今天：三块田与河不变；tracks变成公路road；羊场→camping field（帐篷）+solar panels；新增farm shop（路口）+两处parking+holiday cottages（东侧）；barn迁至chickens旁；farmhouse保留。",
+    "essay": "The maps show Beechwood Farm in 1950 and the same site today.\n\nIt is clear that the farm has diversified from pure agriculture into tourism and energy generation. It is also noticeable that the three crop fields on the western side have survived almost unchanged.\n\nIn 1950, the site was a working farm: fruit trees, soft fruits and vegetables grew in fields west of an unpaved track, sheep grazed the large northern pasture, and the barn, farmhouse and chickens stood to the east, beside the river.\n\nToday the crops and the river remain where they were, but the surrounding economy has changed. The tracks have been upgraded into proper roads, a farm shop and parking have appeared at the main-road entrance, and the old sheep pasture now contains a camping field and rows of solar panels. Holiday cottages have been built on the eastern side, the barn has been relocated next to the chickens, and only the farmhouse links the modern site to the one in 1950.",
+    "paraTeach": {
+      "2": {
+        "why": "地图开头：in 1950 and the same site today——过去/现在两个时点一句锁死；the same site 呼应地图的「同址对比」性质。",
+        "modelPara": "The maps show Beechwood Farm in 1950 and the same site today.",
+        "expressions": [
+          {
+            "en": "Beechwood Farm in 1950",
+            "zh": "1950年的Beechwood农场（过去半句）"
+          },
+          {
+            "en": "the same site today",
+            "zh": "今天的同一场址（现在半句）"
+          }
+        ],
+        "guideQ": "对比图开头两个时点各配一个时态正确的动词了吗？"
+      },
+      "3": {
+        "why": "概括两句定性：句1=从纯农业转向旅游+能源（diversified from... into...一句话讲完转型方向），句2=西侧三块田几乎不变——「什么没变」也是地图信息，放进概括能帮下一段分工。",
+        "modelPara": "It is clear that the farm has diversified from pure agriculture into tourism and energy generation. It is also noticeable that the three crop fields on the western side have survived almost unchanged.",
+        "expressions": [
+          {
+            "en": "has diversified from pure agriculture into tourism and energy generation",
+            "zh": "从纯农业多元化到旅游与能源（转型定性句）"
+          },
+          {
+            "en": "have survived almost unchanged",
+            "zh": "几乎原样保留（不变项预告）"
+          }
+        ],
+        "guideQ": "你的概括是不是「变什么+不变什么」各占一句？"
+      },
+      "4": {
+        "why": "细节一=1950全貌（过去时）：三块田在西（fruit trees/soft fruits/vegetables）、羊在北牧场、建筑群在东（barn/farmhouse/chickens），unpaved track 埋下「将来修路」的钩子——按西-北-东的方位走一遍。",
+        "modelPara": "In 1950, the site was a working farm: fruit trees, soft fruits and vegetables grew in fields west of an unpaved track, sheep grazed the large northern pasture, and the barn, farmhouse and chickens stood to the east, beside the river.",
+        "expressions": [
+          {
+            "en": "fruit trees, soft fruits and vegetables grew in fields west of an unpaved track",
+            "zh": "果树、浆果、蔬菜种在土路西侧的田里"
+          },
+          {
+            "en": "sheep grazed the large northern pasture",
+            "zh": "羊群在北面大牧场吃草（graze精准动词）"
+          },
+          {
+            "en": "the barn, farmhouse and chickens stood to the east",
+            "zh": "谷仓、农舍、鸡群在东侧（stood方位动词）"
+          }
+        ],
+        "guideQ": "旧图的每个要素你都配了「方位+功能」吗？这是为下一段变化埋的坐标。"
+      },
+      "5": {
+        "why": "细节二=今天（现在完成时被动串场）：tracks→roads（升级）、farm shop+parking（新增）、sheep pasture→camping field+solar panels（改用途）、holiday cottages（新建）、barn relocated（移位）；farmhouse 保留收尾——五类变化动词各就各位。",
+        "modelPara": "Today the crops and the river remain where they were, but the surrounding economy has changed. The tracks have been upgraded into proper roads, a farm shop and parking have appeared at the main-road entrance, and the old sheep pasture now contains a camping field and rows of solar panels. Holiday cottages have been built on the eastern side, the barn has been relocated next to the chickens, and only the farmhouse links the modern site to the one in 1950.",
+        "expressions": [
+          {
+            "en": "have been upgraded into proper roads",
+            "zh": "被升级为正式公路（upgrade into）"
+          },
+          {
+            "en": "the old sheep pasture now contains a camping field and rows of solar panels",
+            "zh": "原羊场如今是营地与成排太阳能板（改用途）"
+          },
+          {
+            "en": "the barn has been relocated next to the chickens",
+            "zh": "谷仓迁至鸡舍旁（relocate移位）"
+          }
+        ],
+        "guideQ": "五类变化动词（新增/拆除/移位/改用途/升级），你的每处变化都对上号了吗？"
+      }
+    }
+  },
+  "剑20 Test 3 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 数据已对照剑桥原书原图核正（v2）",
+    "chartNote": "混合图：Little Chalfont Library。饼图=2016年馆员年龄构成：children 22%、young adults 13-17 约12%、adults 18-64 51%、adults 65+ 约5%；表=2016年借书类别占比：children's fiction 38%、children's non-fiction 6%、children's DVDs 1%、young adults 2%、adult fiction 35%、adult non-fiction 13%、adult audio books 2%；柱图=2007-2016年总借书量：约16,000→21,000（2011），2013小跌至约19,500，2015-2016约21,500。",
+    "essay": "The charts give information about a public library in the town of Little Chalfont: the age of its members and the loans they made in 2016, and the total number of loans each year from 2007 to 2016.\n\nIt is clear that borrowing grew steadily over the decade. It is also noticeable that children's fiction, not adult books, was the library's biggest single category, even though adults made up the majority of members.\n\nTotal loans rose from about 16,000 in 2007 to 21,000 by 2011 and, apart from a dip to roughly 19,500 in 2013, continued climbing to around 21,500 in 2015 and 2016.\n\nThe members behind these figures were overwhelmingly adults: those aged 18 to 64 made up 51% of members, children 22%, and teenagers and the elderly only small slices. Their loans, however, were led by children's fiction at 38%, just ahead of adult fiction at 35%; adult non-fiction took 13%, while young-adult books and audio books accounted for a mere 2% each.",
+    "paraTeach": {
+      "2": {
+        "why": "混合图开头用冒号把三块内容一次分派：成员年龄+2016借书类别（饼+表）+十年借书总量（柱图）——信息再多，开头一句也要全装下。",
+        "modelPara": "The charts give information about a public library in the town of Little Chalfont: the age of its members and the loans they made in 2016, and the total number of loans each year from 2007 to 2016.",
+        "expressions": [
+          {
+            "en": "the age of its members and the loans they made in 2016",
+            "zh": "2016年成员年龄与借书类别（饼图+表）"
+          },
+          {
+            "en": "the total number of loans each year from 2007 to 2016",
+            "zh": "2007-2016逐年借书总量（柱图）"
+          }
+        ],
+        "guideQ": "混合图你的开头用冒号把「每块图」列清了吗？"
+      },
+      "3": {
+        "why": "概括两句：句1=十年借书稳步增长（量），句2=童书而非成人书是最大单一类别——「尽管成人会员占多数」的转折（even though）把饼图与表的反差一句话点破，这是本图最有意思的矛盾点。",
+        "modelPara": "It is clear that borrowing grew steadily over the decade. It is also noticeable that children's fiction, not adult books, was the library's biggest single category, even though adults made up the majority of members.",
+        "expressions": [
+          {
+            "en": "borrowing grew steadily over the decade",
+            "zh": "十年间借书量稳步增长（量头条）"
+          },
+          {
+            "en": "children's fiction, not adult books, was the library's biggest single category",
+            "zh": "最大单一类别是童书而非成人书（not A but B强调）"
+          }
+        ],
+        "guideQ": "「成人会员占多数、借的却多是童书」这个反差，你的概括点破了吗？"
+      },
+      "4": {
+        "why": "细节一=柱图：16,000→21,000（2011）→apart from a dip（2013约19,500）→21,500（2015-2016）——四个节点+一个例外插入，apart from 处理小回落最省字（体系2.3：起点/峰值/例外必写）。",
+        "modelPara": "Total loans rose from about 16,000 in 2007 to 21,000 by 2011 and, apart from a dip to roughly 19,500 in 2013, continued climbing to around 21,500 in 2015 and 2016.",
+        "expressions": [
+          {
+            "en": "rose from about 16,000 in 2007 to 21,000 by 2011",
+            "zh": "从2007年约1.6万升至2011年2.1万"
+          },
+          {
+            "en": "apart from a dip to roughly 19,500 in 2013",
+            "zh": "除2013年回落至约1.95万外（例外插入）"
+          },
+          {
+            "en": "continued climbing to around 21,500 in 2015 and 2016",
+            "zh": "续升至2015-2016的约2.15万"
+          }
+        ],
+        "guideQ": "小回落用 apart from 一笔带过，主趋势才不被打断——你会处理例外吗？"
+      },
+      "5": {
+        "why": "细节二=饼+表：先写成员构成（adults 51% / children 22% / 其余小项归堆），However 转折引出借书类别（children's fiction 38% 压过 adult fiction 35%），小类 mere 2% each 收尾——「人」与「书」两层数据在同一段内对位，反差自明。",
+        "modelPara": "The members behind these figures were overwhelmingly adults: those aged 18 to 64 made up 51% of members, children 22%, and teenagers and the elderly only small slices. Their loans, however, were led by children's fiction at 38%, just ahead of adult fiction at 35%; adult non-fiction took 13%, while young-adult books and audio books accounted for a mere 2% each.",
+        "expressions": [
+          {
+            "en": "made up 51% of members",
+            "zh": "占会员的51%（make up占比）"
+          },
+          {
+            "en": "were led by children's fiction at 38%, just ahead of adult fiction at 35%",
+            "zh": "由38%的童书领衔、略高于35%的成人小说（led by+ahead of）"
+          },
+          {
+            "en": "accounted for a mere 2% each",
+            "zh": "各仅占2%（mere降格+each并写）"
+          }
+        ],
+        "guideQ": "「人」的构成与「书」的构成放在同一段对位了吗？反差不用你说破，读者自己会看见。"
+      }
+    }
+  },
+  "剑20 Test 4 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 数据已对照剑桥原书原图核正（v2）",
+    "chartNote": "流程图（蛇形9步）：①Plant bamboo plants (Spring) ②Harvest (Autumn) ③Cut into strips ④Crush strips (to make liquid pulp) ⑤Filter (separate long fibres from liquid) ⑥Soften fibres (add water and amine oxide) ⑦Spin (to make yarn) ⑧Weave (to make fabric) ⑨制成成品（衣袜图）。季节节点：春种秋收；软化剂是水+胺氧化物（amine oxide）；无染色步骤。",
+    "essay": "The diagram shows how fabric for clothes is manufactured from bamboo, in nine stages from planting to the finished products.\n\nIt is clear that the process falls into two halves: preparing the raw material and turning the fibre into cloth. It is also noticeable that the timetable is fixed by the seasons, since the bamboo is planted in spring and harvested in autumn.\n\nThe first half begins in the fields, where bamboo plants are grown and then cut down in the autumn. The harvested canes are cut into strips and crushed to make a liquid pulp, at which point the material leaves the farm for the factory.\n\nThe second half extracts and processes the fibre. Long fibres are filtered from the liquid and then softened with water and amine oxide; they are spun to make yarn, the yarn is woven to make fabric, and the fabric is finally made into finished products such as clothes.",
+    "paraTeach": {
+      "2": {
+        "why": "开头：in nine stages from planting to the finished products——步数+起终点前置一句完成改写（planting↔finished products 首尾对仗）。",
+        "modelPara": "The diagram shows how fabric for clothes is manufactured from bamboo, in nine stages from planting to the finished products.",
+        "expressions": [
+          {
+            "en": "how fabric for clothes is manufactured from bamboo",
+            "zh": "衣料如何由竹子制成（被动改写）"
+          },
+          {
+            "en": "in nine stages from planting to the finished products",
+            "zh": "从种植到成品的九个阶段（步数+首尾）"
+          }
+        ],
+        "guideQ": "流程图开头你的步数和首尾齐了吗？"
+      },
+      "3": {
+        "why": "概括两句：句1=两半结构（备料/成布），句2=季节固定节奏（春种秋收）——季节是这张流程图最特别的信息，放进 overview 而不是埋在细节里。",
+        "modelPara": "It is clear that the process falls into two halves: preparing the raw material and turning the fibre into cloth. It is also noticeable that the timetable is fixed by the seasons, since the bamboo is planted in spring and harvested in autumn.",
+        "expressions": [
+          {
+            "en": "falls into two halves",
+            "zh": "分为两半（工序结构概括）"
+          },
+          {
+            "en": "the timetable is fixed by the seasons",
+            "zh": "时间表由季节决定（季节特征句）"
+          }
+        ],
+        "guideQ": "图上的季节标注（Spring/Autumn）你升格为概括信息了吗？"
+      },
+      "4": {
+        "why": "细节一=①-④备料：种（春）→砍（秋）→切条→压成 liquid pulp；at which point the material leaves the farm for the factory 用「离开农场」一句话交代①-④与⑤-⑨的场景分界（体系2.2流程图分段点明边界）。",
+        "modelPara": "The first half begins in the fields, where bamboo plants are grown and then cut down in the autumn. The harvested canes are cut into strips and crushed to make a liquid pulp, at which point the material leaves the farm for the factory.",
+        "expressions": [
+          {
+            "en": "bamboo plants are grown and then cut down in the autumn",
+            "zh": "竹子种植后于秋季砍伐"
+          },
+          {
+            "en": "crushed to make a liquid pulp",
+            "zh": "压碎成液态浆（目的状语）"
+          },
+          {
+            "en": "at which point the material leaves the farm for the factory",
+            "zh": "此时原料离开农场进入工厂（场景分界句）"
+          }
+        ],
+        "guideQ": "两半的分界位置，你用一句「场景转换」点明了吗？"
+      },
+      "5": {
+        "why": "细节二=⑤-⑨纤维到布：filtered from the liquid→softened with water and amine oxide→spun to make yarn→woven to make fabric→made into finished products；spin/weave/make 三个「to make」目的短语层层递进——术语（yarn/fabric/products）分级是本段的语言分。",
+        "modelPara": "The second half extracts and processes the fibre. Long fibres are filtered from the liquid and then softened with water and amine oxide; they are spun to make yarn, the yarn is woven to make fabric, and the fabric is finally made into finished products such as clothes.",
+        "expressions": [
+          {
+            "en": "Long fibres are filtered from the liquid",
+            "zh": "长纤维从液体中滤出（filter）"
+          },
+          {
+            "en": "softened with water and amine oxide",
+            "zh": "加水与胺氧化物软化（试剂名照抄图）"
+          },
+          {
+            "en": "they are spun to make yarn, the yarn is woven to make fabric",
+            "zh": "纺成纱线、织成布料（顶针式衔接）"
+          }
+        ],
+        "guideQ": " yarn→fabric→products 的三级术语链，你用顶针法串起来了吗？"
+      }
+    }
+  },
+  "剑21 Test 1 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 数据已对照剑桥原书原图核正（v2）",
+    "chartNote": "线图：美国四经济部门就业（百万），1960/1980/2000/2020四点。Manufacturing 15→20（1980峰值）→17→13；Retail 6→10→15→16；Agriculture 2.5→3→3→2（最小最平）；Healthcare 2→5→11→16（增速最快，8倍，2020与Retail持平）。四部门=Manufacturing/Retail/Agriculture/Healthcare（不是笼统的services）。",
+    "essay": "The line graph shows how many people were employed in four sectors of the United States economy between 1960 and 2020, measured in millions.\n\nIt is clear that manufacturing, once the largest employer, fell away after 1980. It is also noticeable that healthcare grew faster than any other sector, ending the period level with retail.\n\nManufacturing began as the biggest source of jobs, with 15 million in 1960, and climbed to a peak of 20 million in 1980. From there it declined steadily to 13 million in 2020. Agriculture, by contrast, was always small, hovering between 2 and 3 million and finishing at the bottom of the chart.\n\nThe growth sectors told the opposite story. Retail employment rose steadily from 6 million to 16 million, while healthcare expanded fastest of all, multiplying eightfold from just 2 million in 1960 to 16 million in 2020 — the same figure as retail, and three million more than manufacturing, which it had overtaken around 2015.",
+    "paraTeach": {
+      "2": {
+        "why": "开头改写：the number of jobs in four sectors→how many people were employed in four sectors（名词改从句）；单位 millions 嵌入句尾。",
+        "modelPara": "The line graph shows how many people were employed in four sectors of the United States economy between 1960 and 2020, measured in millions.",
+        "expressions": [
+          {
+            "en": "how many people were employed in four sectors",
+            "zh": "多少人受雇于四大部门（名词改从句）"
+          },
+          {
+            "en": "measured in millions",
+            "zh": "以百万为单位"
+          }
+        ],
+        "guideQ": "「就业人数」你写成了从句还是照抄 the number of jobs？"
+      },
+      "3": {
+        "why": "概括两句：句1=制造业（昔日最大雇主）1980后衰落——once the largest employer 一个同位语交代起点地位；句2=healthcare 增速最快、期末与 retail 持平——「谁追平了谁」是四线图的头条。",
+        "modelPara": "It is clear that manufacturing, once the largest employer, fell away after 1980. It is also noticeable that healthcare grew faster than any other sector, ending the period level with retail.",
+        "expressions": [
+          {
+            "en": "manufacturing, once the largest employer, fell away after 1980",
+            "zh": "昔日最大雇主的制造业1980后衰落（同位语+分词）"
+          },
+          {
+            "en": "ending the period level with retail",
+            "zh": "期末与零售业持平（分词收尾）"
+          }
+        ],
+        "guideQ": "「追平」发生在期末的哪两条线之间？你的概括点破了吗？"
+      },
+      "4": {
+        "why": "细节一=制造+农业：15→peak 20 (1980)→declined steadily to 13（先升后降的三幕）；agriculture by contrast：hovering between 2 and 3 million / finishing at the bottom（窄幅+垫底）——一多一少，对照成段。",
+        "modelPara": "Manufacturing began as the biggest source of jobs, with 15 million in 1960, and climbed to a peak of 20 million in 1980. From there it declined steadily to 13 million in 2020. Agriculture, by contrast, was always small, hovering between 2 and 3 million and finishing at the bottom of the chart.",
+        "expressions": [
+          {
+            "en": "climbed to a peak of 20 million in 1980",
+            "zh": "1980年攀升至2000万峰值"
+          },
+          {
+            "en": "From there it declined steadily to 13 million",
+            "zh": "此后持续下滑至1300万（from there承接）"
+          },
+          {
+            "en": "hovering between 2 and 3 million",
+            "zh": "在200-300万间徘徊（hovering区间动词）"
+          }
+        ],
+        "guideQ": "先升后降的线，你的「峰值」句落在1980了吗？峰值年就是这条线的转折词。"
+      },
+      "5": {
+        "why": "细节二=两条增长线：retail 稳步 6→16 一句；healthcare multiplying eightfold（2→16）从句展开，破折号补两个对比（与retail持平、超制造3m、约2015反超）——反超时间点是多线图最值钱的交叉信息。",
+        "modelPara": "The growth sectors told the opposite story. Retail employment rose steadily from 6 million to 16 million, while healthcare expanded fastest of all, multiplying eightfold from just 2 million in 1960 to 16 million in 2020 — the same figure as retail, and three million more than manufacturing, which it had overtaken around 2015.",
+        "expressions": [
+          {
+            "en": "multiplying eightfold from just 2 million in 1960 to 16 million",
+            "zh": "从仅200万八倍增至1600万（eightfold倍数）"
+          },
+          {
+            "en": "the same figure as retail, and three million more than manufacturing",
+            "zh": "与零售持平、比制造多300万（双重对比）"
+          },
+          {
+            "en": "which it had overtaken around 2015",
+            "zh": "约2015年已完成反超（过去完成时+反超点）"
+          }
+        ],
+        "guideQ": "反超发生的大致年份（2015前后），你从图上估出来了吗？交叉点是多线图的隐藏采分点。"
+      }
+    }
+  },
+  "剑21 Test 2 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 数据已对照剑桥原书原图核正（v2）",
+    "chartNote": "地图：大学咖啡馆改造前后。Before：kitchen（顶部）、serving area (all food & drink)、staff dining rooms（员工餐厅，两张圆桌）、tables and chairs（主区）、Bar（右侧小间）、toilets（右下）。Today：kitchen保留+hot meals新增；salad bar（左侧新增）、take away food与coffee bar（原员工餐厅位）、tables and chairs保留、recycling bins（右下新增）、barbeque+outdoor seating（下方新增户外区）；toilets保留。",
+    "essay": "The diagrams show a college café before it was redesigned and the same café today.\n\nIt is clear that the café now offers a far wider range of food and drink. It is also noticeable that the space once given over to staff facilities has been handed back to customers.\n\nIn its original form, the café was simple: a kitchen with a single serving area for all food and drink, a large seating area of tables and chairs, staff dining rooms in one corner, and toilets by the side entrance.\n\nToday the kitchen is still there, but the serving area has become a hot-meals counter, and new facilities ring the seating area — a salad bar on one side, a take-away counter and coffee bar where the staff dining rooms used to be, and recycling bins near the toilets. The biggest addition of all lies outside, where a barbecue and rows of outdoor seating have been installed beside the entrance.",
+    "paraTeach": {
+      "2": {
+        "why": "改造图开头：before it was redesigned and the same café today——redesigned/today 两个时间锚点，一句完成（the same 呼应同址对比）。",
+        "modelPara": "The diagrams show a college café before it was redesigned and the same café today.",
+        "expressions": [
+          {
+            "en": "before it was redesigned",
+            "zh": "重新设计之前（被动时间从句）"
+          },
+          {
+            "en": "the same café today",
+            "zh": "如今的同一咖啡馆（现在锚点）"
+          }
+        ],
+        "guideQ": "改造图开头你的两个时间锚点用了吗？"
+      },
+      "3": {
+        "why": "概括两句定性：句1=餐饮选择大大丰富（range of food and drink），句2=员工设施的空间归还给了顾客——「空间重新分配」是本图改造的本质，比罗列新增高一层。",
+        "modelPara": "It is clear that the café now offers a far wider range of food and drink. It is also noticeable that the space once given over to staff facilities has been handed back to customers.",
+        "expressions": [
+          {
+            "en": "a far wider range of food and drink",
+            "zh": "餐食饮品选择丰富得多（定性句）"
+          },
+          {
+            "en": "the space once given over to staff facilities has been handed back to customers",
+            "zh": "曾经的员工设施空间已归还顾客（空间重配句）"
+          }
+        ],
+        "guideQ": "改造的本质（空间给了谁）你点破了吗？它比新增了什么更能概括全图。"
+      },
+      "4": {
+        "why": "细节一=旧布局（过去时）：was simple 总起，冒号后按「厨房-服务区-座位区-员工餐厅-厕所」走一遍，each带功能（serving area for all food & drink）——旧图简写，一笔一个。",
+        "modelPara": "In its original form, the café was simple: a kitchen with a single serving area for all food and drink, a large seating area of tables and chairs, staff dining rooms in one corner, and toilets by the side entrance.",
+        "expressions": [
+          {
+            "en": "a single serving area for all food and drink",
+            "zh": "唯一的售卖区供应全部餐饮（single点出简陋）"
+          },
+          {
+            "en": "staff dining rooms in one corner",
+            "zh": "一角的员工餐厅（将被改造的对象）"
+          }
+        ],
+        "guideQ": "旧布局里「注定要被改造」的对象，你点出了吗？single/staff 这些词就是伏笔。"
+      },
+      "5": {
+        "why": "细节二=今天（现在完成时/一般现在时）：serving area→hot-meals counter（改用途），salad bar/take away/coffee bar/recycling bins（新增）用 ring the seating area 一句归位，员工餐厅位用 where... used to be 指明前身；barbeque+outdoor seating 作为 the biggest addition of all 收尾。",
+        "modelPara": "Today the kitchen is still there, but the serving area has become a hot-meals counter, and new facilities ring the seating area — a salad bar on one side, a take-away counter and coffee bar where the staff dining rooms used to be, and recycling bins near the toilets. The biggest addition of all lies outside, where a barbecue and rows of outdoor seating have been installed beside the entrance.",
+        "expressions": [
+          {
+            "en": "the serving area has become a hot-meals counter",
+            "zh": "售卖区已变为热食柜台（become改用途）"
+          },
+          {
+            "en": "a take-away counter and coffee bar where the staff dining rooms used to be",
+            "zh": "外带柜台与咖啡吧设在原员工餐厅处（where...used to be）"
+          },
+          {
+            "en": "The biggest addition of all lies outside",
+            "zh": "最大的新增在室外（收尾主旨句）"
+          }
+        ],
+        "guideQ": "每处新增的「前身」，你用 where...used to be 这类结构点明了吗？"
+      }
+    }
+  },
+  "剑21 Test 4 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 数据已对照剑桥原书原图核正（v2）",
+    "chartNote": "饼图+表。饼图 Categories of library users：full-time undergraduate 44%、full-time postgraduate 25%、part-time postgraduate 16%、distance learning (all courses) 8%、academic staff 7%。表 Library user satisfaction (%)：opening hours 65/35/0；helpfulness of staff 95/5/0；availability of books 50/40/10；availability of journals 45/35/20；reliability of wi-fi 48/33/19（三列=very satisfied/fairly satisfied/not satisfied）。",
+    "essay": "The pie chart shows the categories of users of a university library, and the table shows how satisfied those users were with five aspects of the service.\n\nIt is clear that full-time undergraduates dominate the user base. It is also noticeable that the helpfulness of staff earned the strongest approval, while the availability of journals and the reliability of the wi-fi were the weakest points.\n\nFull-time undergraduates accounted for 44% of users, and a further 25% were full-time postgraduates, so nearly seven in ten users were studying on campus full time. Part-time postgraduates made up 16%, distance learners 8%, and academic staff the remaining 7%.\n\nThe satisfaction table shows a service strong on people and weaker on resources. Staff helpfulness was praised by 95% of users, with none dissatisfied, and even opening hours satisfied every respondent at least partly. The availability of books scored 50% very satisfied, but journals (45% and 20% not satisfied) and wi-fi reliability (48% and 19%) attracted the most criticism.",
+    "paraTeach": {
+      "2": {
+        "why": "图表组合开头一句一图：the categories of users（饼图）+ how satisfied those users were with five aspects（表格问题）——两个名词/疑问短语精准概括两图。",
+        "modelPara": "The pie chart shows the categories of users of a university library, and the table shows how satisfied those users were with five aspects of the service.",
+        "expressions": [
+          {
+            "en": "the categories of users of a university library",
+            "zh": "大学图书馆的用户类别（饼图主题）"
+          },
+          {
+            "en": "how satisfied those users were with five aspects of the service",
+            "zh": "用户对五方面服务的满意度（表格主题）"
+          }
+        ],
+        "guideQ": "双图开头是否一句一图、各领主题？"
+      },
+      "3": {
+        "why": "概括一句一图：饼图=全日制本科生主导（dominate the user base）；表=人员帮助满意度最高、期刊与wifi最弱——「最强点+最弱点」一句话把表格的结论说尽。",
+        "modelPara": "It is clear that full-time undergraduates dominate the user base. It is also noticeable that the helpfulness of staff earned the strongest approval, while the availability of journals and the reliability of the wi-fi were the weakest points.",
+        "expressions": [
+          {
+            "en": "dominate the user base",
+            "zh": "主导用户群体（饼图头条）"
+          },
+          {
+            "en": "the helpfulness of staff earned the strongest approval, while the availability of journals and the reliability of the wi-fi were the weakest points",
+            "zh": "最强项与最弱项对举（表格头条）"
+          }
+        ],
+        "guideQ": "满意度表你先找「最高行」和「最低行」了吗？中流行不用逐个报。"
+      },
+      "4": {
+        "why": "细节一=饼图：44% + 25% 合成 nearly seven in ten（加总换算一句），其余三类 16%/8%/7% 递减排列，the remaining 7% 收尾——加总+归堆双手法（体系2.3）。",
+        "modelPara": "Full-time undergraduates accounted for 44% of users, and a further 25% were full-time postgraduates, so nearly seven in ten users were studying on campus full time. Part-time postgraduates made up 16%, distance learners 8%, and academic staff the remaining 7%.",
+        "expressions": [
+          {
+            "en": "so nearly seven in ten users were studying on campus full time",
+            "zh": "近七成用户为全日制（so引出加总结论）"
+          },
+          {
+            "en": "Part-time postgraduates made up 16%, distance learners 8%",
+            "zh": "非全日制研究生16%、远程教育8%（递减并列）"
+          },
+          {
+            "en": "academic staff the remaining 7%",
+            "zh": "教职员占其余7%（省略动词收尾）"
+          }
+        ],
+        "guideQ": "44%+25% 你合成「七成」了吗？加总换算是饼图的加分动作。"
+      },
+      "5": {
+        "why": "细节二=满意度表：strong on people and weaker on resources 一句定性分组——人员帮助95%满赞/0不满 与 opening hours 65/35/0 归为「强项组」，books 50/40/10、journals 45/35/20、wifi 48/33/19 归为「弱项组」；括号插入数字最省字。",
+        "modelPara": "The satisfaction table shows a service strong on people and weaker on resources. Staff helpfulness was praised by 95% of users, with none dissatisfied, and even opening hours satisfied every respondent at least partly. The availability of books scored 50% very satisfied, but journals (45% and 20% not satisfied) and wi-fi reliability (48% and 19%) attracted the most criticism.",
+        "expressions": [
+          {
+            "en": "a service strong on people and weaker on resources",
+            "zh": "对人是强项、对资源是弱项（定性分组句）"
+          },
+          {
+            "en": "praised by 95% of users, with none dissatisfied",
+            "zh": "95%用户称赞、无人不满（with复合结构）"
+          },
+          {
+            "en": "attracted the most criticism",
+            "zh": "招致最多批评（弱项收尾）"
+          }
+        ],
+        "guideQ": "五行满意度你「分组」了吗？强项组与弱项组各写一句，胜过五行各报一遍。"
+      }
+    }
+  },
+  "剑21 Test 3 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 数据已对照剑桥原书原图核正（v2）",
+    "chartNote": "自然过程图（场景式）：The formation of rain-shadow deserts。编号7步：①Winds approach coast ②Winds forced upwards ③Moist air cools ④Clouds form ⑤Rain falls ⑥Dry air continues down leeward side ⑦Dry winds reach coast。场景：左侧sea，中部mountain（windward side迎风坡绿/leeward side背风坡黄），右侧 rain-shadow desert，比例尺 thousands of kilometres。",
+    "essay": "The diagram shows how a rain-shadow desert is formed on the side of a mountain range facing away from the sea.\n\nIt is clear that the desert is created not by a lack of wind or water in the region, but by a mountain range stripping the air of its moisture before that air descends. It is also noticeable that the two sides of the same mountain, just kilometres apart, end up with opposite climates.\n\nThe process begins over the ocean, where moist air is blown towards the coast. When it meets the mountain range, it has nowhere to go but upwards, and as it climbs the windward slope it cools; the vapour inside condenses into clouds and falls as heavy rain, which is why the coastal side is lush and green.\n\nBy the time the air crosses the summit, however, it has lost almost all its moisture. It sinks down the far side, and the increasing pressure warms it as it descends, so that it arrives at the leeward slope as hot, dry wind. With no moisture left to give, it brings no rain, and the land slowly dries out into the desert that gives the phenomenon its name.",
+    "paraTeach": {
+      "2": {
+        "why": "自然过程图开头：is formed on the side... facing away from the sea——分词短语精确定位「背风坡」，开头即解决全图最重要的空间设定。",
+        "modelPara": "The diagram shows how a rain-shadow desert is formed on the side of a mountain range facing away from the sea.",
+        "expressions": [
+          {
+            "en": "how a rain-shadow desert is formed",
+            "zh": "雨影沙漠如何形成（术语保留+被动）"
+          },
+          {
+            "en": "facing away from the sea",
+            "zh": "背向大海的一侧（分词定位背风坡）"
+          }
+        ],
+        "guideQ": "自然过程的开头你把「发生在哪里」一次说清了吗？"
+      },
+      "3": {
+        "why": "概括两句：句1=机制本质（不是缺水缺风，而是山「抽干」了空气水分，not by... but by 结构），句2=最强反差（同山两侧、几公里之隔，气候相反）——自然过程图的概括写机制与反差，不写步数。",
+        "modelPara": "It is clear that the desert is created not by a lack of wind or water in the region, but by a mountain range stripping the air of its moisture before that air descends. It is also noticeable that the two sides of the same mountain, just kilometres apart, end up with opposite climates.",
+        "expressions": [
+          {
+            "en": "not by a lack of wind or water in the region, but by a mountain range stripping the air of its moisture",
+            "zh": "并非缺水缺风、而是山剥去了空气水分（not by but by机制定性）"
+          },
+          {
+            "en": "the two sides of the same mountain, just kilometres apart, end up with opposite climates",
+            "zh": "几公里之隔的两侧气候相反（最强反差句）"
+          }
+        ],
+        "guideQ": "自然过程的概括你点破「因果机制的本质」了吗？不是复述步骤而是解释为什么。"
+      },
+      "4": {
+        "why": "细节一=迎风半程（对应图①-⑤）：moist air blown coastward→nowhere to go but upwards→cools→condenses→heavy rain→lush and green（which is why 回扣结果）——主动语态讲空气的旅程，因果链一句扣一句。",
+        "modelPara": "The process begins over the ocean, where moist air is blown towards the coast. When it meets the mountain range, it has nowhere to go but upwards, and as it climbs the windward slope it cools; the vapour inside condenses into clouds and falls as heavy rain, which is why the coastal side is lush and green.",
+        "expressions": [
+          {
+            "en": "it has nowhere to go but upwards",
+            "zh": "空气别无去路只能爬升（拟物句）"
+          },
+          {
+            "en": "the vapour inside condenses into clouds and falls as heavy rain",
+            "zh": "水汽凝云、化作大雨（主动语态因果链）"
+          },
+          {
+            "en": "which is why the coastal side is lush and green",
+            "zh": "这正是沿海一侧葱郁的原因（which is why回扣）"
+          }
+        ],
+        "guideQ": "自然过程你通篇用主动语态讲故事了吗？出现大量被动就写成了机械流程。"
+      },
+      "5": {
+        "why": "细节二=背风半程（对应图⑥-⑦）+得名收尾：By the time the air crosses the summit（转场）→sinks→pressure warms→hot, dry wind→With no moisture left to give 分词短语点根源→the desert that gives the phenomenon its name 同位语收尾——现象图的终点就是图名本身。",
+        "modelPara": "By the time the air crosses the summit, however, it has lost almost all its moisture. It sinks down the far side, and the increasing pressure warms it as it descends, so that it arrives at the leeward slope as hot, dry wind. With no moisture left to give, it brings no rain, and the land slowly dries out into the desert that gives the phenomenon its name.",
+        "expressions": [
+          {
+            "en": "By the time the air crosses the summit",
+            "zh": "待空气越过山顶（转场）"
+          },
+          {
+            "en": "the increasing pressure warms it as it descends",
+            "zh": "下沉增压使空气再升温（下沉增温机制）"
+          },
+          {
+            "en": "the desert that gives the phenomenon its name",
+            "zh": "让这一现象得名的沙漠（同位语收尾）"
+          }
+        ],
+        "guideQ": "你的最后一步和图的名字接上了吗？现象图的终点就是图名本身。"
+      }
+    }
+  }
+}

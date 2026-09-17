@@ -1,0 +1,10 @@
+{
+  "scores": {
+    "TR": 6,
+    "CC": 6,
+    "LR": 6,
+    "GRA": 6
+  },
+  "overall": 6,
+  "reason": "TA：有总述（五个步骤）并按流程顺序展开、含 4.5 km 等具体信息，但步骤内容有误（the final step is to use a generator in order to water be powered 因果颠倒，应为水/蒸汽驱动发电机；冷凝环节位置含糊），属'抓住主要特征但细节不准确'的6分。CC：流程叙述有清晰推进，先后顺序连接词使用得当（First、After that、At this point、Then、Finally），但句内衔接有断裂（a turbine which moves it...which is who produces），6分。LR：流程术语使用基本正确（pumped down、geothermal zone、turbine、generator），但构词与拼写错误明显（condensered、trasladated、undergrownd、conteiner、trough、In sumary），6分。GRA：被动语态使用恰当且句式有变化，但存在错误（in order to water be powered、a circle movements、a energy tower），属'错误较多但基本不阻碍理解'的6分。"
+}

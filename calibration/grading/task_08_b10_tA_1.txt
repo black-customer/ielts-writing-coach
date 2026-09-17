@@ -1,0 +1,11 @@
+【评分任务】IELTS Academic Writing Task 1（图表作文，图表未提供）
+【题目原文】（缺失，按作文内容自行判断）
+
+【考生作文】
+Dear Sally, My departure date for New Zealand is drawing near, and I am busy with preparations. I have enrolled at an institution called 'ABC English' in Wellington, for a six-month Advanced course, full-time. It is quite expensive but I am hopeful of improving my pronunciation, especially. To assist in covering the costs of my study, I aim to find a part-time job. Not only are the college fees rather high, but also I know that rental accommodation in the capital city will not be cheap, to say nothing of food and heating expenses! So I would very much like to arrange some temporary employment before I arrive. I was wondering if you could ask around among your friends and colleagues to see if anyone wants a house-cleaner, gardener, or nanny for their children. I know you have a wide social network in Wellington which you could canvas for me, if you wouldn’t mind, i’d be so grateful. I look forward to seeing you soon. Best wishes, Margot
+
+Model and sample answers for Writing tasks
+
+【输出要求】严格输出 JSON（不要 markdown 代码块），格式：
+{"scores":{"TR":x,"CC":x,"LR":x,"GRA":x},"overall":x,"reason":"每项一句话依据（中文）"}
+x 为 0-9 的分数，可带 0.5。Task 1 若图表缺失，TR 按作文内部数据一致性保守评估。

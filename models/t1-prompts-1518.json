@@ -1,0 +1,82 @@
+{
+  "剑15 Test 1": {
+    "t1type": "bar chart",
+    "t1": "The chart below shows the results of a survey about people's coffee and tea buying and drinking habits in five Australian cities. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chartNote": "柱图，5城市（Sydney/Melbourne/Brisbane/Adelaide/Hobart）×3习惯的百分比（过去4周）：买现磨咖啡、买速溶咖啡、去咖啡馆喝咖啡或茶。关键数据：去咖啡馆一栏4个城市超过55%（Sydney约63%、Melbourne约64%最高、Hobart约63%、Brisbane约55%），Adelaide最低约49%；买现磨咖啡在Adelaide约31%、Hobart约38%、Sydney约44%；速溶咖啡在Melbourne约46%、Brisbane和Hobart约52-55%、Adelaide约50%。总体特征：去咖啡馆是最普遍习惯（Adelaide除外）；速溶咖啡购买率普遍高于现磨。"
+  },
+  "剑15 Test 2": {
+    "t1type": "line graph",
+    "t1": "The graph below shows the number of tourists visiting a particular Caribbean island between 2010 and 2017. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chartNote": "线图，三条线（百万人）：总人数、乘游轮到访、住在岛上到访，2010-2017。总人数从1.0m升至2012-2013年的1.5m，2015-2016稳定在2.5m，2017跳到3.5m；乘游轮从2010年约0.25m持续上升到2017年2.0m；住岛游客从0.75m升到2013年1.5m后保持不变。总体特征：总 visitor 数整体上升；游轮客后来居上（约2016年反超住岛客）。"
+  },
+  "剑15 Test 3": {
+    "t1type": "process diagram",
+    "t1": "The diagram below illustrates the process involved in how instant noodles are produced and put into containers for distribution to supermarkets. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chartNote": "流程图：速食面（instant noodles）制作，8个阶段：面粉从silo吊运→搅拌机（加面粉、油、水制成dough）→压成dough sheets→切成strips→卷成noodle discs→油炸煮熟→晾干→装杯（加蔬菜和香料）→封口贴标。起点是面粉储存，终点是贴标完成。"
+  },
+  "剑15 Test 4": {
+    "t1type": "pie + table",
+    "t1": "The charts below show what anthropology graduates from one university did after finishing their undergraduate degree, and the table shows the salaries of the anthropologists in work after five years. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chartNote": "饼图+表。饼图去向：全职工作52%、兼职工作15%、毕业深造全职8%、兼职工作兼深造5%、待业12%、其他8%。表：工作5年后各就业类型的年薪分布（%）：10万美元以上——政府50%、自由职业40%、私营30%；7.5-10万——自由职业40%、政府30%、私营25%；5-7.5万——私营35%、政府与自由职业各15%；2.5-5万——各类型约5-10%。总体特征：过半全职就业；高薪段政府比例最高。"
+  },
+  "剑16 Test 1": {
+    "t1type": "line graph",
+    "t1": "The chart below shows the changes in ownership of electrical appliances and the amount of time spent doing housework in households in one country between 1920 and 2019. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chartNote": "线图：3种家电拥有率%+每周家务小时数，1920-2019。冰箱从1920年0%→1940年约45%→1980年前后达到100%；吸尘器1920年0%→2000年前后约100%；洗衣机1920年约40%缓慢升至2019年约75%；每周家务时长从1920年约50小时降到2019年约10小时（1950年已减半至20小时）。总体特征：家电普及与家务时长同步反向变化（ Appliances 普及→家务时间大幅下降）。"
+  },
+  "剑16 Test 2": {
+    "t1type": "process diagram",
+    "t1": "The diagram below shows the manufacturing process for making sugar from sugar cane. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chartNote": "流程图：甘蔗制糖7个阶段：种植生长12-18个月→收割（机器或人工砍伐）→压榨机榨汁→汁液过滤净化→蒸发器加热浓缩成糖浆→离心分离机分离出糖晶体→干燥冷却成糖。起点种植，终点干燥冷却。"
+  },
+  "剑16 Test 3": {
+    "t1type": "maps",
+    "t1": "The plans below show the site of an airport now and how it will look after redevelopment next year. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chartNote": "地图：Southwest Airport 现在与翻修后对比。关键变化：登机口8→10；检查口到登机口的走廊将被sky train取代；安检口移至behind check-in；新增bag drop区；café扩为café+shop；增设更多服务设施。总体特征：扩容（+2登机口）+ 交通方式升级（walk→sky train）。"
+  },
+  "剑16 Test 4": {
+    "t1type": "process diagram",
+    "t1": "The diagram below shows the process for recycling plastic bottles. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chartNote": "流程图：塑料瓶回收9阶段：投入回收桶→卡车收运→回收中心分拣→压缩成块→破碎→清洗→熔化成pellets→加热制成产品原料→制成新品（衣服、玩具等）。起点投瓶，终点新产品。"
+  },
+  "剑17 Test 1": {
+    "t1type": "maps",
+    "t1": "The maps below show an industrial area in the town of Norbiton and planned future development of this site. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chartNote": "地图：Norbiton工业区现状 vs 未来改造规划。关键变化：所有工厂被住宅取代；环岛/主路重新布局（roundabout新增）；新修桥梁跨河连接住宅区与主路另一侧；增设商店；学校保留并新建playground；河边农田改建住宅。总体特征：工业区彻底变住宅区+基础设施升级。"
+  },
+  "剑17 Test 2": {
+    "t1type": "table + pie charts",
+    "t1": "The table and charts below give information on the police budget and how it was spent in one area of Britain in 2017 and 2018. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chartNote": "表+双饼图。预算总额：2017年304.7m→2018年318.6m；来源：national government 175.5→177.8m，local taxes（最大涨幅来源）91.2→102.3m，other 38→38.5m。支出饼图：salaries占大头75%→69%，technology 8%→14%（几乎翻倍），buildings 17%→17%持平。总体特征：预算增加主要由local taxes贡献；支出结构中technology占比显著上升、salaries下降。"
+  },
+  "剑17 Test 3": {
+    "t1type": "bar chart",
+    "t1": "The chart below gives information about how families in one country spent their weekly income in 1968 and in 2018. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chartNote": "柱图：1968 vs 2018 家庭周收入各类支出%。1968年food最高35%；2018年food降至约17%；leisure从约6%升至约13%成为最大项；housing从约10%升至约19%；transport小幅上升约8%→11%；personal goods等占比下降。总体特征：食品从绝对最大项减半，leisure与housing大幅上升——消费结构从温饱转向休闲。"
+  },
+  "剑17 Test 4": {
+    "t1type": "line graph",
+    "t1": "The graph below shows owner-reported cases of shop closures and openings in one country between 2011 and 2018. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chartNote": "线图：商店关闭数vs新开数，2011-2018。开张数：2011年约8500→2012年跌至约4000→2014-2015回升至约6500-7000→2018年跌至约3000；关闭数：2011年约7000→2012年最低约600→2014年升至约7000（与开张线交叉）→2018年回落至约3000。总体特征：两条线均大幅波动，2018年两端趋同（约3000）；2012年关店骤降、2014年交叉是关键点。"
+  },
+  "剑18 Test 1": {
+    "t1type": "line graph",
+    "t1": "The graph below gives information about the percentage of the population in four Asian countries living in cities from 1970 to 2020, with predictions for 2030. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chartNote": "线图（含将来时）：菲律宾/马来西亚/泰国/印尼城市人口%，1970-2020实线+2030虚线预测。四国全部上升；马来西亚最高（1970约30%→2020约70%→2030预测约80%）；印尼最低（1970约15%→2020约40%→2030约55%）；泰国与菲律宾居中（泰国1970约20%→2030约50%），菲律宾2020约45%→2030约55%前后两线接近。总体特征：四国城市化全部持续上升，且2030年四国差距明显缩小。"
+  },
+  "剑18 Test 2": {
+    "t1type": "bar chart",
+    "t1": "The chart below shows the number of households in the US by their annual income in 2007, 2011 and 2015. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chartNote": "柱图：美国家庭数（百万）按5档年收入，2007/2011/2015三年。25k-50k档始终最大（约28-30m，稳定）；100k+档三年连续增长（约18→19→26m，2011-2015涨幅最大）；75-100k小幅上升；<25k与50-75k基本平稳。总体特征：中档（2.5-5万）一直是最大群体；高收入家庭显著增加。"
+  },
+  "剑18 Test 3": {
+    "t1type": "maps",
+    "t1": "The diagram below shows the floor plan of a public library 20 years ago and the same library now. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chartNote": "地图：中央图书馆20年前vs现在。关键变化：书架大减、改造为sofas和自习区；enquiry desk→café； CDs/videos区→storytelling events空间；报刊区→自服务借还书机；儿童区保留但扩充。总体特征：从藏书空间转型为社区活动空间（books→events/社交）。"
+  },
+  "剑18 Test 4": {
+    "t1type": "line graph",
+    "t1": "The graph below shows the average monthly change in the prices of copper, nickel and zinc during 2014. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "chartNote": "线图：铜/镍/锌2014年每月价格平均变化%（上下穿过0轴）。镍波动最大：3月冲高至约+8%，6月跌至约-5%，年末回落至约+1%；铜大部分月份为负，下半年回升，年末约+2%；锌年初约+3%，年中跌至约-3%，年末约+1%。总体特征：镍最不稳定；铜与锌波动较小且年末均微涨。"
+  }
+}

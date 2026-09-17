@@ -1,0 +1,47 @@
+[
+ {
+  "taskFile": "calibration/grading/task_03_b10_t2_2.txt",
+  "out": "calibration/grading/grade_03_b10_t2_2.json",
+  "kind": "Task 2（议论文）",
+  "band": 3.5,
+  "book": 10,
+  "test": "2",
+  "task": 2
+ },
+ {
+  "taskFile": "calibration/grading/task_08_b10_tA_1.txt",
+  "out": "calibration/grading/grade_08_b10_tA_1.json",
+  "kind": "Task 1（图表作文，图表未提供）",
+  "band": 9,
+  "book": 10,
+  "test": "A",
+  "task": 1
+ },
+ {
+  "taskFile": "calibration/grading/task_13_b11_t3_1.txt",
+  "out": "calibration/grading/grade_13_b11_t3_1.json",
+  "kind": "Task 1（图表作文，图表未提供）",
+  "band": 6,
+  "book": 11,
+  "test": "3",
+  "task": 1
+ },
+ {
+  "taskFile": "calibration/grading/task_18_b12_t5_2.txt",
+  "out": "calibration/grading/grade_18_b12_t5_2.json",
+  "kind": "Task 2（议论文）",
+  "band": 6,
+  "book": 12,
+  "test": "5",
+  "task": 2
+ },
+ {
+  "taskFile": "calibration/grading/task_23_b12_t8_1.txt",
+  "out": "calibration/grading/grade_23_b12_t8_1.json",
+  "kind": "Task 1（图表作文，图表未提供）",
+  "band": 6,
+  "book": 12,
+  "test": "8",
+  "task": 1
+ }
+]

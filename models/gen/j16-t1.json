@@ -1,0 +1,306 @@
+{
+  "剑16 Test 1 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "线图：冰箱0%(1920)→约45%(1940)→约100%(1980)；吸尘器1920年约30%→约100%(2000)；洗衣机约40%(1920)缓升→约75%(2019)；每周家务时长约50小时(1920)→约20(1950)→约10(2019)。",
+    "essay": "The line graph tracks the percentage of households owning three electrical appliances, together with the number of hours spent on housework each week, in one country between 1920 and 2019.\n\nIt is clear that appliance ownership rose dramatically over the period shown. It is also noticeable that this happened alongside a sharp fall in the time families spent on housework.\n\nThe refrigerator saw the most remarkable growth: almost no households owned one in 1920, but the figure climbed to around 45% by 1940 and had reached virtually every home by 1980. Vacuum cleaners followed a similar path, starting at roughly 30% and becoming almost universal after 2000. The washing machine was the slowest of the three, rising only gradually from 40% in 1920 to 75% by the end of the period.\n\nThe time devoted to housework fell in step with these changes. It halved from about 50 hours per week in 1920 to 20 hours by 1950, and continued declining to a low of just 10 hours in 2019. The contrast could hardly be clearer: as homes acquired these machines, the household workload shrank to a fifth of its former level.",
+    "paraTeach": {
+      "2": {
+        "why": "开头改写：shows the changes in ownership→tracks the percentage of households owning（名词改从句）；and连接的「家务时长」补成 the number of hours spent on housework each week——双信息一个不漏；时间段1920-2019原样保留。",
+        "modelPara": "The line graph tracks the percentage of households owning three electrical appliances, together with the number of hours spent on housework each week, in one country between 1920 and 2019.",
+        "expressions": [
+          {
+            "en": "tracks the percentage of households owning three electrical appliances",
+            "zh": "追踪三种家电的家庭拥有率（shows替换+从句改写）"
+          },
+          {
+            "en": "together with the number of hours spent on housework each week",
+            "zh": "连同每周家务小时数（第二信息嵌入）"
+          }
+        ],
+        "guideQ": "多信息图的题干改写，你把「每一条线/每一块信息」都装进开头了吗？"
+      },
+      "3": {
+        "why": "概括两句零数字：句1=家电拥有率总体暴涨，句2=与家务时长骤降同步发生——这张图的头条就是「一条升一条降」，把对比关系写进概括（体系2.1：总体差异）。",
+        "modelPara": "It is clear that appliance ownership rose dramatically over the period shown. It is also noticeable that this happened alongside a sharp fall in the time families spent on housework.",
+        "expressions": [
+          {
+            "en": "rose dramatically over the period shown",
+            "zh": "在图示期间大幅上升"
+          },
+          {
+            "en": "alongside a sharp fall in",
+            "zh": "伴随…的骤降（两线关系的概括写法）"
+          }
+        ],
+        "guideQ": "两条线方向相反的图，你的概括句点出「一升一降伴随发生」了吗？"
+      },
+      "4": {
+        "why": "细节一=三台家电（比较型分组）：先写最陡的冰箱（0→45%→100%，两段式爬升），vacuum 用 similar path 类比带过，washer 用 slowest 对比收尾——最值展开、次值类比、末位对比，每个数字都有参照（体系2.3）。",
+        "modelPara": "The refrigerator saw the most remarkable growth: almost no households owned one in 1920, but the figure climbed to around 45% by 1940 and had reached virtually every home by 1980. Vacuum cleaners followed a similar path, starting at roughly 30% and becoming almost universal after 2000. The washing machine was the slowest of the three, rising only gradually from 40% in 1920 to 75% by the end of the period.",
+        "expressions": [
+          {
+            "en": "saw the most remarkable growth",
+            "zh": "增长最惊人（最值主题句）"
+          },
+          {
+            "en": "had reached virtually every home by 1980",
+            "zh": "到1980年已基本普及（过去完成时+到位表达）"
+          },
+          {
+            "en": "the slowest of the three, rising only gradually",
+            "zh": "三者中最慢、仅缓升（末位对比）"
+          }
+        ],
+        "guideQ": "三条线的详略安排是「最陡的最详、类似的类比、最慢的对比」吗？平均用力=流水账。"
+      },
+      "5": {
+        "why": "细节二=家务时长+收尾对比：halved/continued declining/low of just 10 三步写完下降线，结尾用 1920 vs 2019 的对比句把两条线重新拧在一起（a fifth of its former level 倍数表达）——呼应概括段的「alongside」。",
+        "modelPara": "The time devoted to housework fell in step with these changes. It halved from about 50 hours per week in 1920 to 20 hours by 1950, and continued declining to a low of just 10 hours in 2019. The contrast could hardly be clearer: as homes acquired these machines, the household workload shrank to a fifth of its former level.",
+        "expressions": [
+          {
+            "en": "fell in step with these changes",
+            "zh": "随这些变化同步下降（指代衔接+关系句）"
+          },
+          {
+            "en": "halved from about 50 hours per week in 1920 to 20 hours",
+            "zh": "从每周约50小时减半到20小时（倍数+区间）"
+          },
+          {
+            "en": "shrank to a fifth of its former level",
+            "zh": "缩水到原来的五分之一（倍数对比收尾）"
+          },
+          {
+            "en": "shrank to a fifth of its former level",
+            "zh": "缩水到原来的五分之一（倍数对比收尾）"
+          }
+        ],
+        "guideQ": "图上有好几条线时，你有没有在最后用一句对比把所有线的关系收拢？"
+      }
+    }
+  },
+  "剑16 Test 2 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "流程图：甘蔗制糖7阶段——种植生长12-18个月→收割（机器或人工砍伐）→压榨机榨汁→汁液过滤净化→蒸发器加热浓缩→离心分离出糖晶体→干燥冷却成糖。",
+    "essay": "The diagram illustrates how sugar is produced from sugar cane in seven distinct stages.\n\nIt is clear that the process begins with the growing of the crop and ends with the drying and cooling of the final crystals. It is also noticeable that harvesting can be carried out in two different ways.\n\nThe first stage takes place in the fields, where sugar cane needs 12 to 18 months to mature before it is harvested. This can be done either mechanically, with machines cutting the cane, or manually, by farmers using simple tools. The harvested cane is then fed into a crushing mill, which presses it to extract the raw juice.\n\nPreparing the juice for consumption involves the remaining four stages. It is first filtered to remove impurities, before being heated in an evaporator, which turns it into a thick syrup. Next, the syrup passes into a centrifuge, where the sugar crystals are separated from the rest of the liquid. Finally, the crystals are dried and cooled, at which point the sugar is ready for sale.",
+    "paraTeach": {
+      "2": {
+        "why": "流程图开头：主动改写为被动（making sugar from sugar cane→how sugar is produced from sugar cane），并把步数直接写进开头一句（in seven distinct stages）——流程图题把步数前置，考官一眼确认你看懂了全图。",
+        "modelPara": "The diagram illustrates how sugar is produced from sugar cane in seven distinct stages.",
+        "expressions": [
+          {
+            "en": "how sugar is produced from sugar cane",
+            "zh": "糖如何由甘蔗制成（被动改写）"
+          },
+          {
+            "en": "in seven distinct stages",
+            "zh": "分七个明确阶段（步数前置）"
+          }
+        ],
+        "guideQ": "流程图你的第一句就报出总步数了吗？"
+      },
+      "3": {
+        "why": "概括=起终点+分叉点：句1 from growing to drying and cooling 框住全程；句2点出流程里唯一的分支（收割有两种方式）——分支是这张图区别于普通线性流程的最显著特征，必须进overview。",
+        "modelPara": "It is clear that the process begins with the growing of the crop and ends with the drying and cooling of the final crystals. It is also noticeable that harvesting can be carried out in two different ways.",
+        "expressions": [
+          {
+            "en": "begins with the growing of the crop and ends with",
+            "zh": "以种植开始、以…结束（起终点句）"
+          },
+          {
+            "en": "can be carried out in two different ways",
+            "zh": "可用两种方式完成（分支特征）"
+          }
+        ],
+        "guideQ": "这张流程图的「分叉」你找了吗？有分支不点，概括就平庸。"
+      },
+      "4": {
+        "why": "细节一=前三步（田间+榨汁）：needs 12 to 18 months 数字纪律；either...or... 并写两种收割；crushing mill 用定语从句 which presses it to explain 机制——步骤、方式、机制三层信息一句不浪费。",
+        "modelPara": "The first stage takes place in the fields, where sugar cane needs 12 to 18 months to mature before it is harvested. This can be done either mechanically, with machines cutting the cane, or manually, by farmers using simple tools. The harvested cane is then fed into a crushing mill, which presses it to extract the raw juice.",
+        "expressions": [
+          {
+            "en": "needs 12 to 18 months to mature",
+            "zh": "需12-18个月成熟（唯一的数字）"
+          },
+          {
+            "en": "either mechanically, with machines cutting the cane, or manually",
+            "zh": "机械或人工两种方式（分支并写）"
+          },
+          {
+            "en": "which presses it to extract the raw juice",
+            "zh": "压榨机榨出原汁（which从句带机制）"
+          }
+        ],
+        "guideQ": "流程图里的分叉你是并成一句 either...or，还是当成两条流程各写一遍？前者才对。"
+      },
+      "5": {
+        "why": "细节二=后四步：先总后分（Preparing the juice involves the remaining four stages 一句交代段内结构），filtered→heated→syrup→centrifuge→dried and cooled 全被动串联，Next/Finally 两个顺序词就够，结尾 at which point the sugar is ready for sale 收在终点。",
+        "modelPara": "Preparing the juice for consumption involves the remaining four stages. It is first filtered to remove impurities, before being heated in an evaporator, which turns it into a thick syrup. Next, the syrup passes into a centrifuge, where the sugar crystals are separated from the rest of the liquid. Finally, the crystals are dried and cooled, at which point the sugar is ready for sale.",
+        "expressions": [
+          {
+            "en": "before being heated in an evaporator",
+            "zh": "之后在蒸发器中加热（before being句型）"
+          },
+          {
+            "en": "the sugar crystals are separated from the rest of the liquid",
+            "zh": "糖晶体与其余液体分离（关键步骤）"
+          },
+          {
+            "en": "at which point the sugar is ready for sale",
+            "zh": "此时糖即可出售（终点收尾）"
+          }
+        ],
+        "guideQ": "你的细节段开头有没有「本段管哪几步」的总起句？流程图切两段后，每段都该先报边界。"
+      }
+    }
+  },
+  "剑16 Test 3 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "地图：Southwest Airport 现状vs明年翻修后。关键变化：登机口8→10；安检口后移；新增bag drop区；连接走廊改为sky train；café扩为café+shop；等待区设施增多。规划图用将来时。",
+    "essay": "The plans show the current layout of Southwest Airport and how the site will look once it has been redeveloped next year.\n\nIt is clear that the main change will be an increase in the number of gates, from eight to ten. It is also noticeable that passengers will move around the airport in a completely different way after the work is completed.\n\nAt present, travellers check in at the entrance area, where security is located, and then walk along a single corridor to reach the eight gates. After redevelopment, this entrance zone will be substantially reorganised: a bag drop will be added beside the check-in desks, the security area will be moved behind them, and the café will be converted into a combined café and shop.\n\nThe most striking alteration concerns the walkway. Instead of walking the full length of the building, passengers will board a sky train, which will carry them directly to the gates; two extra gates, including one replacing the existing café, will bring the total to ten, and the waiting area beside them will offer more seats and facilities for the increased number of travellers.",
+    "paraTeach": {
+      "2": {
+        "why": "规划图地图（现在vs将来）开头：The plans show... and how the site will look——用 will look 一词锁定全文将来时基调；once it has been redeveloped 用完成时讲「翻修完成」这一时点（体系2.1：时态由时间定）。",
+        "modelPara": "The plans show the current layout of Southwest Airport and how the site will look once it has been redeveloped next year.",
+        "expressions": [
+          {
+            "en": "the current layout of Southwest Airport",
+            "zh": "机场当前布局"
+          },
+          {
+            "en": "how the site will look once it has been redeveloped",
+            "zh": "翻修完成后的样子（将来时+完成时）"
+          }
+        ],
+        "guideQ": "规划图你全文用 will be / will look 了吗？混进 was built 就时态错乱。"
+      },
+      "3": {
+        "why": "地图概括两句：句1给头条变化（登机口8→10，from eight to ten 唯一允许进overview的对比因为它是总纲），句2给第二特征（通行方式彻底改变）——概括写「变化的最大头」而不是逐处罗列。",
+        "modelPara": "It is clear that the main change will be an increase in the number of gates, from eight to ten. It is also noticeable that passengers will move around the airport in a completely different way after the work is completed.",
+        "expressions": [
+          {
+            "en": "the main change will be an increase in the number of gates",
+            "zh": "最大变化是登机口增加（头条句）"
+          },
+          {
+            "en": "move around the airport in a completely different way",
+            "zh": "通行方式彻底不同（第二特征）"
+          }
+        ],
+        "guideQ": "地图题你的概括挑出「最大的一两处变化」了吗？把十几处变化全列进去就成明细账了。"
+      },
+      "4": {
+        "why": "细节一=入口半区：At present 一句写现状（check-in+security+走廊），After redevelopment 用冒号引出三连改动（bag drop新增/security后移/café变身）——「现状一句+将来三改」的对称结构，was/will be 时态切换清晰。",
+        "modelPara": "At present, travellers check in at the entrance area, where security is located, and then walk along a single corridor to reach the eight gates. After redevelopment, this entrance zone will be substantially reorganised: a bag drop will be added beside the check-in desks, the security area will be moved behind them, and the café will be converted into a combined café and shop.",
+        "expressions": [
+          {
+            "en": "will be substantially reorganised",
+            "zh": "将被大幅重组（半区总起）"
+          },
+          {
+            "en": "will be added beside the check-in desks",
+            "zh": "将增设于值机柜台旁（新增类变化）"
+          },
+          {
+            "en": "will be converted into a combined café and shop",
+            "zh": "将改为咖啡+商店合体（用途改变类变化）"
+          }
+        ],
+        "guideQ": "地图的变化你都归到「新增/拆除/扩建/移位/改用途」五类动词了吗？分类用词准确是地图题词汇分的核心。"
+      },
+      "5": {
+        "why": "细节二=通道半区：用 The most striking alteration concerns... 点出本段主笔（sky train），Instead of walking 对比新旧方式；定语从句 which will carry them directly to the gates 一句带出功能，两个附加变化（新增登机口+等待区扩容）合并收尾。",
+        "modelPara": "The most striking alteration concerns the walkway. Instead of walking the full length of the building, passengers will board a sky train, which will carry them directly to the gates; two extra gates, including one replacing the existing café, will bring the total to ten, and the waiting area beside them will offer more seats and facilities for the increased number of travellers.",
+        "expressions": [
+          {
+            "en": "The most striking alteration concerns",
+            "zh": "最显眼的变化涉及…（变化类主旨句）"
+          },
+          {
+            "en": "Instead of walking the full length of the building",
+            "zh": "不再步行穿越整个建筑（新旧对比）"
+          },
+          {
+            "en": "will bring the total to ten",
+            "zh": "总数将增至10（数字变化的表达）"
+          }
+        ],
+        "guideQ": "你把「交通方式的替换」当成单独一段的重点了吗？地铁替代步行这种结构性变化，值得一段的篇幅。"
+      }
+    }
+  },
+  "剑16 Test 4 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "流程图：塑料瓶回收——投入回收桶→卡车收运→回收中心分拣→压缩成块→破碎→清洗→熔化成pellets→加热制成产品原料→制成新品（衣服、玩具等）。",
+    "essay": "The diagram shows the stages by which plastic bottles are recycled, from the moment they are thrown away to the production of new goods.\n\nIt is clear that the process consists of nine steps, beginning at the recycling bin and ending with everyday products such as clothing and toys. It is also noticeable that both the public and industrial machinery play essential parts in the cycle.\n\nThe first three stages take place before the bottles reach the factory. Consumers drop their used bottles into recycling bins, from which the bottles are collected by lorries and taken to a sorting centre, where reusable bottles are separated from unusable ones. In the preparation stage, the sorted bottles are compressed into large blocks, crushed into small pieces and washed thoroughly.\n\nThe manufacturing stage begins when the clean pieces are melted down and formed into pellets. These pellets are then heated once more and rolled into sheets, which are used to make a wide range of end products, from clothes to stationery. What makes this process remarkable is that it never truly finishes: today's plastic bottle becomes part of tomorrow's product, and the cycle can begin again.",
+    "paraTeach": {
+      "2": {
+        "why": "开头把流程的起终点装进 from...to... 介词短语（from thrown away to production of new goods），一句完成改写+全程框架——比 The diagram shows the process of recycling 更具体。",
+        "modelPara": "The diagram shows the stages by which plastic bottles are recycled, from the moment they are thrown away to the production of new goods.",
+        "expressions": [
+          {
+            "en": "the stages by which plastic bottles are recycled",
+            "zh": "塑料瓶被回收的各个阶段（被动改写）"
+          },
+          {
+            "en": "from the moment they are thrown away to the production of new goods",
+            "zh": "从丢弃到新产品（起终点框架）"
+          }
+        ],
+        "guideQ": "你的流程图开头带了「起点和终点」吗？一句话交代全程，考官立刻知道你读懂了。"
+      },
+      "3": {
+        "why": "概括=步数+起终点（句1）+流程的结构特征（句2：公众与机器各承担一半）——第二句跳出步骤细节看「谁参与」，这是这张图比一般流程图深一层的特征。",
+        "modelPara": "It is clear that the process consists of nine steps, beginning at the recycling bin and ending with everyday products such as clothing and toys. It is also noticeable that both the public and industrial machinery play essential parts in the cycle.",
+        "expressions": [
+          {
+            "en": "consists of nine steps",
+            "zh": "由九步组成（步数句）"
+          },
+          {
+            "en": "both the public and industrial machinery play essential parts",
+            "zh": "公众与机器缺一不可（参与方特征）"
+          }
+        ],
+        "guideQ": "除了数步数，你有没有看出流程里「人或机器」的角色分工？第二层特征往往在评分时拉开差距。"
+      },
+      "4": {
+        "why": "细节一=工厂前五步：总起句 The first three stages take place before the bottles reach the factory 先报边界；三个 where/from which 定语从句把「收集-分拣」的场景链起来；压缩-破碎-清洗三连动作用一个句子并列完成（体系2.2从中点切两段）。",
+        "modelPara": "The first three stages take place before the bottles reach the factory. Consumers drop their used bottles into recycling bins, from which the bottles are collected by lorries and taken to a sorting centre, where reusable bottles are separated from unusable ones. In the preparation stage, the sorted bottles are compressed into large blocks, crushed into small pieces and washed thoroughly.",
+        "expressions": [
+          {
+            "en": "from which the bottles are collected by lorries",
+            "zh": "瓶子由此被卡车收走（from which场景链）"
+          },
+          {
+            "en": "reusable bottles are separated from unusable ones",
+            "zh": "可用瓶与不可用瓶被分开（分拣步骤）"
+          },
+          {
+            "en": "are compressed into large blocks, crushed into small pieces and washed",
+            "zh": "压块、破碎、清洗三步并一句"
+          }
+        ],
+        "guideQ": "相邻的三个机械动作你会并成一句写吗？一步一句的流程图，句子机械感很重。"
+      },
+      "5": {
+        "why": "细节二=后四步：melted→pellets→heated→rolled→end products；these pellets 指代衔接；结尾 What makes this process remarkable 是流程图罕见的「评论句」——点出循环本质，呼应开头 without breaking 客观原则（说的是图内事实而非观点）。",
+        "modelPara": "The manufacturing stage begins when the clean pieces are melted down and formed into pellets. These pellets are then heated once more and rolled into sheets, which are used to make a wide range of end products, from clothes to stationery. What makes this process remarkable is that it never truly finishes: today's plastic bottle becomes part of tomorrow's product, and the cycle can begin again.",
+        "expressions": [
+          {
+            "en": "melted down and formed into pellets",
+            "zh": "熔化制成小球粒（关键转化步骤）"
+          },
+          {
+            "en": "a wide range of end products",
+            "zh": "各种各样的最终产品"
+          },
+          {
+            "en": "the cycle can begin again",
+            "zh": "循环可以重新开始（点出循环性）"
+          }
+        ],
+        "guideQ": "写完所有步骤后，你有没有用一句「流程的本质」收尾？循环图尤其需要点破 cycle。"
+      }
+    }
+  }
+}

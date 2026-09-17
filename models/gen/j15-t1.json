@@ -1,0 +1,185 @@
+{
+  "剑15 Test 1 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "柱图，5城市×3习惯的百分比（过去4周）：去咖啡馆喝咖啡/茶在四个城市超过55%（Sydney/Melbourne/Hobart约63%，Brisbane约55%），Adelaide例外仅约49%；速溶咖啡 Brisbane/Hobart约54-55%，Melbourne约48%，Sydney约46%；现磨咖啡全场最低：Adelaide约31%，Hobart约38%，Sydney约44%。",
+    "essay": "The bar chart compares the percentages of residents in five Australian cities who bought fresh coffee, bought instant coffee, or visited a café for coffee or tea in the last four weeks.\n\nIt is clear that going to a café was the most common habit in the majority of the cities shown. It is also noticeable that buying instant coffee was generally more popular than buying fresh coffee.\n\nGoing to a café was the most popular habit in four of the five cities: the proportion stood at roughly 63% in Sydney, Melbourne and Hobart, and slightly lower, at 55%, in Brisbane. In Adelaide, by contrast, the figure dipped to 49%, the only city where fewer than half of residents had done so.\n\nThe pattern for shop-bought coffee was different: in every city, instant coffee outsold the fresh variety. Around 54-55% of people in Brisbane and Hobart bought instant coffee, compared with roughly 46-48% in Melbourne and Sydney. Fresh coffee was the least common habit overall, purchased by just 31% of residents in Adelaide and 38% in Hobart, although the figure for Sydney was a little higher, at 44%.",
+    "paraTeach": {
+      "2": {
+        "why": "开头一句完成全部改写：shows→compares（体系2.4规定的替换词）；people's coffee and tea buying and drinking habits→residents who bought..., bought..., or visited a café（抽象名词组改三个动词短语，信息一点不丢）；时间状语 in the last four weeks 原样保留。",
+        "modelPara": "The bar chart compares the percentages of residents in five Australian cities who bought fresh coffee, bought instant coffee, or visited a café for coffee or tea in the last four weeks.",
+        "expressions": [
+          { "en": "compares the percentages of residents in five Australian cities", "zh": "比较五个城市居民的百分比（shows的标准替换）" },
+          { "en": "bought fresh coffee, bought instant coffee, or visited a café", "zh": "三种习惯改写成三个并列动词短语" },
+          { "en": "in the last four weeks", "zh": "时间状语原样保留（改写不丢信息）" }
+        ],
+        "guideQ": "你的开头有没有把「对象+三种习惯+时间」一个不落地改写完？漏一个，TA的改写分就扣一半。"
+      },
+      "3": {
+        "why": "概括段两句、零细数字：句1给最显著特征（去咖啡馆在多数城市最流行），句2给第二总体差异（速溶普遍高于现磨）——按体系2.1，只挑「最值+总体差异」，这是TA的生死线。",
+        "modelPara": "It is clear that going to a café was the most common habit in the majority of the cities shown. It is also noticeable that buying instant coffee was generally more popular than buying fresh coffee.",
+        "expressions": [
+          { "en": "the most common habit in the majority of the cities", "zh": "多数城市中最普遍的习惯（总体特征一）" },
+          { "en": "generally more popular than", "zh": "普遍高于（总体差异，不带数字）" }
+        ],
+        "guideQ": "你的概括句里有没有出现具体百分比？出现了就错了——概括是「一眼看出」，不是数据。"
+      },
+      "4": {
+        "why": "分组法第一组=去咖啡馆：最高的三个城市并排写（一个63%级带三个城市名），Brisbane用slightly lower衔接，Adelaide用by contrast点成唯一例外——每个数字都有对比对象（体系2.3数字纪律）。",
+        "modelPara": "Going to a café was the most popular habit in four of the five cities: the proportion stood at roughly 63% in Sydney, Melbourne and Hobart, and slightly lower, at 55%, in Brisbane. In Adelaide, by contrast, the figure dipped to 49%, the only city where fewer than half of residents had done so.",
+        "expressions": [
+          { "en": "the proportion stood at roughly 63%", "zh": "比例约为63%（at补数值）" },
+          { "en": "slightly lower, at 55%, in Brisbane", "zh": "略低，为55%（对比嵌入）" },
+          { "en": "the only city where fewer than half of residents had done so", "zh": "唯一不到半数居民这么做的城市（例外点睛）" }
+        ],
+        "guideQ": "你写柱图时，是不是把「最高组并排一句+例外单独一句」？一句一个数字地罗列是6分写法。"
+      },
+      "5": {
+        "why": "分组法第二组=店内购买：先给一句总体结论（速溶在每个城市都卖过现磨），再给两组代表数字（54-55% vs 46-48%），收尾抓全场最低值（Adelaide 31%）并用although带出Sydney略高——总数6-8个数字，最值与例外全覆盖。",
+        "modelPara": "The pattern for shop-bought coffee was different: in every city, instant coffee outsold the fresh variety. Around 54-55% of people in Brisbane and Hobart bought instant coffee, compared with roughly 46-48% in Melbourne and Sydney. Fresh coffee was the least common habit overall, purchased by just 31% of residents in Adelaide and 38% in Hobart, although the figure for Sydney was a little higher, at 44%.",
+        "expressions": [
+          { "en": "instant coffee outsold the fresh variety", "zh": "速溶咖啡卖得比现磨好（总体结论句）" },
+          { "en": "compared with roughly", "zh": "相比之下约为（对比句式）" },
+          { "en": "the least common habit overall", "zh": "整体上最不普遍的习惯（最值）" }
+        ],
+        "guideQ": "你的细节段二有没有先给一句总体结论再上数字？直接砸数字就是流水账。"
+      }
+    }
+  },
+  "剑15 Test 2 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "线图，三条线（百万人）：总人数、乘游轮到访、住岛到访，2010-2017。住岛客0.75m翻倍至2013年1.5m后纹丝不动；游轮客从0.25m起步，2012年小跌后逐年稳步上升，2016年反超住岛客，2017年达2.0m；总人数1.0m→1.5m(2012-13)→2.5m(2015-16稳定)→3.5m(2017)。",
+    "essay": "The line graph illustrates how many tourists visited a particular Caribbean island between 2010 and 2017, measured in millions.\n\nIt is clear that the island attracted considerably more visitors by the end of the period. It is also noticeable that cruise ship passengers, the smallest group at first, eventually overtook those staying on the island itself.\n\nVisitors staying on the island began at 0.75 million and doubled to 1.5 million by 2013, after which the figure stayed exactly the same until 2017. Cruise ship passengers started far lower, at just 0.25 million in 2010, but after a brief dip in 2012 their numbers climbed steadily every year, eventually overtaking island stayers in 2016 on their way to 2.0 million.\n\nAs a result of these trends, the total number of tourists rose from one million in 2010 to 1.5 million in 2012 and 2013. It then jumped to 2.5 million in 2015 and remained at that level for two years, before leaping to 3.5 million in the final year, the highest figure shown.",
+    "paraTeach": {
+      "2": {
+        "why": "开头改写三处：shows the number of tourists visiting→illustrates how many tourists visited（名词组改从句）；加 measured in millions 交代单位；时间段 between 2010 and 2017 保留。时态全过去式（体系2.1：时态由年份定）。",
+        "modelPara": "The line graph illustrates how many tourists visited a particular Caribbean island between 2010 and 2017, measured in millions.",
+        "expressions": [
+          { "en": "illustrates how many tourists visited", "zh": "展示游客数量（名词改从句的改写手法）" },
+          { "en": "measured in millions", "zh": "以百万为单位（分词补语交代单位）" }
+        ],
+        "guideQ": "你的开头交代单位了吗？漏单位，后面的数字全部没有参照。"
+      },
+      "3": {
+        "why": "概括两句零数字：句1给总量趋势（末期多得多），句2给最显著的结构变化（游轮客从最小反超住岛客）——「反超」是这张图一眼可见的头条，按体系2.1必须进概括。",
+        "modelPara": "It is clear that the island attracted considerably more visitors by the end of the period. It is also noticeable that cruise ship passengers, the smallest group at first, eventually overtook those staying on the island itself.",
+        "expressions": [
+          { "en": "attracted considerably more visitors", "zh": "游客多得多（程度副词嵌入）" },
+          { "en": "the smallest group at first, eventually overtook", "zh": "最初最小、最终反超（一句话讲完反超故事）" }
+        ],
+        "guideQ": "这张图最显眼的一件事是什么？如果你的概括没写「反超」，就漏了考官最想看的特征。"
+      },
+      "4": {
+        "why": "分组法：两条「成分线」一组——住岛客（翻倍后走平）与游轮客（持续上升）写在同一段才能完成「反超」这个交叉点（体系2.2交叉点必写）。doubled/far lower/brief dip/climbed steadily 每个数字都带形状或对比。",
+        "modelPara": "Visitors staying on the island began at 0.75 million and doubled to 1.5 million by 2013, after which the figure stayed exactly the same until 2017. Cruise ship passengers started far lower, at just 0.25 million in 2010, but after a brief dip in 2012 their numbers climbed steadily every year, eventually overtaking island stayers in 2016 on their way to 2.0 million.",
+        "expressions": [
+          { "en": "began at 0.75 million and doubled to 1.5 million", "zh": "从0.75百万翻倍到1.5百万（倍数表达）" },
+          { "en": "after which the figure stayed exactly the same", "zh": "此后数字纹丝不动（走平衔接）" },
+          { "en": "eventually overtaking island stayers in 2016", "zh": "最终于2016年反超住岛客（交叉点必写）" }
+        ],
+        "guideQ": "你的分组让「交叉/反超」发生在同一段里了吗？两条被比较的线分开写，反超就写不出来。"
+      },
+      "5": {
+        "why": "总和线单独一段，用 As a result of these trends 承接上一段——衔接靠指代与逻辑而非Firstly（体系1.5）。rose→jumped→leaping 三个动词拉开变化幅度，结尾用同位语 the highest figure shown 点全场最值。",
+        "modelPara": "As a result of these trends, the total number of tourists rose from one million in 2010 to 1.5 million in 2012 and 2013. It then jumped to 2.5 million in 2015 and remained at that level for two years, before leaping to 3.5 million in the final year, the highest figure shown.",
+        "expressions": [
+          { "en": "As a result of these trends", "zh": "受这些趋势影响（段落逻辑衔接）" },
+          { "en": "remained at that level for two years", "zh": "该水平维持两年（稳定表达）" },
+          { "en": "the highest figure shown", "zh": "图中最值（同位语收尾点睛）" }
+        ],
+        "guideQ": "你的两个细节段之间有没有逻辑关系？能用 As a result / despite this 串起来，衔接分就到手了。"
+      }
+    }
+  },
+  "剑15 Test 3 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "流程图：速食面8阶段——面粉从silo吊入搅拌机（加油加水成dough）→压成sheets→切成strips→卷成noodle discs→油炸→晾干→装杯（加蔬菜和香料）→封口贴标运往超市。",
+    "essay": "The diagram illustrates the process by which instant noodles are manufactured and packaged for distribution to supermarkets.\n\nIt is clear that the production of instant noodles involves eight stages, beginning with the storage of flour and ending with cups that are sealed and labelled. It is also noticeable that the noodles are cooked in oil halfway through the process.\n\nAt the first stage of the process, flour is delivered from storage silos to a mixer, where it is combined with oil and water to form dough. The dough is then passed through rollers to create sheets, and these sheets are cut into thin strips before being formed into round noodle discs.\n\nIn the second half of the process, the discs are cooked in boiling oil and left to dry. They are then placed into cups, together with vegetables and spices, and the cups are sealed and labelled, ready to be transported and sold in supermarkets.",
+    "paraTeach": {
+      "2": {
+        "why": "开头改写：shows→illustrates；how instant noodles are produced→the process by which instant noodles are manufactured（被动从句改名词短语）；put into containers for distribution→packaged for distribution（体系2.4只用compares/illustrates/gives information about）。",
+        "modelPara": "The diagram illustrates the process by which instant noodles are manufactured and packaged for distribution to supermarkets.",
+        "expressions": [
+          { "en": "the process by which instant noodles are manufactured", "zh": "速食面的制造流程（show的高级替换句型）" },
+          { "en": "packaged for distribution to supermarkets", "zh": "包装后分销到超市" }
+        ],
+        "guideQ": "流程图的开头你写「How X is made」的改写了吗？直接照抄题干第一个词 show 就丢了改写分。"
+      },
+      "3": {
+        "why": "流程图的概括段（体系2.2）：句1给总特征=步数+起终点（eight stages, from flour storage to sealed cups），句2给最显著特征（油炸在流程中段）——没有数字可写，但起终点和中点必须点出来。",
+        "modelPara": "It is clear that the production of instant noodles involves eight stages, beginning with the storage of flour and ending with cups that are sealed and labelled. It is also noticeable that the noodles are cooked in oil halfway through the process.",
+        "expressions": [
+          { "en": "involves eight stages", "zh": "包含八个阶段（流程图概括标配）" },
+          { "en": "beginning with the storage of flour", "zh": "以面粉储存开始（起点）" },
+          { "en": "ending with cups that are sealed and labelled", "zh": "以封口贴标的杯面结束（终点）" },
+          { "en": "halfway through the process", "zh": "流程进行到一半（中点视角）" }
+        ],
+        "guideQ": "流程图你的概括句给出「步数+起终点」了吗？这是流程图overview的固定动作。"
+      },
+      "4": {
+        "why": "分组法=流程图从中点切两段（体系2.2）。前四步全部被动语态串联：is delivered→is combined→is passed→are cut→being formed；步骤间的衔接用 then/these/before being，不数Firstly Secondlly（体系1.5）。",
+        "modelPara": "At the first stage of the process, flour is delivered from storage silos to a mixer, where it is combined with oil and water to form dough. The dough is then passed through rollers to create sheets, and these sheets are cut into thin strips before being formed into round noodle discs.",
+        "expressions": [
+          { "en": "is combined with oil and water to form dough", "zh": "与油和水混合成面团（被动+结果）" },
+          { "en": "is then passed through rollers", "zh": "随后被送入滚轮（被动+顺序）" },
+          { "en": "before being formed into round noodle discs", "zh": "之后被卷成面饼（before being句型）" }
+        ],
+        "guideQ": "你的人造流程全部用被动语态了吗？出现 they add/mix 主动语态就是语法失分点。"
+      },
+      "5": {
+        "why": "后半段五到八步：cooked→dry→placed into cups→sealed and labelled，继续被动串联并用 together with 带出辅料；结尾 ready to be... 收在终点，与概括段呼应（首尾闭合，体系2.2起终点必写）。",
+        "modelPara": "In the second half of the process, the discs are cooked in boiling oil and left to dry. They are then placed into cups, together with vegetables and spices, and the cups are sealed and labelled, ready to be transported and sold in supermarkets.",
+        "expressions": [
+          { "en": "are cooked in boiling oil and left to dry", "zh": "油炸后晾干（两步合一句的并写）" },
+          { "en": "together with vegetables and spices", "zh": "连同蔬菜和香料（辅料嵌入）" },
+          { "en": "ready to be transported and sold", "zh": "待运输销售（终点收尾）" }
+        ],
+        "guideQ": "你漏步骤了吗？流程图漏一步比语言错误严重得多——写完数一遍步数对不对得上。"
+      }
+    }
+  },
+  "剑15 Test 4 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "饼图：毕业去向——全职工作52%、兼职15%、待业12%、全职深造8%、兼职+深造5%、未知8%。表：工作5年后年薪——10万+：政府50%、自由职业40%、私营30%；7.5-10万：自由职业40%、政府30%、私营25%；低于5万：各类型仅5-10%。",
+    "essay": "The pie chart shows what anthropology graduates from one university did after completing their degree, while the table gives information about the salaries of those who were in work five years later.\n\nIt is clear that full-time employment was the most common destination by a wide margin. It is also noticeable that a considerable proportion of those in work were earning high salaries five years after graduating.\n\nJust over half of the graduates, at 52%, went into full-time employment, while a further 15% worked part-time. The remaining categories were much smaller: 12% were unemployed, 8% chose full-time postgraduate study, 5% combined part-time work with study, and the destinations of the final 8% were unknown.\n\nThe table shows that government employees had the highest salaries: half of them earned over $100,000, compared with 40% of freelancers and 30% of those in the private sector. In the $75,000-$99,999 band, however, freelancers were ahead, at 40%, while very few graduates in any sector earned under $50,000.",
+    "paraTeach": {
+      "2": {
+        "why": "双图开头分工：一句一图（pie chart...while the table...），各自完成改写（shows what...did / gives information about salaries，体系2.4替换词），while 把两张图锁进一句话。",
+        "modelPara": "The pie chart shows what anthropology graduates from one university did after completing their degree, while the table gives information about the salaries of those who were in work five years later.",
+        "expressions": [
+          { "en": "shows what anthropology graduates from one university did after completing their degree", "zh": "展示毕业生去向（名词改从句改写）" },
+          { "en": "while the table gives information about", "zh": "而表格给出…（双图连接词，gives information about标准替换）" }
+        ],
+        "guideQ": "双图题你的开头是一句一图吗？只改写了一张图，另一半就照抄题干了。"
+      },
+      "3": {
+        "why": "概括一句一图：饼图给最值（全职工作 by a wide margin 远超其他），表格给总体特征（高薪比例可观）——都不带细数字（体系2.1概括段纪律）。",
+        "modelPara": "It is clear that full-time employment was the most common destination by a wide margin. It is also noticeable that a considerable proportion of those in work were earning high salaries five years after graduating.",
+        "expressions": [
+          { "en": "the most common destination by a wide margin", "zh": "以巨大差距成为最常见去向" },
+          { "en": "a considerable proportion of those in work", "zh": "在职者中相当大比例（概括性表述）" }
+        ],
+        "guideQ": "双图题你的概括是「一句一图」吗？两个特征都来自同一张图，另一张的overview就缺了。"
+      },
+      "4": {
+        "why": "细节一=饼图：先写最大项（52%用同位语 at 52% 嵌入），再用 much smaller 一笔压住四个小项、按大小顺序列完——大项展开、小项归堆，避免逐块流水账（体系2.2）。",
+        "modelPara": "Just over half of the graduates, at 52%, went into full-time employment, while a further 15% worked part-time. The remaining categories were much smaller: 12% were unemployed, 8% chose full-time postgraduate study, 5% combined part-time work with study, and the destinations of the final 8% were unknown.",
+        "expressions": [
+          { "en": "Just over half of the graduates, at 52%", "zh": "略过半数，为52%（同位语补数值）" },
+          { "en": "a further 15%", "zh": "另有15%（累加衔接）" },
+          { "en": "The remaining categories were much smaller", "zh": "其余类别小得多（小项归堆句）" }
+        ],
+        "guideQ": "你写饼图小项时是「一句归堆列完」还是一块一块报数？前者才高分。"
+      },
+      "5": {
+        "why": "细节二=表格：只挑两行最值写透（体系2.2表格只取最大最小）——最高档用 colon 引出三个数并带 compared with 对比，however 转到自由职业领先的档位，收尾用 very few under $50,000 抓全场低端最值。",
+        "modelPara": "The table shows that government employees had the highest salaries: half of them earned over $100,000, compared with 40% of freelancers and 30% of those in the private sector. In the $75,000-$99,999 band, however, freelancers were ahead, at 40%, while very few graduates in any sector earned under $50,000.",
+        "expressions": [
+          { "en": "had the highest salaries", "zh": "薪资最高（表格最值句）" },
+          { "en": "half of them earned over $100,000, compared with", "zh": "半数年薪超10万，对比…（对比句式）" },
+          { "en": "very few graduates in any sector earned under $50,000", "zh": "各行业低于5万者极少（低端最值）" }
+        ],
+        "guideQ": "表格题你挑「每行最大最小」了吗？中间档照抄全表，就是把表格题做成了数字听写。"
+      }
+    }
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "剑18 Test 1 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "线图（含预测）：菲律宾/马来西亚/泰国/印尼城市人口占比%，1970-2020实线+2030虚线。马来西亚最高（约30→65→预测75%）；菲律宾约30→45→55%；泰国约20→50%前后；印尼最低（约15→40→55%）。四国差距缩小。",
+    "essay": "The line graph shows the proportion of people living in cities in four Asian countries between 1970 and 2020, together with predictions for 2030.\n\nIt is clear that urbanisation advanced in every country over the period shown. It is also noticeable that the gap between the most and least urbanised nations is expected to narrow considerably by 2030.\n\nMalaysia was the most urbanised country throughout, and its trajectory remained the steepest: from around 30% of its people in cities in 1970, the figure climbed steadily to roughly 65% in 2019 and is forecast to reach about 78% by 2030. The Philippines and Thailand followed similar paths, both starting near 30% and rising to between 45% and 50% by 2020, with continued growth predicted over the following decade.\n\nIndonesia urbanised from the lowest base, at just 15% in 1970, but it made up ground continuously, and its predicted figure of around 55% for 2030 will place it level with its neighbours. Indeed, by the end of the forecast period, all four countries are expected to lie within a band of roughly 55% to 78%, a far narrower range than the fifteen-point spread that separated them in 1970.",
+    "paraTeach": {
+      "2": {
+        "why": "含预测的线图开头：between 1970 and 2020 + together with predictions for 2030 把「实线段+预测段」一次交代——将来数据必须单独点名，否则后文的 will/forecast 没有出处（体系2.1）。",
+        "modelPara": "The line graph shows the proportion of people living in cities in four Asian countries between 1970 and 2020, together with predictions for 2030.",
+        "expressions": [
+          {
+            "en": "the proportion of people living in cities",
+            "zh": "居住在城市的人口比例（percentage of urban population的改写）"
+          },
+          {
+            "en": "together with predictions for 2030",
+            "zh": "连同2030年的预测（预测段交代）"
+          }
+        ],
+        "guideQ": "图上有预测虚线时，你的开头单独交代了吗？"
+      },
+      "3": {
+        "why": "概括两句：句1=四国全部城市化（总趋势），句2=最大与最小者差距将收窄（线的相互关系）——第二条概括自「比较四个国家」这张图的结构，比罗列谁高谁低更值钱。",
+        "modelPara": "It is clear that urbanisation advanced in every country over the period shown. It is also noticeable that the gap between the most and least urbanised nations is expected to narrow considerably by 2030.",
+        "expressions": [
+          {
+            "en": "urbanisation advanced in every country",
+            "zh": "各国城市化都在推进（总趋势）"
+          },
+          {
+            "en": "the gap between the most and least urbanised nations is expected to narrow considerably",
+            "zh": "最大与最小城市化国家间的差距预计显著收窄（线间关系概括）"
+          }
+        ],
+        "guideQ": "多线图的概括你写了「线与线的关系」吗？只写各自趋势是二等概括。"
+      },
+      "4": {
+        "why": "细节一=最高的马来西亚+中间两国：一条线写透（30→65→预测78，实线用过去时、预测用 is forecast to reach），两条近似线合并一笔（both starting near 30%, rising to between 45% and 50%）——最值详写、近似并写，省字且清晰（体系2.2）。",
+        "modelPara": "Malaysia was the most urbanised country throughout, and its trajectory remained the steepest: from around 30% of its people in cities in 1970, the figure climbed steadily to roughly 65% in 2019 and is forecast to reach about 78% by 2030. The Philippines and Thailand followed similar paths, both starting near 30% and rising to between 45% and 50% by 2020, with continued growth predicted over the following decade.",
+        "expressions": [
+          {
+            "en": "its trajectory remained the steepest",
+            "zh": "其轨迹始终最陡（最值+形状动词）"
+          },
+          {
+            "en": "is forecast to reach about 78% by 2030",
+            "zh": "预计到2030年达约78%（预测句式）"
+          },
+          {
+            "en": "The Philippines and Thailand followed similar paths",
+            "zh": "菲泰两国轨迹相似（近似线并写）"
+          }
+        ],
+        "guideQ": "四条线里形状相近的，你合并成一句写了吗？逐条各写=字数爆炸。"
+      },
+      "5": {
+        "why": "细节二=最低的印尼+收束对比：from the lowest base + made up ground continuously 写追赶，predicted figure... will place it level with its neighbours 点出趋同；结尾用两个区间对比（55-78% vs 十五点差距）把概括段的「收窄」用数字证实——首尾呼应闭环。",
+        "modelPara": "Indonesia urbanised from the lowest base, at just 15% in 1970, but it made up ground continuously, and its predicted figure of around 55% for 2030 will place it level with its neighbours. Indeed, by the end of the forecast period, all four countries are expected to lie within a band of roughly 55% to 78%, a far narrower range than the fifteen-point spread that separated them in 1970.",
+        "expressions": [
+          {
+            "en": "urbanised from the lowest base",
+            "zh": "从最低起点开始城市化（起点最值）"
+          },
+          {
+            "en": "will place it level with its neighbours",
+            "zh": "将使其与邻国持平（趋同表达）"
+          },
+          {
+            "en": "a far narrower range than the fifteen-point spread",
+            "zh": "远窄于当年的15点差距（区间对比收尾）"
+          }
+        ],
+        "guideQ": "你的细节段结尾有没有用一句对比呼应概括？首尾闭环是TA满分卷的标志。"
+      }
+    }
+  },
+  "剑18 Test 2 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "柱图：美国家庭数（百万）按年收入五档（<25k / 25-49.9k / 50-74.9k / 75-99.9k / 100k+），2007/2011/2015。25-50k档最大且稳定（约28-30m）；100k+档连续增长（约18→19→26m）；75-100k小幅上升；其余两档平稳。",
+    "essay": "The bar chart shows how many households in the United States fell into each of five annual income bands in 2007, 2011 and 2015.\n\nIt is clear that the second-lowest income group remained the largest throughout. It is also noticeable that the number of households earning $100,000 or more grew steadily while most other categories changed little.\n\nHouseholds earning between $25,000 and $49,999 formed the biggest band in all three years, at just under 30 million, followed fairly closely by those below $25,000, at around 26 to 27 million. The middle band, covering $50,000 to $74,999, was only slightly smaller again.\n\nThe clearest movement occurred at the top of the scale. Households on $75,000 to $99,999 rose modestly from about 16 million to 18 million over the period, while the richest group, earning $100,000 or more, climbed from 18 million in 2007 to 26 million in 2015, overtaking every band except the largest. This growth was especially sharp after 2011. Overall, the chart shows an American income distribution that was stable at the bottom but expanding steadily at the top.",
+    "paraTeach": {
+      "2": {
+        "why": "柱图开头：shows how many households fell into each of five annual income bands——「档位」改写为 income bands 一词，how many 带出数量属性，三个年份顺排在句尾；一句话完成全部改写。",
+        "modelPara": "The bar chart shows how many households in the United States fell into each of five annual income bands in 2007, 2011 and 2015.",
+        "expressions": [
+          {
+            "en": "fell into each of five annual income bands",
+            "zh": "分属五个年收入档（档位表达）"
+          },
+          {
+            "en": "how many households",
+            "zh": "多少户家庭（数量属性点名）"
+          }
+        ],
+        "guideQ": "你的开头点明图上量的是「家庭数（不是百分比）」了吗？单位属性第一句就要定死。"
+      },
+      "3": {
+        "why": "概括两句：句1=最大档三年不变（格局稳定），句2=顶层持续增长、其余几乎不动（唯一显著变化）——「稳定处+变化处」各占一句，正是分组柱图的双头条。",
+        "modelPara": "It is clear that the second-lowest income group remained the largest throughout. It is also noticeable that the number of households earning $100,000 or more grew steadily while most other categories changed little.",
+        "expressions": [
+          {
+            "en": "remained the largest throughout",
+            "zh": "始终是最大档（稳定头条）"
+          },
+          {
+            "en": "grew steadily while most other categories changed little",
+            "zh": "稳步增长而其余几乎不动（对比头条）"
+          }
+        ],
+        "guideQ": "分组柱图你的概括是不是「哪里不变+哪里在变」各一句？"
+      },
+      "4": {
+        "why": "细节一=稳定的底部三档：最大档先立（just under 30 million），followed fairly closely by 类比第二档（26-27m），middle band 用 only slightly smaller again 收——「底部三档并列」一段写完，避免三段流水账（体系2.2比较型分组）。",
+        "modelPara": "Households earning between $25,000 and $49,999 formed the biggest band in all three years, at just under 30 million, followed fairly closely by those below $25,000, at around 26 to 27 million. The middle band, covering $50,000 to $74,999, was only slightly smaller again.",
+        "expressions": [
+          {
+            "en": "formed the biggest band in all three years",
+            "zh": "三年都是最大档（主位句）"
+          },
+          {
+            "en": "followed fairly closely by those below $25,000",
+            "zh": "紧随其后的是最低档（分词类比）"
+          },
+          {
+            "en": "was only slightly smaller again",
+            "zh": "又略小一点（第三档收尾）"
+          }
+        ],
+        "guideQ": "数值接近的几档你「并排一句」写完了吗？"
+      },
+      "5": {
+        "why": "细节二=顶部两档：75-100k 用 modestly 小升一笔带过，100k+ 主写（18→26m+overtaking every band except the largest 位次变化+This growth was especially sharp after 2011 分段强调）；Overall 收束句定调「底部稳、顶部扩」——呼应概括段且不越界成评论。",
+        "modelPara": "The clearest movement occurred at the top of the scale. Households on $75,000 to $99,999 rose modestly from about 16 million to 18 million over the period, while the richest group, earning $100,000 or more, climbed from 18 million in 2007 to 26 million in 2015, overtaking every band except the largest. This growth was especially sharp after 2011. Overall, the chart shows an American income distribution that was stable at the bottom but expanding steadily at the top.",
+        "expressions": [
+          {
+            "en": "The clearest movement occurred at the top of the scale",
+            "zh": "最清晰的变化发生在收入顶层（段落主旨）"
+          },
+          {
+            "en": "overtaking every band except the largest",
+            "zh": "超过除最大档外所有档（位次变化）"
+          },
+          {
+            "en": "stable at the bottom but expanding steadily at the top",
+            "zh": "底部稳定、顶部扩张（收束对仗）"
+          }
+        ],
+        "guideQ": "你把「哪里的变化最清晰」做成段落主旨句了吗？柱图细节段也需要主旨。"
+      }
+    }
+  },
+  "剑18 Test 3 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "地图：中央图书馆20年前vs现在。书架区→sofas与自习/阅读区；enquiry desk→café；CD/录像区→storytelling events空间；报刊区→自服务借还书机；儿童区保留扩充。",
+    "essay": "The diagram shows the floor plan of a public library as it was twenty years ago and the layout of the same building today.\n\nIt is clear that the library has been transformed from a space devoted to storing books into one designed for social activities. It is also noticeable that technology now handles many of the tasks once performed by staff.\n\nTwenty years ago, the entrance led to rows of bookshelves, with an enquiry desk just inside the door staffed by librarians. Along one side lay a room for newspapers and periodicals, while the far corner held CDs and videos; only the children's area, in the space nearest the windows, resembled what visitors find today.\n\nThe present layout tells a different story. The shelves closest to the entrance have given way to sofas and individual study tables, and the enquiry desk has been replaced by a café serving drinks throughout the day. The newspaper room has become an open space with self-service machines, where borrowers now scan their own books in and out. In the former media corner, the discs have been cleared away to create a space for children's storytelling events, though the children's books remain nearby.",
+    "paraTeach": {
+      "2": {
+        "why": "地图开头：as it was twenty years ago and the layout of the same building today——用 was/today 分管两个时态；「同一栋建筑」(the same) 点明这是改造对比而非两个地点（体系2.2发展型地图）。",
+        "modelPara": "The diagram shows the floor plan of a public library as it was twenty years ago and the layout of the same building today.",
+        "expressions": [
+          {
+            "en": "the floor plan of a public library as it was twenty years ago",
+            "zh": "图书馆20年前的平面图（过去半句）"
+          },
+          {
+            "en": "the layout of the same building today",
+            "zh": "同一建筑如今的布局（现在半句）"
+          }
+        ],
+        "guideQ": "改造对比图你的开头写明「同一对象+两个时点」了吗？"
+      },
+      "3": {
+        "why": "概括两句：句1给最大变化（藏书空间→社交空间，一句话定性整体转型），句2给第二特征（技术替代人工服务）——转型定性+服务方式变化，正是图书馆改造图的双头条，均无具体方位细节。",
+        "modelPara": "It is clear that the library has been transformed from a space devoted to storing books into one designed for social activities. It is also noticeable that technology now handles many of the tasks once performed by staff.",
+        "expressions": [
+          {
+            "en": "has been transformed from a space devoted to storing books into one designed for social activities",
+            "zh": "从藏书空间转型为社交空间（定性句，现在完成时被动）"
+          },
+          {
+            "en": "technology now handles many of the tasks once performed by staff",
+            "zh": "技术接管了人工服务（第二特征）"
+          }
+        ],
+        "guideQ": "你的概括句能当作这张图的一句话简介吗？能，就说明概括到位了。"
+      },
+      "4": {
+        "why": "细节一=二十年前布局（过去时全段）：entrance→shelves→enquiry desk→报刊室→media角→儿童区，按「进门后的空间顺序」走一圈（体系2.2按方位分）；lay/housed 替换重复的 was；only the children's area... resembled what visitors find today 一句为下一段埋钩子。",
+        "modelPara": "Twenty years ago, the entrance led to rows of bookshelves, with an enquiry desk just inside the door staffed by librarians. Along one side lay a room for newspapers and periodicals, while the far corner held CDs and videos; only the children's area, in the space nearest the windows, resembled what visitors find today.",
+        "expressions": [
+          {
+            "en": "the entrance led to rows of bookshelves",
+            "zh": "进门即是成排书架（led to方位引导）"
+          },
+          {
+            "en": "Along one side lay a room for newspapers and periodicals",
+            "zh": "一侧是报刊室（倒装描写方位）"
+          },
+          {
+            "en": "only the children's area, in the space nearest the windows, resembled what visitors find today",
+            "zh": "只有儿童区与今日相似（埋钩子句）"
+          }
+        ],
+        "guideQ": "写「过去布局」时你是按进门后的动线走吗？空间顺序是地图题的天然叙事线。"
+      },
+      "5": {
+        "why": "细节二=如今布局（现在完成时被动串全场）：given way to/has been replaced by/has become 三连改写，self-service machines 呼应概括段的 technology；though the children's collection remains 收在「保留项」——变化与保留闭环（体系2.2发展型地图的 retained 纪律）。",
+        "modelPara": "The present layout tells a different story. The shelves closest to the entrance have given way to sofas and individual study tables, and the enquiry desk has been replaced by a café serving drinks throughout the day. The newspaper room has become an open space with self-service machines, where borrowers now scan their own books in and out. In the former media corner, the discs have been cleared away to create a space for children's storytelling events, though the children's books remain nearby.",
+        "expressions": [
+          {
+            "en": "have given way to sofas and individual study tables",
+            "zh": "让位于沙发与自习桌（被替换表达）"
+          },
+          {
+            "en": "where borrowers now scan their own books in and out",
+            "zh": "读者自行扫码借还（自服务细节）"
+          },
+          {
+            "en": "though the children's books remain nearby",
+            "zh": "儿童藏书原地保留（保留项收尾）"
+          }
+        ],
+        "guideQ": "「现在」段你通篇用现在完成时被动（has been replaced）了吗？这是改造图的时态指纹。"
+      }
+    }
+  },
+  "剑18 Test 4 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "线图：铜/镍/锌2014年每月价格平均变化%（跨0轴）。镍波动最大：3月冲高约+8%，6月跌至约-5%，年末约+1%；铜上半年多负值、下半年回升，年末约+2%；锌年初约+3%，年中约-3%，年末约+1%。",
+    "essay": "The line graph shows how the average monthly prices of copper, nickel and zinc changed during 2014, measured as percentage movement from one month to the next.\n\nIt is clear that nickel was by far the most volatile of the three metals. It is also noticeable that all three ended the year with small price increases.\n\nNickel began the year by surging to a peak of 8% in March, after which its fortunes reversed dramatically: the rate of change fell steadily to a low of minus 5% in June, and although prices recovered in the autumn, the year closed with only a 1% rise. Zinc traced a milder version of the same pattern, starting at 3%, dipping below zero in mid-year and finishing, like nickel, at 1%.\n\nCopper behaved differently. Its price changes were negative for most of the first half of the year, hovering between minus 1% and minus 3%, but the second half brought a steady recovery, and copper ultimately recorded the strongest December figure of the three, at 2%. What the chart makes plain is that nickel, with a swing of thirteen percentage points between March and June, was the metal that tested investors most.",
+    "paraTeach": {
+      "2": {
+        "why": "开头改写两处关键：average monthly change in prices→how the average monthly prices changed（名词组改从句）；measured as percentage movement 补单位口径——上下穿0轴的图必须写明「变化率」而非「价格」。",
+        "modelPara": "The line graph shows how the average monthly prices of copper, nickel and zinc changed during 2014, measured as percentage movement from one month to the next.",
+        "expressions": [
+          {
+            "en": "how the average monthly prices of copper, nickel and zinc changed",
+            "zh": "铜镍锌月均价如何变化（名词改从句）"
+          },
+          {
+            "en": "measured as percentage movement from one month to the next",
+            "zh": "以环比百分比变化计（口径说明）"
+          }
+        ],
+        "guideQ": "变化率图你写明「量的是变化不是价格」了吗？口径不清是这类图的头号失分点。"
+      },
+      "3": {
+        "why": "概括两句：句1=镍最波动（by far the most volatile 最值定性），句2=三种金属年末都以小幅上涨收尾（共同终点）——「最极端的一条+三条的共性」各占一句，无数字。",
+        "modelPara": "It is clear that nickel was by far the most volatile of the three metals. It is also noticeable that all three ended the year with small price increases.",
+        "expressions": [
+          {
+            "en": "by far the most volatile of the three metals",
+            "zh": "三种金属中波动最大的（最值定性）"
+          },
+          {
+            "en": "all three ended the year with small price increases",
+            "zh": "三者年末均小幅收涨（共性概括）"
+          }
+        ],
+        "guideQ": "三条线的「共同结局」进你的概括第二句了吗？共性往往是考官设的考点。"
+      },
+      "4": {
+        "why": "细节一=镍+锌（波动组）：镍四段式（surge到3月峰值8%→reversed dramatically→6月低点-5%→autumn回升→1%收尾）；锌用 a milder version of the same pattern 一句类比带过——详写极端、类比温和，省字法与线图分组（体系2.2）。",
+        "modelPara": "Nickel began the year by surging to a peak of 8% in March, after which its fortunes reversed dramatically: the rate of change fell steadily to a low of minus 5% in June, and although prices recovered in the autumn, the year closed with only a 1% rise. Zinc traced a milder version of the same pattern, starting at 3%, dipping below zero in mid-year and finishing, like nickel, at 1%.",
+        "expressions": [
+          {
+            "en": "surging to a peak of 8% in March",
+            "zh": "3月冲至8%的峰值"
+          },
+          {
+            "en": "its fortunes reversed dramatically",
+            "zh": "走势急剧逆转（拟物化转折句）"
+          },
+          {
+            "en": "traced a milder version of the same pattern",
+            "zh": "走出同一模式的温和版（类比句）"
+          }
+        ],
+        "guideQ": "形状相似的两条线，你「详写一条、类比一条」了吗？"
+      },
+      "5": {
+        "why": "细节二=铜（平稳组）+收束判断：negative for most of the first half→hovering between（区间表达）→steady recovery→strongest December figure（小幅最值对比）；结尾 What the chart makes plain 是允许的图内事实评论（十三点的摆幅=可交易不可持有）——收在不越界的洞察上。",
+        "modelPara": "Copper behaved differently. Its price changes were negative for most of the first half of the year, hovering between minus 1% and minus 3%, but the second half brought a steady recovery, and copper ultimately recorded the strongest December figure of the three, at 2%. What the chart makes plain is that nickel, with a swing of thirteen percentage points between March and June, was the metal that tested investors most.",
+        "expressions": [
+          {
+            "en": "hovering between minus 1% and minus 3%",
+            "zh": "在-1%与-3%之间徘徊（区间动词）"
+          },
+          {
+            "en": "recorded the strongest December figure of the three",
+            "zh": "录得三者中最强的年末值（对比收尾）"
+          },
+          {
+            "en": "the metal that tested investors most",
+            "zh": "最考验投资者的金属（点睛式收束）"
+          }
+        ],
+        "guideQ": "你的结尾是「图内事实的洞察」还是「个人观点」？前者加分，后者犯规。"
+      }
+    }
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "剑20 Test 1 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "Because access to clean water is recognised as a basic human right, some argue that every household should receive a free water supply. I disagree with this demand, not because water is unimportant, but because free water would be consumed wastefully and paid for by the very people the policy claims to help.\n\nNobody disputes the principle at stake. Water is not a luxury like cable television; it is a precondition of life and public health, and a government that lets citizens go thirsty has failed at its most basic duty. The terrible epidemics that once swept cities without clean supplies, and still sweep those without them today, show exactly what is at risk when water is treated as an ordinary commodity.\n\nFree water, however, is the wrong answer to a real problem. Anything supplied at zero price is consumed without thought, and households would have no reason to fix a leaking pipe, choose efficient appliances or care how long the garden hose runs; the resulting surge in demand would have to be met by building expensive new infrastructure. Worse, nothing is truly free. If water companies receive no revenue, the state must fund them from taxation, so the cost returns through everybody's tax bill, and the heaviest users are quietly subsidised by the most careful ones. The fair and effective alternative is a cheap or free basic allowance for every household, with heavy use priced normally: the right to enough water for drinking and washing is protected, while waste still carries a cost.\n\nIn conclusion, although the human right to clean water is beyond argument, making the entire supply free would punish careful users and encourage waste, and a subsidised basic allowance achieves the same right at a fraction of the cost.",
+    "paraTeach": {
+      "2": {
+        "why": "观点题开头：句1改写（recognised as a basic human right 保留题目让步），句2 disagree + 让步前置（not because unimportant）+ 双总理由（浪费+转嫁）——「我反对的不是原则而是手段」的框架，把题目里最锋利的道德武器先接过来。",
+        "modelPara": "Because access to clean water is recognised as a basic human right, some argue that every household should receive a free water supply. I disagree with this demand, not because water is unimportant, but because free water would be consumed wastefully and paid for by the very people the policy claims to help.",
+        "expressions": [
+          {
+            "en": "I disagree with this demand, not because water is unimportant, but because free water would be consumed wastefully",
+            "zh": "反对的不是原则而是手段（not because...but...框架）"
+          },
+          {
+            "en": "paid for by the very people the policy claims to help",
+            "zh": "由政策声称要帮助的那些人买单（very强调）"
+          }
+        ],
+        "guideQ": "题目里最强的道德牌（基本人权），你是绕开它还是先接过来再打？"
+      },
+      "3": {
+        "why": "原则确认段：water is not a luxury（否定类比）+ precondition of life and public health（定性）+ 没清洁供水城市的瘟疫史实（历史证据今昔对比）——整段把「人权」立场写得无可挑剔，为下一段反对「免费」赢得合法性。",
+        "modelPara": "Nobody disputes the principle at stake. Water is not a luxury like cable television; it is a precondition of life and public health, and a government that lets citizens go thirsty has failed at its most basic duty. The terrible epidemics that once swept cities without clean supplies, and still sweep those without them today, show exactly what is at risk when water is treated as an ordinary commodity.",
+        "expressions": [
+          {
+            "en": "a precondition of life and public health",
+            "zh": "生命与公共卫生的前提条件"
+          },
+          {
+            "en": "a government that lets citizens go thirsty has failed at its most basic duty",
+            "zh": "让公民口渴的政府失职（道义句）"
+          },
+          {
+            "en": "treated as an ordinary commodity",
+            "zh": "被当成普通商品对待（点出争议本质）"
+          }
+        ],
+        "guideQ": "反对「免费供水」前，你先确认「清洁用水是权利」了吗？先立后破，反对才不显得冷血。"
+      },
+      "4": {
+        "why": "批判段三链：零价格→零节制的机制（漏水不修/水龙头长流/需求暴增→新基建）→没有真正的免费（税收回流+重用户被轻用户补贴）→解法（basic allowance：基础量免费+超额正常计价）——「先破后立」在同段完成，给结论备好方案（体系1.4给出解法句）。",
+        "modelPara": "Free water, however, is the wrong answer to a real problem. Anything supplied at zero price is consumed without thought, and households would have no reason to fix a leaking pipe, choose efficient appliances or care how long the garden hose runs; the resulting surge in demand would have to be met by building expensive new infrastructure. Worse, nothing is truly free. If water companies receive no revenue, the state must fund them from taxation, so the cost returns through everybody's tax bill, and the heaviest users are quietly subsidised by the most careful ones. The fair and effective alternative is a cheap or free basic allowance for every household, with heavy use priced normally: the right to enough water for drinking and washing is protected, while waste still carries a cost.",
+        "expressions": [
+          {
+            "en": "Anything supplied at zero price is consumed without thought",
+            "zh": "零价格供应的东西都会被无度消耗（机制主旨句）"
+          },
+          {
+            "en": "the heaviest users are quietly subsidised by the most careful ones",
+            "zh": "最浪费者被最节约者悄悄补贴（分配批判金句）"
+          },
+          {
+            "en": "a cheap or free basic allowance for every household, with heavy use priced normally",
+            "zh": "每户基础量低价免费+超额正常计价（解法句）"
+          }
+        ],
+        "guideQ": "你反驳政策时给出了「正确的替代方案」吗？只破不立的观点题缺少建设性。"
+      },
+      "5": {
+        "why": "一句话结论：although 回收人权原则 + punish careful users and encourage waste 回收双批判 + achieves the same right at a fraction of the cost 用解法收尾——结论直接比较两条路线的成本效益，反对显得理性而非冷漠。",
+        "modelPara": "In conclusion, although the human right to clean water is beyond argument, making the entire supply free would punish careful users and encourage waste, and a subsidised basic allowance achieves the same right at a fraction of the cost.",
+        "expressions": [
+          {
+            "en": "beyond argument",
+            "zh": "无可争辩（让步回收原则）"
+          },
+          {
+            "en": "achieves the same right at a fraction of the cost",
+            "zh": "以零头成本实现同一权利（成本比较收尾）"
+          }
+        ],
+        "guideQ": "你的结论有没有一句「替代方案同样能实现对方的目标」？这是击败道德主张的关键一刀。"
+      }
+    }
+  },
+  "剑20 Test 2 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "In many countries, primary and secondary schools shut down for two months or more every summer, a practice so familiar that its purpose is rarely questioned. The holidays certainly carry value, but the case for shortening them is now strong, because a ten-week break serves neither children's learning nor most families' lives.\n\nThe traditional case for long holidays deserves a fair hearing. Children need unstructured time: weeks of freedom teach them to fill their own days, organise games with neighbours and simply be bored, which many psychologists regard as the seed of creativity. The break also allows families to travel together and gives tired teachers a genuine reset; anyone who has watched a classroom in the final week of term knows that both pupils and staff are running on empty.\n\nThe arguments for a shorter break, however, carry more weight in the modern world. The first is learning loss: studies consistently find that pupils forget a substantial share of each year's material over the summer, with children from poorer homes falling furthest behind, because their middle-class classmates spend the weeks at camps and on holidays while they stay home alone. The second is childcare arithmetic. Most parents now work full time, and ten weeks without school means ten weeks of expensive cover, shared unevenly between families who can afford summer programmes and those who cannot. A shorter, more evenly distributed calendar would keep knowledge fresh and spare household budgets without costing children the freedom that a reasonable holiday still provides.\n\nIn conclusion, long summer holidays once made sense for an agricultural society, and they still offer children rest and independence, but shrinking them to four or five weeks, spread across the year, would serve learning and fairness better than the current extreme.",
+    "paraTeach": {
+      "2": {
+        "why": "双问题（value+shorter arguments）开头：句1改写并点出「习以为常以致无人追问」的切口，句2双预告（holidays carry value + case for shortening is now strong）——两个问各领一段，立场倾向第二问但不否定第一问。",
+        "modelPara": "In many countries, primary and secondary schools shut down for two months or more every summer, a practice so familiar that its purpose is rarely questioned. The holidays certainly carry value, but the case for shortening them is now strong, because a ten-week break serves neither children's learning nor most families' lives.",
+        "expressions": [
+          {
+            "en": "a practice so familiar that its purpose is rarely questioned",
+            "zh": "习以为常以致无人追问其目的（同位语评论句）"
+          },
+          {
+            "en": "The holidays certainly carry value, but the case for shortening them is now strong",
+            "zh": "假期确有价值，但缩短的理由如今更强（双问各半句）"
+          }
+        ],
+        "guideQ": "双问题题你的开头是不是「问一给半句、问二给半句」？"
+      },
+      "3": {
+        "why": "价值段三层：非结构化时间培养自主与创造力（be bored 是创造力的种子——具体机制）→家庭旅行与教师喘息（deserves a fair hearing 起手公允）→running on empty 的画面感收尾——把对方价值写成「真实的心理学与真实的人」。",
+        "modelPara": "The traditional case for long holidays deserves a fair hearing. Children need unstructured time: weeks of freedom teach them to fill their own days, organise games with neighbours and simply be bored, which many psychologists regard as the seed of creativity. The break also allows families to travel together and gives tired teachers a genuine reset; anyone who has watched a classroom in the final week of term knows that both pupils and staff are running on empty.",
+        "expressions": [
+          {
+            "en": "deserves a fair hearing",
+            "zh": "值得被公正对待（让步起手）"
+          },
+          {
+            "en": "simply be bored, which many psychologists regard as the seed of creativity",
+            "zh": "无聊本身是创造力的种子（反直觉论点）"
+          },
+          {
+            "en": "both pupils and staff are running on empty",
+            "zh": "师生都已油尽灯枯（画面感收尾）"
+          }
+        ],
+        "guideQ": "你给对方的理由里有没有一条「反直觉但讲得出机制」的？无聊出创造力就是这种。"
+      },
+      "4": {
+        "why": "批判段两条论点各有算法：learning loss（研究结论+公平视角——中产孩子上夏令营、穷孩子独自在家，掉队最远的恰是穷孩子）；childcare arithmetic（全职父母+十周托管开销+家庭间不均）；解法句把批判转化为方案（更短、更均摊的校历）——「损耗+算术+方案」三段式。",
+        "modelPara": "The arguments for a shorter break, however, carry more weight in the modern world. The first is learning loss: studies consistently find that pupils forget a substantial share of each year's material over the summer, with children from poorer homes falling furthest behind, because their middle-class classmates spend the weeks at camps and on holidays while they stay home alone. The second is childcare arithmetic. Most parents now work full time, and ten weeks without school means ten weeks of expensive cover, shared unevenly between families who can afford summer programmes and those who cannot. A shorter, more evenly distributed calendar would keep knowledge fresh and spare household budgets without costing children the freedom that a reasonable holiday still provides.",
+        "expressions": [
+          {
+            "en": "pupils forget a substantial share of each year's material over the summer",
+            "zh": "学生在夏季遗忘当年所学的大块内容（研究结论）"
+          },
+          {
+            "en": "children from poorer homes falling furthest behind",
+            "zh": "贫困家庭的孩子掉队最远（公平视角）"
+          },
+          {
+            "en": "ten weeks of expensive cover, shared unevenly between families",
+            "zh": "十周昂贵托管、家庭间负担不均（算术句）"
+          }
+        ],
+        "guideQ": "你的两条批判里有没有一条「公平账」？教育话题里它最有力。"
+      },
+      "5": {
+        "why": "一句话结论：once made sense for an agricultural society（历史视角点破制度的来历）+ rest and independence 让步回收 + shrinking to four or five weeks, spread across the year 的具体方案收尾——结论带数字方案，立场落地。",
+        "modelPara": "In conclusion, long summer holidays once made sense for an agricultural society, and they still offer children rest and independence, but shrinking them to four or five weeks, spread across the year, would serve learning and fairness better than the current extreme.",
+        "expressions": [
+          {
+            "en": "once made sense for an agricultural society",
+            "zh": "在农业社会曾经合理（历史溯源句）"
+          },
+          {
+            "en": "shrinking them to four or five weeks, spread across the year",
+            "zh": "缩至四五周并均摊全年（具体方案收尾）"
+          }
+        ],
+        "guideQ": "你的结论给出「缩短到多少、怎么放」的具体方案了吗？数字让立场可信。"
+      }
+    }
+  },
+  "剑20 Test 3 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "Some people now choose to fly less or to give up flying altogether, hoping to shrink their personal contribution to climate change. In my view the environmental gains of this choice are outweighed by its disadvantages, but only because individual abstinence is the wrong tool: the same environmental goal is better achieved through technology and policy.\n\nThere is no disputing the environmental logic behind the decision. A single long-haul return flight can emit more carbon than an average person is allowed per year if warming is to be limited, so cutting flights genuinely shrinks an individual footprint faster than almost any other lifestyle change. For the minority who fly frequently, simply flying less is by far the most effective thing they can do.\n\nThe disadvantages, however, reach further than personal inconvenience. Flying connects people to family, love and opportunity; the granddaughter who stops visiting elderly relatives abroad, or the small firm that abandons an overseas client because video calls cannot close the deal, loses something real. Business travel, whatever its carbon cost, still wins contracts, and tourism keeps whole economies alive: islands and mountain regions that cannot grow or manufacture much depend on visitors who arrive by plane. If conscientious travellers simply withdraw, those destinations lose income while the flights, filled instead by less concerned passengers, take off anyway. The emission saved by one person's virtue is cancelled by another's indifference.\n\nIn conclusion, although flying less is personally coherent and environmentally meaningful for frequent flyers, individual sacrifice cannot ground a fair climate policy, and the real answers lie in cleaner fuels, higher efficiency standards and prices that reflect carbon. Until those exist, I do not think the environmental benefits of giving up flying outweigh its human costs.",
+    "paraTeach": {
+      "2": {
+        "why": "利弊比较题开头的高阶写法：句2表态后立刻给出「为什么弊更重」的精确边界（individual abstinence is the wrong tool——工具错≠目标错），并把己方替代方案（technology and policy）预埋进开头——立场、理由、解法一句全齐。",
+        "modelPara": "Some people now choose to fly less or to give up flying altogether, hoping to shrink their personal contribution to climate change. In my view the environmental gains of this choice are outweighed by its disadvantages, but only because individual abstinence is the wrong tool: the same environmental goal is better achieved through technology and policy.",
+        "expressions": [
+          {
+            "en": "individual abstinence is the wrong tool",
+            "zh": "个人戒断是错误的工具（批判的精确边界）"
+          },
+          {
+            "en": "the same environmental goal is better achieved through technology and policy",
+            "zh": "同一目标靠技术与政策更好实现（解法预埋）"
+          }
+        ],
+        "guideQ": "你的 outweigh 判断有没有附带「弊在何处」的精确边界？工具错和目标错是两个完全不同的命题。"
+      },
+      "3": {
+        "why": "让步段只写一条但写到极致：一次往返长途航班>个人年碳配额（数字冲击）+对常飞者是最有效的个人行为（by far the most effective）——承认对方最强点时用「量化」而不是空赞，让步的分量感来自数字。",
+        "modelPara": "There is no disputing the environmental logic behind the decision. A single long-haul return flight can emit more carbon than an average person is allowed per year if warming is to be limited, so cutting flights genuinely shrinks an individual footprint faster than almost any other lifestyle change. For the minority who fly frequently, simply flying less is by far the most effective thing they can do.",
+        "expressions": [
+          {
+            "en": "There is no disputing the environmental logic",
+            "zh": "环境逻辑无可争辩（让步起手）"
+          },
+          {
+            "en": "emit more carbon than an average person is allowed per year",
+            "zh": "一次长途往返排放超过个人年度配额（量化对比）"
+          },
+          {
+            "en": "by far the most effective thing they can do",
+            "zh": "他们所能做的最有效的事"
+          }
+        ],
+        "guideQ": "你让步时用了数字吗？「超过年度配额」比「排放很多」有力十倍。"
+      },
+      "4": {
+        "why": "批判段三层代价：亲人（孙辈停访海外老人）→生意（视频谈不成的客户）→经济（岛屿与山区靠航空游客活着）；再补机制反转：有良知者退出后航班照样起飞、座位被无所谓者填满——「一个人的美德被另一个人的冷漠抵消」金句收尾，证明个人牺牲不仅痛苦而且无效。",
+        "modelPara": "The disadvantages, however, reach further than personal inconvenience. Flying connects people to family, love and opportunity; the granddaughter who stops visiting elderly relatives abroad, or the small firm that abandons an overseas client because video calls cannot close the deal, loses something real. Business travel, whatever its carbon cost, still wins contracts, and tourism keeps whole economies alive: islands and mountain regions that cannot grow or manufacture much depend on visitors who arrive by plane. If conscientious travellers simply withdraw, those destinations lose income while the flights, filled instead by less concerned passengers, take off anyway. The emission saved by one person's virtue is cancelled by another's indifference.",
+        "expressions": [
+          {
+            "en": "Flying connects people to family, love and opportunity",
+            "zh": "航空连接着亲情、爱与机会（让步段后的转折主旨）"
+          },
+          {
+            "en": "the flights, filled instead by less concerned passengers, take off anyway",
+            "zh": "航班由更不在意的乘客填满、照飞不误（无效性机制）"
+          },
+          {
+            "en": "The emission saved by one person's virtue is cancelled by another's indifference",
+            "zh": "一个人的美德省下的排放被另一个人的冷漠抵消（金句收尾）"
+          }
+        ],
+        "guideQ": "你批判个人牺牲时证明了「它无效」而不只是「它痛苦」了吗？"
+      },
+      "5": {
+        "why": "一句话结论：although 回收让步（personally coherent and environmentally meaningful for frequent flyers——把适用域精确到常飞者）+ the real answers lie in 三连解法 + Until those exist 的时序限定收尾——结论给出「何时我会改变判断」的条件，立场完全透明。",
+        "modelPara": "In conclusion, although flying less is personally coherent and environmentally meaningful for frequent flyers, individual sacrifice cannot ground a fair climate policy, and the real answers lie in cleaner fuels, higher efficiency standards and prices that reflect carbon. Until those exist, I do not think the environmental benefits of giving up flying outweigh its human costs.",
+        "expressions": [
+          {
+            "en": "individual sacrifice cannot ground a fair climate policy",
+            "zh": "个人牺牲撑不起公平的气候政策（立场句）"
+          },
+          {
+            "en": "Until those exist, I do not think the environmental benefits of giving up flying outweigh its human costs",
+            "zh": "在这些存在之前我不认为放弃飞行的环境收益大过人的代价（时序条件收尾）"
+          }
+        ],
+        "guideQ": "你的结论写明「什么条件下我会改变立场」了吗？透明条件让利弊判断更显专业。"
+      }
+    }
+  },
+  "剑20 Test 4 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "From the clothes people wear to the phone cases they carry, global fashion trends now shape daily choices in almost every society. These trends became so powerful through a combination of commerce, media and imitation, and I regard their dominance as a negative development, though a less alarming one than it first appears.\n\nFashion's grip has three causes. The first is commercial: global brands spend billions persuading consumers that this season's style is the only acceptable one, and because production has become fast and cheap, new ranges arrive monthly rather than yearly. The second is visibility. Social media turns every street into a catwalk, and young people in Manila now dress like their counterparts in Manchester because they watch the same videos. The third is human nature itself: clothing has always signalled belonging, and wearing what the global crowd wears promises membership of a modern, international community.\n\nThe costs of this uniformity are real. Local textile traditions, from woven patterns to regional dress, are abandoning to mass-produced copies, and with them disappear skills and identities built over centuries. The environment pays too: fast fashion is among the world's most polluting industries, and clothes worn for a season fill landfills for centuries. Yet the picture is not entirely dark. Global fashion has also lowered the cost of decent clothing, dissolved some snobberies of class and region, and given individuals a vocabulary of styles with which to define themselves; the problem is not variety but the speed at which variety is discarded.\n\nIn conclusion, commerce, shared media and the ancient desire to belong explain fashion's global power, and although its costs to tradition and the planet are serious, the development could be made acceptable if the industry's pace, rather than its reach, were curbed.",
+    "paraTeach": {
+      "2": {
+        "why": "双问题（how become strong + positive/negative）开头：句1用「从衣着到手机壳」的具象排比改写题目，句2双答（commerce/media/imitation 三因 + negative though less alarming）——though a less alarming one than it first appears 的克制定性让批判立刻脱离俗套。",
+        "modelPara": "From the clothes people wear to the phone cases they carry, global fashion trends now shape daily choices in almost every society. These trends became so powerful through a combination of commerce, media and imitation, and I regard their dominance as a negative development, though a less alarming one than it first appears.",
+        "expressions": [
+          {
+            "en": "From the clothes people wear to the phone cases they carry",
+            "zh": "从衣着到手机壳（具象排比改写）"
+          },
+          {
+            "en": "a negative development, though a less alarming one than it first appears",
+            "zh": "消极发展，但没乍看那么可怕（克制定性）"
+          }
+        ],
+        "guideQ": "你的评价句带「程度修正」了吗？less alarming than it appears 比裸 negative 高一档。"
+      },
+      "3": {
+        "why": "原因段三因并列但写法各异：商业（billions+上新周期 monthly rather than yearly 用频率对比）→媒介（马尼拉与曼彻斯特的对仗地名例）→人性（clothing has always signalled belonging 的历史纵深）——三因各配一种论证手法，避免清单感（体系1.4）。",
+        "modelPara": "Fashion's grip has three causes. The first is commercial: global brands spend billions persuading consumers that this season's style is the only acceptable one, and because production has become fast and cheap, new ranges arrive monthly rather than yearly. The second is visibility. Social media turns every street into a catwalk, and young people in Manila now dress like their counterparts in Manchester because they watch the same videos. The third is human nature itself: clothing has always signalled belonging, and wearing what the global crowd wears promises membership of a modern, international community.",
+        "expressions": [
+          {
+            "en": "Fashion's grip has three causes",
+            "zh": "时尚的控制力源于三个原因（总起+grip点题）"
+          },
+          {
+            "en": "new ranges arrive monthly rather than yearly",
+            "zh": "上新按月而非按年（频率对比）"
+          },
+          {
+            "en": "Social media turns every street into a catwalk",
+            "zh": "社交媒体把每条街变成T台（隐喻）"
+          }
+        ],
+        "guideQ": "你的「三个原因」各用了不同的论证手法吗（数据/例证/历史）？同质并列会显得机械。"
+      },
+      "4": {
+        "why": "批判+再让步双层段：先批（地方纺织传统流失——with them disappear 倒装强调技艺与身份同灭；快时尚一季衣穿几个世纪的 landfill 对比）→ Yet the picture is not entirely dark 再让步（衣服便宜/消解傲慢/风格词汇）→ not variety but the speed 一句聚焦真病灶——段内完成批判、让步、聚焦三步。",
+        "modelPara": "The costs of this uniformity are real. Local textile traditions, from woven patterns to regional dress, are abandoning to mass-produced copies, and with them disappear skills and identities built over centuries. The environment pays too: fast fashion is among the world's most polluting industries, and clothes worn for a season fill landfills for centuries. Yet the picture is not entirely dark. Global fashion has also lowered the cost of decent clothing, dissolved some snobberies of class and region, and given individuals a vocabulary of styles with which to define themselves; the problem is not variety but the speed at which variety is discarded.",
+        "expressions": [
+          {
+            "en": "with them disappear skills and identities built over centuries",
+            "zh": "随之消失的是数世纪积累的技艺与身份（倒装强调）"
+          },
+          {
+            "en": "clothes worn for a season fill landfills for centuries",
+            "zh": "穿一季的衣服填埋几个世纪（一季/几世纪对仗）"
+          },
+          {
+            "en": "the problem is not variety but the speed at which variety is discarded",
+            "zh": "问题不是多样而是丢弃多样的速度（not X but Y定位句）"
+          }
+        ],
+        "guideQ": "你的批判段内部有没有「再让步并聚焦真问题」的一步？"
+      },
+      "5": {
+        "why": "一句话结论：三因压缩回收（commerce, shared media and the ancient desire to belong）+ could be made acceptable if the industry's pace, rather than its reach, were curbed 的虚拟语气收尾——「管速度不管范围」的精确方案把 negative 立场变成可执行主张。",
+        "modelPara": "In conclusion, commerce, shared media and the ancient desire to belong explain fashion's global power, and although its costs to tradition and the planet are serious, the development could be made acceptable if the industry's pace, rather than its reach, were curbed.",
+        "expressions": [
+          {
+            "en": "the ancient desire to belong",
+            "zh": "古老的归属渴望（人性因回收）"
+          },
+          {
+            "en": "if the industry's pace, rather than its reach, were curbed",
+            "zh": "若被约束的是速度而非范围（虚拟语气+对仗收尾）"
+          }
+        ],
+        "guideQ": "你的结尾有没有一个「而非」（rather than）句式把批判精确化？"
+      }
+    }
+  }
+}

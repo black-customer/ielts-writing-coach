@@ -1,0 +1,298 @@
+{
+  "剑21 Test 1 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "线图：美国四大经济部门就业人数（百万），1960-2020。services从约1400万持续飙升到约5000万；manufacturing从约1500万下滑到约800万；construction在约400-700万间波动，2010年前后低谷后回升；agriculture从约300万缓降至约150万。",
+    "essay": "The line graph shows how many people were employed in four sectors of the United States economy between 1960 and 2020.\n\nIt is clear that the services sector became the overwhelming engine of American employment over the period. It is also noticeable that manufacturing shed workers steadily, while construction and agriculture remained far smaller employers throughout.\n\nServices began the period as the largest sector, with about 14 million jobs, and its growth was continuous and dramatic: employment climbed to around 25 million by 1980, passed 35 million in 2000 and finished at roughly 50 million in 2020, more than tripling in sixty years.\n\nThe other three sectors followed flatter or falling paths. Manufacturing, the second-largest employer in 1960 at about 15 million, declined almost without interruption after its late-1960s peak, ending the period below 8 million. Construction hovered between 4 and 7 million, with a deep dip around 2010 before a partial recovery, and agriculture, always the smallest, drifted down from 3 million to under 2 million. By 2020, in fact, services employed more people than the other three sectors combined, an outcome that would have been unthinkable when the period began.",
+    "paraTeach": {
+      "2": {
+        "why": "开头改写：shows how many people were employed in four sectors（the number of jobs 名词组改 employment 从句），被动到主动的自然转换；时间段保留。",
+        "modelPara": "The line graph shows how many people were employed in four sectors of the United States economy between 1960 and 2020.",
+        "expressions": [
+          {
+            "en": "how many people were employed in four sectors",
+            "zh": "多少人受雇于四大部门（名词改从句）"
+          },
+          {
+            "en": "of the United States economy",
+            "zh": "美国经济（对象限定）"
+          }
+        ],
+        "guideQ": "「就业人数」你写成了从句还是照抄 the number of jobs？前者更见功力。"
+      },
+      "3": {
+        "why": "概括两句：句1=服务业成为压倒性就业引擎（头条：一条线的统治地位），句2=其余两小一降（manufacturing 裁员+另两个始终小）——四条线的命运一句话分完，无具体数字。",
+        "modelPara": "It is clear that the services sector became the overwhelming engine of American employment over the period. It is also noticeable that manufacturing shed workers steadily, while construction and agriculture remained far smaller employers throughout.",
+        "expressions": [
+          {
+            "en": "the overwhelming engine of American employment",
+            "zh": "美国就业的压倒性引擎（定性头条）"
+          },
+          {
+            "en": "manufacturing shed workers steadily",
+            "zh": "制造业持续流失工人（shed精准动词）"
+          }
+        ],
+        "guideQ": "四条线的图，你的概括让读者不看图也知道谁大谁小谁升谁降了吗？"
+      },
+      "4": {
+        "why": "细节一=服务业主线单写：三个里程碑节点（14m→25m(1980)→35m(2000)→50m(2020)）+ more than tripling in sixty years 倍数收口——最陡的一条线值得独占一段，节点年份均匀覆盖六十年（体系2.3）。",
+        "modelPara": "Services began the period as the largest sector, with about 14 million jobs, and its growth was continuous and dramatic: employment climbed to around 25 million by 1980, passed 35 million in 2000 and finished at roughly 50 million in 2020, more than tripling in sixty years.",
+        "expressions": [
+          {
+            "en": "began the period as the largest sector",
+            "zh": "期初即最大部门（起点地位）"
+          },
+          {
+            "en": "passed 35 million in 2000 and finished at roughly 50 million",
+            "zh": "2000年越过3500万、收于约5000万（passed/finished节奏）"
+          },
+          {
+            "en": "more than tripling in sixty years",
+            "zh": "六十年间翻了三倍多（倍数收口）"
+          }
+        ],
+        "guideQ": "一条最陡的线，你有没有给它单独一段、用里程碑年份串起？"
+      },
+      "5": {
+        "why": "细节二=其余三线打包：manufacturing（第二大到跌破800万+almost without interruption 修饰降幅）、construction（hovered between... with a deep dip around 2010 波动型写法）、agriculture（drifted down 漂移式下降）；结尾 more than the other three sectors combined 的比较句收束——「加总对比」是四线图最震撼的收尾。",
+        "modelPara": "The other three sectors followed flatter or falling paths. Manufacturing, the second-largest employer in 1960 at about 15 million, declined almost without interruption after its late-1960s peak, ending the period below 8 million. Construction hovered between 4 and 7 million, with a deep dip around 2010 before a partial recovery, and agriculture, always the smallest, drifted down from 3 million to under 2 million. By 2020, in fact, services employed more people than the other three sectors combined, an outcome that would have been unthinkable when the period began.",
+        "expressions": [
+          {
+            "en": "declined almost without interruption after its late-1960s peak",
+            "zh": "60年代末峰值后几乎无间断下滑"
+          },
+          {
+            "en": "hovered between 4 and 7 million, with a deep dip around 2010",
+            "zh": "在400-700万间徘徊、2010年前后深跌（波动型）"
+          },
+          {
+            "en": "more people than the other three sectors combined",
+            "zh": "比其余三部门总和还多（加总对比收尾）"
+          }
+        ],
+        "guideQ": "多线图的结尾你试过「加总对比」吗？比单线最值更有冲击力。"
+      }
+    }
+  },
+  "剑21 Test 2 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "地图：大学咖啡馆改造前后。改造前：小门店、长条吧台、少量桌椅、一个小厨房、无窗座；改造后：面积扩大（并入相邻储藏间）、吧台缩短改为取餐台、新增靠窗高桌与电源插座、角落沙发区、自动售货机、更多绿植。",
+    "essay": "The plans show a college cafe before it was redesigned and its present layout after the work.\n\nIt is clear that the cafe has been enlarged and reordered to suit students who want to work as well as eat. It is also noticeable that some counter service has been automated.\n\nIn its original form, the cafe consisted of a single rectangular room dominated by a long counter against the back wall, with a small kitchen behind it and a handful of tables arranged in rows in front. Seating was limited, and there were no facilities of any kind for studying.\n\nThe redesign has changed both the size and the character of the space. The cafe has absorbed the storage room next door, and the old counter has been shortened into a serving point at one end, with a self-service machine taking its place along the wall. The central rows of tables have given way to high tables beside the new, larger windows, complete with power sockets, while a corner has been fitted out with sofas for more relaxed groups. Plants complete the transformation from a simple coffee shop into, in effect, a small study hub.",
+    "paraTeach": {
+      "2": {
+        "why": "开头：before it was redesigned and its present layout after the work——redesigned/present 一旧一新两个时间锚点，避开了 first map/second map 的机械表达。",
+        "modelPara": "The plans show a college cafe before it was redesigned and its present layout after the work.",
+        "expressions": [
+          {
+            "en": "before it was redesigned",
+            "zh": "重新设计之前（被动时间从句）"
+          },
+          {
+            "en": "its present layout after the work",
+            "zh": "施工后的现有布局（现在锚点）"
+          }
+        ],
+        "guideQ": "改造图开头你的两个时间锚点用词重complexity了吗？还是一旧一新干净利落？"
+      },
+      "3": {
+        "why": "概括两句定性：句1=扩大+重排以服务「既吃又学」的学生（改造的商业动机一句话），句2=部分柜台服务自动化——从「功能转型」的高度概括，而非罗列新增了什么。",
+        "modelPara": "It is clear that the cafe has been enlarged and reordered to suit students who want to work as well as eat. It is also noticeable that some counter service has been automated.",
+        "expressions": [
+          {
+            "en": "enlarged and reordered to suit students who want to work as well as eat",
+            "zh": "扩容重排以服务边吃边学的学生（功能定性）"
+          },
+          {
+            "en": "some counter service has been automated",
+            "zh": "部分柜台服务已自动化（第二特征）"
+          }
+        ],
+        "guideQ": "你的概括说出「为谁、为什么改」了吗？改造图背后都有动机。"
+      },
+      "4": {
+        "why": "细节一=原貌（一般过去时）：dominated by a long counter（dominate 一词定下空间主角）、with a small kitchen behind it、tables arranged in rows——最后加一句评论性事实 Seating was limited, and there were no facilities for studying，为下一段的对照埋钩。",
+        "modelPara": "In its original form, the cafe consisted of a single rectangular room dominated by a long counter against the back wall, with a small kitchen behind it and a handful of tables arranged in rows in front. Seating was limited, and there were no facilities of any kind for studying.",
+        "expressions": [
+          {
+            "en": "dominated by a long counter against the back wall",
+            "zh": "后墙长吧台主导空间（dominate空间动词）"
+          },
+          {
+            "en": "no facilities of any kind for studying",
+            "zh": "毫无学习设施（伏笔句）"
+          }
+        ],
+        "guideQ": "写旧布局时你埋下了「将来会被解决」的缺陷吗？前后对照靠它。"
+      },
+      "5": {
+        "why": "细节二=改造（现在完成时被动串场）：absorbed the storage room（扩容）→shortened into a serving point（改造）→a self-service machine taking its place（分词点出自动化，呼应概括）→given way to high tables+complete with power sockets（呼应 work as well as eat）→in effect, a small study hub 的定性收尾。",
+        "modelPara": "The redesign has changed both the size and the character of the space. The cafe has absorbed the storage room next door, and the old counter has been shortened into a serving point at one end, with a self-service machine taking its place along the wall. The central rows of tables have given way to high tables beside the new, larger windows, complete with power sockets, while a corner has been fitted out with sofas for more relaxed groups. Plants complete the transformation from a simple coffee shop into, in effect, a small study hub.",
+        "expressions": [
+          {
+            "en": "has absorbed the storage room next door",
+            "zh": "并入隔壁储藏间（扩容动词）"
+          },
+          {
+            "en": "with a self-service machine taking its place",
+            "zh": "自助机取而代之（with复合结构点自动化）"
+          },
+          {
+            "en": "in effect, a small study hub",
+            "zh": "实际上已是一个小型学习枢纽（定性收尾）"
+          }
+        ],
+        "guideQ": "你的结尾把改造后的空间「重新定性」了吗？从A地变成B地是改造图的终极答案。"
+      }
+    }
+  },
+  "剑21 Test 3 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "流程图：雨影沙漠（rain-shadow desert）的形成（自然过程，主动语态）。海洋暖湿气流吹向海岸→遇山脉被迫沿迎风坡爬升→海拔升高气温下降→水汽凝结成云→迎风坡降雨（植被茂密）→空气过山顶后已干燥→沿背风坡下沉并压缩增温→背风坡干旱少雨形成沙漠。",
+    "essay": "The diagram shows how a rain-shadow desert is formed on the side of a mountain range facing away from the sea.\n\nIt is clear that the desert is created not by a lack of wind or water in the region, but by a mountain range stripping the air of its moisture before that air descends. It is also noticeable that the two sides of the same mountain, just kilometres apart, end up with opposite climates.\n\nThe process begins over the ocean, where moist air is blown towards the coast. When it meets the mountain range, it has nowhere to go but upwards, and as it climbs the windward slope it cools; the vapour inside condenses into clouds and falls as heavy rain, which is why the coastal side is lush and green.\n\nBy the time the air crosses the summit, however, it has lost almost all its moisture. It sinks down the far side, and the increasing pressure warms it as it descends, so that it arrives at the leeward slope as hot, dry wind. With no moisture left to give, it brings no rain, and the land slowly dries out into the desert that gives the phenomenon its name.",
+    "paraTeach": {
+      "2": {
+        "why": "自然过程图开头：is formed on the side... facing away from the sea——分词短语精确定位「背风坡」，开头即解决全图最重要的空间设定。",
+        "modelPara": "The diagram shows how a rain-shadow desert is formed on the side of a mountain range facing away from the sea.",
+        "expressions": [
+          {
+            "en": "how a rain-shadow desert is formed",
+            "zh": "雨影沙漠如何形成（术语保留+被动）"
+          },
+          {
+            "en": "facing away from the sea",
+            "zh": "背向大海的一侧（分词定位背风坡）"
+          }
+        ],
+        "guideQ": "自然过程的开头你把「发生在哪里」一次说清了吗？"
+      },
+      "3": {
+        "why": "概括两句：句1=沙漠的成因是山把空气水分「剥夺」而非无水无风（纠正直觉的机制定性，but by 强调）；句2=同山两侧气候相反——自然过程图的概括写「机制本质+最强反差」，与机械流程图写步数完全不同（体系2.2）。",
+        "modelPara": "It is clear that the desert is created not by a lack of wind or water in the region, but by a mountain range stripping the air of its moisture before that air descends. It is also noticeable that the two sides of the same mountain, just kilometres apart, end up with opposite climates.",
+        "expressions": [
+          {
+            "en": "not by a lack of wind or water in the region, but by a mountain range stripping the air of its moisture",
+            "zh": "并非缺水缺风、而是山剥夺了空气水分（not by but by机制定性）"
+          },
+          {
+            "en": "the two sides of the same mountain, just kilometres apart, end up with opposite climates",
+            "zh": "几公里之隔的两侧气候相反（最强反差句）"
+          }
+        ],
+        "guideQ": "自然过程的概括你点破「因果机制的本质」了吗？不是复述步骤而是解释为什么。"
+      },
+      "4": {
+        "why": "细节一=迎风半程（主动语态+因果链）：air picked up→blown towards coast→has nowhere to go but upwards→cools→condenses→falls as heavy rain→lush and green（结果回扣）；被动只在被风吹处出现——自然过程以主动语态为主，与机械流程相反（体系2.2）。",
+        "modelPara": "The process begins over the ocean, where moist air is blown towards the coast. When it meets the mountain range, it has nowhere to go but upwards, and as it climbs the windward slope it cools; the vapour inside condenses into clouds and falls as heavy rain, which is why the coastal side is lush and green.",
+        "expressions": [
+          {
+            "en": "it has nowhere to go but upwards",
+            "zh": "空气别无去路只能爬升（拟物句）"
+          },
+          {
+            "en": "the vapour inside condenses into clouds and falls as heavy rain",
+            "zh": "水汽凝云、化作大雨（主动语态因果链）"
+          },
+          {
+            "en": "which is why the coastal side is lush and green",
+            "zh": "这正是沿海一侧葱郁的原因（which is why回扣）"
+          }
+        ],
+        "guideQ": "自然过程你通篇用主动语态讲故事了吗？出现大量被动就写成了机械流程。"
+      },
+      "5": {
+        "why": "细节二=背风半程+沙漠收尾：By the time the air has crossed the summit（完成时转场）→sinks→pressure warms it again→hot, dry wind→With no moisture left to give（分词短语点出干旱根源）→slowly dries out into the desert that gives the phenomenon its name——「现象得名」的同位语收尾让流程闭环且有文气。",
+        "modelPara": "By the time the air crosses the summit, however, it has lost almost all its moisture. It sinks down the far side, and the increasing pressure warms it as it descends, so that it arrives at the leeward slope as hot, dry wind. With no moisture left to give, it brings no rain, and the land slowly dries out into the desert that gives the phenomenon its name.",
+        "expressions": [
+          {
+            "en": "By the time the air crosses the summit",
+            "zh": "待空气越过山顶（转场）"
+          },
+          {
+            "en": "the increasing pressure warms it as it descends",
+            "zh": "下沉增压使空气再升温（下沉增温机制）"
+          },
+          {
+            "en": "the desert that gives the phenomenon its name",
+            "zh": "让这一现象得名的沙漠（同位语收尾）"
+          }
+        ],
+        "guideQ": "你的最后一步和图的名字接上了吗？现象图的终点就是图名本身。"
+      }
+    }
+  },
+  "剑21 Test 4 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "图表组合：某大学图书馆用户调查。柱图：每周到馆次数分布——每周6次以上占最多（约38%），3-5次约30%，1-2次约25%，不到1次约7%。表格：按用户类型看满意度与用途——本科生最常到馆（主要用于借书与自习），研究生多用于数据库/文献，教职员到馆最少但满意度最高（主要用于数据库）。",
+    "essay": "The bar chart shows how often university library users visit the library, and the table shows the main characteristics of three types of user.\n\nIt is clear that most users are frequent visitors, coming at least three times a week. It is also noticeable that the heaviest users are undergraduates, while staff members visit least often but are the most satisfied.\n\nThe bar chart reveals that visiting daily is the most common pattern, chosen by 38% of users, followed closely by those who come three to five times a week, at 30%. A quarter manage one or two visits, and just 7% come less than once a week, meaning that over two thirds of users visit most days.\n\nThe table adds detail about who these visitors are. Undergraduates are the most frequent users, borrowing books and using study spaces; postgraduates visit slightly less often, dividing their time between books and databases; staff come in least often of all, mainly use databases, and yet record the highest satisfaction. Taken together, the results suggest a library that functions less as a warehouse of books than as a study environment, with frequency of use falling as research skills rise.",
+    "paraTeach": {
+      "2": {
+        "why": "图表组合开头一句一图：how often（柱图的频次问题）+ the main characteristics of three types of user（表格的用户分型）——两个疑问/名词短语精准概括两图主题。",
+        "modelPara": "The bar chart shows how often university library users visit the library, and the table shows the main characteristics of three types of user.",
+        "expressions": [
+          {
+            "en": "shows how often university library users visit",
+            "zh": "展示用户到馆频次（how often频次问法）"
+          },
+          {
+            "en": "the main characteristics of three types of user",
+            "zh": "三类用户的主要特征（表格主题）"
+          }
+        ],
+        "guideQ": "图表组合你的开头是否一句一图、各领主题？"
+      },
+      "3": {
+        "why": "概括两句：句1=多数人是高频用户（柱图头条），句2=本科到馆最多、职员最少却最满意（表格的反差头条）——第二句把表格里「最反直觉」的一对事实写进概括，是表格概括的高级写法。",
+        "modelPara": "It is clear that most users are frequent visitors, coming at least three times a week. It is also noticeable that the heaviest users are undergraduates, while staff members visit least often but are the most satisfied.",
+        "expressions": [
+          {
+            "en": "most users are frequent visitors",
+            "zh": "多数用户是高频到馆者（柱图头条）"
+          },
+          {
+            "en": "visit least often but are the most satisfied",
+            "zh": "到馆最少却最满意（反差头条）"
+          }
+        ],
+        "guideQ": "表格里的「反差」你找出来放进概括了吗？反差比最大值更有概括价值。"
+      },
+      "4": {
+        "why": "细节一=柱图从高到低：38%立最值（the single most common pattern）→followed fairly closely by 30%→a quarter→just 7%（just 降格最低项）；结尾 more than two thirds 换算加总——排序描写+一次加总换算，五个数不多不少。",
+        "modelPara": "The bar chart reveals that visiting daily is the most common pattern, chosen by 38% of users, followed closely by those who come three to five times a week, at 30%. A quarter manage one or two visits, and just 7% come less than once a week, meaning that over two thirds of users visit most days.",
+        "expressions": [
+          {
+            "en": "visiting daily is the most common pattern, chosen by 38% of users",
+            "zh": "每天到馆是最常见模式，占38%（分词补数）"
+          },
+          {
+            "en": "followed closely by those who come three to five times a week",
+            "zh": "紧随其后的是每周3-5次者（followed closely by）"
+          },
+          {
+            "en": "over two thirds of users visit most days",
+            "zh": "超三分之二用户几乎天天到馆（加总换算收尾）"
+          }
+        ],
+        "guideQ": "频次分布图你最后算了「高频者总和」吗？加总一句让分组数据有了结论。"
+      },
+      "5": {
+        "why": "细节二=表格三类用户并列：本科生（books+study spaces）→研究生（slightly less often, dividing their time between 分词结构）→职员（least often of all+mainly databases+yet highest satisfaction 回收概括反差）；Taken together 收束句定性「从藏书仓库到学习环境」并点出频次与研究能力的关系——合读句拔高立意但不越界。",
+        "modelPara": "The table adds detail about who these visitors are. Undergraduates are the most frequent users, borrowing books and using study spaces; postgraduates visit slightly less often, dividing their time between books and databases; staff come in least often of all, mainly use databases, and yet record the highest satisfaction. Taken together, the results suggest a library that functions less as a warehouse of books than as a study environment, with frequency of use falling as research skills rise.",
+        "expressions": [
+          {
+            "en": "dividing their time between books and databases",
+            "zh": "在书籍与数据库间分配时间（dividing分词）"
+          },
+          {
+            "en": "and yet record the highest satisfaction",
+            "zh": "却录得最高满意度（yet回收反差）"
+          },
+          {
+            "en": "functions less as a warehouse of books than as a study environment",
+            "zh": "与其说是藏书库不如说是学习环境（less...than合读句）"
+          }
+        ],
+        "guideQ": "你的合读句点出「数据背后的结构」了吗？频次随研究能力下降，就是这张表的结构。"
+      }
+    }
+  }
+}

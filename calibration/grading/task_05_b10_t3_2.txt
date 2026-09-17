@@ -1,0 +1,12 @@
+【评分任务】IELTS Academic Writing Task 2（议论文）
+【题目原文】
+Countries are becoming more and more similar because people are able to buy the same products anywhere in the world. Do you think this is a positive or negative development?
+
+【考生作文】
+It is said that countries are becoming similar to each other because of the global spread of the same products, which are now available for purchase almost anywhere. I strongly believe that this modern development is largely detrimental to culture and traditions worldwide. A country’s history, language and ethos are all inextricably bound up in its manufactured artefacts. If the relentless advance of international brands into every corner of the world continues, these bland packages might one day completely oust the traditional objects of a nation, which would be a loss of richness and diversity in the world, as well as the sad disappearance of the manifestations of a place’s character. What would a Japanese tea ceremony be without its specially crafted teapot, or a Fijian kava ritual without its bowl made from a certain type of tree bark? Let us not forget either that traditional products, whether these be medicines, cosmetics, toys, clothes, utensils or food, provide employment for local people. The spread of multinational products can often bring in its wake a loss of jobs, as people turn to buying the new brand, perhaps thinking it more glamorous than the one they are used to. This eventually puts old-school craftspeople out of work. Finally, tourism numbers may also be affected, as travellers become disillusioned with finding every place just the same as the one they visited previously. To see the same products in shops the world over is boring, and does not impel visitors to open their wallets in the same way that trinkets or souvenirs unique to the particular area do. Some may argue that all people are entitled to have access to the same products, but I say that local objects suit local conditions best, and that faceless uniformity worldwide is an unwelcome and dreary prospect.
+
+Model and sample answers for Writing tasks
+
+【输出要求】严格输出 JSON（不要 markdown 代码块），格式：
+{"scores":{"TR":x,"CC":x,"LR":x,"GRA":x},"overall":x,"reason":"每项一句话依据（中文）"}
+x 为 0-9 的分数，可带 0.5。Task 1 若图表缺失，TR 按作文内部数据一致性保守评估。

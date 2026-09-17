@@ -1,0 +1,16 @@
+【评分任务】IELTS Academic Writing Task 2（议论文）
+【题目原文】
+Some people believe that it is good to share as much information as possible in scientific research, business and the academic world. Others believe that some information is too important or too valuable to be shared freely. Discuss both these views and give your own opinion.
+
+【考生作文】
+Sharing information is actual issue in our world where it has strong influence on people. There are various spheres of our life where information is more or less important for people working there on out of this. For this reason some people consider that it is good to share information while others think in opposite way.
+
+For example, practically all scientists are glad to share information with ordinary people or other scientist. There is no competition in this sphere. Sometimes it is bad for government which scientist share the secret information with international spy but it will not hurt information.
+
+There are some simple rules in academic world which limite informational sources between people. If person is interested in theme discussing with you and you are ready to keep talking then the person gives you all information what he knows for free. On the other hand, if the person knows much and he knows that you can not give him actual or new information then he will share information with you just for money. For example, student pay for his learning while two students can cooperate and share information with each other. It is obviously that sharing information in business world can followes by releases. There is large competition and it may takes much costs for companies. Companies loose their profit every day because some one can not keep silence especially IT companies.
+
+To sum up all above it is neccesery to say that there are some spheres in which sharing information is a crime. In my opinion, in many cases information can be too important or sharing at all.
+
+【输出要求】严格输出 JSON（不要 markdown 代码块），格式：
+{"scores":{"TR":x,"CC":x,"LR":x,"GRA":x},"overall":x,"reason":"每项一句话依据（中文）"}
+x 为 0-9 的分数，可带 0.5。Task 1 若图表缺失，TR 按作文内部数据一致性保守评估。

@@ -1,0 +1,302 @@
+{
+  "剑15 Test 2 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 数据已对照剑桥原书原图核正（v2）",
+    "chartNote": "线图，三条线（百万人）：Total（圆点实线）1.0→1.25→1.5→2.0→2.5→2.7→2.7→3.5（2010-2017）；住岛客（三角虚线）0.75→0.75→1.25→1.5 后持平，2016 小跌至 1.25，2017 回 1.5；游轮客（方块点线）0.25→0.5→0.25→0.5→1.0→1.25→1.5→2.0。2016 年游轮与住岛持平（均 1.5），2017 反超。",
+    "essay": "The line graph shows how many tourists visited a particular Caribbean island between 2010 and 2017, measured in millions.\n\nIt is clear that the total number of visitors rose strongly over the period. It is also noticeable that cruise passengers, the smallest group for most of the period, caught up with those staying on the island and finally overtook them in 2017.\n\nVisitors staying on the island began at 0.75 million, held that figure in 2011, and then doubled to 1.5 million by 2013. Apart from a slight dip to 1.25 million in 2016, the figure then remained at that level until the end of the period. Cruise ship passengers started far lower, at just 0.25 million, and after a brief dip in 2012 climbed continuously, drawing level with island stayers at 1.5 million in 2016 before reaching 2 million in 2017.\n\nAs a result of these trends, the total rose from one million in 2010 to 1.5 million in 2012 and 2 million in 2013. It then climbed to 2.7 million in 2015 and 2016, and ended the period at 3.5 million, the highest figure shown.",
+    "paraTeach": {
+      "2": {
+        "why": "开头改写三处：shows the number of tourists visiting→illustrates how many tourists visited（名词组改从句）；加 measured in millions 交代单位；时间段保留。时态全过去式（体系2.1：时态由年份定）。",
+        "modelPara": "The line graph shows how many tourists visited a particular Caribbean island between 2010 and 2017, measured in millions.",
+        "expressions": [
+          {
+            "en": "shows how many tourists visited",
+            "zh": "展示游客数量（名词改从句的改写手法）"
+          },
+          {
+            "en": "measured in millions",
+            "zh": "以百万为单位（分词补语交代单位）"
+          }
+        ],
+        "guideQ": "你的开头交代单位了吗？漏单位，后面的数字全部没有参照。"
+      },
+      "3": {
+        "why": "概括两句零数字：句1给总量趋势（strongly rose），句2给全图头条的交叉故事——游轮客从最小一路追平并于 2017 反超住岛客。caught up with... and finally overtook 一句话讲完追平+反超两步。",
+        "modelPara": "It is clear that the total number of visitors rose strongly over the period. It is also noticeable that cruise passengers, the smallest group for most of the period, caught up with those staying on the island and finally overtook them in 2017.",
+        "expressions": [
+          {
+            "en": "the smallest group for most of the period",
+            "zh": "多数时间里的最小群体（先抑）"
+          },
+          {
+            "en": "caught up with those staying on the island and finally overtook them in 2017",
+            "zh": "追平住岛客并于2017年最终反超（两步交叉故事）"
+          }
+        ],
+        "guideQ": "两线交叉的故事，你的概括是一步讲完（追平+反超）还是只写了「上升」？"
+      },
+      "4": {
+        "why": "分组法：两条「成分线」一组——住岛客（翻倍后走平、2016 小跌）与游轮客（0.25 起步、2012 小跌后连续攀升、2016 追平、2017 反超）写在同一段才能完成交叉（体系2.2交叉点必写）。doubled/drew level with 每个数字带形状或对比。",
+        "modelPara": "Visitors staying on the island began at 0.75 million, held that figure in 2011, and then doubled to 1.5 million by 2013. Apart from a slight dip to 1.25 million in 2016, the figure then remained at that level until the end of the period. Cruise ship passengers started far lower, at just 0.25 million, and after a brief dip in 2012 climbed continuously, drawing level with island stayers at 1.5 million in 2016 before reaching 2 million in 2017.",
+        "expressions": [
+          {
+            "en": "began at 0.75 million, held that figure in 2011",
+            "zh": "0.75起步、2011持平（held that figure）"
+          },
+          {
+            "en": "Apart from a slight dip to 1.25 million in 2016",
+            "zh": "除2016年小跌至125万外（例外插入）"
+          },
+          {
+            "en": "drawing level with island stayers at 1.5 million in 2016",
+            "zh": "2016年追平住岛客的150万（追平表达）"
+          }
+        ],
+        "guideQ": "追平（drew level）和反超（overtook）是两件事，你分开写清楚了吗？"
+      },
+      "5": {
+        "why": "总和线单独一段，用 As a result of these trends 承接上一段——衔接靠逻辑而非Firstly（体系1.5）。总量线节点密（1→1.5→2→2.5→2.7→3.5），只取代表性节点：2012/2013、2015-2016 平台、2017 终点最值。",
+        "modelPara": "As a result of these trends, the total rose from one million in 2010 to 1.5 million in 2012 and 2 million in 2013. It then climbed to 2.7 million in 2015 and 2016, and ended the period at 3.5 million, the highest figure shown.",
+        "expressions": [
+          {
+            "en": "As a result of these trends",
+            "zh": "受这些趋势影响（段落逻辑衔接）"
+          },
+          {
+            "en": "climbed to 2.7 million in 2015 and 2016",
+            "zh": "2015-2016升至270万（两年并列）"
+          },
+          {
+            "en": "the highest figure shown",
+            "zh": "图中最值（同位语收尾点睛）"
+          }
+        ],
+        "guideQ": "数据点密的线，你挑了哪几个代表节点？全报就是听写。"
+      }
+    }
+  },
+  "剑16 Test 1 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 数据已对照剑桥原书原图核正（v2）",
+    "chartNote": "线图：家电拥有率%（1920/1940/1960/1980/2000/2019）——洗衣机40→60→65→70→65→70→75（有起伏）；冰箱0→50（1940）→90（1960）→100（1980后）；吸尘器30→50→70→90→100（2000后）。家务时长：50→35（1940）→20（1960）→15（1980）→15（2000）→约11（2019）。",
+    "essay": "The line graph tracks the percentage of households owning three electrical appliances, together with the number of hours spent on housework each week, in one country between 1920 and 2019.\n\nIt is clear that appliance ownership rose to near-universal levels over the period. It is also noticeable that this happened alongside a dramatic fall in the time families spent on housework.\n\nThe refrigerator saw the sharpest rise: from no ownership at all in 1920, it reached half of all households by 1940, 90% by 1960 and virtually every home by 1980. Vacuum cleaners followed a steadier path from 30% in 1920 to saturation after 2000, while the washing machine, already in 40% of homes in 1920, fluctuated gently and finished at 75%.\n\nThe time devoted to housework fell in step with these changes: from 50 hours per week in 1920 to 35 in 1940 and just 20 by 1960, before levelling off and ending at around 11 hours in 2019. In short, as machines took over the laundry and the cleaning, the weekly workload fell to less than a quarter of its former level.",
+    "paraTeach": {
+      "2": {
+        "why": "开头改写：shows the changes in ownership→tracks the percentage of households owning（名词改从句）；and连接的「家务时长」补成 the number of hours spent on housework each week——双信息一个不漏；时间段1920-2019保留。",
+        "modelPara": "The line graph tracks the percentage of households owning three electrical appliances, together with the number of hours spent on housework each week, in one country between 1920 and 2019.",
+        "expressions": [
+          {
+            "en": "tracks the percentage of households owning three electrical appliances",
+            "zh": "追踪三种家电的家庭拥有率（shows替换+从句改写）"
+          },
+          {
+            "en": "together with the number of hours spent on housework each week",
+            "zh": "连同每周家务小时数（第二信息嵌入）"
+          }
+        ],
+        "guideQ": "多信息图的题干改写，你把「每一条线/每一块信息」都装进开头了吗？"
+      },
+      "3": {
+        "why": "概括两句零数字：句1=家电拥有率升至接近普及（near-universal 比 rose dramatically 更准确：洗衣机只到75%），句2=家务时长骤降同步发生——把「一升一降伴随」的对比关系写进概括。",
+        "modelPara": "It is clear that appliance ownership rose to near-universal levels over the period. It is also noticeable that this happened alongside a dramatic fall in the time families spent on housework.",
+        "expressions": [
+          {
+            "en": "rose to near-universal levels",
+            "zh": "升至接近普及的水平（比100%更严谨的说法）"
+          },
+          {
+            "en": "alongside a dramatic fall in",
+            "zh": "伴随…的骤降（两线关系的概括写法）"
+          }
+        ],
+        "guideQ": "洗衣机只到75%，你敢写「接近普及」吗？——概括用「总体」措辞，不夸大单条线。"
+      },
+      "4": {
+        "why": "细节一=三台家电：最陡的冰箱详写（0→50%→90%→100%，三段式爬升到顶）、吸尘器 steadier path 一句（30→饱和）、洗衣机 fluctuated gently + 终值对比——详略分明，每个数字有参照（体系2.3）。",
+        "modelPara": "The refrigerator saw the sharpest rise: from no ownership at all in 1920, it reached half of all households by 1940, 90% by 1960 and virtually every home by 1980. Vacuum cleaners followed a steadier path from 30% in 1920 to saturation after 2000, while the washing machine, already in 40% of homes in 1920, fluctuated gently and finished at 75%.",
+        "expressions": [
+          {
+            "en": "from no ownership at all in 1920",
+            "zh": "从1920年的零拥有起步（起点极值）"
+          },
+          {
+            "en": "reached half of all households by 1940, 90% by 1960",
+            "zh": "1940年过半、1960年达90%（里程碑串写）"
+          },
+          {
+            "en": "fluctuated gently and finished at 75%",
+            "zh": "小幅波动、收于75%（起伏型写法）"
+          }
+        ],
+        "guideQ": "三条线的详略是「最陡的最详、平稳的次之、末端对比收尾」吗？"
+      },
+      "5": {
+        "why": "细节二=家务时长：50→35→20 三节点+levelling off（1980-2000平台）+约11收尾；结尾用 In short 把两图拧成一句因果（机器接管→工时降到原来的不到四分之一），呼应概括段的 alongside。",
+        "modelPara": "The time devoted to housework fell in step with these changes: from 50 hours per week in 1920 to 35 in 1940 and just 20 by 1960, before levelling off and ending at around 11 hours in 2019. In short, as machines took over the laundry and the cleaning, the weekly workload fell to less than a quarter of its former level.",
+        "expressions": [
+          {
+            "en": "fell in step with these changes",
+            "zh": "随这些变化同步下降（指代衔接+关系句）"
+          },
+          {
+            "en": "before levelling off",
+            "zh": "之后趋于平稳（平台期动词）"
+          },
+          {
+            "en": "fell to less than a quarter of its former level",
+            "zh": "降到原来的不到四分之一（倍数对比收尾）"
+          }
+        ],
+        "guideQ": "图上有好几条线时，你有没有在最后用一句对比把所有线的关系收拢？"
+      }
+    }
+  },
+  "剑16 Test 3 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 数据已对照剑桥原书原图核正（v2）",
+    "chartNote": "地图：Southwest Airport 现在vs翻修后。现在：8个登机口（1-8），步行通道（walkway）连接，check-in+café在出发侧，security/passport control/customs。翻修后：登机口增至18个（1-18），Y形布局，walkway改为sky train；出发侧新增bag drop（B）和shops；到达侧新增第二个café、ATM、car hire；security等位置不变。",
+    "essay": "The plans show the current layout of Southwest Airport and how the site will look once it has been redeveloped.\n\nIt is clear that the main change will be a huge expansion in the number of gates, from eight to eighteen. It is also noticeable that passengers will be offered several facilities that the airport does not have at present.\n\nAt present, eight gates are reached on foot along a single walkway leading from the terminal. After redevelopment, this walkway will have been replaced by a sky train, and the gates will more than double to eighteen, arranged in a Y shape on either side of the tracks.\n\nThe terminal itself will gain the most new amenities. A bag drop will sit beside the check-in desks, and a row of shops will open along the departures walkway; on the arrivals side, a second café will appear next to a new ATM and car-hire desk. Security, passport control and customs will stay exactly where they are, the only parts of the airport, apart from the check-in and one café, to survive the redevelopment untouched.",
+    "paraTeach": {
+      "2": {
+        "why": "规划图地图（现在vs将来）开头：how the site will look once it has been redeveloped——will look + 完成时锁定「翻修完成」的时点，全文将来时基调由此定下（体系2.1：规划图用 will be）。",
+        "modelPara": "The plans show the current layout of Southwest Airport and how the site will look once it has been redeveloped.",
+        "expressions": [
+          {
+            "en": "the current layout of Southwest Airport",
+            "zh": "机场当前布局（现状半句）"
+          },
+          {
+            "en": "how the site will look once it has been redeveloped",
+            "zh": "翻修完成后的样子（将来时+完成时）"
+          }
+        ],
+        "guideQ": "规划图你全文用 will be / will look 了吗？混进 was built 就时态错乱。"
+      },
+      "3": {
+        "why": "地图概括两句：句1给头条（登机口8→18，from eight to eighteen 一眼看出的最大变化），句2给第二特征（新增多种旅客设施）——概括写「最大变化的总纲」，明细留给细节段。",
+        "modelPara": "It is clear that the main change will be a huge expansion in the number of gates, from eight to eighteen. It is also noticeable that passengers will be offered several facilities that the airport does not have at present.",
+        "expressions": [
+          {
+            "en": "a huge expansion in the number of gates, from eight to eighteen",
+            "zh": "登机口从8个大幅扩至18个（头条+数字对比）"
+          },
+          {
+            "en": "facilities that the airport does not have at present",
+            "zh": "现有机场没有的设施（第二特征）"
+          }
+        ],
+        "guideQ": "地图题的「最大变化」你放进概括第一句了吗？数字对比（8→18）是它的分量所在。"
+      },
+      "4": {
+        "why": "细节一=登机半区：现状一句（8 gates + walkway），将来一句（sky train + 18 gates Y形布局）——will have been replaced 用将来完成时写「翻修完成时已发生」的变化，是规划图的高分时态。",
+        "modelPara": "At present, eight gates are reached on foot along a single walkway leading from the terminal. After redevelopment, this walkway will have been replaced by a sky train, and the gates will more than double to eighteen, arranged in a Y shape on either side of the tracks.",
+        "expressions": [
+          {
+            "en": "are reached on foot along a single walkway",
+            "zh": "步行经单一通道到达（现状被动）"
+          },
+          {
+            "en": "this walkway will have been replaced by a sky train",
+            "zh": "通道将被 Sky Train 取代（将来完成时被动）"
+          },
+          {
+            "en": "the gates will more than double to eighteen",
+            "zh": "登机口翻倍还多、增至18个（more than double）"
+          }
+        ],
+        "guideQ": "「翻修完成时」的变化你用将来完成时（will have been done）了吗？普通 will be 也对，但少一层精确。"
+      },
+      "5": {
+        "why": "细节二=航站楼新增设施：bag drop/shops（出发侧）+第二café/ATM/car hire（到达侧）并写；收尾句用 the only parts... to survive the redevelopment untouched 把「不变项」点出——变化与保留闭环（体系2.2地图 retained 纪律）。",
+        "modelPara": "The terminal itself will gain the most new amenities. A bag drop will sit beside the check-in desks, and a row of shops will open along the departures walkway; on the arrivals side, a second café will appear next to a new ATM and car-hire desk. Security, passport control and customs will stay exactly where they are, the only parts of the airport, apart from the check-in and one café, to survive the redevelopment untouched.",
+        "expressions": [
+          {
+            "en": "will gain the most new amenities",
+            "zh": "航站楼将新增最多设施（段落主旨）"
+          },
+          {
+            "en": "a second café will appear next to a new ATM and car-hire desk",
+            "zh": "到达侧将出现第二咖啡馆、ATM与租车柜台"
+          },
+          {
+            "en": "will stay exactly where they are",
+            "zh": "位置原封不动（保留类表达）"
+          }
+        ],
+        "guideQ": "「不变的部分」你写了吗？机场里 security 等位置不动，与新增设施形成对照。"
+      }
+    }
+  },
+  "剑17 Test 4 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 数据已对照剑桥原书原图核正（v2）",
+    "chartNote": "线图：关店数（实线 Closures）vs 开店数（虚线 Openings）2011-2018。开张：8500→3900（2012崩落）→5000（2013）→6200（2014回升）→4000（2015-2016）→4200（2017）→3000（2018，全图最低）；关张：6500→5900→7200（2013峰值）→6500（2014）→骤降至600（2015，全图最低）→5200（2016回升）→5000→5300。2011年开店多于关店2000家；2018年反转为关店多于开店2300家。",
+    "essay": "The line graph shows how many shops closed and how many new shops opened in one country over the eight years from 2011 to 2018.\n\nIt is clear that the fortunes of the two flows reversed over the period: openings began far higher but ended below closures. It is also noticeable that both lines fell over the eight years as a whole.\n\nOpenings began the period at their peak of 8,500 in 2011 and then collapsed to 3,900 a year later. They recovered to 6,200 by 2014, but the recovery was short-lived: apart from a slight rise to 4,200 in 2017, openings slid back and ended the period at just 3,000, the lowest figure shown.\n\nClosures followed a rougher path. From 6,500 in 2011 they dipped to 5,900, peaked at 7,200 in 2013, and then crashed spectacularly to only 600 in 2015. They rebounded immediately, however, and stabilised at around 5,000 to 5,300. As a result, the healthy surplus of 2,000 more openings than closures recorded in 2011 had turned, by 2018, into a shortfall of 2,300.",
+    "paraTeach": {
+      "2": {
+        "why": "开头改写：owner-reported cases of shop closures and openings→how many shops closed and how many new shops opened（名词组改两个动词从句）；时间段嵌入句尾。本题的真正故事是「两条线的强弱反转」——概括第一句就点破。",
+        "modelPara": "The line graph shows how many shops closed and how many new shops opened in one country over the eight years from 2011 to 2018.",
+        "expressions": [
+          {
+            "en": "how many shops closed and how many new shops opened",
+            "zh": "多少店关张、多少新店开张（两个平行从句）"
+          },
+          {
+            "en": "over the eight years from 2011 to 2018",
+            "zh": "2011至2018八年间（时间段嵌入）"
+          }
+        ],
+        "guideQ": "closures 和 openings 这对名词，你改写成动词从句了吗？从句比名词堆更易读。"
+      },
+      "3": {
+        "why": "概括两句：句1=强弱反转（openings began far higher but ended below closures——一句话讲完八年的故事），句2=两线总体都在下降。「反转」是这张图区别于普通双线图的灵魂。",
+        "modelPara": "It is clear that the fortunes of the two flows reversed over the period: openings began far higher but ended below closures. It is also noticeable that both lines fell over the eight years as a whole.",
+        "expressions": [
+          {
+            "en": "the fortunes of the two flows reversed",
+            "zh": "两条线的命运发生了反转（定性句）"
+          },
+          {
+            "en": "openings began far higher but ended below closures",
+            "zh": "开店数起点高得多、收尾却低于关店数（反转具体化）"
+          }
+        ],
+        "guideQ": "双线图的概括写出「强弱关系如何变化」了吗？只写各自趋势会漏掉最值钱的一层。"
+      },
+      "4": {
+        "why": "细节一=开店线：峰值起点（8,500）→崩落（3,900）→回升（6,200）→回落到全图最低（3,000）。collapsed/the recovery was short-lived/slid back 三个形状动词拉开段落节奏；2017 小反弹用 apart from 插入处理（体系2.4趋势词伙不重复）。",
+        "modelPara": "Openings began the period at their peak of 8,500 in 2011 and then collapsed to 3,900 a year later. They recovered to 6,200 by 2014, but the recovery was short-lived: apart from a slight rise to 4,200 in 2017, openings slid back and ended the period at just 3,000, the lowest figure shown.",
+        "expressions": [
+          {
+            "en": "began the period at their peak of 8,500",
+            "zh": "以期初峰值8500开局（起点即最值）"
+          },
+          {
+            "en": "the recovery was short-lived",
+            "zh": "回升是短暂的（冒号引出转折）"
+          },
+          {
+            "en": "the lowest figure shown",
+            "zh": "图中最小值（同位语点睛）"
+          }
+        ],
+        "guideQ": "一条线有多个拐点时，你用「不同的形状动词」分段写了吗？全段只有rose和fell一定单调。"
+      },
+      "5": {
+        "why": "细节二=关店线+反转收口：dipped→peaked→crashed spectacularly to only 600（2015异常点必写）→rebounded and stabilised；结尾用 As a result 把 2011 与 2018 的差额（+2000 → −2300）对比点出——用「净差额」数字讲完反转，呼应概括段。",
+        "modelPara": "Closures followed a rougher path. From 6,500 in 2011 they dipped to 5,900, peaked at 7,200 in 2013, and then crashed spectacularly to only 600 in 2015. They rebounded immediately, however, and stabilised at around 5,000 to 5,300. As a result, the healthy surplus of 2,000 more openings than closures recorded in 2011 had turned, by 2018, into a shortfall of 2,300.",
+        "expressions": [
+          {
+            "en": "crashed spectacularly to only 600 in 2015",
+            "zh": "2015年暴跌至仅600（全图最异常点）"
+          },
+          {
+            "en": "rebounded immediately, however, and stabilised",
+            "zh": "随即反弹并企稳（ rebound/stabilise）"
+          },
+          {
+            "en": "the healthy surplus of 2,000 more openings than closures recorded in 2011 had turned, by 2018, into a shortfall of 2,300",
+            "zh": "从多开2000家的盈余转为少开2300家的缺口（反转数字化）"
+          }
+        ],
+        "guideQ": "两条线的强弱反转，你用「首尾净差额」的数字对比讲出来了吗？"
+      }
+    }
+  }
+}

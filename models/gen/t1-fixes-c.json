@@ -1,0 +1,302 @@
+{
+  "剑19 Test 1 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 数据已对照剑桥原书原图核正（v2）",
+    "chartNote": "线图（6条线，2000/2005/2010/2015/2020五点）：film club 64→62→60→64→66（全程第一）；table tennis 16→20→20→35.5→54（暴涨，2015超amateur dramatics与martial arts）；martial arts 36→32→38→34→36（窄幅波动）；amateur dramatics 25.5→28→20→14→6（持续下滑）；musical performances 2000-2005为0，2010年12→16→18。注意：原图只有6种活动，没有yoga/pilates。",
+    "essay": "The line graph shows how many people took part in six different activities at one social centre in Melbourne between 2000 and 2020.\n\nIt is clear that the film club remained the most popular activity throughout. It is also noticeable that table tennis, once one of the smaller offerings, grew faster than any other activity, while amateur dramatics declined sharply.\n\nFilm club attendance was remarkably stable: it began and ended the period at 64 and 66 participants respectively, after a slight dip to 60 in 2010. Table tennis started with just 16 participants but climbed continuously, overtaking amateur dramatics and martial arts around 2015 on its way to 54 by 2020. Musical performances, which did not exist until after 2005, attracted 12 participants by 2010 and 18 by 2020.\n\nThe remaining activity went into steep decline: amateur dramatics fell steadily from 25 participants in 2000 to only 6 in 2020. Martial arts, by contrast, simply fluctuated within a narrow band, beginning and ending the period at 36 after peaking at 38 in 2010.",
+    "paraTeach": {
+      "2": {
+        "why": "开头改写：gives information on the numbers of participants→shows how many people took part in six different activities（名词组改从句）；六条线在开头点名（six），与图一致。",
+        "modelPara": "The line graph shows how many people took part in six different activities at one social centre in Melbourne between 2000 and 2020.",
+        "expressions": [
+          {
+            "en": "how many people took part in six different activities",
+            "zh": "多少人参加六种活动（participate动词化改写）"
+          },
+          {
+            "en": "at one social centre in Melbourne",
+            "zh": "墨尔本某社区活动中心（对象+地点保留）"
+          }
+        ],
+        "guideQ": "线有几条，你的开头就数到几了吗？"
+      },
+      "3": {
+        "why": "概括两句：句1=film club 始终第一（稳），句2=两条动态线的故事——table tennis 从小项目暴涨、amateur dramatics 锐减。一稳一涨一跌，六条线的命运一句话分完。",
+        "modelPara": "It is clear that the film club remained the most popular activity throughout. It is also noticeable that table tennis, once one of the smaller offerings, grew faster than any other activity, while amateur dramatics declined sharply.",
+        "expressions": [
+          {
+            "en": "remained the most popular activity throughout",
+            "zh": "始终最受欢迎（稳定项头条）"
+          },
+          {
+            "en": "once one of the smaller offerings, grew faster than any other",
+            "zh": "昔日小项目、如今增速第一（反差句）"
+          }
+        ],
+        "guideQ": "暴涨的是 table tennis——你的概括押对宝了吗？多线图最忌把「看着眼熟」的线写成主角。"
+      },
+      "4": {
+        "why": "细节一=film club（稳）+table tennis（涨）+musical performances（新）：remarkably stable/dip/climbed continuously/overtaking 串起三条线；「2015年前后连超两项」的交叉点与「2005年前不存在」的出生点都点到位（体系2.3）。",
+        "modelPara": "Film club attendance was remarkably stable: it began and ended the period at 64 and 66 participants respectively, after a slight dip to 60 in 2010. Table tennis started with just 16 participants but climbed continuously, overtaking amateur dramatics and martial arts around 2015 on its way to 54 by 2020. Musical performances, which did not exist until after 2005, attracted 12 participants by 2010 and 18 by 2020.",
+        "expressions": [
+          {
+            "en": "began and ended the period at 64 and 66 participants respectively",
+            "zh": "期初期末分别为64和66（respectively配对）"
+          },
+          {
+            "en": "overtaking amateur dramatics and martial arts around 2015",
+            "zh": "约2015年连超两项（交叉点）"
+          },
+          {
+            "en": "which did not exist until after 2005",
+            "zh": "2005年前尚不存在（出生点从句）"
+          }
+        ],
+        "guideQ": "「从零开始」的线，你交代它的出生点了 吗？0是它最重要的数字。"
+      },
+      "5": {
+        "why": "细节二=余下两条：amateur dramatics 稳步下滑（25→6，steep decline）；martial arts 窄幅波动（首尾都是36、2010峰值38）——一条写趋势、一条写波动，By contrast 衔接；首尾同值的「回到原点」用 beginning and ending... at 36 一句收。",
+        "modelPara": "The remaining activity went into steep decline: amateur dramatics fell steadily from 25 participants in 2000 to only 6 in 2020. Martial arts, by contrast, simply fluctuated within a narrow band, beginning and ending the period at 36 after peaking at 38 in 2010.",
+        "expressions": [
+          {
+            "en": "went into steep decline",
+            "zh": "急剧衰退（趋势主旨句）"
+          },
+          {
+            "en": "fluctuated within a narrow band",
+            "zh": "窄幅波动（波动型标准表达）"
+          },
+          {
+            "en": "beginning and ending the period at 36",
+            "zh": "期初期末同为36（回到原点）"
+          }
+        ],
+        "guideQ": "首尾相同的线（回到原点），你用一句话框住了吗？"
+      }
+    }
+  },
+  "剑19 Test 2 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 数据已对照剑桥原书原图核正（v2）",
+    "chartNote": "地图：Porth Harbour 2000 vs today。2000：北 marina（私人游艇）+南 dock（渔船），showers&toilets、两个car park、passenger ferries、lifeboat、public beach（东北）、Castle（disused，废弃古堡）+castle旁public beach、main road。今天：渔船与游艇码头位置互换（渔船迁北、marina迁南），docks之间新增cafés & shops，南侧新增第二处showers & toilats，Castle→Hotel，古堡旁public beach→private beach (for the hotel)；ferry/lifeboat/停车场/东北public beach不变。",
+    "essay": "The maps show Porth Harbour as it was in 2000 and the same harbour today.\n\nIt is clear that the harbour has been reoriented towards tourism and leisure. It is also noticeable that several new visitor facilities have appeared, while the transport features have mostly changed places rather than disappeared.\n\nThe most striking swap concerns the two docks. In 2000, private yachts were berthed in the northern marina while fishing boats used the southern dock; today the positions are reversed, with the fishing fleet to the north and the marina to the south. Cafés and shops have been built between the two, and a second block of showers and toilets now serves the southern side.\n\nThe other transformation is the conversion of the disused castle into a hotel, whose guests enjoy the former public beach as a private one. What has not changed is just as clear: the passenger ferries, the lifeboat station, both car parks, the main road and the north-east public beach all remain exactly where they were.",
+    "paraTeach": {
+      "2": {
+        "why": "地图开头：as it was in 2000 and the same harbour today——was/today 时态分工，the same harbour 点明同一地点两时点，一句话完成。",
+        "modelPara": "The maps show Porth Harbour as it was in 2000 and the same harbour today.",
+        "expressions": [
+          {
+            "en": "as it was in 2000",
+            "zh": "2000年时的样子（过去半句）"
+          },
+          {
+            "en": "the same harbour today",
+            "zh": "今天的同一海港（现在半句）"
+          }
+        ],
+        "guideQ": "两图对比题的开头你能压缩到一句话吗？"
+      },
+      "3": {
+        "why": "概括两句定性：句1=海港转向旅游休闲（性质定位），句2=新增设施多、但运输要素多是「换位」而非消失——「换位不消失」是这张图最特别的结构，概括就点它。",
+        "modelPara": "It is clear that the harbour has been reoriented towards tourism and leisure. It is also noticeable that several new visitor facilities have appeared, while the transport features have mostly changed places rather than disappeared.",
+        "expressions": [
+          {
+            "en": "reoriented towards tourism and leisure",
+            "zh": "重新定位为旅游休闲（定性句）"
+          },
+          {
+            "en": "changed places rather than disappeared",
+            "zh": "换了位置而非消失（换位特征句）"
+          }
+        ],
+        "guideQ": "这张图里「消失」的东西多吗？还是只是「搬家」？读准这一点，全篇的结构就定了。"
+      },
+      "4": {
+        "why": "细节一=码头大换位：2000年布局一句（北marina游艇+南dock渔船），today the positions are reversed 一句反转；新增的 cafés & shops 与第二处 showers & toilets 补在换位之后——「对照一句+反转一句+新增两句」。",
+        "modelPara": "The most striking swap concerns the two docks. In 2000, private yachts were berthed in the northern marina while fishing boats used the southern dock; today the positions are reversed, with the fishing fleet to the north and the marina to the south. Cafés and shops have been built between the two, and a second block of showers and toilets now serves the southern side.",
+        "expressions": [
+          {
+            "en": "The most striking swap concerns the two docks",
+            "zh": "最醒目的换位是两座码头（主旨句）"
+          },
+          {
+            "en": "today the positions are reversed",
+            "zh": "如今位置互换（反转句）"
+          },
+          {
+            "en": "a second block of showers and toilets now serves the southern side",
+            "zh": "南侧新增第二处盥洗室（serves点功能）"
+          }
+        ],
+        "guideQ": "「A 到了 B 的位置、B 到了 A 的位置」，你用 positions are reversed 一句收拢了吗？"
+      },
+      "5": {
+        "why": "细节二=旅游开发+保留项：disused castle→hotel（改用途）、public beach→private beach for hotel guests（改性质）；What has not changed is just as clear 引出五项不变（ferry/lifeboat/停车场/main road/东北海滩）——保留项成段，首尾闭合。",
+        "modelPara": "The other transformation is the conversion of the disused castle into a hotel, whose guests enjoy the former public beach as a private one. What has not changed is just as clear: the passenger ferries, the lifeboat station, both car parks, the main road and the north-east public beach all remain exactly where they were.",
+        "expressions": [
+          {
+            "en": "the conversion of the disused castle into a hotel",
+            "zh": "废弃古堡改建为酒店（conversion into改用途）"
+          },
+          {
+            "en": "the former public beach as a private one",
+            "zh": "原公共海滩变为私人海滩（as性质转换）"
+          },
+          {
+            "en": "all remain exactly where they were",
+            "zh": "全部原地保留（保留项收尾）"
+          }
+        ],
+        "guideQ": "不变项你单独成句收尾了吗？「变化的对照面」让地图答案更完整。"
+      }
+    }
+  },
+  "剑19 Test 3 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 数据已对照剑桥原书原图核正（v2）",
+    "chartNote": "循环流程图：Biofuel production — how ethanol is made。环节：Energy（sunlight + carbon dioxide）→ Plants and trees grow → Harvesting → Pre-processing → Cellulose → Processing → Ethanol → 车辆使用（Carbon dioxide 排出）→ 回到植物吸收，闭环。自然环节（生长/发酵）主动语态，工业环节（harvesting/pre-processing/processing）被动语态。",
+    "essay": "The diagram illustrates how ethanol, a biofuel, is produced from trees and crops and then used to power vehicles.\n\nIt is clear that the process forms a closed cycle, beginning with the growing of plants and ending with carbon dioxide returning to the air, where the growing plants take it up again. It is also noticeable that the whole loop is driven by energy from sunlight.\n\nThe cycle starts as trees and plants absorb sunlight and carbon dioxide while they grow. Once harvested, the crop is taken for pre-processing, where it is reduced to cellulose; this cellulose is then processed into sugars and fermented into ethanol.\n\nThe fuel's journey completes the loop. The ethanol is sold as a biofuel and burned in vehicles, and the carbon dioxide their engines release escapes back into the atmosphere. There it is once again available for the growing plants to absorb, allowing the cycle that produced the fuel to begin anew.",
+    "paraTeach": {
+      "2": {
+        "why": "循环流程图开头：produced from trees and crops and then used to power vehicles——「生产+使用」两大半各占半句，循环图的开头必须交代它是环。",
+        "modelPara": "The diagram illustrates how ethanol, a biofuel, is produced from trees and crops and then used to power vehicles.",
+        "expressions": [
+          {
+            "en": "ethanol, a biofuel, is produced from trees and crops",
+            "zh": "乙醇（生物燃料）由树木作物制成（同位语解释术语）"
+          },
+          {
+            "en": "and then used to power vehicles",
+            "zh": "再用于驱动车辆（使用半环）"
+          }
+        ],
+        "guideQ": "循环图你的开头就把「生产与使用」两大半框出来了吗？"
+      },
+      "3": {
+        "why": "概括=闭环结构+能量来源：句1 closed cycle，首尾相接（CO2 回到植物）；句2 整个循环由阳光驱动——两张图合看才发现的「能量主线」是第二层特征。",
+        "modelPara": "It is clear that the process forms a closed cycle, beginning with the growing of plants and ending with carbon dioxide returning to the air, where the growing plants take it up again. It is also noticeable that the whole loop is driven by energy from sunlight.",
+        "expressions": [
+          {
+            "en": "forms a closed cycle",
+            "zh": "构成闭环（循环图定性词）"
+          },
+          {
+            "en": "the whole loop is driven by energy from sunlight",
+            "zh": "整个循环由阳光驱动（能量主线）"
+          }
+        ],
+        "guideQ": "图上标注的「Energy (sunlight + carbon dioxide)」你读出来了吗？它是概括的第二句。"
+      },
+      "4": {
+        "why": "细节一=生产半环：absorb→harvested→pre-processing→reduced to cellulose→processed into sugars→fermented into ethanol；自然环节主动（trees absorb / plants grow），工业环节被动（is reduced/is processed/is fermented）——语态切换本身就是对图的理解。",
+        "modelPara": "The cycle starts as trees and plants absorb sunlight and carbon dioxide while they grow. Once harvested, the crop is taken for pre-processing, where it is reduced to cellulose; this cellulose is then processed into sugars and fermented into ethanol.",
+        "expressions": [
+          {
+            "en": "trees and plants absorb sunlight and carbon dioxide while they grow",
+            "zh": "植物生长时吸收阳光与二氧化碳（主动语态）"
+          },
+          {
+            "en": "the crop is taken for pre-processing",
+            "zh": "作物送去预处理（工业环节被动）"
+          },
+          {
+            "en": "fermented into ethanol",
+            "zh": "发酵成乙醇（关键转化）"
+          }
+        ],
+        "guideQ": "自然环节主动、工业环节被动——你的语态跟着图的性质切换了吗？"
+      },
+      "5": {
+        "why": "细节二=使用半环+合环：sold as a biofuel→burned in vehicles→CO2 released→available for plants again；The fuel's journey completes the loop 点段旨；allowing the cycle... to begin anew 把环正式合拢，与概括段 closed cycle 首尾呼应。",
+        "modelPara": "The fuel's journey completes the loop. The ethanol is sold as a biofuel and burned in vehicles, and the carbon dioxide their engines release escapes back into the atmosphere. There it is once again available for the growing plants to absorb, allowing the cycle that produced the fuel to begin anew.",
+        "expressions": [
+          {
+            "en": "completes the loop",
+            "zh": "完成闭环（循环图点睛句）"
+          },
+          {
+            "en": "escapes back into the atmosphere",
+            "zh": "排回大气（back呼应闭环）"
+          },
+          {
+            "en": "allowing the cycle that produced the fuel to begin anew",
+            "zh": "使产生燃料的循环重新开始（分词收尾合环）"
+          }
+        ],
+        "guideQ": "你的最后一步接回第一步了吗？循环图的结尾必须合环。"
+      }
+    }
+  },
+  "剑19 Test 4 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 数据已对照剑桥原书原图核正（v2）",
+    "chartNote": "饼图+横条图：饼图=舞蹈课地点——private studios 48%、school halls (after-school) 24%、community halls & other 18%、college-based studios 10%；横条图=Types of dance classes (by age group)——Ballet：11岁以下约600、11-16岁约300；Tap：约450/430；Modern：约300/510。三舞种总量相近（810-900），偏好相反：小学生偏爱ballet、中学生偏爱modern。",
+    "essay": "The pie chart shows where young people in a town in Australia attend dance classes, and the bar chart shows how many students take each type of dance, broken down by age group.\n\nIt is clear that private studios are the most popular venues by a wide margin. It is also noticeable that the two age groups have almost opposite tastes: ballet dominates among the under-11s, modern dance among the 11-to-16s.\n\nJust under half of all young dancers, 48%, learn in private studios, with after-school classes in school halls accounting for a further 24%. Community halls and other venues took 18%, and college-based studios the remaining 10%.\n\nBallet is the largest class type overall, with around 600 dancers under 11 compared with 300 aged 11 to 16. Tap is the most evenly split, at roughly 450 and 430, whereas modern dance is the mirror image of ballet: about 510 teenagers study it, but only 300 younger children do. Taken together, the two charts show young dancers following tradition in the early years and moving to modern styles as they grow older.",
+    "paraTeach": {
+      "2": {
+        "why": "双图开头一句一图：where... attend dance classes（饼图问题）+ how many students take each type, broken down by age group（条图问题+年龄组维度）——broken down by age group 一词把条图的特殊结构点出。",
+        "modelPara": "The pie chart shows where young people in a town in Australia attend dance classes, and the bar chart shows how many students take each type of dance, broken down by age group.",
+        "expressions": [
+          {
+            "en": "shows where young people in a town in Australia attend dance classes",
+            "zh": "展示澳大利亚某镇年轻人在哪上课（地点问题）"
+          },
+          {
+            "en": "broken down by age group",
+            "zh": "按年龄组细分（条图结构）"
+          }
+        ],
+        "guideQ": "条图被分成两组时，你在开头就点明这个结构了吗？"
+      },
+      "3": {
+        "why": "概括一句一图：饼图=private studios 遥遥领先（by a wide margin）；条图=两个年龄组口味几乎相反（ballet 主导小学生、modern 主导中学生）——第二句把条图的「镜像结构」说破，是本图真正的一眼结论。",
+        "modelPara": "It is clear that private studios are the most popular venues by a wide margin. It is also noticeable that the two age groups have almost opposite tastes: ballet dominates among the under-11s, modern dance among the 11-to-16s.",
+        "expressions": [
+          {
+            "en": "the most popular venues by a wide margin",
+            "zh": "以巨大差距领先的场地（饼图最值）"
+          },
+          {
+            "en": "the two age groups have almost opposite tastes",
+            "zh": "两个年龄组口味几乎相反（镜像结构句）"
+          }
+        ],
+        "guideQ": "条图的「分组对比结构」（谁爱ballet、谁爱modern）你读出来了吗？只报各组人数就是流水账。"
+      },
+      "4": {
+        "why": "细节一=饼图：48% 同位语补数（Just under half... 48%），with 分词带出 24%，remaining 10% 收尾凑齐 100%——大项同位语、次项 with、小项 remaining，三步把四块份额收完（体系2.3）。",
+        "modelPara": "Just under half of all young dancers, 48%, learn in private studios, with after-school classes in school halls accounting for a further 24%. Community halls and other venues took 18%, and college-based studios the remaining 10%.",
+        "expressions": [
+          {
+            "en": "Just under half of all young dancers, 48%",
+            "zh": "略低于半数，48%（同位语补数）"
+          },
+          {
+            "en": "accounting for a further 24%",
+            "zh": "占另外24%（with+分词）"
+          },
+          {
+            "en": "the remaining 10%",
+            "zh": "其余10%（凑齐100%收尾）"
+          }
+        ],
+        "guideQ": "饼图份额加起来是100%，你用 remaining 把「其余」收完了吗？"
+      },
+      "5": {
+        "why": "细节二=条图：ballet 最大档（600 vs 300）立标杆→tap 最平均（450/430）→modern 是 ballet 的镜像（510 vs 300），mirror image 一词点破对称结构；Taken together 合读句收尾（小时候传统、长大现代）。",
+        "modelPara": "Ballet is the largest class type overall, with around 600 dancers under 11 compared with 300 aged 11 to 16. Tap is the most evenly split, at roughly 450 and 430, whereas modern dance is the mirror image of ballet: about 510 teenagers study it, but only 300 younger children do. Taken together, the two charts show young dancers following tradition in the early years and moving to modern styles as they grow older.",
+        "expressions": [
+          {
+            "en": "with around 600 dancers under 11 compared with 300 aged 11 to 16",
+            "zh": "11岁以下约600人、对比11-16岁300人（compared with）"
+          },
+          {
+            "en": "modern dance is the mirror image of ballet",
+            "zh": "现代舞与芭蕾互为镜像（对称点睛）"
+          },
+          {
+            "en": "Taken together, the two charts show",
+            "zh": "两图合看表明（双图合读句式）"
+          }
+        ],
+        "guideQ": "「镜像」这种结构特征，你用一个词点破了吗？点破即是高分句。"
+      }
+    }
+  }
+}

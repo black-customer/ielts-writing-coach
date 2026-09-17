@@ -1,0 +1,223 @@
+{
+  "剑18 Test 1 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 数据已对照剑桥原书原图核正（v2）",
+    "chartNote": "线图（预测到2040）：菲律宾/马来西亚/泰国/印尼城市人口%，1970-2040（10年间隔，2020后为预测）。马来西亚30→45.5(1990)→71(2010)→76(2020)→预测81(2030)/83(2040)；菲律宾32→49(1990)→回落43(2010)→46(2020)→预测51/56；泰国18→30.5(1990)→停滞34(2020)→预测41/50；印尼14→25.5(1990)→30.5(2000)→43(2010)→52.5(2020)→预测61/64。印尼约2010超泰国、约2020超菲律宾。",
+    "essay": "The line graph shows the proportion of people living in cities in four Asian countries between 1970 and 2020, with predictions to 2040.\n\nIt is clear that urbanisation advanced in every country over the period. It is also noticeable that Indonesia, the least urbanised in 1970, grew fastest and is expected to overtake two of its neighbours.\n\nMalaysia was the most urbanised country throughout: from 30% in 1970 its figure climbed to 45% by 1990 and 71% in 2010, and it is forecast to reach 83% by 2040. The Philippines followed a different path — rapid growth to 49% by 1990 was followed by a decade of decline to 43%, before the figure resumed its climb, and it is predicted to stand at 56% in 2040.\n\nIndonesia urbanised from the lowest base, at just 14% in 1970, but its growth accelerated after 2000: it overtook Thailand around 2010 and the Philippines around 2020, and is forecast to reach 64% by 2040, with Thailand close behind on 50%.",
+    "paraTeach": {
+      "2": {
+        "why": "含预测的线图开头：between 1970 and 2020 + with predictions to 2040 把「实线段+预测段」一次交代（本题预测轴到2040，不是2030——读图必须以图为准）。",
+        "modelPara": "The line graph shows the proportion of people living in cities in four Asian countries between 1970 and 2020, with predictions to 2040.",
+        "expressions": [
+          {
+            "en": "the proportion of people living in cities",
+            "zh": "居住在城市的人口比例（percentage of urban population的改写）"
+          },
+          {
+            "en": "with predictions to 2040",
+            "zh": "预测到2040年（预测段交代）"
+          }
+        ],
+        "guideQ": "预测段的终点年份，你是从图上读出来的还是想当然写的？"
+      },
+      "3": {
+        "why": "概括两句：句1=四国全部城市化（总趋势），句2=本图的头条故事——起点最低的印尼增速最快、预计反超两个邻国。多线图的概括写「线间关系的变化」，比罗列谁高谁低高一档。",
+        "modelPara": "It is clear that urbanisation advanced in every country over the period. It is also noticeable that Indonesia, the least urbanised in 1970, grew fastest and is expected to overtake two of its neighbours.",
+        "expressions": [
+          {
+            "en": "urbanisation advanced in every country",
+            "zh": "四国城市化全部推进（总趋势）"
+          },
+          {
+            "en": "the least urbanised in 1970, grew fastest and is expected to overtake two of its neighbours",
+            "zh": "起点最低、增速最快、预计连超两国（一句话头条）"
+          }
+        ],
+        "guideQ": "哪条线完成了「反超」？反超者的故事就是你的概括第二句。"
+      },
+      "4": {
+        "why": "细节一=最高者详写+回落者对比：马来西亚三节点串写（30→45%→71%→预测83）；菲律宾用破折号插叙「先快后回落再恢复」的非单调路径（49→43→回升），rapid growth/decline/resumed climb 三个形状词讲完——非单调线就写成三幕小剧。",
+        "modelPara": "Malaysia was the most urbanised country throughout: from 30% in 1970 its figure climbed to 45% by 1990 and 71% in 2010, and it is forecast to reach 83% by 2040. The Philippines followed a different path — rapid growth to 49% by 1990 was followed by a decade of decline to 43%, before the figure resumed its climb, and it is predicted to stand at 56% in 2040.",
+        "expressions": [
+          {
+            "en": "was the most urbanised country throughout",
+            "zh": "始终是城市化程度最高（全程最值）"
+          },
+          {
+            "en": "rapid growth to 49% by 1990 was followed by a decade of decline to 43%",
+            "zh": "1990年快速升至49%后经历十年回落至43%（先扬后抑）"
+          },
+          {
+            "en": "before the figure resumed its climb",
+            "zh": "之后重新回升（resume句型）"
+          }
+        ],
+        "guideQ": "先升后降再升的线，你写成三幕了吗？只报首尾就丢了中间的回落故事。"
+      },
+      "5": {
+        "why": "细节二=追赶者印尼：from the lowest base + accelerated after 2000 + 两次反超的时间点（约2010超泰国、约2020超菲律宾）+ 预测64%；泰国以 with Thailand close behind on 50% 一笔带过——主写反超者、被超者嵌入句尾。",
+        "modelPara": "Indonesia urbanised from the lowest base, at just 14% in 1970, but its growth accelerated after 2000: it overtook Thailand around 2010 and the Philippines around 2020, and is forecast to reach 64% by 2040, with Thailand close behind on 50%.",
+        "expressions": [
+          {
+            "en": "urbanised from the lowest base, at just 14% in 1970",
+            "zh": "从仅14%的最低起点城市化"
+          },
+          {
+            "en": "it overtook Thailand around 2010 and the Philippines around 2020",
+            "zh": "约2010超泰国、约2020超菲律宾（两次反超）"
+          },
+          {
+            "en": "with Thailand close behind on 50%",
+            "zh": "泰国以50%紧随其后（with独立主格带出被超者）"
+          }
+        ],
+        "guideQ": "反超者的两次超越各发生在哪一年？时间点是反超故事的骨架。"
+      }
+    }
+  },
+  "剑18 Test 2 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 数据已对照剑桥原书原图核正（v2）",
+    "chartNote": "柱图：美国家庭数（百万）按5档年收入×3年。<$25k：25.5→29→28；$25-49.9k：27→30→28.5；$50-74.9k：21→21.5→21（三年不动）；$75-99.9k：14.5→14→15.5（最小档）；$100k+：29.5→28→33（2015全图最高）。头条：$100k+在2007与2015都是最大单档；中部两档纹丝不动。",
+    "essay": "The bar chart shows how many households in the United States fell into each of five annual income bands in 2007, 2011 and 2015, measured in millions.\n\nIt is clear that the $100,000-or-more band was the largest single group in two of the three years. It is also noticeable that the two middle bands barely moved, so that virtually all the change in the chart came at the top and the bottom.\n\nHouseholds earning $100,000 or more numbered 29.5 million in 2007, dipped to 28 million in 2011 and then jumped to 33 million in 2015, the highest figure on the chart. The $25,000-$49,999 band followed a similar arc, peaking at 30 million in 2011 before easing back to 28.5 million, while the poorest band rose from 25.5 to 28 million over the period.\n\nThe middle of the distribution, by contrast, was static. Households on $50,000-$74,999 held steady at around 21 million in all three years, and the $75,000-$99,999 band was the smallest group throughout, at roughly 14 to 15.5 million. Overall, therefore, America's income profile grew at the very top while its middle stayed exactly where it was.",
+    "paraTeach": {
+      "2": {
+        "why": "开头改写：shows the number of households by their annual income→how many households fell into each of five annual income bands（档位表达+数量属性），三个年份顺排在句尾。",
+        "modelPara": "The bar chart shows how many households in the United States fell into each of five annual income bands in 2007, 2011 and 2015, measured in millions.",
+        "expressions": [
+          {
+            "en": "fell into each of five annual income bands",
+            "zh": "分属五个年收入档（档位表达）"
+          },
+          {
+            "en": "measured in millions",
+            "zh": "以百万为单位（单位口径）"
+          }
+        ],
+        "guideQ": "你的开头点明量的是「户数（百万）」了吗？"
+      },
+      "3": {
+        "why": "概括两句：句1=$100k+档在三年中两年是最大单档（纠正直觉：最大的是最高档不是中间档），句2=中部两档几乎不动→全部变化发生在顶部和底部——「变化发生在哪里」是分组柱图概括的钥匙。",
+        "modelPara": "It is clear that the $100,000-or-more band was the largest single group in two of the three years. It is also noticeable that the two middle bands barely moved, so that virtually all the change in the chart came at the top and the bottom.",
+        "expressions": [
+          {
+            "en": "the largest single group in two of the three years",
+            "zh": "三年中两年的最大单档（精确限定）"
+          },
+          {
+            "en": "virtually all the change in the chart came at the top and the bottom",
+            "zh": "几乎所有变化都发生在顶部和底部（变化定位句）"
+          }
+        ],
+        "guideQ": "分组柱图你先问「哪里动、哪里不动」了吗？这就是概括的两句话。"
+      },
+      "4": {
+        "why": "细节一=三个大档：$100k+（29.5→28→33，2015全图最高）详写，$25-50k「类似弧线」（峰值2011后回落）类比，最穷档一句（25.5→28）——类似走势用 similar arc 归并，避免三段重复。",
+        "modelPara": "Households earning $100,000 or more numbered 29.5 million in 2007, dipped to 28 million in 2011 and then jumped to 33 million in 2015, the highest figure on the chart. The $25,000-$49,999 band followed a similar arc, peaking at 30 million in 2011 before easing back to 28.5 million, while the poorest band rose from 25.5 to 28 million over the period.",
+        "expressions": [
+          {
+            "en": "numbered 29.5 million in 2007, dipped to 28 million in 2011 and then jumped to 33 million",
+            "zh": "2950万→2800万→3300万（dip/jump节奏）"
+          },
+          {
+            "en": "followed a similar arc",
+            "zh": "走出类似的弧线（近似走势归并）"
+          },
+          {
+            "en": "peaking at 30 million in 2011 before easing back",
+            "zh": "2011年见顶3000万后回落（peaking分词）"
+          }
+        ],
+        "guideQ": "走势相同的档位你「归并」了吗？三个大档各写一段就是字数灾难。"
+      },
+      "5": {
+        "why": "细节二=中部两档：by contrast 转折（与上段的动形成对照），held steady at around 21 million / the smallest group throughout at roughly 14 to 15.5 million；结尾 Overall, therefore 收束句呼应概括（top grew, middle stayed）。",
+        "modelPara": "The middle of the distribution, by contrast, was static. Households on $50,000-$74,999 held steady at around 21 million in all three years, and the $75,000-$99,999 band was the smallest group throughout, at roughly 14 to 15.5 million. Overall, therefore, America's income profile grew at the very top while its middle stayed exactly where it was.",
+        "expressions": [
+          {
+            "en": "The middle of the distribution, by contrast, was static",
+            "zh": "分布的中部相比之下纹丝不动（对照转折句）"
+          },
+          {
+            "en": "the smallest group throughout",
+            "zh": "始终是最小群体（持续最值）"
+          },
+          {
+            "en": "grew at the very top while its middle stayed exactly where it was",
+            "zh": "顶部增长、中部原地踏步（收束对仗）"
+          }
+        ],
+        "guideQ": "你的收束句把「顶部与中部」的反差钉死了吗？"
+      }
+    }
+  },
+  "剑18 Test 3 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 数据已对照剑桥原书原图核正（v2）",
+    "chartNote": "地图：中央图书馆20年前vs现在（房间式平面图）。20年前：CDs/videos/computer games角、儿童书（右上）、成人小说（左）、成人非小说（右）、阅览室（报刊杂志，左下）、中央tables & chairs、enquiry desk（右下，办证还书）；今天：storytelling events+sofas（原媒体角）、lecture room（原儿童书）、children's fiction（原成人小说位）、all reference books+computer room（原阅览室）、成人小说保留在右侧+information desk+self-service machines、café（原enquiry desk位）、中央桌椅取消、入口开放。",
+    "essay": "The diagrams show the floor plan of a public library as it was twenty years ago and the layout of the same building today.\n\nIt is clear that the library has shifted from a storehouse of physical media to a multi-purpose community space. It is also noticeable that most of the internal walls have gone, as separate rooms have been opened into one another.\n\nTwenty years ago the building was a grid of closed rooms: CDs, videos and computer games in one corner, children's books opposite, adult fiction and non-fiction down either side, a walled reading room for newspapers and magazines, and an enquiry desk by the entrance handling tickets and book returns.\n\nToday the partitions have largely disappeared. The media corner has become a storytelling events area with sofas, the children's collection has moved to the left wall, and all reference books now sit in the open beside a new computer room. On the right, adult fiction remains, but the enquiry desk has given way to an information desk, self-service machines and a café, while a lecture room occupies the old children's area. The central tables and chairs are the one casualty: the entrance hall now stands completely open.",
+    "paraTeach": {
+      "2": {
+        "why": "地图开头：as it was twenty years ago and the layout of the same building today——was/today 两个时态分管两图，the same building 点明「同一建筑改造对比」。",
+        "modelPara": "The diagrams show the floor plan of a public library as it was twenty years ago and the layout of the same building today.",
+        "expressions": [
+          {
+            "en": "the floor plan of a public library as it was twenty years ago",
+            "zh": "20年前的平面布局（过去半句）"
+          },
+          {
+            "en": "the layout of the same building today",
+            "zh": "同一建筑如今的布局（现在半句）"
+          }
+        ],
+        "guideQ": "改造对比图你的开头写明「同一对象+两个时点」了吗？"
+      },
+      "3": {
+        "why": "概括两句定性：句1=从「实体媒体仓库」转向「多用途社区空间」（转型定性一句话），句2=内部隔墙大多消失（房间打通）——从图中读出的结构特征，比逐屋罗列高一层。",
+        "modelPara": "It is clear that the library has shifted from a storehouse of physical media to a multi-purpose community space. It is also noticeable that most of the internal walls have gone, as separate rooms have been opened into one another.",
+        "expressions": [
+          {
+            "en": "has shifted from a storehouse of physical media to a multi-purpose community space",
+            "zh": "从实体媒体仓库转向多用途社区空间（转型定性）"
+          },
+          {
+            "en": "most of the internal walls have gone",
+            "zh": "内部隔墙大多消失（结构特征句）"
+          }
+        ],
+        "guideQ": "你的概括句能当作这张图的一句话简介吗？能，就说明概括到位了。"
+      },
+      "4": {
+        "why": "细节一=旧布局（过去时）：a grid of closed rooms 一句总起（格子间），再按「一角-对面-两侧-左下-入口」的方位把五个功能区一句串完——旧图不展开，为下一段的变化留足笔墨。",
+        "modelPara": "Twenty years ago the building was a grid of closed rooms: CDs, videos and computer games in one corner, children's books opposite, adult fiction and non-fiction down either side, a walled reading room for newspapers and magazines, and an enquiry desk by the entrance handling tickets and book returns.",
+        "expressions": [
+          {
+            "en": "a grid of closed rooms",
+            "zh": "一间间封闭房间的格子布局（总起比喻）"
+          },
+          {
+            "en": "an enquiry desk by the entrance handling tickets and book returns",
+            "zh": "入口咨询台办理借还（handling分词带功能）"
+          }
+        ],
+        "guideQ": "旧图你用一句总起+方位串写了吗？逐屋各写一句会把篇幅耗在不变化的部分。"
+      },
+      "5": {
+        "why": "细节二=今天（现在完成时+一般现在时混用）：partitions have largely disappeared 承接概括，四组变化各半句（媒体角→storytelling+sofas；儿童书迁移；enquiry desk→info desk+自助机+café；lecture room 占原儿童区），结尾 the one casualty 幽默点出「中央桌椅被取消」——保留与取消闭环。",
+        "modelPara": "Today the partitions have largely disappeared. The media corner has become a storytelling events area with sofas, the children's collection has moved to the left wall, and all reference books now sit in the open beside a new computer room. On the right, adult fiction remains, but the enquiry desk has given way to an information desk, self-service machines and a café, while a lecture room occupies the old children's area. The central tables and chairs are the one casualty: the entrance hall now stands completely open.",
+        "expressions": [
+          {
+            "en": "has given way to an information desk, self-service machines and a café",
+            "zh": "咨询台让位于信息台、自助机与咖啡角（give way to）"
+          },
+          {
+            "en": "while a lecture room occupies the old children's area",
+            "zh": "演讲室占据了原儿童书区（occupy变化动词）"
+          },
+          {
+            "en": "The central tables and chairs are the one casualty",
+            "zh": "中央桌椅是唯一的牺牲品（the one casualty点睛）"
+          }
+        ],
+        "guideQ": "新图的每一处变化，你都能在旧图里指出「它的前身」吗？前身-后身一一对应是地图题的核心。"
+      }
+    }
+  }
+}

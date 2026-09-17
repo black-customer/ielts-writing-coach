@@ -1,0 +1,182 @@
+{
+  "剑18 Test 1 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "Science serves many masters: governments want security, companies want profit and researchers want knowledge for its own sake. While each of these goals has value, I largely agree that improving people's lives should be treated as the most important aim of scientific work, because that is the standard by which the public ultimately judges and funds it.\n\nThe strongest argument for putting human welfare first is that science consumes public money and public patience. Laboratories, telescopes and clinical trials are financed by taxpayers, and that support survives only as long as ordinary people can see the benefits: the vaccines, clean water and faster communications that research has delivered. When science visibly improves lives, budgets are renewed; when it cannot explain what it is for, it is quietly starved. Prioritising human welfare is therefore not just morally attractive but institutionally necessary.\n\nIt is right, however, to concede a limit. Some of the most useful science in history began as curiosity with no application in sight, and had funding followed only immediate needs, the theories behind today's computers and satellites might never have been discovered. Pure research must therefore keep a protected space. But even this concession supports the central claim: curiosity is worth funding because it so often ends up improving lives in ways nobody predicted. The aim and the accident point in the same direction.\n\nIn conclusion, although knowledge pursued for its own sake deserves protection, the improvement of human life is the proper first priority of science, both because it is the fairest test of value and because it is the only basis on which the public will continue to pay.",
+    "paraTeach": {
+      "2": {
+        "why": "「To what extent」观点题开头：句1先把题目的对立面摆上桌（governments/companies/researchers 各有所求），句2表态 largely agree 并给出总理由（公众以此标准评价和出资）——先立靶再表态，agree 程度词 largely 留出让步空间。",
+        "modelPara": "Science serves many masters: governments want security, companies want profit and researchers want knowledge for its own sake. While each of these goals has value, I largely agree that improving people's lives should be treated as the most important aim of scientific work, because that is the standard by which the public ultimately judges and funds it.",
+        "expressions": [
+          { "en": "Science serves many masters", "zh": "科学服务于多方（一句话摆出对立面）" },
+          { "en": "I largely agree that", "zh": "我基本同意（extent类题的留余地表态）" },
+          { "en": "the standard by which the public ultimately judges and funds it", "zh": "公众评价与出资的最终标准（总理由）" }
+        ],
+        "guideQ": "「在多大程度上同意」的题，你的表态词是绝对的还是留了让步空间（largely/strongly）？"
+      },
+      "3": {
+        "why": "理由一写到「制度层」而非「口号层」：科学花的是纳税人的钱和耐心→好处可见则预算续期→解释不了用途就被饿死——整段是一条制度因果链，vaccines/clean water 只作例子嵌入。落到「钱和耐心」是观点具体化的范本（体系1.4）。",
+        "modelPara": "The strongest argument for putting human welfare first is that science consumes public money and public patience. Laboratories, telescopes and clinical trials are financed by taxpayers, and that support survives only as long as ordinary people can see the benefits: the vaccines, clean water and faster communications that research has delivered. When science visibly improves lives, budgets are renewed; when it cannot explain what it is for, it is quietly starved. Prioritising human welfare is therefore not just morally attractive but institutionally necessary.",
+        "expressions": [
+          { "en": "science consumes public money and public patience", "zh": "科学消耗公共资金与公众耐心（主旨句）" },
+          { "en": "that support survives only as long as ordinary people can see the benefits", "zh": "支持只在好处可见时存续（条件链）" },
+          { "en": "not just morally attractive but institutionally necessary", "zh": "不仅道德上可取、制度上也不可少（递进收口）" }
+        ],
+        "guideQ": "你的理由是停在「改善生活是好的」，还是挖到了「为什么制度上必须如此」？差一层深度差一分。"
+      },
+      "4": {
+        "why": "让步段处理「纯好奇心研究」这一最强反例：承认无应用的科学曾孕育计算机与卫星→给纯研究留保护区→再用 but even this concession supports 把让步反转回立场（好奇心最终也服务于改善生活）——让步反转结构是高分段的标志性写法。",
+        "modelPara": "It is right, however, to concede a limit. Some of the most useful science in history began as curiosity with no application in sight, and had funding followed only immediate needs, the theories behind today's computers and satellites might never have been discovered. Pure research must therefore keep a protected space. But even this concession supports the central claim: curiosity is worth funding because it so often ends up improving lives in ways nobody predicted. The aim and the accident point in the same direction.",
+        "expressions": [
+          { "en": "began as curiosity with no application in sight", "zh": "始于看不见应用的纯好奇（让步句）" },
+          { "en": "had funding followed only immediate needs", "zh": "假如拨款只看眼前需求（倒装虚拟条件）" },
+          { "en": "But even this concession supports the central claim", "zh": "但连这条让步也支持中心论点（反转句）" }
+        ],
+        "guideQ": "你让步完有没有把让步「反转」回自己的立场？让而不转等于送分给对方。"
+      },
+      "5": {
+        "why": "一句话结论：although 让步回收纯研究 deserving protection + the proper first priority 重申立场 + 双理由收口（fairest test of value + 唯一的出资基础）——extent题结尾要把「同意的程度与理由」一并收拢。",
+        "modelPara": "In conclusion, although knowledge pursued for its own sake deserves protection, the improvement of human life is the proper first priority of science, both because it is the fairest test of value and because it is the only basis on which the public will continue to pay.",
+        "expressions": [
+          { "en": "the proper first priority of science", "zh": "科学正当的首要目标（立场换词重申）" },
+          { "en": "the only basis on which the public will continue to pay", "zh": "公众持续出资的唯一基础（收口）" }
+        ],
+        "guideQ": "你的结论把「立场+两条理由+让步」四件事收进两行了吗？"
+      }
+    }
+  },
+  "剑18 Test 2 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "At university, some students prefer to broaden their studies beyond their chosen subject, while others concentrate exclusively on the qualification in front of them. Both approaches have obvious attractions, but I believe the focused path is the wiser one for most people, provided it is a genuine choice rather than an inability to explore.\n\nThose who wander into other subjects make a persuasive case. Knowledge does not respect the boundaries of a syllabus, and some of the most productive minds in history were conspicuously wide-ranging: a computer scientist who has studied psychology may design better interfaces, and an engineer with an economics background understands why her bridge should be cheap as well as strong. Sampling other fields can also rescue students who discover, sometimes too late, that they chose their main subject badly. A semester of taster courses is often all it takes to redirect a young person towards work that actually suits them.\n\nNevertheless, the case for concentration is stronger. A degree is examined, and examination results are what employers and admissions tutors see first; time spent on extra subjects is time taken from the discipline that will appear on the transcript. Deep study also builds something superficial sampling never can: the habit of sustained, difficult thinking. There will be forty working years after graduation for breadth, and the workplace itself teaches subjects faster than any seminar. University, by contrast, is the one period in life when experts are on hand to guide a student through material they could never master alone.\n\nIn conclusion, while exploring neighbouring subjects has real value, I believe students gain more from going deep on their own degree, since breadth can wait but guided depth cannot.",
+    "paraTeach": {
+      "2": {
+        "why": "讨论题开头：句1改写双方（broaden their studies beyond their chosen subject ↔ concentrate exclusively），句2立场+限定（the wiser one for most people, provided...）——provided 从句把立场修得更精细，也为后文留出分寸（体系1.2）。",
+        "modelPara": "At university, some students prefer to broaden their studies beyond their chosen subject, while others concentrate exclusively on the qualification in front of them. Both approaches have obvious attractions, but I believe the focused path is the wiser one for most people, provided it is a genuine choice rather than an inability to explore.",
+        "expressions": [
+          { "en": "broaden their studies beyond their chosen subject", "zh": "拓宽主修之外的学习（A方改写）" },
+          { "en": "concentrate exclusively on the qualification in front of them", "zh": "只专注于眼前学位（B方改写）" },
+          { "en": "provided it is a genuine choice rather than an inability to explore", "zh": "前提是主动选择而非无能探索（精细限定）" }
+        ],
+        "guideQ": "你的立场句带 provided/as long as 的精细限定了吗？讨论题表态越精确越显功力。"
+      },
+      "3": {
+        "why": "A方段=两层理由+一个尖锐例子：知识不分科（跨学科生产力的历史规律，两句具体到计算机+心理/工程+经济）+试读课能救错选专业的学生——「rescue those who chose badly」是对方立场里最有人情味的论点，写足了才公平。",
+        "modelPara": "Those who wander into other subjects make a persuasive case. Knowledge does not respect the boundaries of a syllabus, and some of the most productive minds in history were conspicuously wide-ranging: a computer scientist who has studied psychology may design better interfaces, and an engineer with an economics background understands why her bridge should be cheap as well as strong. Sampling other fields can also rescue students who discover, sometimes too late, that they chose their main subject badly. A semester of taster courses is often all it takes to redirect a young person towards work that actually suits them.",
+        "expressions": [
+          { "en": "Knowledge does not respect the boundaries of a syllabus", "zh": "知识不守教学大纲的边界（A方主题句）" },
+          { "en": "an engineer with an economics background understands why her bridge should be cheap as well as strong", "zh": "懂经济的工程师知道桥要便宜也要结实（跨学科具体例）" },
+          { "en": "redirect a young person towards work that actually suits them", "zh": "把年轻人引向真正适合的工作（救错选论点）" }
+        ],
+        "guideQ": "对方立场的例子具体到「哪种人+做出什么更好」了吗？泛泛说视野开阔没有说服力。"
+      },
+      "4": {
+        "why": "我方段=务实+修养双轮：学位被考试定义→成绩单上的纪律才是雇主所见（务实）；深度学习锻造「持续艰难思考」的习惯（修养）；再加时间账（毕业后四十年可博，大学是唯一有专家引路的窗口期）——用「不可替代性」论证而非偏好。",
+        "modelPara": "Nevertheless, the case for concentration is stronger. A degree is examined, and examination results are what employers and admissions tutors see first; time spent on extra subjects is time taken from the discipline that will appear on the transcript. Deep study also builds something superficial sampling never can: the habit of sustained, difficult thinking. There will be forty working years after graduation for breadth, and the workplace itself teaches subjects faster than any seminar. University, by contrast, is the one period in life when experts are on hand to guide a student through material they could never master alone.",
+        "expressions": [
+          { "en": "time spent on extra subjects is time taken from the discipline that will appear on the transcript", "zh": "花在别处的时间就是从成绩单纪律上挪走的（机会成本句）" },
+          { "en": "the habit of sustained, difficult thinking", "zh": "持续艰难思考的习惯（深度价值句）" },
+          { "en": "the one period in life when experts are on hand to guide", "zh": "一生中唯一有专家引路的时期（不可替代性收口）" }
+        ],
+        "guideQ": "你论证己方时算过「时间账」吗？四十个工作年 vs 大学四年，数字让立场落地。"
+      },
+      "5": {
+        "why": "一句话结论：while 让步回收对方 + going deep on their own degree 重申立场 + since breadth can wait but guided depth cannot 用对仗句收口——把不可替代性论证压缩成一行对仗，是结论的记忆点。",
+        "modelPara": "In conclusion, while exploring neighbouring subjects has real value, I believe students gain more from going deep on their own degree, since breadth can wait but guided depth cannot.",
+        "expressions": [
+          { "en": "breadth can wait but guided depth cannot", "zh": "广度可等待，有引路的深度不可等待（对仗收口）" },
+          { "en": "going deep on their own degree", "zh": "深耕本专业（立场换词）" }
+        ],
+        "guideQ": "你的结论有一句能被读者记住的对仗吗？"
+      }
+    }
+  },
+  "剑18 Test 3 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "Across much of the world, villages are emptying as people move to cities, and the countryside is steadily losing population. I regard this as a negative development on balance, even though it is an understandable and partly beneficial response to economic change.\n\nThe benefits are real and should be admitted at the outset. Cities generate productivity: when firms and workers cluster together, jobs multiply, wages rise and services such as hospitals and universities become viable. A young farmer's daughter who moves to the city may triple her income and gain access to schooling her village could never support. Migration also relieves pressure on fragile rural environments, allowing exhausted farmland to recover. Nobody who has watched a thriving city absorb new arrivals can deny that, for many families, the move is a step up.\n\nThe costs, however, fall on those left behind and eventually on the cities themselves. Rural regions lose precisely the people a community needs to survive: the young, the skilled and the ambitious, leaving villages populated by the old, whose schools, clinics and buses close for lack of customers, which pushes yet more residents out. Meanwhile the receiving cities swell beyond their infrastructure, so that migrants who came for opportunity find themselves paying city-centre rents for rooms in crowded districts far from work. A country that lets its regions hollow out in this way pays twice: once in depopulated heartland and once in unmanageable metropolises.\n\nIn conclusion, although rural flight delivers individual opportunity that no policy should deny, the decline of the countryside brings costs that individuals cannot see and markets will not fix, and for that reason I judge it a development worth worrying about.",
+    "paraTeach": {
+      "2": {
+        "why": "利弊评价题开头：句1改写（villages are emptying↔rural people are moving to cities；意象化改写），句2 negative on balance + 立刻预告让步（understandable and partly beneficial）——立场与让步同句亮出，段落分工提前剧透。",
+        "modelPara": "Across much of the world, villages are emptying as people move to cities, and the countryside is steadily losing population. I regard this as a negative development on balance, even though it is an understandable and partly beneficial response to economic change.",
+        "expressions": [
+          { "en": "villages are emptying as people move to cities", "zh": "人口进城、村庄变空（题目的意象化改写）" },
+          { "en": "a negative development on balance", "zh": "总体消极的发展（表态）" },
+          { "en": "an understandable and partly beneficial response", "zh": "可理解且部分有益的应对（让步预告）" }
+        ],
+        "guideQ": "你的表态和让步是不是同一句里先后亮出？这是利弊题开头最紧凑的写法。"
+      },
+      "3": {
+        "why": "让步段把「益」写实：聚集效应机制（公司+工人扎堆→岗位工资服务联动）→具体到一位农夫女儿的收益三倍+学校（体系1.4具体到人）→环境减压收尾。admitted at the outset 的姿态为下一段批判赢得公正性。",
+        "modelPara": "The benefits are real and should be admitted at the outset. Cities generate productivity: when firms and workers cluster together, jobs multiply, wages rise and services such as hospitals and universities become viable. A young farmer's daughter who moves to the city may triple her income and gain access to schooling her village could never support. Migration also relieves pressure on fragile rural environments, allowing exhausted farmland to recover. Nobody who has watched a thriving city absorb new arrivals can deny that, for many families, the move is a step up.",
+        "expressions": [
+          { "en": "when firms and workers cluster together, jobs multiply, wages rise", "zh": "企业工人聚集→岗位与工资齐升（聚集效应机制）" },
+          { "en": "A young farmer's daughter who moves to the city may triple her income", "zh": "农家女儿进城收入或翻三倍（具体到人）" },
+          { "en": "for many families, the move is a step up", "zh": "对许多家庭而言进城就是向上走（让步收口）" }
+        ],
+        "guideQ": "你写让步段时给了「一个具体的人」吗？抽象的「人们受益」不如一个农家女儿。"
+      },
+      "4": {
+        "why": "批判段=双重代价的链条：乡村端（流失的恰是社区生存所需的人→学校诊所公交关闭→更多人被迫离开的恶性循环）；城市端（基础设施被挤爆→为机会而来却在远郊挤房间）。costs fall on those left behind 的「谁来买单」框架让批判有伦理分量（体系1.4结果意识）。",
+        "modelPara": "The costs, however, fall on those left behind and eventually on the cities themselves. Rural regions lose precisely the people a community needs to survive: the young, the skilled and the ambitious, leaving villages populated by the old, whose schools, clinics and buses close for lack of customers, which pushes yet more residents out. Meanwhile the receiving cities swell beyond their infrastructure, so that migrants who came for opportunity find themselves paying city-centre rents for rooms in crowded districts far from work. A country that lets its regions hollow out in this way pays twice: once in depopulated heartland and once in unmanageable metropolises.",
+        "expressions": [
+          { "en": "lose precisely the people a community needs to survive", "zh": "流失的恰是社区存续所需的人（批判主旨）" },
+          { "en": "schools, clinics and buses close for lack of customers, which pushes yet more residents out", "zh": "设施因没客源关闭，又逼走更多人（恶性循环链）" },
+          { "en": "pays twice: once in depopulated heartland and once in unmanageable metropolises", "zh": "双重买单：空心腹地+失控都市（收口金句）" }
+        ],
+        "guideQ": "你的批判段指出了「代价由谁承担」吗？说清买单的人，利弊分析才有伦理落点。"
+      },
+      "5": {
+        "why": "一句话结论：although 让步收口（个体机会不容政策否定）+ costs that individuals cannot see and markets will not fix 点出批判的本质（外部性）+ worth worrying about 的克制表态收尾——不喊禁止口号，立场成熟。",
+        "modelPara": "In conclusion, although rural flight delivers individual opportunity that no policy should deny, the decline of the countryside brings costs that individuals cannot see and markets will not fix, and for that reason I judge it a development worth worrying about.",
+        "expressions": [
+          { "en": "costs that individuals cannot see and markets will not fix", "zh": "个体看不见、市场不去修的代价（外部性一句话）" },
+          { "en": "a development worth worrying about", "zh": "值得担忧的发展（克制的表态收尾）" }
+        ],
+        "guideQ": "你的结尾表态是口号式的还是「点出问题本质」式的？后者高一个段位。"
+      }
+    }
+  },
+  "剑18 Test 4 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "In many societies the share of the population over retirement age is climbing steadily. Although this trend brings some benefits, I believe its disadvantages are heavier, because the economic burden falls on a shrinking group of workers.\n\nThe advantages should be stated fairly. Older citizens are experienced consumers and volunteers whose spending and unpaid work support local economies; many care for grandchildren, allowing parents to work. Companies also retain their institutional memory, and entire industries, from healthcare to leisure travel, gain customers and staff. In a slow-growing economy, an older population can even steady demand, since pensioners spend reliably what younger households save.\n\nThese gains, however, are dwarfed by the arithmetic of support. Pensions and healthcare are paid for by current workers, and the ratio of workers to retirees worsens every year: in the countries where this shift is most advanced, there are already fewer than two contributors for every pensioner. The consequences follow inevitably. Either taxes and social contributions rise until the young are working largely to fund the old, or retirement ages climb and benefits shrink, breaking a promise that workers have paid into all their lives. Whole sectors feel the squeeze too, as care work drains staff from hospitals and schools, and economies with fewer young adults struggle to fill demanding jobs. Japan's decades of stagnation illustrate how heavily demographics can weigh on growth.\n\nIn conclusion, an ageing population may bring stability and valuable experience, but no efficiency gain reliably offsets a shrinking workforce supporting an ever larger retired one, and so the disadvantages outweigh the advantages.",
+    "paraTeach": {
+      "2": {
+        "why": "利弊比较题开头：句1改写（the share of the population over retirement age is climbing↔proportion of elderly is increasing），句2表态 disadvantages are heavier+总理由（负担落在缩小的劳动者群体上）——把全文的「算术逻辑」放进开头第一句。",
+        "modelPara": "In many societies the share of the population over retirement age is climbing steadily. Although this trend brings some benefits, I believe its disadvantages are heavier, because the economic burden falls on a shrinking group of workers.",
+        "expressions": [
+          { "en": "the share of the population over retirement age is climbing steadily", "zh": "退休以上人口比例持续攀升（题干改写）" },
+          { "en": "its disadvantages are heavier", "zh": "弊更重（比较级表态）" },
+          { "en": "the economic burden falls on a shrinking group of workers", "zh": "经济负担落在不断缩小的劳动者群体（总理由）" }
+        ],
+        "guideQ": "你的 outweigh 题开头有没有一句话给出「为什么弊更重」的总逻辑？"
+      },
+      "3": {
+        "why": "让步段三连益处写到实处：消费与志愿劳动、隔代育儿解放父母、机构记忆+银发产业——每条都是可观察的事实而非赞美句。结尾 In a slow-growing economy 的稳定性论证把对方立场推到最强（体系1.2让步要够分量）。",
+        "modelPara": "The advantages should be stated fairly. Older citizens are experienced consumers and volunteers whose spending and unpaid work support local economies; many care for grandchildren, allowing parents to work. Companies also retain their institutional memory, and entire industries, from healthcare to leisure travel, gain customers and staff. In a slow-growing economy, an older population can even steady demand, since pensioners spend reliably what younger households save.",
+        "expressions": [
+          { "en": "The advantages should be stated fairly", "zh": "优点应被公正陈述（让步段起手）" },
+          { "en": "many care for grandchildren, allowing parents to work", "zh": "带孙辈让父母得以工作（具体益处）" },
+          { "en": "pensioners spend reliably what younger households save", "zh": "老人稳定消费年轻人储蓄的钱（机制化让步）" }
+        ],
+        "guideQ": "你给对方的三个优点都是「可观察的事实」吗？空泛的「老人有智慧」撑不起让步段。"
+      },
+      "4": {
+        "why": "批判段=算术碾压：抚养比数字（不到两个劳动者养一个退休者）→两条必然路径二选一（加税压垮年轻人 vs 推迟退休毁承诺）→行业挤压（护理抽空医院学校）→日本停滞的国家级例证——用「不可避免」的推导链让弊的分量无法反驳（体系1.4）。",
+        "modelPara": "These gains, however, are dwarfed by the arithmetic of support. Pensions and healthcare are paid for by current workers, and the ratio of workers to retirees worsens every year: in the countries where this shift is most advanced, there are already fewer than two contributors for every pensioner. The consequences follow inevitably. Either taxes and social contributions rise until the young are working largely to fund the old, or retirement ages climb and benefits shrink, breaking a promise that workers have paid into all their lives. Whole sectors feel the squeeze too, as care work drains staff from hospitals and schools, and economies with fewer young adults struggle to fill demanding jobs. Japan's decades of stagnation illustrate how heavily demographics can weigh on growth.",
+        "expressions": [
+          { "en": "dwarfed by the arithmetic of support", "zh": "在养老的算术面前相形见绌（批判主旨句）" },
+          { "en": "fewer than two contributors for every pensioner", "zh": "每个领取者对应不到两个缴费者（抚养比数字）" },
+          { "en": "breaking a promise that workers have paid into all their lives", "zh": "毁掉劳动者终身缴费换来的承诺（代价具象化）" }
+        ],
+        "guideQ": "你的「弊」有没有推演出「必然的二选一困境」？比罗列三条坏处有力得多。"
+      },
+      "5": {
+        "why": "一句话结论：让步短语（stability and valuable experience）+ no efficiency gain reliably offsets 的否定式比较收口——用「没有任何效率提升能可靠抵消」这种全称否定把 outweigh 问题彻底钉死。",
+        "modelPara": "In conclusion, an ageing population may bring stability and valuable experience, but no efficiency gain reliably offsets a shrinking workforce supporting an ever larger retired one, and so the disadvantages outweigh the advantages.",
+        "expressions": [
+          { "en": "no efficiency gain reliably offsets", "zh": "没有任何效率提升能可靠抵消（全称否定收口）" },
+          { "en": "a shrinking workforce supporting an ever larger retired one", "zh": "缩水的劳动者供养膨胀的退休群体（对仗收尾）" }
+        ],
+        "guideQ": "你的结论敢用一次「全称否定」（no...can...）吗？用得准就是利弊题的最强收尾。"
+      }
+    }
+  }
+}

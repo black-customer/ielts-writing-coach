@@ -1,0 +1,362 @@
+{
+ "llm": {
+  "all": {
+   "n": 20,
+   "overallMAE": 0.05,
+   "overallBias": 0,
+   "perCrit": {
+    "TR": {
+     "mae": 0.2,
+     "bias": 0
+    },
+    "CC": {
+     "mae": 0.2,
+     "bias": 0.1
+    },
+    "LR": {
+     "mae": 0.18,
+     "bias": -0.12
+    },
+    "GRA": {
+     "mae": 0.3,
+     "bias": -0.25
+    }
+   },
+   "byBand": "官方5: 均偏移0 (n=5) · 官方6: 均偏移0 (n=3) · 官方7: 均偏移-0.17 (n=3) · 官方8: 均偏移0 (n=1) · 官方4.5: 均偏移0.5 (n=1) · 官方3.5: 均偏移0 (n=1) · 官方6.5: 均偏移0 (n=2) · 官方5.5: 均偏移0 (n=3) · 官方7.5: 均偏移0 (n=1)"
+  },
+  "t2": {
+   "n": 10,
+   "overallMAE": 0,
+   "overallBias": 0,
+   "perCrit": {
+    "TR": {
+     "mae": 0.25,
+     "bias": -0.05
+    },
+    "CC": {
+     "mae": 0.2,
+     "bias": 0.1
+    },
+    "LR": {
+     "mae": 0.2,
+     "bias": -0.2
+    },
+    "GRA": {
+     "mae": 0.4,
+     "bias": -0.3
+    }
+   },
+   "byBand": "官方5: 均偏移0 (n=3) · 官方6: 均偏移0 (n=1) · 官方7: 均偏移0 (n=1) · 官方3.5: 均偏移0 (n=1) · 官方5.5: 均偏移0 (n=3) · 官方7.5: 均偏移0 (n=1)"
+  },
+  "t1": {
+   "n": 10,
+   "overallMAE": 0.1,
+   "overallBias": 0,
+   "perCrit": {
+    "TR": {
+     "mae": 0.15,
+     "bias": 0.05
+    },
+    "CC": {
+     "mae": 0.2,
+     "bias": 0.1
+    },
+    "LR": {
+     "mae": 0.15,
+     "bias": -0.05
+    },
+    "GRA": {
+     "mae": 0.2,
+     "bias": -0.2
+    }
+   },
+   "byBand": "官方5: 均偏移0 (n=2) · 官方6: 均偏移0 (n=2) · 官方7: 均偏移-0.25 (n=2) · 官方8: 均偏移0 (n=1) · 官方4.5: 均偏移0.5 (n=1) · 官方6.5: 均偏移0 (n=2)"
+  }
+ },
+ "ruleT2": {
+  "n": 10,
+  "overallMAE": 0.79,
+  "overallBias": 0.26,
+  "perCrit": {
+   "TR": {
+    "mae": 0.7,
+    "bias": -0.4
+   },
+   "CC": {
+    "mae": 1.05,
+    "bias": 0.45
+   },
+   "LR": {
+    "mae": 0.85,
+    "bias": 0.25
+   },
+   "GRA": {
+    "mae": 1.05,
+    "bias": 0.75
+   }
+  },
+  "byBand": "官方5: 均偏移0.79 (n=3) · 官方6: 均偏移0.25 (n=1) · 官方7: 均偏移-0.62 (n=1) · 官方3.5: 均偏移1.88 (n=1) · 官方5.5: 均偏移0.25 (n=3) · 官方7.5: 均偏移-2 (n=1)"
+ },
+ "detail": [
+  {
+   "book": 10,
+   "test": "1",
+   "task": 1,
+   "band": 4.5,
+   "scores": {
+    "TR": 5,
+    "CC": 5,
+    "LR": 5,
+    "GRA": 4.5
+   },
+   "overall": 5
+  },
+  {
+   "book": 10,
+   "test": "2",
+   "task": 2,
+   "band": 3.5,
+   "scores": {
+    "TR": 4,
+    "CC": 4,
+    "LR": 3,
+    "GRA": 3
+   },
+   "overall": 3.5
+  },
+  {
+   "book": 10,
+   "test": "3",
+   "task": 1,
+   "band": 6.5,
+   "scores": {
+    "TR": 6.5,
+    "CC": 7,
+    "LR": 6.5,
+    "GRA": 6.5
+   },
+   "overall": 6.5
+  },
+  {
+   "book": 10,
+   "test": "4",
+   "task": 2,
+   "band": 5.5,
+   "scores": {
+    "TR": 5,
+    "CC": 6,
+    "LR": 5,
+    "GRA": 5
+   },
+   "overall": 5.5
+  },
+  {
+   "book": 10,
+   "test": "A",
+   "task": 2,
+   "band": 5,
+   "scores": {
+    "TR": 5,
+    "CC": 5,
+    "LR": 5,
+    "GRA": 5
+   },
+   "overall": 5
+  },
+  {
+   "book": 10,
+   "test": "B",
+   "task": 1,
+   "band": 8,
+   "scores": {
+    "TR": 8,
+    "CC": 8,
+    "LR": 8,
+    "GRA": 8
+   },
+   "overall": 8
+  },
+  {
+   "book": 11,
+   "test": "1",
+   "task": 2,
+   "band": 5.5,
+   "scores": {
+    "TR": 5,
+    "CC": 6,
+    "LR": 5,
+    "GRA": 5
+   },
+   "overall": 5.5
+  },
+  {
+   "book": 11,
+   "test": "3",
+   "task": 1,
+   "band": 6,
+   "scores": {
+    "TR": 6,
+    "CC": 6,
+    "LR": 6,
+    "GRA": 6
+   },
+   "overall": 6
+  },
+  {
+   "book": 11,
+   "test": "3",
+   "task": 2,
+   "band": 7,
+   "scores": {
+    "TR": 7,
+    "CC": 7,
+    "LR": 7,
+    "GRA": 7
+   },
+   "overall": 7
+  },
+  {
+   "book": 11,
+   "test": "4",
+   "task": 1,
+   "band": 7,
+   "scores": {
+    "TR": 6.5,
+    "CC": 6.5,
+    "LR": 7,
+    "GRA": 6
+   },
+   "overall": 6.5
+  },
+  {
+   "book": 11,
+   "test": "4",
+   "task": 2,
+   "band": 5.5,
+   "scores": {
+    "TR": 6,
+    "CC": 5.5,
+    "LR": 5.5,
+    "GRA": 5
+   },
+   "overall": 5.5
+  },
+  {
+   "book": 12,
+   "test": "5",
+   "task": 1,
+   "band": 5,
+   "scores": {
+    "TR": 5,
+    "CC": 5,
+    "LR": 5,
+    "GRA": 5
+   },
+   "overall": 5
+  },
+  {
+   "book": 12,
+   "test": "5",
+   "task": 2,
+   "band": 6,
+   "scores": {
+    "TR": 6,
+    "CC": 6,
+    "LR": 6,
+    "GRA": 5
+   },
+   "overall": 6
+  },
+  {
+   "book": 12,
+   "test": "6",
+   "task": 1,
+   "band": 7,
+   "scores": {
+    "TR": 7,
+    "CC": 7,
+    "LR": 6.5,
+    "GRA": 7
+   },
+   "overall": 7
+  },
+  {
+   "book": 12,
+   "test": "6",
+   "task": 2,
+   "band": 5,
+   "scores": {
+    "TR": 5,
+    "CC": 5,
+    "LR": 5,
+    "GRA": 4.5
+   },
+   "overall": 5
+  },
+  {
+   "book": 12,
+   "test": "7",
+   "task": 1,
+   "band": 6.5,
+   "scores": {
+    "TR": 7,
+    "CC": 7,
+    "LR": 6.5,
+    "GRA": 6
+   },
+   "overall": 6.5
+  },
+  {
+   "book": 12,
+   "test": "7",
+   "task": 2,
+   "band": 7.5,
+   "scores": {
+    "TR": 7,
+    "CC": 7,
+    "LR": 7,
+    "GRA": 8
+   },
+   "overall": 7.5
+  },
+  {
+   "book": 12,
+   "test": "8",
+   "task": 1,
+   "band": 6,
+   "scores": {
+    "TR": 6,
+    "CC": 6,
+    "LR": 6,
+    "GRA": 6
+   },
+   "overall": 6
+  },
+  {
+   "book": 12,
+   "test": "8",
+   "task": 2,
+   "band": 5,
+   "scores": {
+    "TR": 5,
+    "CC": 5,
+    "LR": 5,
+    "GRA": 5
+   },
+   "overall": 5
+  },
+  {
+   "book": 13,
+   "test": "3",
+   "task": 1,
+   "band": 5,
+   "scores": {
+    "TR": 5,
+    "CC": 5,
+    "LR": 4.5,
+    "GRA": 4.5
+   },
+   "overall": 5
+  }
+ ]
+}

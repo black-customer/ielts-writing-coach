@@ -1,0 +1,298 @@
+{
+  "剑20 Test 1 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "双表：纽约市总人口1800-2000（1800约6万→1850约51.5万→1900约340万→1950约790万→2000约800万）；分区分表（Manhattan/Brooklyn/Bronx/Queens/Staten Island）。曼哈顿早期占绝对主导，20世纪外区（尤其Queens/Brooklyn）激增，曼哈顿1950后趋稳略降。",
+    "essay": "The two tables give information on the population of New York City between 1800 and 2000, showing the overall total and the figures for the city's individual boroughs.\n\nIt is clear that New York grew enormously over the two centuries. It is also noticeable that growth was concentrated in different boroughs at different times, with the outer districts expanding chiefly after 1900.\n\nThe city's population rose from just 60,000 in 1800 to 3.4 million by 1900, a fifty-seven-fold increase driven largely by Manhattan, which housed almost the entire population at the start of the period. Brooklyn was already growing quickly in the nineteenth century, but the Bronx, Queens and Staten Island remained tiny.\n\nThe twentieth century changed the pattern completely. New York reached its peak of almost 8 million in 1950 and stayed close to that level in 2000, but the share of people living in Manhattan fell sharply as the outer boroughs expanded; Queens and the Bronx in particular grew several times over between 1900 and 1950. By the end of the period, the once-dominant island held only around one resident in five, a striking reversal of the situation two hundred years earlier.",
+    "paraTeach": {
+      "2": {
+        "why": "双表开头一句一图：showing the overall total and the figures for individual boroughs 用 showing 分词把两表分工讲清——表格题先声明「总量表+分区分表」的读法，考官立刻知道你看懂了结构。",
+        "modelPara": "The two tables give information on the population of New York City between 1800 and 2000, showing the overall total and the figures for the city's individual boroughs.",
+        "expressions": [
+          {
+            "en": "The two tables give information on the population of New York City",
+            "zh": "双表给出纽约人口信息"
+          },
+          {
+            "en": "showing the overall total and the figures for the city's individual boroughs",
+            "zh": "分词短语交代两表分工（总量+分区）"
+          }
+        ],
+        "guideQ": "双表题你的开头把「每张表管什么」说清了吗？"
+      },
+      "3": {
+        "why": "概括两句：句1=两个世纪的巨大增长（总量头条），句2=增长的时间-空间结构（1900后主要在外区）——第二句把「何时+何地」两个维度收进一句，是结构化概括的范本。",
+        "modelPara": "It is clear that New York grew enormously over the two centuries. It is also noticeable that growth was concentrated in different boroughs at different times, with the outer districts expanding chiefly after 1900.",
+        "expressions": [
+          {
+            "en": "grew enormously over the two centuries",
+            "zh": "两个世纪间巨大增长（总量头条）"
+          },
+          {
+            "en": "growth was concentrated in different boroughs at different times",
+            "zh": "增长在不同时期集中在不同区（时空结构句）"
+          }
+        ],
+        "guideQ": "表格的概括你点出「增长在时间和空间上的分布」了吗？"
+      },
+      "4": {
+        "why": "细节一=19世纪：总量三步（60,000→3.4m）+ a fifty-seven-fold increase 倍数换算（表格题算倍数是第一加分动作）+归因句 driven largely by Manhattan；Brooklyn 提前起步、其余三区 remained tiny 一笔带过——主因详写、次因并写。",
+        "modelPara": "The city's population rose from just 60,000 in 1800 to 3.4 million by 1900, a fifty-seven-fold increase driven largely by Manhattan, which housed almost the entire population at the start of the period. Brooklyn was already growing quickly in the nineteenth century, but the Bronx, Queens and Staten Island remained tiny.",
+        "expressions": [
+          {
+            "en": "a fifty-seven-fold increase driven largely by Manhattan",
+            "zh": "57倍增长、主要由曼哈顿驱动（倍数+归因）"
+          },
+          {
+            "en": "housed almost the entire population at the start of the period",
+            "zh": "期初几乎承载全部人口（份额极值）"
+          },
+          {
+            "en": "the Bronx, Queens and Staten Island remained tiny",
+            "zh": "三区保持微小（并写收尾）"
+          }
+        ],
+        "guideQ": "拿到两个数字你先算「倍数」了吗？表格题的倍数换算是最值钱的一步。"
+      },
+      "5": {
+        "why": "细节二=20世纪翻转：峰值句（almost 8 million in 1950, stayed close）+曼哈顿份额锐减+外区数倍增长（grew several times over）+结尾 one resident in five 与两百年前的 reversal 对比——用「份额反转」收束全篇，呼应概括段的时空结构句。",
+        "modelPara": "The twentieth century changed the pattern completely. New York reached its peak of almost 8 million in 1950 and stayed close to that level in 2000, but the share of people living in Manhattan fell sharply as the outer boroughs expanded; Queens and the Bronx in particular grew several times over between 1900 and 1950. By the end of the period, the once-dominant island held only around one resident in five, a striking reversal of the situation two hundred years earlier.",
+        "expressions": [
+          {
+            "en": "reached its peak of almost 8 million in 1950",
+            "zh": "1950年达到近800万的峰值"
+          },
+          {
+            "en": "grew several times over between 1900 and 1950",
+            "zh": "1900-1950间增长数倍"
+          },
+          {
+            "en": "a striking reversal of the situation two hundred years earlier",
+            "zh": "与两百年前的惊人反转（同位语收尾）"
+          }
+        ],
+        "guideQ": "你的细节段结尾有没有一句「大反转」式的收束？份额反转让全篇有了故事性。"
+      }
+    }
+  },
+  "剑20 Test 2 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "地图：某农场1950年vs今天。1950：农舍（farmhouse）、谷仓（barn）、奶牛棚（dairy）、羊圈与水井，四周为耕地与牧场，一条乡路。今天：农场停业，谷仓改为住宅，农舍扩建；羊圈与水井消失，改铺草坪与新车道；部分耕地让位于住宅区与停车场；乡路拓宽为公路，新增公交站。",
+    "essay": "The maps show the site of a farm in 1950 and what stands on the same site today.\n\nIt is clear that the farm has disappeared and the site has been given over to housing. It is also noticeable that the quiet country lane of 1950 has become a proper road with public transport.\n\nIn 1950 the site was a working farm. The farmhouse stood at the centre, with the barn beside it and a dairy, sheep pens and a well around the yard; beyond the buildings, fields stretched away on every side, with a narrow lane running past the gate.\n\nToday the agricultural world of that yard has almost entirely vanished. The barn has been converted into a second dwelling, and the farmhouse itself has been extended; the sheep pens and well have made way for lawns and a new driveway. Part of the nearest field has been sold off for a small estate of houses and their car park, while the remaining farmland is still worked to the south. The clearest change of all concerns access: the lane has been widened into a main road, and a bus stop now stands where the farm gates used to be.",
+    "paraTeach": {
+      "2": {
+        "why": "开头两图一句：in 1950 and what stands on the same site today——was（过去）与 stands（现在）两个动词分管两张图，避免 the first map / the second map 的笨拙。",
+        "modelPara": "The maps show the site of a farm in 1950 and what stands on the same site today.",
+        "expressions": [
+          {
+            "en": "the site of a farm in 1950",
+            "zh": "1950年农场场址（过去半句）"
+          },
+          {
+            "en": "what stands on the same site today",
+            "zh": "同一场址如今的样貌（名词性从句+现在时）"
+          }
+        ],
+        "guideQ": "对比图开头两个时点各配了一个时态正确的动词吗？"
+      },
+      "3": {
+        "why": "概括两句定性：句1=农场消失、场地转住宅（用途定性），句2=乡路变公交公路（交通升级）——概括挑「性质转变」而非罗列，第二特征小但符合「最显眼变化」原则。",
+        "modelPara": "It is clear that the farm has disappeared and the site has been given over to housing. It is also noticeable that the quiet country lane of 1950 has become a proper road with public transport.",
+        "expressions": [
+          {
+            "en": "has been given over to housing",
+            "zh": "场地已转作住宅用途（give over to改用途）"
+          },
+          {
+            "en": "the quiet country lane of 1950 has become a proper road with public transport",
+            "zh": "乡路升级为通公交的公路（交通定性）"
+          }
+        ],
+        "guideQ": "你的两条概括是不是「最大用途变化+次要但显眼的变化」？"
+      },
+      "4": {
+        "why": "细节一=1950布局（一般过去时全段）：farmhouse 居中、barn/dairy/sheep pens/well grouped around the yard（grouped 分词描绘空间聚散），fields stretched away on every side 写出旷野感，narrow lane 收在入口——一段话给「过去」立起完整空间坐标。",
+        "modelPara": "In 1950 the site was a working farm. The farmhouse stood at the centre, with the barn beside it and a dairy, sheep pens and a well around the yard; beyond the buildings, fields stretched away on every side, with a narrow lane running past the gate.",
+        "expressions": [
+          {
+            "en": "a dairy, sheep pens and a well around the yard",
+            "zh": "奶牛棚、羊圈与水井环绕院子（方位收束）"
+          },
+          {
+            "en": "fields stretched away on every side",
+            "zh": "田野向四周延展（stretched away方位动词）"
+          },
+          {
+            "en": "a narrow lane running past the gate",
+            "zh": "窄巷经过门口（分词补语）"
+          }
+        ],
+        "guideQ": "写旧图你有没有用「中心-环绕-延伸」的空间叙事？乱序罗列设施是地图大忌。"
+      },
+      "5": {
+        "why": "细节二=今天（现在完成时被动串全段）：converted into a second dwelling / has been extended / made way for / sold off for——四类变化动词各就各位；The most visible change of all concerns access 收在交通，bus stop 与 farm gates 的今昔同位对照（where the farm gates used to stand）收尾——同一位置的新旧对比是地图题最有力的结尾。",
+        "modelPara": "Today the agricultural world of that yard has almost entirely vanished. The barn has been converted into a second dwelling, and the farmhouse itself has been extended; the sheep pens and well have made way for lawns and a new driveway. Part of the nearest field has been sold off for a small estate of houses and their car park, while the remaining farmland is still worked to the south. The clearest change of all concerns access: the lane has been widened into a main road, and a bus stop now stands where the farm gates used to be.",
+        "expressions": [
+          {
+            "en": "have made way for lawns and a new driveway",
+            "zh": "让位于草坪与新车道（make way for拆除类）"
+          },
+          {
+            "en": "has been widened into a main road",
+            "zh": "拓宽为公路（widen into扩建类）"
+          },
+          {
+            "en": "a bus stop now stands where the farm gates used to be",
+            "zh": "公交站立在旧时农场大门处（同址今昔对照）"
+          }
+        ],
+        "guideQ": "你的结尾有没有「同一位置的今昔对照」？这是地图题的点睛写法。"
+      }
+    }
+  },
+  "剑20 Test 3 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "混合图：Little Chalfont公共图书馆。图1：年访问量2000年约4万→2010年约6.5万→2020年约8万（持续上升）。图2：到馆目的占比2000 vs 2020——借书60%→30%，用电脑5%→40%，参加活动0%→20%，自习/读报约35%→10%。",
+    "essay": "The charts give information about a public library in the town of Little Chalfont, showing annual visits between 2000 and 2020 and the reasons why people used the library in 2000 and 2020.\n\nIt is clear that the library attracted far more visitors by the end of the period. It is also noticeable that the reasons for coming changed profoundly: borrowing books fell from being the main purpose to just one among several.\n\nVisits rose steadily over the twenty years, from around 40,000 in 2000 to 65,000 in 2010 and roughly 80,000 in 2020, an increase of one hundred per cent.\n\nThe purpose of those visits tells a more interesting story. In 2000, borrowing books dominated at 60% of visits, while computer use accounted for a mere 5% and organised events did not exist. Twenty years later the hierarchy had inverted: computer use, at 40%, had overtaken borrowing at 30%, and events, introduced from nothing, drew a fifth of all visits. Studying and reading on site, meanwhile, had shrunk to about 10%. The library of 2020, in short, was busier than ever but served as much as a community hub and internet access point as a place to borrow books.",
+    "paraTeach": {
+      "2": {
+        "why": "混合图开头一句一图+一因果句：showing annual visits... and the reasons why... 两分词短语分管两图——visits 与 reasons 的「量与质」关系是这两张图的合读逻辑。",
+        "modelPara": "The charts give information about a public library in the town of Little Chalfont, showing annual visits between 2000 and 2020 and the reasons why people used the library in 2000 and 2020.",
+        "expressions": [
+          {
+            "en": "showing annual visits between 2000 and 2020",
+            "zh": "展示2000-2020年间年度访问量（图一分工）"
+          },
+          {
+            "en": "the reasons why people used the library",
+            "zh": "人们使用图书馆的原因（图二分工）"
+          }
+        ],
+        "guideQ": "混合图你的开头有没有把「两张图各管什么」分派清楚？"
+      },
+      "3": {
+        "why": "概括两句：句1=访问量大增（量的头条），句2=到馆原因质变（borrowing 从主导降为之一）——「量增+质变」两句正好领起两个细节段，第二句用 from being the main purpose to just one among several 的曲线概括，不带数字。",
+        "modelPara": "It is clear that the library attracted far more visitors by the end of the period. It is also noticeable that the reasons for coming changed profoundly: borrowing books fell from being the main purpose to just one among several.",
+        "expressions": [
+          {
+            "en": "attracted far more visitors",
+            "zh": "吸引了多得多的访客（量头条）"
+          },
+          {
+            "en": "fell from being the main purpose to just one among several",
+            "zh": "从主要目的降为若干目的之一（质的概括）"
+          }
+        ],
+        "guideQ": "「量」和「质」两条线索，你的概括是不是各给了一句？"
+      },
+      "4": {
+        "why": "细节一=访问量线图三步走（40,000→65,000→80,000），an increase of one hundred per cent 同位语收倍数——短段落三数字一倍数，干净利落（体系2.3数字纪律：起点/中点/终点）。",
+        "modelPara": "Visits rose steadily over the twenty years, from around 40,000 in 2000 to 65,000 in 2010 and roughly 80,000 in 2020, an increase of one hundred per cent.",
+        "expressions": [
+          {
+            "en": "rose steadily over the twenty years",
+            "zh": "二十年间稳步上升"
+          },
+          {
+            "en": "an increase of one hundred per cent",
+            "zh": "增长一倍（同位语补倍数）"
+          }
+        ],
+        "guideQ": "短线的三个节点加一个倍数，你的细节段有这个密度吗？"
+      },
+      "5": {
+        "why": "细节二=目的占比今昔：2000年格局一句（dominated at 60% + mere 5% + did not exist），Twenty years later the hierarchy had inverted 转折句引新格局（overtaken/a fifth of all visits/shrunk to 10%）；in short 收束句定性「社区枢纽+上网点」——双图在结尾接通，点破量增的真正原因。",
+        "modelPara": "The purpose of those visits tells a more interesting story. In 2000, borrowing books dominated at 60% of visits, while computer use accounted for a mere 5% and organised events did not exist. Twenty years later the hierarchy had inverted: computer use, at 40%, had overtaken borrowing at 30%, and events, introduced from nothing, drew a fifth of all visits. Studying and reading on site, meanwhile, had shrunk to about 10%. The library of 2020, in short, was busier than ever but served as much as a community hub and internet access point as a place to borrow books.",
+        "expressions": [
+          {
+            "en": "accounted for a mere 5%",
+            "zh": "仅占5%（mere降格强调）"
+          },
+          {
+            "en": "Twenty years later the hierarchy had inverted",
+            "zh": "二十年后层级倒转（转折句）"
+          },
+          {
+            "en": "served as much as a community hub and internet access point as a place to borrow books",
+            "zh": "一半是社区枢纽与上网点，一半才是借书处（as much as结构收尾）"
+          }
+        ],
+        "guideQ": "双图的合读结论你放在最后一个句子里了吗？这里是量与质的因果闭环。"
+      }
+    }
+  },
+  "剑20 Test 4 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "流程图：竹子制布料。竹子种植（自生根繁殖，无需 replant）→春季采伐→切成条→压碎成浆→水浸（加酶/化学软化）→梳理出纤维→纺成纱线→织成布→裁剪缝制成衣。",
+    "essay": "The diagram shows how cloth is manufactured from bamboo, from the growing plant to finished garments.\n\nIt is clear that the process has two broad phases, in which the plant is first reduced to fibre and the fibre is then spun and woven. It is also noticeable that bamboo is a self-renewing raw material, since it regrows from its own roots.\n\nThe fibre phase begins in the fields, where bamboo is left to mature until it is cut in spring. The harvested canes are sliced into strips, crushed and then soaked in water with softening agents until the fibres separate; these fibres are combed clean and dried.\n\nThe second phase turns fibre into cloth. The cleaned fibres are spun into yarn, which is woven on looms to produce long rolls of fabric. In the final stages, the fabric is dyed, cut into patterns and sewn into finished clothes. What makes bamboo cloth distinctive is where the process starts: because the plant shoots again from its own roots after harvesting, the fields never need replanting, and the raw material for the next cycle is growing even as the current batch is being turned into garments.",
+    "paraTeach": {
+      "2": {
+        "why": "开头 from the growing plant to finished garments 介词短语框住全程（起终点前置）；garments 一词比 clothes 更精准对应成衣终点。",
+        "modelPara": "The diagram shows how cloth is manufactured from bamboo, from the growing plant to finished garments.",
+        "expressions": [
+          {
+            "en": "how cloth is manufactured from bamboo",
+            "zh": "布料如何由竹子制成（被动改写）"
+          },
+          {
+            "en": "from the growing plant to finished garments",
+            "zh": "从生长的植株到成衣（起终点框架）"
+          }
+        ],
+        "guideQ": "流程图开头你的起终点进句子了吗？"
+      },
+      "3": {
+        "why": "概括=两阶段切分+原料特性：句1 two broad phases（先成纤维再纺织——从图中读出的工序结构），句2 self-renewing（竹子自生根再生）——第二句把流程图里「隐藏的循环/特性」点出来，是超出流水账的一层。",
+        "modelPara": "It is clear that the process has two broad phases, in which the plant is first reduced to fibre and the fibre is then spun and woven. It is also noticeable that bamboo is a self-renewing raw material, since it regrows from its own roots.",
+        "expressions": [
+          {
+            "en": "two broad phases",
+            "zh": "两大阶段（工序结构概括）"
+          },
+          {
+            "en": "a self-renewing raw material, since it regrows from its own roots",
+            "zh": "自我更新的原料、自根系再生（原料特性点睛）"
+          }
+        ],
+        "guideQ": "流程图里除步骤外还有「原料特性」这类隐藏信息，你读出来了吗？"
+      },
+      "4": {
+        "why": "细节一=成纤维阶段：left to mature until cut in spring（时间条件嵌入）→sliced→crushed→soaked with softening agents until the fibres separate（until结果从句）→combed clean and dried——五步一逗号分层，until 两次使用把「等待型工序」写出节奏。",
+        "modelPara": "The fibre phase begins in the fields, where bamboo is left to mature until it is cut in spring. The harvested canes are sliced into strips, crushed and then soaked in water with softening agents until the fibres separate; these fibres are combed clean and dried.",
+        "expressions": [
+          {
+            "en": "left to mature until it is cut in spring",
+            "zh": "待其长成后于春季砍伐（时间条件）"
+          },
+          {
+            "en": "soaked in water with softening agents until the fibres separate",
+            "zh": "加软化剂浸泡至纤维分离（until结果句）"
+          },
+          {
+            "en": "combed clean and dried",
+            "zh": "梳理干净并晾干（结果补语）"
+          }
+        ],
+        "guideQ": "「浸泡到纤维分离」这类带终点的工序，你用 until 从句写出了完成条件吗？"
+      },
+      "5": {
+        "why": "细节二=纺织成衣阶段：spun into yarn→woven on looms→dyed→cut→sewn，五步被动推进；结尾 What makes bamboo cloth distinctive 回扣概括段的 self-renewing（never need replanting + 正在被制成衣服时下一茬已在生长）——首尾呼应+现在进行时的巧思收尾。",
+        "modelPara": "The second phase turns fibre into cloth. The cleaned fibres are spun into yarn, which is woven on looms to produce long rolls of fabric. In the final stages, the fabric is dyed, cut into patterns and sewn into finished clothes. What makes bamboo cloth distinctive is where the process starts: because the plant shoots again from its own roots after harvesting, the fields never need replanting, and the raw material for the next cycle is growing even as the current batch is being turned into garments.",
+        "expressions": [
+          {
+            "en": "The cleaned fibres are spun into yarn, which is woven on looms",
+            "zh": "净纤维纺成纱线、织机织造（which从句衔接两步）"
+          },
+          {
+            "en": "dyed, cut into patterns and sewn into finished clothes",
+            "zh": "染色、裁剪、缝制成衣（三步并一句）"
+          },
+          {
+            "en": "the raw material for the next cycle is growing even as the current batch is being turned into garments",
+            "zh": "当这批正被制成衣服时下一轮原料已在生长（进行时收尾）"
+          }
+        ],
+        "guideQ": "收尾的「巧思句」你用了一个时态对比（is growing / is being turned）吗？小机关放大文采。"
+      }
+    }
+  }
+}

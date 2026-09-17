@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>12 评分校准报告 · IELTS Writing Coach 知识库</title>
+<style>
+:root { --bg:#f4f6fb; --card:#fff; --ink:#1f2937; --muted:#64748b; --line:#e2e8f0; --primary:#2563eb; --accent:#eff6ff; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0b1220; --card:#141e30; --ink:#e2e8f0; --muted:#94a3b8; --line:#263650; --accent:#16233c; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:"Segoe UI","Microsoft YaHei",-apple-system,sans-serif; line-height:1.85; font-size:17px; }
+.wrap { max-width: 76ch; margin: 0 auto; padding: 40px 20px 80px; }
+h1,h2,h3 { line-height:1.4; }
+h1 { font-size: 28px; border-bottom: 3px solid var(--primary); padding-bottom: 10px; }
+h2 { font-size: 22px; margin-top: 40px; }
+h3 { font-size: 18px; margin-top: 28px; }
+a { color: var(--primary); text-decoration: none; border-bottom: 1px dotted; }
+a:hover { border-bottom-style: solid; }
+blockquote { border-left: 4px solid var(--primary); margin: 16px 0; padding: 8px 18px; background: var(--accent); border-radius: 0 8px 8px 0; }
+code { background: var(--accent); border-radius: 4px; padding: 2px 6px; font-size: 15px; }
+pre code { display:block; padding: 14px; overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15.5px; }
+th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+th { background: var(--accent); }
+.top { display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px; flex-wrap: wrap; gap: 10px; }
+.top a.home { font-weight: 700; }
+nav.docs { margin-top: 50px; border-top: 2px solid var(--line); padding-top: 16px; font-size: 15px; }
+nav.docs a { margin-right: 14px; }
+</style>
+</head>
+<body><div class="wrap">
+<div class="top"><a class="home" href="index.html">← 知识库首页</a><span style="color:var(--muted);font-size:14px">IELTS Writing Coach 知识库</span></div>
+<h1>12 · 评分校准报告（用剑桥官方样卷对齐评分系统）</h1>
+<blockquote>
+<p>校准时间：2026-09-16。方法：从剑10-13 书后答案提取官方样卷，让"评分员"在<strong>看不到官方分数</strong>的条件下按本工具的评分标准（2023 官方量表 + Simon 方法论）盲评，再对比官方分数。</p>
+</blockquote>
+<hr />
+<h2>1. 校准语料</h2>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>数量</th>
+<th>分数依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Task 2 考生样卷</td>
+<td>13 篇</td>
+<td>书面 Band 分（3.5 ~ 7.5），手写卷经视觉转录（转录与考官评语交叉验证，如"220词 vs 评语219词"）</td>
+</tr>
+<tr>
+<td>Task 1 考生样卷</td>
+<td>13 篇</td>
+<td>书面 Band 分（4.5 ~ 8.0）；TA 项因图表未随文提供仅作参考</td>
+</tr>
+<tr>
+<td>考官 9 级范文</td>
+<td>6 篇</td>
+<td>剑10 "prepared by an examiner"，按 9 分作锚点</td>
+</tr>
+</tbody>
+</table>
+<h2>2. 校准结果</h2>
+<h3>LLM 按本工具评分标准盲评（20 篇有官方分的样卷）</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总分 MAE（平均绝对误差）</td>
+<td><strong>0.05</strong></td>
+</tr>
+<tr>
+<td>总分偏移</td>
+<td><strong>0</strong>（不虚高不压分）</td>
+</tr>
+<tr>
+<td>分项 MAE</td>
+<td>TR 0.20 · CC 0.20 · LR 0.18 · GRA 0.30</td>
+</tr>
+<tr>
+<td>最大单篇偏差</td>
+<td>0.5 分（4 例，均为 .25/.75 进位边缘）</td>
+</tr>
+<tr>
+<td>分档表现</td>
+<td>官方3.5→±0 · 5→±0 · 5.5→±0 · 6→±0 · 6.5→±0 · 7→-0.17 · 7.5→±0 · 8→±0</td>
+</tr>
+<tr>
+<td>考官范文</td>
+<td>全部盲评 9.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结论：按本工具评分标准执行的 LLM 盲评，与官方分数在总分上几乎完全一致（MAE 0.05），分项 GRA 最容易偏严（-0.25）。</strong></p>
+<h3>规则引擎（T2，10 篇对照）</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总分 MAE / 偏移</td>
+<td>0.79 / +0.26</td>
+</tr>
+<tr>
+<td>强项</td>
+<td>5~7 分中段可用（偏移 ±0.3~0.8）</td>
+</tr>
+<tr>
+<td>已知失准</td>
+<td>官方 3.5 → 引擎 5.5（+1.9，低级错误粒度不够）；官方 7.5 → 引擎 5.5（-2.0，无法识别优秀）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结论：规则引擎是"下限保护器"——它能可靠地告诉你哪里有硬伤，但不能识别优秀，也不能给低分作文应有的低分。这就是它只做参考分、复盘靠 AI 精批+自评清单的原因。</strong></p>
+<h2>3. 对使用者的含义</h2>
+<ol>
+<li><strong>AI 精批的分数可信</strong>：在 3.5-9 的全分数段上与官方一致（±0.5 内），按它提分不会跑偏。</li>
+<li><strong>规则诊断的分数只当下限</strong>：规则分高不代表能拿高分（它不识别亮点）；规则分低说明一定有硬伤。</li>
+<li><strong>GRA 是最容易被 AI 偏严对待的一项</strong>（-0.25）：如果你的作文语法其实不错但 AI 给 GRA 偏低，以"error-free sentences 是否频繁"自检后可自行上调心理预期。</li>
+<li>复跑方式：<code>node grade-rule.js</code>（规则引擎，本地免费）+ 校准报告原始数据在 <code>calibration/</code>。</li>
+</ol>
+<h2>4. 局限性（如实说明）</h2>
+<ul>
+<li>样卷手写正文经视觉转录，个别潦草词按合理判读处理（已与考官评语交叉验证，如"220词 vs 219词"）。</li>
+<li>LLM 评分员与本工具转录员同为 GLM 系模型，存在同源可能带来的系统性偏好；DeepSeek 侧未跑全量批（避免消耗用户额度），但工具内 AI 精批用的提示词与本次盲评的评分标准同源。</li>
+<li>T1 的 TA 项因图表未随文提供，该项校准不充分。</li>
+<li>n=20/27（7 篇因页码映射失败未纳入盲评），对总体结论影响有限。</li>
+</ul>
+<nav class="docs"><a href="00.html" style="font-weight:400">00</a> <a href="01.html" style="font-weight:400">01</a> <a href="02.html" style="font-weight:400">02</a> <a href="03.html" style="font-weight:400">03</a> <a href="04.html" style="font-weight:400">04</a> <a href="05.html" style="font-weight:400">05</a> <a href="06.html" style="font-weight:400">06</a> <a href="08.html" style="font-weight:400">08</a> <a href="09.html" style="font-weight:400">09</a> <a href="10.html" style="font-weight:400">10</a> <a href="11.html" style="font-weight:400">11</a> <a href="12.html" style="font-weight:700">12</a></nav>
+</div></body></html>

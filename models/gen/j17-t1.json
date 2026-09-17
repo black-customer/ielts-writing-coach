@@ -1,0 +1,302 @@
+{
+  "剑17 Test 1 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "地图：Norbiton工业区现状 vs 未来规划。现状：环岛主路串起若干工厂、厂房临河。规划：全部工厂改建为住宅；主路新增环岛与支路；跨河新桥连接对岸；增设商店；学校旁新建playground；河边农田改住宅。未来规划→will be。",
+    "essay": "The maps show an industrial area in the town of Norbiton as it exists today and how it is planned to be developed in the future.\n\nIt is clear that the area will be transformed from a zone of factories into a residential neighbourhood. It is also noticeable that the road network will be expanded to connect the new housing with the far side of the river.\n\nAt present, the site consists of a main road encircling a series of factories, with a roundabout at its western end and a river running along the eastern edge. According to the plan, every factory will be demolished and replaced by housing on new side streets. A further roundabout will be built at the eastern end, and a new bridge will carry the road across the river, where the farmland will also become homes.\n\nThe plan makes some provision for daily life. Shops will open on the main road near the centre of the development, and the existing school in the north will be retained, with a new playground constructed on land beside it. Overall, the area is expected to become one of the town's principal residential districts.",
+    "paraTeach": {
+      "2": {
+        "why": "规划图开头：as it exists today and how it is planned to be developed 一句锁死「现状+将来」双时态框架；is planned to be 被动未来是规划图的标准开场（体系2.1：规划图用 will be）。",
+        "modelPara": "The maps show an industrial area in the town of Norbiton as it exists today and how it is planned to be developed in the future.",
+        "expressions": [
+          {
+            "en": "as it exists today",
+            "zh": "如今的样子（现状半句）"
+          },
+          {
+            "en": "how it is planned to be developed in the future",
+            "zh": "未来规划的样子（将来被动半句）"
+          }
+        ],
+        "guideQ": "规划图的开头你把「现在与将来」两种时态都用上了吗？"
+      },
+      "3": {
+        "why": "地图概括两句：句1给最大变化（工厂区→住宅区，一句话讲完土地用途逆转），句2给第二主线（路网跨河扩展）——「用途改变+基础设施延伸」是这类城乡规划图的两大标配头条。",
+        "modelPara": "It is clear that the area will be transformed from a zone of factories into a residential neighbourhood. It is also noticeable that the road network will be expanded to connect the new housing with the far side of the river.",
+        "expressions": [
+          {
+            "en": "will be transformed from a zone of factories into a residential neighbourhood",
+            "zh": "将从工厂区转变为住宅区（用途逆转一句话）"
+          },
+          {
+            "en": "the road network will be expanded to connect",
+            "zh": "路网将扩展以连接（基础设施主线）"
+          }
+        ],
+        "guideQ": "地图题的「用途改变」你放进概括第一句了吗？这是规划图永远的第一特征。"
+      },
+      "4": {
+        "why": "细节一=主体改造：At present 一句写现状（encircling 精准描述环路），then 三连 will be（demolished/replaced/arranged）写住宅替换，再以 roundabout→bridge→farmland 的顺序写路网跨河——「现状一句+将来三改」+空间顺序推进。",
+        "modelPara": "At present, the site consists of a main road encircling a series of factories, with a roundabout at its western end and a river running along the eastern edge. According to the plan, every factory will be demolished and replaced by housing on new side streets. A further roundabout will be built at the eastern end, and a new bridge will carry the road across the river, where the farmland will also become homes.",
+        "expressions": [
+          {
+            "en": "a main road encircling a series of factories",
+            "zh": "环绕一片工厂的主路（encircle精准方位动词）"
+          },
+          {
+            "en": "will be demolished and replaced by housing",
+            "zh": "将被拆除并由住宅取代（拆除+替换连用）"
+          },
+          {
+            "en": "the farmland will also become homes",
+            "zh": "对岸农田也将改为住宅（converted into改用途）"
+          }
+        ],
+        "guideQ": "地图变化的五类动词（新增/拆除/扩建/移位/改用途）你能各举出本图一例吗？"
+      },
+      "5": {
+        "why": "细节二=生活配套：shops 与 playground 用 will open/will be constructed，学校用 retained（保留是地图题最容易被漏写的动词类别）；Overall 收束句点出「工业属性彻底消失+预期成为主要住宅区」，呼应概括段收口。",
+        "modelPara": "The plan makes some provision for daily life. Shops will open on the main road near the centre of the development, and the existing school in the north will be retained, with a new playground constructed on land beside it. Overall, the area is expected to become one of the town's principal residential districts.",
+        "expressions": [
+          {
+            "en": "makes some provision for daily life",
+            "zh": "为日常生活做了安排（配套段总起）"
+          },
+          {
+            "en": "will be retained, with a new playground constructed on land beside it",
+            "zh": "将保留，旁边将新建游乐场（保留+新增一句并写）"
+          },
+          {
+            "en": "is expected to become one of the town's principal residential districts",
+            "zh": "预计成为镇上主要的住宅区之一（呼应概括收尾）"
+          }
+        ],
+        "guideQ": "「保留不变」的东西你写了吗？地图题只写变化漏掉 retained 项，覆盖就不完整。"
+      }
+    }
+  },
+  "剑17 Test 2 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "表+双饼图：警察预算2017年304.7m→2018年318.6m；来源：national government 175.5→177.8m、local taxes 91.2→102.3m（涨幅最大）、other 38→38.5m。支出：salaries 75%→69%、technology 8%→14%（近翻倍）、buildings 17%→17%持平。",
+    "essay": "The table and pie charts give information on the budget of one police force in Britain in 2017 and 2018, showing where the money came from and how it was spent.\n\nIt is clear that the total budget grew over the two years. It is also noticeable that the extra money came mainly from local taxes, while the largest change in spending was the growing share taken by technology.\n\nThe budget rose from £304.7 million in 2017 to £318.6 million in 2018, an increase of just under £14 million. The government remained the biggest single source of funds, providing £175.5 million and then £177.8 million, but the sharpest rise belonged to local taxes, which jumped from £91.2 million to £102.3 million. The remaining category, other sources, was almost unchanged at around £38 million.\n\nAs for spending, salaries dominated the budget in both years, although their share fell from 75% to 69%. Buildings took a steady 17% each year, while technology was the only area to grow, its proportion nearly doubling from 8% to 14%. Overall, the pattern suggests a force receiving more money and choosing to invest a significant part of the increase in new equipment rather than staffing.",
+    "paraTeach": {
+      "2": {
+        "why": "双图开头一句一图：showing 分词短语挂出两个任务（where the money came from / how it was spent），与图表标题一一对应——双图题开头先把「每张图管什么」说清，下面的分组就有了边界。",
+        "modelPara": "The table and pie charts give information on the budget of one police force in Britain in 2017 and 2018, showing where the money came from and how it was spent.",
+        "expressions": [
+          {
+            "en": "give information on the budget of one police force",
+            "zh": "给出警方预算信息（gives information about标准替换）"
+          },
+          {
+            "en": "showing where the money came from and how it was spent",
+            "zh": "分词短语交代两图分工（来源+去向）"
+          }
+        ],
+        "guideQ": "双图题你的开头有没有把「哪张图管哪个问题」分派清楚？"
+      },
+      "3": {
+        "why": "概括两句：句1给总量趋势（预算增长），句2把两张图的关键结论各收半句（增量主要来自地方税+科技占比大增）——第二概括句用 while 对比结构一次带走两图的头条，省句又完整。",
+        "modelPara": "It is clear that the total budget grew over the two years. It is also noticeable that the extra money came mainly from local taxes, while the largest change in spending was the growing share taken by technology.",
+        "expressions": [
+          {
+            "en": "the extra money came mainly from local taxes",
+            "zh": "增量主要来自地方税（表图头条）"
+          },
+          {
+            "en": "the largest change in spending was the growing share taken by technology",
+            "zh": "支出最大变化是科技占比上升（饼图头条）"
+          }
+        ],
+        "guideQ": "你的第二概括句有没有用 while/whereas 把两张图的结论串在一起？"
+      },
+      "4": {
+        "why": "细节一=表格（来源）：先总（rose from X to Y+增量换算 just under 14 million——数字纪律：绝对差比裸数字更值钱），再按大小与变化排（government最大但微涨、local taxes涨幅最猛、other不动）——「最值+变化率」双轴组织数据。",
+        "modelPara": "The budget rose from £304.7 million in 2017 to £318.6 million in 2018, an increase of just under £14 million. The government remained the biggest single source of funds, providing £175.5 million and then £177.8 million, but the sharpest rise belonged to local taxes, which jumped from £91.2 million to £102.3 million. The remaining category, other sources, was almost unchanged at around £38 million.",
+        "expressions": [
+          {
+            "en": "an increase of just under £14 million",
+            "zh": "增长略低于1400万（同位语补增量）"
+          },
+          {
+            "en": "the sharpest rise belonged to local taxes",
+            "zh": "涨幅最大的是地方税（变化率最值）"
+          },
+          {
+            "en": "was almost unchanged at around £38 million",
+            "zh": "维持在约3800万不变（平稳项收尾）"
+          }
+        ],
+        "guideQ": "表格题你算了「增量」吗？两年数字相减的一句话，信息量胜过照抄四遍原值。"
+      },
+      "5": {
+        "why": "细节二=饼图（去向）：salaries 主导但占比降（75→69）、buildings 持平（steady 17%）、technology 独涨（nearly doubling from 8% to 14% 倍数表达）；结尾 Overall 句把两图接通（更多钱→投向设备而非人员）——收尾一句解读，但不越界成观点。",
+        "modelPara": "As for spending, salaries dominated the budget in both years, although their share fell from 75% to 69%. Buildings took a steady 17% each year, while technology was the only area to grow, its proportion nearly doubling from 8% to 14%. Overall, the pattern suggests a force receiving more money and choosing to invest a significant part of the increase in new equipment rather than staffing.",
+        "expressions": [
+          {
+            "en": "dominated the budget in both years",
+            "zh": "两年都占预算大头（支配动词）"
+          },
+          {
+            "en": "its proportion nearly doubling from 8% to 14%",
+            "zh": "占比近翻倍，8%到14%（独立主格+倍数）"
+          },
+          {
+            "en": "invest a significant part of the increase in new equipment rather than staffing",
+            "zh": "把大部分增量投向设备而非人员（双图合读收尾）"
+          }
+        ],
+        "guideQ": "表格加饼图你最后有没有一句「合起来看」？双图题的高分收尾就是把两张图接通。"
+      }
+    }
+  },
+  "剑17 Test 3 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "柱图：家庭周收入支出占比 1968 vs 2018。1968：food最高35%；2018：food降至约17%，leisure升至约13%成最大项，housing约10%→19%，transport约8%→11%，personal goods等下降。",
+    "essay": "The bar chart compares how families in one country spent their weekly income across a range of categories in 1968 and 2018.\n\nIt is clear that the shape of household spending changed fundamentally over the fifty years. It is also noticeable that food, the largest expense by far in 1968, had surrendered that position to leisure by 2018.\n\nFood accounted for 35% of the family budget in 1968, twice as much as any other category, with housing and transport the next largest at around 10% each. Fifty years later, the food figure had fallen to about 17%, while housing had almost doubled to 19% and transport had risen slightly to 11%. Leisure showed the most dramatic change of all, climbing from a modest 6% to 13%, overtaking every category except housing.\n\nThe remaining areas of spending became less important over the period. The proportion of income devoted to clothing and footwear, household goods and personal items all fell, and the combined share taken by these smaller categories dropped noticeably. In 1968 the household budget revolved around feeding the family; by 2018, after food, shelter and travel had been paid for, entertainment had become the main claim on what was left.",
+    "paraTeach": {
+      "2": {
+        "why": "开头改写：compares how families spent their weekly income（疑问词从句改写 gives information about the spending），across a range of categories 补充维度，两年份保留——柱图双年份=对比题，开头就点明比较性质。",
+        "modelPara": "The bar chart compares how families in one country spent their weekly income across a range of categories in 1968 and 2018.",
+        "expressions": [
+          {
+            "en": "compares how families in one country spent their weekly income",
+            "zh": "比较家庭如何支配周收入（从句改写）"
+          },
+          {
+            "en": "across a range of categories",
+            "zh": "横跨多个类别（维度交代）"
+          }
+        ],
+        "guideQ": "对比两年的图，你的开头是不是也写成了比较句式（compares）？"
+      },
+      "3": {
+        "why": "概括两句：句1定性（消费结构根本改变），句2抓头条故事（王位更替：food 让位于 leisure）——「the largest expense by far... surrendered that position」用拟人动词把最值变化讲成一句话，无细数字。",
+        "modelPara": "It is clear that the shape of household spending changed fundamentally over the fifty years. It is also noticeable that food, the largest expense by far in 1968, had surrendered that position to leisure by 2018.",
+        "expressions": [
+          {
+            "en": "the shape of household spending changed fundamentally",
+            "zh": "消费结构发生根本变化（定性句）"
+          },
+          {
+            "en": "had surrendered that position to leisure",
+            "zh": "把最大项的位置让给了休闲（头条故事化）"
+          }
+        ],
+        "guideQ": "两张柱子放一起，最大的那条故事线是什么？你的概括讲出这个故事了吗？"
+      },
+      "4": {
+        "why": "细节一=三大项：先写1968年的食物统治地位（35%+twice as much as any other 倍数对比），然后 1968→2018 三项各给一对数字（fallen to 17%/almost doubled to 19%/risen slightly to 11%），leisure 用 the most dramatic change 单独强调——「过去格局一句+五十年后三项各一句」。",
+        "modelPara": "Food accounted for 35% of the family budget in 1968, twice as much as any other category, with housing and transport the next largest at around 10% each. Fifty years later, the food figure had fallen to about 17%, while housing had almost doubled to 19% and transport had risen slightly to 11%. Leisure showed the most dramatic change of all, climbing from a modest 6% to 13%, overtaking every category except housing.",
+        "expressions": [
+          {
+            "en": "twice as much as any other category",
+            "zh": "是其他任何类别的两倍（倍数对比）"
+          },
+          {
+            "en": "had almost doubled to 19%",
+            "zh": "几乎翻倍至19%（过去完成时+倍数）"
+          },
+          {
+            "en": "overtaking every category except housing",
+            "zh": "超过除住房外所有类别（位次变化）"
+          }
+        ],
+        "guideQ": "双年份柱图的每个类别，你都给出「两个年份+一个变化动词」三件套了吗？"
+      },
+      "5": {
+        "why": "细节二=其余小项归堆（clothing/household goods/personal items 一句打包下降）+收束句把全文拧成一句话（1968预算围着吃转；2018付完吃住行后娱乐成为最大去处）——归堆防流水账，收束句给段落一个「可记住的结论」。",
+        "modelPara": "The remaining areas of spending became less important over the period. The proportion of income devoted to clothing and footwear, household goods and personal items all fell, and the combined share taken by these smaller categories dropped noticeably. In 1968 the household budget revolved around feeding the family; by 2018, after food, shelter and travel had been paid for, entertainment had become the main claim on what was left.",
+        "expressions": [
+          {
+            "en": "The remaining areas of spending became less important",
+            "zh": "其余支出项目变得次要（小项归堆句）"
+          },
+          {
+            "en": "the household budget revolved around feeding the family",
+            "zh": "预算围着全家的吃饭转（形象收束句）"
+          },
+          {
+            "en": "the main claim on what was left",
+            "zh": "剩余钱的最大去向（结尾点题）"
+          }
+        ],
+        "guideQ": "小项归堆后，你有没有给一句「可记住的结论」收尾？这是细节段的层次感所在。"
+      }
+    }
+  },
+  "剑17 Test 4 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "线图：商店关张vs新开数 2011-2018。开张：8500(2011)→4000(2012骤降)→回升至约6500-7000(2014-2015)→3000(2018)；关闭：7000(2011)→600(2012最低)→7000(2014交叉)→3000(2018)。两条线2018年趋同于约3000。",
+    "essay": "The line graph shows how many shops closed and how many new shops opened in one country over the eight years from 2011 to 2018.\n\nIt is clear that both figures fluctuated considerably over the period. It is also noticeable that by the end of the period, closures and openings had converged at the same low level.\n\nOpenings began the period at their highest point, some 8,500 in 2011, before collapsing to 4,000 a year later. They then recovered strongly, climbing back to a peak of about 7,000 in 2014 and remaining close to that level in 2015, but the recovery was temporary: from 2016 the number fell away sharply, ending the period at only 3,000.\n\nClosures followed a very different path. From 7,000 in 2011 they plunged to a low of just 600 in 2012. Thereafter closures climbed almost continuously, crossing above openings in 2014 at around 7,000, before easing back to 3,000 in the final year. The most striking feature of the graph is therefore the convergence of the two lines: after eight years of instability, roughly the same number of shops were closing and opening, at half the level recorded at the start.",
+    "paraTeach": {
+      "2": {
+        "why": "开头改写：owner-reported cases of shop closures and openings→how many shops closed and how many new shops opened（名词组改两个从句，动作化更顺口），over the eight years from 2011 to 2018 把时间段顺进句。",
+        "modelPara": "The line graph shows how many shops closed and how many new shops opened in one country over the eight years from 2011 to 2018.",
+        "expressions": [
+          {
+            "en": "how many shops closed and how many new shops opened",
+            "zh": "多少店关张、多少新店开张（两个平行从句）"
+          },
+          {
+            "en": "over the eight years from 2011 to 2018",
+            "zh": "2011至2018八年间（时间段嵌入）"
+          }
+        ],
+        "guideQ": "closures 和 openings 这对名词，你改写成动词从句了吗？从句比名词堆更易读。"
+      },
+      "3": {
+        "why": "概括两句：句1给总特征（双双剧烈波动），句2给第二头条（期末两线汇聚于同一低位）——「波动」+「趋同」正是这张图的两个一眼结论，converged at the same low level 不带具体数字。",
+        "modelPara": "It is clear that both figures fluctuated considerably over the period. It is also noticeable that by the end of the period, closures and openings had converged at the same low level.",
+        "expressions": [
+          {
+            "en": "both figures fluctuated considerably",
+            "zh": "两项数字均大幅波动（总特征）"
+          },
+          {
+            "en": "had converged at the same low level",
+            "zh": "汇聚到同一低位（第二特征）"
+          }
+        ],
+        "guideQ": "两线图的「线的相互关系」（交叉/汇聚/分叉）进你的概括了吗？那只描述各自趋势会漏掉最有价值的一层。"
+      },
+      "4": {
+        "why": "细节一=开张线四段式：起点最高（some 8,500）→骤降（collapsing）→强劲回升至峰值（climbing back to a peak of about 7,000）→再度走低收于3,000。collapsing/recovering strongly/fell away sharply 每段一个形状动词，不重复 rose/fell（体系2.4趋势词伙）。",
+        "modelPara": "Openings began the period at their highest point, some 8,500 in 2011, before collapsing to 4,000 a year later. They then recovered strongly, climbing back to a peak of about 7,000 in 2014 and remaining close to that level in 2015, but the recovery was temporary: from 2016 the number fell away sharply, ending the period at only 3,000.",
+        "expressions": [
+          {
+            "en": "began the period at their highest point, some 8,500",
+            "zh": "以期初最高点约8500起步（some约数）"
+          },
+          {
+            "en": "climbing back to a peak of about 7,000 in 2014",
+            "zh": "回升至2014年约7000的峰值"
+          },
+          {
+            "en": "the recovery was temporary",
+            "zh": "回升是暂时的（冒号引出转折）"
+          }
+        ],
+        "guideQ": "一条线有四个拐点时，你用「不同的形状动词」分段写了吗？全段只有rose和fell一定单调。"
+      },
+      "5": {
+        "why": "细节二=关闭线+交叉点：plunged to a low of just 600（全场最低）→almost continuously 爬升→2014 crossing above openings（交叉点必写）→回落收尾。最后 The most striking feature... therefore 把汇聚点破并补上对比（half the level recorded at the start）——呼应概括并给全图一个收束判断。",
+        "modelPara": "Closures followed a very different path. From 7,000 in 2011 they plunged to a low of just 600 in 2012. Thereafter closures climbed almost continuously, crossing above openings in 2014 at around 7,000, before easing back to 3,000 in the final year. The most striking feature of the graph is therefore the convergence of the two lines: after eight years of instability, roughly the same number of shops were closing and opening, at half the level recorded at the start.",
+        "expressions": [
+          {
+            "en": "plunged to a low of just 600",
+            "zh": "骤降至仅600的低位（全场最低值）"
+          },
+          {
+            "en": "crossing above openings in 2014",
+            "zh": "2014年反超开张线（交叉点）"
+          },
+          {
+            "en": "at half the level recorded at the start",
+            "zh": "仅为期初水平的一半（期末对比收尾）"
+          }
+        ],
+        "guideQ": "两线的交叉点你点明在哪一年了吗？交叉是双线图最值钱的数字，漏掉就漏了头条。"
+      }
+    }
+  }
+}

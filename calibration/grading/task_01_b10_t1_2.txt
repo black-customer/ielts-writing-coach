@@ -1,0 +1,12 @@
+【评分任务】IELTS Academic Writing Task 2（议论文）
+【题目原文】
+It is important for children to learn the difference between right and wrong at an early age. Punishment is necessary to help them learn this distinction. To what extent do you agree or disagree with this opinion? What sort of punishment should parents and teachers be allowed to use to teach good behaviour to children?
+
+【考生作文】
+One important stage in a child's growth is certainly the development of a conscience, which is linked to the ability to tell right from wrong. This skill comes with time and good parenting, and my firm conviction is that punishment does not have much of a role to play in this. Therefore I have to disagree almost entirely with the given statement. To some extent the question depends on the age of the child. To punish a very young child is both wrong and foolish, as an infant will not understand what is happening or why he or she is being punished. Once the age of reason is reached however, a child can be rewarded for good behaviour and discouraged from bad. This kind but firm approach will achieve more than harsh punishments, which might entail many negative consequences unintended by the parents. To help a child learn the difference between right and wrong, teachers and parents should firstly provide good role modelling in their own behaviour. After that, if sanctions are needed, the punishment should not be of a physical nature, as that merely sends the message that it is acceptable for larger people to hit smaller ones - an outcome which may well result in the child starting to bully others. Nor should the punishment be in any way cruel. Rather, teachers and parents can use a variety of methods to discipline their young charges, such as detention, withdrawal of privileges, and time-out. Making the punishment fit the crime is a useful notion, which would see children being made to pick up rubbish they have dropped, clean up graffiti they have drawn, or apologise to someone they have hurt. In these ways responsibility is developed in the child, which leads to much better future behaviour than does punishment.
+
+Model and sample answers for Writing tasks
+
+【输出要求】严格输出 JSON（不要 markdown 代码块），格式：
+{"scores":{"TR":x,"CC":x,"LR":x,"GRA":x},"overall":x,"reason":"每项一句话依据（中文）"}
+x 为 0-9 的分数，可带 0.5。Task 1 若图表缺失，TR 按作文内部数据一致性保守评估。

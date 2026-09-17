@@ -1,0 +1,12 @@
+【评分任务】IELTS Academic Writing Task 1（图表作文，图表未提供）
+【题目原文】
+The diagrams below show the life cycle of a species of large fish called the salmon. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.
+
+【考生作文】
+Salmon begin life as eggs on a pebbly riverbed, hidden among reeds in the slow- moving upper reaches of a river. After five to six months the eggs hatch into ‘fry’. For approximately the next four years, these baby salmon will live in the lower, faster-flowing waters of their river. During this time they measure between three and eight centimetres in length. By the time salmon reach twelve to fifteen centimetres, they are termed ‘smolt1, and at this time they migrate further downriver into the open sea. After five years at sea the salmon will have grown to adult size, which is between seventy and seventy-six centimetres. They then begin swimming back to their birthplace, where they will lay their eggs, and the cycle starts anew. In summary, the salmon passes through three distinct physical stages as it grows to maturity. Each of these stages takes place in a very different aquatic location. It is noteworthy that the first two stages of this fish's life occur in a freshwater environment, while the third stage is lived in saltwater.
+
+Model and sample answers for Writing tasks
+
+【输出要求】严格输出 JSON（不要 markdown 代码块），格式：
+{"scores":{"TR":x,"CC":x,"LR":x,"GRA":x},"overall":x,"reason":"每项一句话依据（中文）"}
+x 为 0-9 的分数，可带 0.5。Task 1 若图表缺失，TR 按作文内部数据一致性保守评估。

@@ -1,0 +1,306 @@
+{
+  "剑19 Test 1 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "线图：墨尔本一家社区活动中心8种活动参与人数，2000-2020。film club全程第一（约65→68）；table tennis 15→5下滑；amateur dramatics约28稳定；musical performances约10→18缓升；middle eastern dance约18→30；yoga约2005年从3起步飙升至2020约55；pilates 2010年从28开始升至约55。总体：老牌活动或稳或衰，新兴身心类活动（yoga/pilates）暴涨。",
+    "essay": "The line graph gives information on how many people took part in eight different activities at one social centre in Melbourne between 2000 and 2020.\n\nIt is clear that participation in new wellness activities grew fastest over the two decades. It is also noticeable that the film club remained the most popular offering throughout, while table tennis declined almost continuously.\n\nThe most dramatic changes belonged to the newest activities. Yoga, absent in 2000, was introduced around 2005 with just three participants and then surged to roughly 55 by 2020; pilates, another late arrival, rose from 28 participants in 2010 to a similar level. Middle Eastern dance also climbed, more modestly, from under 20 to about 30.\n\nThe established activities followed three very different paths. Attendance at the film club, already the highest at around 65 in 2000, edged up slightly to 68 and stayed comfortably above every other activity. Amateur dramatics and musical performances held steady at roughly 28 and 12 respectively, whereas table tennis lost two thirds of its players, falling from 15 to just 5. Overall, the centre's membership shifted decisively towards health-oriented classes, and away from traditional pastimes such as table tennis.",
+    "paraTeach": {
+      "2": {
+        "why": "开头改写：gives information on how many people took part in eight different activities——the numbers of participants（名词组）改 how many people took part（从句），eight 点出图上八条线，2000-2020保留。",
+        "modelPara": "The line graph gives information on how many people took part in eight different activities at one social centre in Melbourne between 2000 and 2020.",
+        "expressions": [
+          {
+            "en": "how many people took part in eight different activities",
+            "zh": "多少人参加八种活动（participate的动词化改写）"
+          },
+          {
+            "en": "gives information on",
+            "zh": "给出…的信息（show的标准替换）"
+          }
+        ],
+        "guideQ": "八条线的图，你的开头数过「图上到底有几条线」并写明了吗？"
+      },
+      "3": {
+        "why": "概括两句：句1=新兴身心类活动增速最快（头条），句2=两个「稳与衰」的对照（film club 一直第一 + table tennis 持续下滑）——多线图的概括抓「三类命运」，这里前两句先立两条，第三条留给细节段（体系2.1）。",
+        "modelPara": "It is clear that participation in new wellness activities grew fastest over the two decades. It is also noticeable that the film club remained the most popular offering throughout, while table tennis declined almost continuously.",
+        "expressions": [
+          {
+            "en": "participation in new wellness activities grew fastest",
+            "zh": "新兴身心活动参与增长最快（头条）"
+          },
+          {
+            "en": "remained the most popular offering throughout",
+            "zh": "始终最受欢迎（稳定项）"
+          },
+          {
+            "en": "declined almost continuously",
+            "zh": "几乎持续下滑（衰落项）"
+          }
+        ],
+        "guideQ": "多条线的图，你有没有按「兴、稳、衰」三种命运给线分类？分类即结构。"
+      },
+      "4": {
+        "why": "细节一=新兴活动组（涨组）：yoga 写出「出生证明」（absent in 2000, introduced around 2005 with just three participants——起点即最值），surge 到 55；pilates 用 another late arrival 类比；Middle Eastern dance 用 more modestly 收——最猛的详写、次猛的类比、温和的一笔带过。",
+        "modelPara": "The most dramatic changes belonged to the newest activities. Yoga, absent in 2000, was introduced around 2005 with just three participants and then surged to roughly 55 by 2020; pilates, another late arrival, rose from 28 participants in 2010 to a similar level. Middle Eastern dance also climbed, more modestly, from under 20 to about 30.",
+        "expressions": [
+          {
+            "en": "The most dramatic changes belonged to the newest activities",
+            "zh": "最剧烈的变化属于最新活动（分组主旨句）"
+          },
+          {
+            "en": "was introduced around 2005 with just three participants",
+            "zh": "约2005年以仅3人起步（出生点即起点值）"
+          },
+          {
+            "en": "another late arrival",
+            "zh": "另一位迟到的后来者（类比衔接）"
+          }
+        ],
+        "guideQ": "新增的线你写出「它从哪一年、几个人开始」了吗？出生点是这类线最值钱的数字。"
+      },
+      "5": {
+        "why": "细节二=老牌活动组（稳+衰）：film club（edged up slightly 轻微上移+stayed comfortably above every other activity 位次）→两项平稳（held steady at roughly... respectively——respectively 配对数字）→table tennis（lost two thirds of its players 倍数式下降）；Overall 收束句点「向健康类转移」——把八条线的结构收成一句话。",
+        "modelPara": "The established activities followed three very different paths. Attendance at the film club, already the highest at around 65 in 2000, edged up slightly to 68 and stayed comfortably above every other activity. Amateur dramatics and musical performances held steady at roughly 28 and 12 respectively, whereas table tennis lost two thirds of its players, falling from 15 to just 5. Overall, the centre's membership shifted decisively towards health-oriented classes, and away from traditional pastimes such as table tennis.",
+        "expressions": [
+          {
+            "en": "edged up slightly to 68",
+            "zh": "微升至68（edged up小幅动词）"
+          },
+          {
+            "en": "held steady at roughly 28 and 12 respectively",
+            "zh": "分别稳定在约28和12（respectively配对）"
+          },
+          {
+            "en": "lost two thirds of its players",
+            "zh": "流失三分之二的参与者（倍数下降）"
+          }
+        ],
+        "guideQ": "老活动的「稳」你是用 respectively 一句打包，还是一条线一段地拖？"
+      }
+    }
+  },
+  "剑19 Test 2 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "地图：某港口2000年vs现在。2000：南端渡轮码头+渔船码头（fishing boats停泊）、北面小型游艇码头（marina）、一家咖啡馆、仓库；现在：渔船码头改为游艇泊位（私人游艇取代渔船）、marina扩大、新增公寓楼与更多商店餐厅、仓库区改为停车场、渡轮码头保留。",
+    "essay": "The maps show a harbour as it was in the year 2000 and the same harbour today.\n\nIt is clear that the harbour has been modernised to serve leisure rather than fishing. It is also noticeable that the space around the water has been filled with new buildings and facilities for visitors.\n\nIn 2000, the southern pier was used by fishing boats, whose catch was unloaded into the warehouses that stood behind it, while a smaller marina for private vessels occupied the northern side. A single café served the area, and the ferry terminal at the western end connected the town to nearby islands.\n\nToday the harbour is a different world. The fishing fleet has disappeared entirely: the southern pier now berths private yachts, and the warehouses behind it have been converted into apartments and waterside restaurants. The northern marina has been extended to hold many more boats, and the handful of shops that were once clustered near the ferry terminal has grown into a row of cafes and boutiques along the waterfront. The ferry terminal itself remains in operation, the one part of the harbour that continues its original job.",
+    "paraTeach": {
+      "2": {
+        "why": "对比地图开头：as it was in the year 2000 and the same harbour today——was/today 时态分工 + the same harbour 点明同一地点两时点，简洁到极致（体系2.2发展型地图开场）。",
+        "modelPara": "The maps show a harbour as it was in the year 2000 and the same harbour today.",
+        "expressions": [
+          {
+            "en": "as it was in the year 2000",
+            "zh": "2000年时的样子（过去半句）"
+          },
+          {
+            "en": "the same harbour today",
+            "zh": "同一港口今天（现在半句）"
+          }
+        ],
+        "guideQ": "两图对比题的开头你能压缩到一句话吗？信息全在图中，开头越短越好。"
+      },
+      "3": {
+        "why": "概括两句定性：句1=现代化转向休闲（fishing→leisure 一句话讲完灵魂变化），句2=水边空间被访客设施填满——地图概括写「性质转变」而非罗列增减，这是8分地图的写法。",
+        "modelPara": "It is clear that the harbour has been modernised to serve leisure rather than fishing. It is also noticeable that the space around the water has been filled with new buildings and facilities for visitors.",
+        "expressions": [
+          {
+            "en": "modernised to serve leisure rather than fishing",
+            "zh": "现代化为休闲而非渔业服务（定性句）"
+          },
+          {
+            "en": "filled with new buildings and facilities for visitors",
+            "zh": "被访客设施填满（第二特征）"
+          }
+        ],
+        "guideQ": "地图的概括你写「这片区域变成了什么性质的地方」了吗？增减明细属于细节段。"
+      },
+      "4": {
+        "why": "细节一=2000年布局（过去时）：南码头渔船+卸货仓库（whose catch was unloaded——功能从句让静态地图有生产叙事），北面小 marina、一家咖啡馆、渡轮码头——每个设施都带「用途」，为下一段的「用途改变」埋好对照。",
+        "modelPara": "In 2000, the southern pier was used by fishing boats, whose catch was unloaded into the warehouses that stood behind it, while a smaller marina for private vessels occupied the northern side. A single café served the area, and the ferry terminal at the western end connected the town to nearby islands.",
+        "expressions": [
+          {
+            "en": "whose catch was unloaded into the warehouses",
+            "zh": "渔获卸入仓库（whose从句带功能）"
+          },
+          {
+            "en": "a smaller marina for private vessels occupied the northern side",
+            "zh": "北面是较小的私人船只码头（occupied方位动词）"
+          },
+          {
+            "en": "the ferry terminal at the western end connected the town to nearby islands",
+            "zh": "西端渡轮码头连接外岛（功能+方位）"
+          }
+        ],
+        "guideQ": "写「过去布局」时你给每个设施配上「用途」了吗？用途是后面「改变」的对照物。"
+      },
+      "5": {
+        "why": "细节二=如今（现在完成时被动四连）：渔船彻底消失（has disappeared entirely 最高强度动词）→码头改泊游艇→仓库改公寓餐厅（converted into）→marina扩建→商铺成排（has grown into）；结尾 The ferry terminal itself remains in operation, the one part... continues its original job——保留项用同位语点睛收尾。",
+        "modelPara": "Today the harbour is a different world. The fishing fleet has disappeared entirely: the southern pier now berths private yachts, and the warehouses behind it have been converted into apartments and waterside restaurants. The northern marina has been extended to hold many more boats, and the handful of shops that were once clustered near the ferry terminal has grown into a row of cafes and boutiques along the waterfront. The ferry terminal itself remains in operation, the one part of the harbour that continues its original job.",
+        "expressions": [
+          {
+            "en": "Today the harbour is a different world",
+            "zh": "如今港口已换了一片天地（段落转场句）"
+          },
+          {
+            "en": "have been converted into apartments and waterside restaurants",
+            "zh": "被改建为公寓与临水餐厅（改用途）"
+          },
+          {
+            "en": "the one part of the harbour that continues its original job",
+            "zh": "唯一延续本职的部分（保留项点睛）"
+          }
+        ],
+        "guideQ": "你的「如今」段用了多少个现在完成时被动？少于三个说明改动没写全。"
+      }
+    }
+  },
+  "剑19 Test 3 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "流程图：生物燃料乙醇的生产循环。阳光+CO2被树吸收（生长）→机器收割→储存→切碎→加工提取纤维素→转化为糖→发酵成乙醇→乙醇供车辆使用→车辆排放CO2→再被树吸收（循环闭合）。",
+    "essay": "The diagram illustrates how ethanol, a biofuel, is produced from trees and then used to power vehicles.\n\nIt is clear that the process forms a closed cycle, beginning with the growing of trees and ending with carbon dioxide returning to the atmosphere, where new trees absorb it again. It is also noticeable that every stage is powered, directly or indirectly, by sunlight.\n\nThe cycle starts as trees absorb sunlight and carbon dioxide from the air while they grow. Once mature, they are harvested by machine and stored until needed, at which point they are chipped into small pieces and processed to extract cellulose. In the laboratory stage that follows, this cellulose is converted into sugars, and microorganisms then ferment the sugars into ethanol.\n\nThe fuel's journey completes the loop. The ethanol is distributed to filling stations and burned in cars and lorries, and the carbon dioxide released by their engines escapes into the atmosphere. There it is once again available for trees to absorb, allowing the cycle that produced the fuel to begin anew.",
+    "paraTeach": {
+      "2": {
+        "why": "循环流程图开头：produced from trees and then used to power vehicles 把「生产+使用」两大半各占半句——循环图的开头必须交代「它是个环」，否则结尾的回收会显得突兀。",
+        "modelPara": "The diagram illustrates how ethanol, a biofuel, is produced from trees and then used to power vehicles.",
+        "expressions": [
+          {
+            "en": "ethanol, a biofuel, is produced from trees",
+            "zh": "乙醇（一种生物燃料）由树木制成（同位语嵌入术语解释）"
+          },
+          {
+            "en": "and then used to power vehicles",
+            "zh": "再用于驱动车辆（生产+使用双框架）"
+          }
+        ],
+        "guideQ": "循环图你的开头就把「前后两大半」框出来了吗？"
+      },
+      "3": {
+        "why": "概括=循环结构+能量来源：句1 closed cycle + 起点终点相接（CO2 回归大气再被吸收），句2 every stage powered by sunlight 点出能量主线——循环图的概括必须把「环」点破（体系2.2）。",
+        "modelPara": "It is clear that the process forms a closed cycle, beginning with the growing of trees and ending with carbon dioxide returning to the atmosphere, where new trees absorb it again. It is also noticeable that every stage is powered, directly or indirectly, by sunlight.",
+        "expressions": [
+          {
+            "en": "forms a closed cycle",
+            "zh": "构成封闭循环（循环图定性词）"
+          },
+          {
+            "en": "carbon dioxide returning to the atmosphere, where new trees absorb it again",
+            "zh": "CO2回归大气、再被树吸收（环的接缝处）"
+          }
+        ],
+        "guideQ": "循环图你有没有在概括里指出「终点接回起点」的具体位置？这是考官最想看到的一笔。"
+      },
+      "4": {
+        "why": "细节一=生产半环（五步）：absorb→harvested by machine→stored→chipped→processed to extract cellulose→converted into sugars→ferment into ethanol，被动串联；Once mature / at which point 两个时间连接把「等待与时机」写出节奏——步骤零遗漏（体系2.2流程纪律）。",
+        "modelPara": "The cycle starts as trees absorb sunlight and carbon dioxide from the air while they grow. Once mature, they are harvested by machine and stored until needed, at which point they are chipped into small pieces and processed to extract cellulose. In the laboratory stage that follows, this cellulose is converted into sugars, and microorganisms then ferment the sugars into ethanol.",
+        "expressions": [
+          {
+            "en": "Once mature, they are harvested by machine and stored until needed",
+            "zh": "成熟后机收并储存待用（时间连接+被动）"
+          },
+          {
+            "en": "processed to extract cellulose",
+            "zh": "加工以提取纤维素"
+          },
+          {
+            "en": "microorganisms then ferment the sugars into ethanol",
+            "zh": "微生物将糖发酵为乙醇（唯一主动语态步骤=自然过程）"
+          }
+        ],
+        "guideQ": "自然环节（微生物发酵）你保留了主动语态、人造环节用被动了吗？语态切换本身就是理解图的证明。"
+      },
+      "5": {
+        "why": "细节二=使用半环+闭环：distributed→burned in cars and lorries→released into the atmosphere→absorbed again，The fuel's journey completes the loop 点段旨；句尾 allowing the cycle that produced the fuel to begin anew 把「环」正式合拢——与概括段 closed cycle 首尾呼应。",
+        "modelPara": "The fuel's journey completes the loop. The ethanol is distributed to filling stations and burned in cars and lorries, and the carbon dioxide released by their engines escapes into the atmosphere. There it is once again available for trees to absorb, allowing the cycle that produced the fuel to begin anew.",
+        "expressions": [
+          {
+            "en": "completes the loop",
+            "zh": "完成闭环（循环图点睛句）"
+          },
+          {
+            "en": "the carbon dioxide released by their engines escapes into the atmosphere",
+            "zh": "发动机释放的CO2进入大气（分词后置修饰）"
+          },
+          {
+            "en": "allowing the cycle that produced the fuel to begin anew",
+            "zh": "使产生燃料的循环得以重新开始（分词收尾合环）"
+          }
+        ],
+        "guideQ": "你的最后一步把「环」明确合上了吗？循环图的结尾必须回到起点才算写完。"
+      }
+    }
+  },
+  "剑19 Test 4 T1": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "chartNote": "饼图+柱图：澳大利亚某镇年轻人舞蹈课。饼图（上课地点%）：private studios约48%、school halls（课后）约24%、community halls约18%、college studios约10%。柱图（舞种人数）：ballet最高约600人，tap约450，modern约510，folk最低约80，ballroom/contemporary居中。",
+    "essay": "The pie chart shows where young people in a town in Australia attend dance classes, and the bar chart shows how many students take each type of dance.\n\nIt is clear that private studios are the most popular venues by a wide margin. It is also noticeable that classical ballet attracts more participants than any other style.\n\nJust under half of all young dancers, 48%, learn in private studios, which are commercial businesses run for profit. School halls, used after regular lessons finish, accommodate a further 24%, while community halls and college-based studios account for the remaining 18% and 10% respectively.\n\nThe bar chart reveals an equally clear hierarchy among the dances themselves. Ballet is the most studied form, with around 600 young people attending classes, and modern dance and tap follow closely with roughly 500 and 450 students each. Ballroom dancing attracts about half as many as ballet, and folk dance trails the field with fewer than 100 participants. Taken together, the two charts suggest that young dancers follow tradition in their choice of style, but that the classes themselves are now provided mainly by private businesses rather than public institutions.",
+    "paraTeach": {
+      "2": {
+        "why": "双图开头一句一图：两个并列定语从句（where... attend / how many students take）分别改写两张图的问题，and 锁句——双图开头的「分派」动作在第一句完成（体系2.4）。",
+        "modelPara": "The pie chart shows where young people in a town in Australia attend dance classes, and the bar chart shows how many students take each type of dance.",
+        "expressions": [
+          {
+            "en": "shows where young people in a town in Australia attend dance classes",
+            "zh": "展示澳大利亚某镇年轻人在哪上课（地点问题）"
+          },
+          {
+            "en": "how many students take each type of dance",
+            "zh": "多少学生学每种舞（数量问题）"
+          }
+        ],
+        "guideQ": "你的双图开头是否一句一图、各领一个问题？"
+      },
+      "3": {
+        "why": "概括一句一图：饼图=私教室遥遥领先（by a wide margin），柱图=芭蕾学员最多——两个「最大值」就是两张图的overview，无细数字。",
+        "modelPara": "It is clear that private studios are the most popular venues by a wide margin. It is also noticeable that classical ballet attracts more participants than any other style.",
+        "expressions": [
+          {
+            "en": "the most popular venues by a wide margin",
+            "zh": "以巨大差距领先的场地（饼图最值）"
+          },
+          {
+            "en": "attracts more participants than any other style",
+            "zh": "参与者多于任何其他舞种（柱图最值）"
+          }
+        ],
+        "guideQ": "两张图你各给「一个最值」做概括了吗？"
+      },
+      "4": {
+        "why": "细节一=饼图：Just under half of all young dancers, 48% 同位语补数；两处分词插入语（used after regular lessons finish / college-based）交代场所性质——每个百分比都带「场所身份」，不是裸报数（体系2.3）。",
+        "modelPara": "Just under half of all young dancers, 48%, learn in private studios, which are commercial businesses run for profit. School halls, used after regular lessons finish, accommodate a further 24%, while community halls and college-based studios account for the remaining 18% and 10% respectively.",
+        "expressions": [
+          {
+            "en": "Just under half of all young dancers, 48%",
+            "zh": "略低于半数，48%（同位语补数）"
+          },
+          {
+            "en": "accommodate a further 24%",
+            "zh": "容纳另外24%（a further累加）"
+          },
+          {
+            "en": "account for the remaining 18% and 10% respectively",
+            "zh": "分别占其余的18%与10%（respectively配对）"
+          }
+        ],
+        "guideQ": "饼图的所有份额加起来是100%，你的句子把「其余的」用 remaining 收完了吗？"
+      },
+      "5": {
+        "why": "细节二=柱图梯度+双图合读：ballet 600 立标杆，modern/tap follow closely 并写（500/450），ballroom 用 half as many as ballet 倍数对比，folk trails the field 收尾最低值；Taken together 一句把两图接通（传统舞种+私营养成）——合读句是双图题的收尾标配。",
+        "modelPara": "The bar chart reveals an equally clear hierarchy among the dances themselves. Ballet is the most studied form, with around 600 young people attending classes, and modern dance and tap follow closely with roughly 500 and 450 students each. Ballroom dancing attracts about half as many as ballet, and folk dance trails the field with fewer than 100 participants. Taken together, the two charts suggest that young dancers follow tradition in their choice of style, but that the classes themselves are now provided mainly by private businesses rather than public institutions.",
+        "expressions": [
+          {
+            "en": "an equally clear hierarchy among the dances",
+            "zh": "舞种之间同样清晰的层级（与饼图呼应）"
+          },
+          {
+            "en": "about half as many as ballet",
+            "zh": "约为芭蕾的一半（倍数对比）"
+          },
+          {
+            "en": "Taken together, the two charts suggest that",
+            "zh": "两图合看表明（双图合读句式）"
+          }
+        ],
+        "guideQ": "双图题你用 Taken together 之类的句子把两张图接通了吗？这是双图题最后的得分点。"
+      }
+    }
+  }
+}

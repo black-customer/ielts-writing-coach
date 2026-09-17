@@ -1,0 +1,302 @@
+{
+  "剑19 Test 1 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "Whether competition or cooperation deserves more encouragement is a question that touches schools, workplaces and daily life alike. While competition can raise short-term performance, I believe we should put cooperation first, because almost every complex achievement of modern life is a team product.\n\nAdmittedly, competition has its uses. Rivals push effort upwards: sales teams given league tables work harder, and pupils who compete for places at top universities often study with remarkable discipline. Competition also selects for excellence, since tournaments and job markets identify the strongest performers faster than consensus ever could. In simple, measurable tasks with clear winners, these effects are genuine and valuable.\n\nMost modern work, however, does not resemble a sprint with a finish line. Surgeons, pilots and software engineers succeed by coordinating with others and by being able to admit mistakes quickly, and a hospital whose departments compete for budget learns to hide information precisely when sharing it saves lives. Research on innovation points the same way: the breakthroughs we most admire, from the internet to COVID vaccines, came from laboratories that shared data across borders. A culture of cooperation also scales better than a culture of rivalry, because it produces trust, and trust lowers the cost of every future project.\n\nIn conclusion, competition still has a place where performance is individual and measurable, but since the hardest problems of our societies are solved by groups rather than heroes, we should be teaching cooperation as the primary skill and treating competition as a useful supplement rather than an ideal.",
+    "paraTeach": {
+      "2": {
+        "why": "讨论题开头：句1用「问题式」改写（Whether... deserves more encouragement），一句框住题目的三个场景（schools/workplaces/daily life）；句2让步（competition raises short-term performance）+立场（cooperation first）+总理由（现代成就都是团队产品）——总理由就是全文主轴。",
+        "modelPara": "Whether competition or cooperation deserves more encouragement is a question that touches schools, workplaces and daily life alike. While competition can raise short-term performance, I believe we should put cooperation first, because almost every complex achievement of modern life is a team product.",
+        "expressions": [
+          {
+            "en": "a question that touches schools, workplaces and daily life alike",
+            "zh": "一个问题牵动学校职场与日常（题干三场景合并）"
+          },
+          {
+            "en": "While competition can raise short-term performance",
+            "zh": "尽管竞争能提升短期表现（让步限定）"
+          },
+          {
+            "en": "almost every complex achievement of modern life is a team product",
+            "zh": "现代复杂成就皆是团队产物（立场主轴）"
+          }
+        ],
+        "guideQ": "你的立场句后面那句总理由，能当全文的目录吗？"
+      },
+      "3": {
+        "why": "A方段写足对方三张牌：绩效上推（league tables/名校竞争的自律）+筛选功能（tournaments/job markets 识别强者）+适用条件（simple, measurable tasks with clear winners）——第三张牌「适用条件」最关键，为我方反驳精确画出靶子（体系1.2转述要像转述）。",
+        "modelPara": "Admittedly, competition has its uses. Rivals push effort upwards: sales teams given league tables work harder, and pupils who compete for places at top universities often study with remarkable discipline. Competition also selects for excellence, since tournaments and job markets identify the strongest performers faster than consensus ever could. In simple, measurable tasks with clear winners, these effects are genuine and valuable.",
+        "expressions": [
+          {
+            "en": "Rivals push effort upwards",
+            "zh": "对手把努力往上推（机制短句）"
+          },
+          {
+            "en": "identify the strongest performers faster than consensus ever could",
+            "zh": "比共识更快识别出最强者（比较结构）"
+          },
+          {
+            "en": "In simple, measurable tasks with clear winners",
+            "zh": "在简单可测、赢家明确的任务中（限定条件收口）"
+          }
+        ],
+        "guideQ": "你转述对方观点时有没有给出「它在什么条件下成立」？这为你的反驳画出准确靶心。"
+      },
+      "4": {
+        "why": "我方段三连证据：职业协作本质（外科/飞行员/工程师+医院部门竞争的致命反例）→创新史（互联网与疫苗的跨国数据共享）→社会尺度（合作产信任、信任降成本）——「trust lowers the cost of every future project」是机制化收口，比喊口号有力（体系1.4）。",
+        "modelPara": "Most modern work, however, does not resemble a sprint with a finish line. Surgeons, pilots and software engineers succeed by coordinating with others and by being able to admit mistakes quickly, and a hospital whose departments compete for budget learns to hide information precisely when sharing it saves lives. Research on innovation points the same way: the breakthroughs we most admire, from the internet to COVID vaccines, came from laboratories that shared data across borders. A culture of cooperation also scales better than a culture of rivalry, because it produces trust, and trust lowers the cost of every future project.",
+        "expressions": [
+          {
+            "en": "does not resemble a sprint with a finish line",
+            "zh": "不像一场有终点线的冲刺（反喻主题句）"
+          },
+          {
+            "en": "learns to hide information precisely when sharing it saves lives",
+            "zh": "恰在该共享救命信息时学会了隐藏（反例狠而准）"
+          },
+          {
+            "en": "trust lowers the cost of every future project",
+            "zh": "信任降低每个未来项目的成本（机制化收口）"
+          }
+        ],
+        "guideQ": "你的反驳有没有一个「对方逻辑走偏后的具体惨案」？医院部门竞争的例子就是这种。"
+      },
+      "5": {
+        "why": "一句话结论：competition has a place where... 承认对方适用域 + 主张把合作当 primary skill、竞争当 supplement——「主从关系」的定位式结论，比单纯重申更聪明。",
+        "modelPara": "In conclusion, competition still has a place where performance is individual and measurable, but since the hardest problems of our societies are solved by groups rather than heroes, we should be teaching cooperation as the primary skill and treating competition as a useful supplement rather than an ideal.",
+        "expressions": [
+          {
+            "en": "solved by groups rather than heroes",
+            "zh": "由群体而非英雄解决（对仗）"
+          },
+          {
+            "en": "as a useful supplement rather than an ideal",
+            "zh": "是有用的补充而非理想本身（定位式收尾）"
+          }
+        ],
+        "guideQ": "你的结论给两个概念「定了位次」吗？主从定位让讨论题结尾格外清晰。"
+      }
+    }
+  },
+  "剑19 Test 2 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "Some countries are again debating a shorter working week and a longer weekend. I disagree with the idea that this should be introduced across the board, because the evidence suggests it brings real costs for output and flexibility that many economies cannot currently absorb.\n\nThe attraction of the proposal is easy to respect. Workers exhausted by five-day schedules often produce their best ideas in protected leisure time, and studies of trial four-day weeks report lower burnout and, in some offices, no loss of output at all. A longer weekend would also give people time that money struggles to buy: time for children, for elderly parents and for the voluntary work that holds communities together. These are not trivial goods, and any society able to afford them should think hard about doing so.\n\nThe difficulty is that most cannot afford them yet. Output that simply disappears is output that must be replaced, either by hiring more staff, which small firms with thin margins cannot do, or by squeezing the same work into fewer hours, which usually means more pressure rather than less. Not every job is compressible: a nurse, a train driver or a shop assistant cannot finish the same caring, driving or selling in four days. There is also a hidden inequality in the idea, because the professionals who would gain a long weekend are already the ones who enjoy flexible schedules, while shift workers on lower wages would see pay cut to match hours reduced.\n\nIn conclusion, although a shorter working week is an appealing vision and may suit certain well-paid offices, introducing it universally would shift costs onto precisely the workers and businesses least able to carry them, and for that reason I do not support it at present.",
+    "paraTeach": {
+      "2": {
+        "why": "观点题开头：句1改写（debating a shorter working week——把 should 句改写成「正在被辩论」的时事情境），句2 disagree + across the board 限定 + 总理由（产出与灵活性的代价）——「先限定范围再反对」让反对更难被驳倒。",
+        "modelPara": "Some countries are again debating a shorter working week and a longer weekend. I disagree with the idea that this should be introduced across the board, because the evidence suggests it brings real costs for output and flexibility that many economies cannot currently absorb.",
+        "expressions": [
+          {
+            "en": "introduced across the board",
+            "zh": "全面推行（范围限定词）"
+          },
+          {
+            "en": "real costs for output and flexibility that many economies cannot currently absorb",
+            "zh": "许多经济体目前无法吸收的产出与灵活性代价（总理由）"
+          }
+        ],
+        "guideQ": "你反对一个主张时，反对的是「它本身」还是「它全面推行」？后者 precision 更高。"
+      },
+      "3": {
+        "why": "让步段写满对方三大吸引力：试验数据（four-day weeks 低倦怠不掉产出）+无法用钱买的时间（孩子/老人/社区志愿）+收尾升华（not trivial goods）——对方立场写到最动人，下一段的「但是」才有千钧之力。",
+        "modelPara": "The attraction of the proposal is easy to respect. Workers exhausted by five-day schedules often produce their best ideas in protected leisure time, and studies of trial four-day weeks report lower burnout and, in some offices, no loss of output at all. A longer weekend would also give people time that money struggles to buy: time for children, for elderly parents and for the voluntary work that holds communities together. These are not trivial goods, and any society able to afford them should think hard about doing so.",
+        "expressions": [
+          {
+            "en": "time that money struggles to buy",
+            "zh": "金钱难以买到的时光（点题短语）"
+          },
+          {
+            "en": "the voluntary work that holds communities together",
+            "zh": "维系社区的志愿工作"
+          },
+          {
+            "en": "any society able to afford them should think hard about doing so",
+            "zh": "负担得起的社会应认真考虑（伏笔句：关键词 afford）"
+          }
+        ],
+        "guideQ": "你的让步段有没有埋一个「afford」式的伏笔词，让下一段的转折顺理成章？"
+      },
+      "4": {
+        "why": "批判段三连击：产出消失必须被替代（小公司雇不起/压缩工时反增压力）→不可压缩职业（护士/司机/店员——具体职业名词排比）→隐藏不平等（灵活者得利、轮班者减薪）——「谁买单」的分配分析是本段杀器，比单纯喊「效率低」高一档。",
+        "modelPara": "The difficulty is that most cannot afford them yet. Output that simply disappears is output that must be replaced, either by hiring more staff, which small firms with thin margins cannot do, or by squeezing the same work into fewer hours, which usually means more pressure rather than less. Not every job is compressible: a nurse, a train driver or a shop assistant cannot finish the same caring, driving or selling in four days. There is also a hidden inequality in the idea, because the professionals who would gain a long weekend are already the ones who enjoy flexible schedules, while shift workers on lower wages would see pay cut to match hours reduced.",
+        "expressions": [
+          {
+            "en": "Output that simply disappears is output that must be replaced",
+            "zh": "消失的产出必须被替代（顶针式主题句）"
+          },
+          {
+            "en": "Not every job is compressible",
+            "zh": "并非所有工作都可压缩（判据句）"
+          },
+          {
+            "en": "a hidden inequality in the idea",
+            "zh": "主张中隐藏的不平等（分配视角）"
+          }
+        ],
+        "guideQ": "你的批判段问过「谁来买单」吗？分配分析让利弊讨论立刻深刻。"
+      },
+      "5": {
+        "why": "一句话结论：appealing vision 承认愿景 + shift costs onto those least able to carry them 回收分配论 + at present 时间限定收尾——反对但不永久关门，立场老练。",
+        "modelPara": "In conclusion, although a shorter working week is an appealing vision and may suit certain well-paid offices, introducing it universally would shift costs onto precisely the workers and businesses least able to carry them, and for that reason I do not support it at present.",
+        "expressions": [
+          {
+            "en": "an appealing vision",
+            "zh": "迷人的愿景（让步回收）"
+          },
+          {
+            "en": "I do not support it at present",
+            "zh": "目前不支持（时间限定收尾）"
+          }
+        ],
+        "guideQ": "你的反对结论加了「at present / in most cases」式的安全阀吗？"
+      }
+    }
+  },
+  "剑19 Test 3 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "It is often said that everyone, including the young, should be saving money for the future. I agree with this advice in principle, but I would apply it with some flexibility, since the capacity to save is not evenly distributed and saving should never come at the cost of basic development.\n\nThe case for saving rests on the power of early habits. Money set aside in one's twenties benefits from decades of compound growth, so a modest sum saved young is worth far more than a larger sum saved late. Savings also transform how people handle shocks: a family with three months of expenses in the bank can survive a job loss without borrowing at ruinous rates, whereas a family with nothing is one misfortune away from debt. On top of this, the habit itself matters. People who learn to live slightly below their means as teenagers find it far easier to manage a salary, a mortgage and eventually a pension than those who learn at forty.\n\nThat said, the advice needs two qualifications. First, saving is a luxury of income: the many young adults whose wages barely cover rent and transport cannot be blamed for saving nothing, and lectures about thrift only add insult to injury. Second, some investments in oneself outperform any bank account. The graduate who spends her spare cash on a professional qualification, or the young worker who moves cities for a better job market, is using that money in the most productive way available, and deferring such spending to build savings would be poor arithmetic.\n\nIn conclusion, saving from an early age is sound advice for those who can afford it, but it should be taught as a habit to grow into rather than demanded of those whose incomes and opportunities justify spending.",
+    "paraTeach": {
+      "2": {
+        "why": "观点题（extent型）开头：句1改写引出建议（It is often said that...），句2 agree in principle + with some flexibility 两个限定词把立场精确化——先总表态再划边界，extent 题的教科书开头。",
+        "modelPara": "It is often said that everyone, including the young, should be saving money for the future. I agree with this advice in principle, but I would apply it with some flexibility, since the capacity to save is not evenly distributed and saving should never come at the cost of basic development.",
+        "expressions": [
+          {
+            "en": "I agree with this advice in principle, but I would apply it with some flexibility",
+            "zh": "原则上同意，但应用时留有弹性（extent双段表态）"
+          },
+          {
+            "en": "the capacity to save is not evenly distributed",
+            "zh": "储蓄能力分布不均（限定理由一）"
+          }
+        ],
+        "guideQ": "extent 题你的表态是不是「总态度+边界」两层？只有一层算不上回答了 to what extent。"
+      },
+      "3": {
+        "why": "理由段三层递进：复利算术（二十岁存的钱数十年增值）→抗风险（三个月备用金 vs 借高息债的具体对比）→习惯本身（teenagers 学会的量入为出受用终身）——算术、风险、习惯，从物到事到人层层落地（体系1.4）。",
+        "modelPara": "The case for saving rests on the power of early habits. Money set aside in one's twenties benefits from decades of compound growth, so a modest sum saved young is worth far more than a larger sum saved late. Savings also transform how people handle shocks: a family with three months of expenses in the bank can survive a job loss without borrowing at ruinous rates, whereas a family with nothing is one misfortune away from debt. On top of this, the habit itself matters. People who learn to live slightly below their means as teenagers find it far easier to manage a salary, a mortgage and eventually a pension than those who learn at forty.",
+        "expressions": [
+          {
+            "en": "benefits from decades of compound growth",
+            "zh": "享受数十年的复利增长（算术层）"
+          },
+          {
+            "en": "one misfortune away from debt",
+            "zh": "距负债只差一次厄运（风险层，具象表达）"
+          },
+          {
+            "en": "live slightly below their means",
+            "zh": "量入为出、略低于收入生活（习惯层词伙）"
+          }
+        ],
+        "guideQ": "你的理由段有没有「算术、风险、习惯」这样从物到人的层次？平铺三条同级理由是7分写法。"
+      },
+      "4": {
+        "why": "限定段两条边界：储蓄是收入的奢侈品（低收入年轻人无从指责，说教只添侮辱）+自我投资跑赢银行账户（读证/搬城的例子，defer such spending is poor arithmetic 用对方的算术语言反将一军）——两条限定正好呼应开头 flexibility（体系1.4）。",
+        "modelPara": "That said, the advice needs two qualifications. First, saving is a luxury of income: the many young adults whose wages barely cover rent and transport cannot be blamed for saving nothing, and lectures about thrift only add insult to injury. Second, some investments in oneself outperform any bank account. The graduate who spends her spare cash on a professional qualification, or the young worker who moves cities for a better job market, is using that money in the most productive way available, and deferring such spending to build savings would be poor arithmetic.",
+        "expressions": [
+          {
+            "en": "saving is a luxury of income",
+            "zh": "储蓄是收入带来的奢侈（精辟概括句）"
+          },
+          {
+            "en": "lectures about thrift only add insult to injury",
+            "zh": "节俭说教只是往伤口撒盐"
+          },
+          {
+            "en": "deferring such spending to build savings would be poor arithmetic",
+            "zh": "为储蓄推迟这种花费是糟糕的算术（呼应句）"
+          }
+        ],
+        "guideQ": "你划的边界有没有在结尾被「回收」？qualifications 若不呼应开头表态，结构就散了。"
+      },
+      "5": {
+        "why": "一句话结论：sound advice for those who can afford it 收同意段 + a habit to grow into rather than demanded of those... 收限定段——用 rather than 对仗把「同意+限定」压进一行。",
+        "modelPara": "In conclusion, saving from an early age is sound advice for those who can afford it, but it should be taught as a habit to grow into rather than demanded of those whose incomes and opportunities justify spending.",
+        "expressions": [
+          {
+            "en": "a habit to grow into rather than demanded of those whose incomes and opportunities justify spending",
+            "zh": "应渐次养成的习惯，而非对有理由花钱者的苛求（对仗收尾）"
+          },
+          {
+            "en": "sound advice for those who can afford it",
+            "zh": "对负担得起的人是好建议（同意段回收）"
+          }
+        ],
+        "guideQ": "extent 题的结论你把「同意的部分」和「保留的部分」各用半句收齐了吗？"
+      }
+    }
+  },
+  "剑19 Test 4 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "Shoppers in many countries can now fill a supermarket trolley with berries from Chile, prawns from Vietnam and cheese from France at any time of year. In my view this development, though convenient, is negative on balance, because its environmental and social costs are quietly pushed onto people who never see the checkout receipt.\n\nFor the individual shopper, the benefits are undeniable. Year-round variety has ended the preserve-and-scarcity era: out-of-season produce is affordable, diets are more varied, and consumers in landlocked countries can enjoy foods their grandparents never tasted. For producers, the picture can be equally bright, since farmers in developing regions gain access to lucrative export markets that local demand could never sustain.\n\nThe costs, however, accumulate far from the trolley. Air-freighted asparagus and berries carry a carbon footprint that dwarfs their nutritional value, and the emissions are invisible at the point of purchase, which is precisely why the trade keeps expanding. There is a hidden human cost too: to survive in export supply chains, producers in poorer countries are often pushed into monoculture, growing cash crops for foreigners while staples must be imported at volatile prices, and food security quietly erodes. Meanwhile, at home, the guarantee of everything in every season weakens the connection between consumers and local farming, and small domestic growers, unable to compete with industrial exporters, leave the land.\n\nIn conclusion, although global food trade delights the shopper and rewards some growers, its true costs in emissions, distorted rural economies and weakened food security are borne by others, and I therefore judge it a negative development overall.",
+    "paraTeach": {
+      "2": {
+        "why": "利弊评价题开头：句1用超市购物车的具象画面改写题目（berries from Chile... 一句三个具体商品），句2 negative on balance + 总理由（代价被悄悄转嫁给看不见的人）——「谁承担代价」直接当主轴，评价题立刻有了伦理纵深。",
+        "modelPara": "Shoppers in many countries can now fill a supermarket trolley with berries from Chile, prawns from Vietnam and cheese from France at any time of year. In my view this development, though convenient, is negative on balance, because its environmental and social costs are quietly pushed onto people who never see the checkout receipt.",
+        "expressions": [
+          {
+            "en": "fill a supermarket trolley with berries from Chile, prawns from Vietnam and cheese from France",
+            "zh": "购物车里装满智利莓果、越南虾、法国奶酪（具象化改写）"
+          },
+          {
+            "en": "its environmental and social costs are quietly pushed onto people who never see the checkout receipt",
+            "zh": "环境与社会代价被转嫁给看不见小票的人（主轴句）"
+          }
+        ],
+        "guideQ": "你的开头有没有一句「具体到看得见的画面」？ Chile莓果比 global food trade 生动十倍。"
+      },
+      "3": {
+        "why": "让步段双主体：消费者（全年供应/价格亲民/饮食多样）与生产者（发展中地区农民获得出口市场）——For the individual shopper / For producers 的双开头结构清晰对称；benefits are undeniable 的干脆让步为批判攒足信用。",
+        "modelPara": "For the individual shopper, the benefits are undeniable. Year-round variety has ended the preserve-and-scarcity era: out-of-season produce is affordable, diets are more varied, and consumers in landlocked countries can enjoy foods their grandparents never tasted. For producers, the picture can be equally bright, since farmers in developing regions gain access to lucrative export markets that local demand could never sustain.",
+        "expressions": [
+          {
+            "en": "has ended the preserve-and-scarcity era",
+            "zh": "终结了腌制与匮乏的时代（时代定性）"
+          },
+          {
+            "en": "foods their grandparents never tasted",
+            "zh": "祖辈从未尝过的食物（跨代对比）"
+          },
+          {
+            "en": "lucrative export markets that local demand could never sustain",
+            "zh": "本地需求撑不起的高价值出口市场"
+          }
+        ],
+        "guideQ": "你的让步段按「受益的不同主体」分段内结构了吗？比笼统一句「有好处」清晰得多。"
+      },
+      "4": {
+        "why": "批判段三链：环境（空运碳足迹远超营养价值+购买时不可见所以持续扩张的机制）→生产国（单一化种植挤掉主粮→粮食安全受威胁的链条）→本国（小农竞争失败离地）——每条链都点到「机制」而非「现象」，invisible at the point of purchase 呼应开头主轴（体系1.4）。",
+        "modelPara": "The costs, however, accumulate far from the trolley. Air-freighted asparagus and berries carry a carbon footprint that dwarfs their nutritional value, and the emissions are invisible at the point of purchase, which is precisely why the trade keeps expanding. There is a hidden human cost too: to survive in export supply chains, producers in poorer countries are often pushed into monoculture, growing cash crops for foreigners while staples must be imported at volatile prices, and food security quietly erodes. Meanwhile, at home, the guarantee of everything in every season weakens the connection between consumers and local farming, and small domestic growers, unable to compete with industrial exporters, leave the land.",
+        "expressions": [
+          {
+            "en": "a carbon footprint that dwarfs their nutritional value",
+            "zh": "碳足迹远超其营养价值（dwarf比较动词）"
+          },
+          {
+            "en": "pushed into monoculture, growing cash crops for foreigners while staples must be imported",
+            "zh": "被迫单一化：为外国人种经济作物、主粮靠进口"
+          },
+          {
+            "en": "The costs, however, accumulate far from the trolley",
+            "zh": "代价在远离购物车之处累积（呼应开头主轴）"
+          }
+        ],
+        "guideQ": "批判段每条害处你都写出了「传导链条」吗？单一化→主粮进口→粮食安全，链条才算论证。"
+      },
+      "5": {
+        "why": "一句话结论：although 双受益者回收（delights the shopper and rewards some growers）+ true costs borne by others 回收主轴 + negative development overall 定性——结尾是开头主轴的完美回声，结构闭环。",
+        "modelPara": "In conclusion, although global food trade delights the shopper and rewards some growers, its true costs in emissions, distorted rural economies and weakened food security are borne by others, and I therefore judge it a negative development overall.",
+        "expressions": [
+          {
+            "en": "delights the shopper and rewards some growers",
+            "zh": "取悦消费者、回报部分生产者（双受益回收）"
+          },
+          {
+            "en": "its true costs in emissions, distorted rural economies and weakened food security are borne by others",
+            "zh": "排放、农村经济扭曲与粮食安全的真实代价由他人承担（主轴回收）"
+          }
+        ],
+        "guideQ": "你的结论第一句能让读者想起开头那句主轴吗？首尾回声是利弊题的闭环标志。"
+      }
+    }
+  }
+}

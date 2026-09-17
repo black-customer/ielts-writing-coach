@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>11 AI 考官精批指南 · IELTS Writing Coach 知识库</title>
+<style>
+:root { --bg:#f4f6fb; --card:#fff; --ink:#1f2937; --muted:#64748b; --line:#e2e8f0; --primary:#2563eb; --accent:#eff6ff; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0b1220; --card:#141e30; --ink:#e2e8f0; --muted:#94a3b8; --line:#263650; --accent:#16233c; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:"Segoe UI","Microsoft YaHei",-apple-system,sans-serif; line-height:1.85; font-size:17px; }
+.wrap { max-width: 76ch; margin: 0 auto; padding: 40px 20px 80px; }
+h1,h2,h3 { line-height:1.4; }
+h1 { font-size: 28px; border-bottom: 3px solid var(--primary); padding-bottom: 10px; }
+h2 { font-size: 22px; margin-top: 40px; }
+h3 { font-size: 18px; margin-top: 28px; }
+a { color: var(--primary); text-decoration: none; border-bottom: 1px dotted; }
+a:hover { border-bottom-style: solid; }
+blockquote { border-left: 4px solid var(--primary); margin: 16px 0; padding: 8px 18px; background: var(--accent); border-radius: 0 8px 8px 0; }
+code { background: var(--accent); border-radius: 4px; padding: 2px 6px; font-size: 15px; }
+pre code { display:block; padding: 14px; overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15.5px; }
+th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+th { background: var(--accent); }
+.top { display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px; flex-wrap: wrap; gap: 10px; }
+.top a.home { font-weight: 700; }
+nav.docs { margin-top: 50px; border-top: 2px solid var(--line); padding-top: 16px; font-size: 15px; }
+nav.docs a { margin-right: 14px; }
+</style>
+</head>
+<body><div class="wrap">
+<div class="top"><a class="home" href="index.html">← 知识库首页</a><span style="color:var(--muted);font-size:14px">IELTS Writing Coach 知识库</span></div>
+<h1>11 · AI 考官精批使用指南</h1>
+<blockquote>
+<p>工具「③ 诊断室 → 🤖 AI 考官精批」。模型：DeepSeek（默认 deepseek-flash，可在设置切换 deepseek-v4-pro）。key 存在你本机（tool/js/config.js + 浏览器 localStorage），请求直接从你的浏览器发往 api.deepseek.com。</p>
+</blockquote>
+<hr />
+<h2>一、它评什么（提示词里固化了什么）</h2>
+<p>AI 收到的评分依据就是本知识体系的核心：
+- <strong>2023 年 5 月官方写作量表</strong>（现行版 TR/CC/LR/GRA 逐档描述）
+- <strong>Simon 方法论</strong>（4段13-15句、idea-explain-example、连接词密度警告、主题词伙才加分、准确性优先于复杂度、Task 1 的 overview/数据挑选规则）</p>
+<p>输出包含：四项分数 + 总分、一句话总评、逐段点评、<strong>句子级问题（原文摘录→问题→改法）</strong>、最优先修复项、<strong>最弱段落改写示范</strong>（保持你的观点，升到 7-7.5 水平）。</p>
+<h2>二、怎么用最有效（推荐流程）</h2>
+<ol>
+<li>写完 → 先跑<strong>规则诊断</strong>（免费、即时，抓硬伤：字数/结构/Although...but/词伙覆盖）。</li>
+<li>修掉硬伤 → 再点 <strong>AI 精批</strong>（约 15-30 秒，flash 是推理模型，慢是正常的）。</li>
+<li>对照 AI 的句子级问题逐条改；把「最弱段改写示范」和你的原段逐句对比——这就是仿写训练的定制版。</li>
+<li>AI 分数可一键存入进度（标注为 AI 评分），与规则自评分交叉看趋势。</li>
+</ol>
+<h2>三、可靠性边界（必须知道）</h2>
+<ul>
+<li><strong>模型评分有 ±0.5 浮动</strong>：同一篇作文两次精批可能差半档。四项分看趋势别抠单次。</li>
+<li><strong>AI 偏严</strong>：实测对弱文（130词、错误密集）给 4-4.5 分，与人工考官口径基本一致；但 7 分以上的区分度会收窄，6.5 vs 7 的判断以自评清单+规则诊断交叉为准。</li>
+<li><strong>偶尔字段缺失</strong>：模型有时少给逐段点评或改写（已做容错，缺失时其余部分照常显示），重试一次通常就有。</li>
+<li><strong>不要把 AI 分数当官方分</strong>：它是"一个读过评分标准且很认真的老师"，不是考官本人。</li>
+</ul>
+<h2>四、隐私与费用</h2>
+<ul>
+<li>作文和题目只发往你自己的 DeepSeek 账号；key 不经过任何第三方。</li>
+<li>每次精批约消耗 1000-7000 token（视作文长度和推理深度），flash 价格很低，日常练习成本可忽略。</li>
+<li>换 key/换模型：诊断室 → ⚙️ AI 设置 → 填入保存即可（留空用 config.js 默认值）。</li>
+</ul>
+<nav class="docs"><a href="00.html" style="font-weight:400">00</a> <a href="01.html" style="font-weight:400">01</a> <a href="02.html" style="font-weight:400">02</a> <a href="03.html" style="font-weight:400">03</a> <a href="04.html" style="font-weight:400">04</a> <a href="05.html" style="font-weight:400">05</a> <a href="06.html" style="font-weight:400">06</a> <a href="08.html" style="font-weight:400">08</a> <a href="09.html" style="font-weight:400">09</a> <a href="10.html" style="font-weight:400">10</a> <a href="11.html" style="font-weight:700">11</a> <a href="12.html" style="font-weight:400">12</a></nav>
+</div></body></html>

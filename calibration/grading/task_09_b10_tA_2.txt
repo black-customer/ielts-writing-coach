@@ -1,0 +1,15 @@
+【评分任务】IELTS Academic Writing Task 2（议论文）
+【题目原文】（缺失，按作文内容自行判断）
+
+【考生作文】
+I am going to write about how the amount of crime is increasing in many countries and why
+
+Nowdays there are many countries has increasing on the amount of crime and I think the problem is that most of the crim has done by the young people which is under 18 and from the age you can see and you can understand what is going on but in my openion I think the main causes is the family and the school, the family I mean the mum an dad they have to look after theire tenagers until they grow up and do not let them watch films which has a fight or blod, the school is the same as the second house for the tenagers and they have to teach them how to grow up in good way and teach them how to respect the old people
+
+For example I have been told from my oldest brother that in the UK 2 years ago a boy from Qatar he is 16 years old has killed by groupe of tenagers in Itaisting and they killed him without any reasons and when the Police asked them why did you do that they said we want to show of we are the best So you can say they learn from the action movies
+
+Fimaly I hope all the people can help the tenagers to give them advice and to let them know what will happen after the crime Also in schools they must teach them how to avoied the bad movies and to grow up in safe way
+
+【输出要求】严格输出 JSON（不要 markdown 代码块），格式：
+{"scores":{"TR":x,"CC":x,"LR":x,"GRA":x},"overall":x,"reason":"每项一句话依据（中文）"}
+x 为 0-9 的分数，可带 0.5。Task 1 若图表缺失，TR 按作文内部数据一致性保守评估。

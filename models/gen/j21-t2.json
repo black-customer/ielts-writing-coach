@@ -1,0 +1,306 @@
+{
+  "剑21 Test 1 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "Faced with housing shortages, some cities have concluded that the answer is to build upwards: tall apartment blocks, on this view, are the best way to house large populations. I disagree with this as a universal prescription, because height solves the arithmetic of housing while creating new problems of cost, community and liveability.\n\nThe case for towers is straightforward. High-rise buildings put far more homes on the same plot of land than low-rise streets ever can, which matters acutely where land is scarce and prices are high. Clustering population vertically also makes public transport viable: a city of towers can support frequent metro services that a sprawl of cottages never could, and shorter pipe, cable and road networks cost less to build and maintain. Singapore, where eighty per cent of residents live in well-run high-rise estates, shows that density done well is neither squalid nor impersonal.\n\nYet tall buildings are a tool, not a cure, and treating them as the answer produces predictable failures. Towers are expensive per flat to construct, so privately built high-rise housing tends to be small and costly, doing little for the families most in need. Height can also erode the informal contact that makes neighbourhoods safe and friendly: residents who pass in a lift rather than a garden have fewer natural chances to know one another. Most importantly, the premise is often false, since many housing crises are crises of affordability and speculation rather than of physical space, and no tower solves a problem of prices.\n\nIn conclusion, apartment towers are a valuable part of the housing toolkit, especially in land-hungry cities, but calling them the best way to provide homes mistakes a technical solution for a social one, and I would place them alongside cheaper, gentler forms of building rather than above them.",
+    "paraTeach": {
+      "2": {
+        "why": "观点题开头：句1把题目主张具象成一句「信条」（build upwards... on this view），句2 disagree + universal prescription 限定 + 三靶预告（cost/community/liveability）——三个靶子正好是主体段的三发子弹（体系审题三问之「分几个部分」）。",
+        "modelPara": "Faced with housing shortages, some cities have concluded that the answer is to build upwards: tall apartment blocks, on this view, are the best way to house large populations. I disagree with this as a universal prescription, because height solves the arithmetic of housing while creating new problems of cost, community and liveability.",
+        "expressions": [
+          {
+            "en": "I disagree with this as a universal prescription",
+            "zh": "反对将其视为普适药方（限定式反对）"
+          },
+          {
+            "en": "height solves the arithmetic of housing while creating new problems of cost, community and liveability",
+            "zh": "高度解决了住房算术、却带来成本/社区/宜居三问题（一句话双面+三靶预告）"
+          }
+        ],
+        "guideQ": "你的反对句预告了几个靶子？预告三个，主体段就必须真的打三发。"
+      },
+      "3": {
+        "why": "让步段三发认可：土地利用算术（同地更多 homes）→交通经济性（垂直聚集养活地铁+管线更短）→新加坡实例（80%住高层且治理良好，done well neither squalid nor impersonal 双否让步）——「数字+机制+实证」三件套让让步段无懈可击。",
+        "modelPara": "The case for towers is straightforward. High-rise buildings put far more homes on the same plot of land than low-rise streets ever can, which matters acutely where land is scarce and prices are high. Clustering population vertically also makes public transport viable: a city of towers can support frequent metro services that a sprawl of cottages never could, and shorter pipe, cable and road networks cost less to build and maintain. Singapore, where eighty per cent of residents live in well-run high-rise estates, shows that density done well is neither squalid nor impersonal.",
+        "expressions": [
+          {
+            "en": "put far more homes on the same plot of land",
+            "zh": "同一地块放上多得多的住宅（土地算术）"
+          },
+          {
+            "en": "makes public transport viable",
+            "zh": "让公共交通变得可行（机制句）"
+          },
+          {
+            "en": "density done well is neither squalid nor impersonal",
+            "zh": "做好了的密度既不脏乱也不冷漠（双否让步）"
+          }
+        ],
+        "guideQ": "你让步段的例子带「数字+治理质量」了吗？新加坡80%比「某国很高」可信十倍。"
+      },
+      "4": {
+        "why": "批判段三发反击：成本（每套贵→小户型贵价→帮不到最需要的家庭）→社区（电梯里擦肩 vs 花园里的自然结识机会）→釜底抽薪（many crises are of affordability and speculation rather than physical space—— no tower solves a problem of prices 金句）——第三发直接拆掉题目的前提，是最重的一击。",
+        "modelPara": "Yet tall buildings are a tool, not a cure, and treating them as the answer produces predictable failures. Towers are expensive per flat to construct, so privately built high-rise housing tends to be small and costly, doing little for the families most in need. Height can also erode the informal contact that makes neighbourhoods safe and friendly: residents who pass in a lift rather than a garden have fewer natural chances to know one another. Most importantly, the premise is often false, since many housing crises are crises of affordability and speculation rather than of physical space, and no tower solves a problem of prices.",
+        "expressions": [
+          {
+            "en": "a tool, not a cure",
+            "zh": "是工具而非解药（定位句）"
+          },
+          {
+            "en": "residents who pass in a lift rather than a garden have fewer natural chances to know one another",
+            "zh": "电梯擦肩不如花园偶遇（社区机制具体化）"
+          },
+          {
+            "en": "no tower solves a problem of prices",
+            "zh": "没有任何高塔能解决价格问题（釜底抽薪金句）"
+          }
+        ],
+        "guideQ": "你的三发反击里有没有一发是「拆对方前提」的？拆前提比列举缺点更致命。"
+      },
+      "5": {
+        "why": "一句话结论：a valuable part of the housing toolkit 承认价值 + mistakes a technical solution for a social one 一句话总结批判 + alongside... rather than above them 的位次安排收尾——给工具定位而非全盘否定，立场成熟。",
+        "modelPara": "In conclusion, apartment towers are a valuable part of the housing toolkit, especially in land-hungry cities, but calling them the best way to provide homes mistakes a technical solution for a social one, and I would place them alongside cheaper, gentler forms of building rather than above them.",
+        "expressions": [
+          {
+            "en": "mistakes a technical solution for a social one",
+            "zh": "把技术方案误当社会方案（批判一句话）"
+          },
+          {
+            "en": "alongside cheaper, gentler forms of building rather than above them",
+            "zh": "并列使用而非凌驾其上（位次收尾）"
+          }
+        ],
+        "guideQ": "你的结论是「处决」还是「定位」对方主张？定位式结论更显思辨成熟度。"
+      }
+    }
+  },
+  "剑21 Test 2 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "Now that almost any film or performance can be streamed at home, some claim that theatres and cinemas have lost their reason to exist, while others insist they remain vital. I side with the second view: far from being made redundant by the digital age, live and communal entertainment offers what no screen can supply.\n\nThose who consider these venues obsolete reason from pure convenience. Streaming costs a fraction of a cinema ticket, offers unlimited choice and allows the viewer to pause, rewind and watch in pyjamas; by every measure of comfort and price, the living room has won. If the only purpose of a cinema were delivering images to an audience, the case would already be closed, and the steady closure of small venues suggests many consumers have reached exactly that conclusion.\n\nYet reducing entertainment to convenience misunderstands what people are buying. A theatre or cinema sells an event: the darkness, the shared laughter, the collective silence, and the simple fact of being one body of strangers responding together. Economically, the venues anchor whole high streets, since every ticket sold drags along restaurant meals and late buses; culturally, they are the nurseries where writers, actors and directors learn their craft, feeding the very streaming platforms that supposedly replace them. It is no accident that the most successful streaming shows are celebrated first in cinemas and theatres, which still confer the prestige that a phone screen cannot.\n\nIn conclusion, while the convenience argument explains why many people now stream rather than pay for seats, it does not follow that the venues are unimportant: they remain economic anchors, cultural nurseries and the only places where entertainment is genuinely shared, and that is a form of importance no technology has abolished.",
+    "paraTeach": {
+      "2": {
+        "why": "讨论题开头：句1改写双方（lost their reason to exist ↔ remain vital，动词短语对仗），句2 I side with the second view + 冒号后立刻给出立场内核（live and communal entertainment offers what no screen can supply）——「选边+一句内核」比干巴巴的表态高一层。",
+        "modelPara": "Now that almost any film or performance can be streamed at home, some claim that theatres and cinemas have lost their reason to exist, while others insist they remain vital. I side with the second view: far from being made redundant by the digital age, live and communal entertainment offers what no screen can supply.",
+        "expressions": [
+          {
+            "en": "I side with the second view",
+            "zh": "我站在第二种观点一边（选边句）"
+          },
+          {
+            "en": "far from being made redundant by the digital age",
+            "zh": "非但没有被数字时代淘汰（far from让步）"
+          },
+          {
+            "en": "offers what no screen can supply",
+            "zh": "提供屏幕给不了的东西（立场内核）"
+          }
+        ],
+        "guideQ": "你选边之后，有没有用冒号补一句「立场内核」？内核句决定后续两段的走向。"
+      },
+      "3": {
+        "why": "A方段从对方最强处写起（convenience 三连：价格/选择/暂停快进睡衣看），再用让步式假说推进（If the only purpose were delivering images... the case would already be closed）——虚拟语气的「假设立场」既写出对方逻辑又埋下被反驳的裂缝，还顺手承认了 small venues 倒闭的现实。",
+        "modelPara": "Those who consider these venues obsolete reason from pure convenience. Streaming costs a fraction of a cinema ticket, offers unlimited choice and allows the viewer to pause, rewind and watch in pyjamas; by every measure of comfort and price, the living room has won. If the only purpose of a cinema were delivering images to an audience, the case would already be closed, and the steady closure of small venues suggests many consumers have reached exactly that conclusion.",
+        "expressions": [
+          {
+            "en": "reason from pure convenience",
+            "zh": "从纯粹的便利出发推理（A方逻辑定性）"
+          },
+          {
+            "en": "by every measure of comfort and price, the living room has won",
+            "zh": "论舒适与价格，客厅全面获胜（对仗让步）"
+          },
+          {
+            "en": "If the only purpose of a cinema were delivering images to an audience, the case would already be closed",
+            "zh": "假如影院只是传图，此案早已了结（虚拟语气埋裂缝）"
+          }
+        ],
+        "guideQ": "你转述对方时用了「假如他们的前提成立」的虚拟句吗？既是转述又是伏笔。"
+      },
+      "4": {
+        "why": "我方段三层：体验层（an event：黑暗/共同的笑声/集体的沉默/一群陌生人同频共振——四个具象细节替代「氛围好」的空话）→经济层（anchor high streets，一张票带动的餐饮公交链条）→文化层（ nurseries of 编剧演员导演，反哺流媒体）——最后 reciprocity 一击（最成功的流媒体剧反而在影院剧院获得礼赞）。",
+        "modelPara": "Yet reducing entertainment to convenience misunderstands what people are buying. A theatre or cinema sells an event: the darkness, the shared laughter, the collective silence, and the simple fact of being one body of strangers responding together. Economically, the venues anchor whole high streets, since every ticket sold drags along restaurant meals and late buses; culturally, they are the nurseries where writers, actors and directors learn their craft, feeding the very streaming platforms that supposedly replace them. It is no accident that the most successful streaming shows are celebrated first in cinemas and theatres, which still confer the prestige that a phone screen cannot.",
+        "expressions": [
+          {
+            "en": "A theatre or cinema sells an event",
+            "zh": "剧场影院卖的是一场事件（重新定义句）"
+          },
+          {
+            "en": "one body of strangers responding together",
+            "zh": "一群陌生人同频共振的共同体（体验具象化）"
+          },
+          {
+            "en": "the nurseries where writers, actors and directors learn their craft",
+            "zh": "编剧演员导演的摇篮（文化功能）"
+          }
+        ],
+        "guideQ": "你反驳「便利论」时重新定义了「卖的是什么」吗？重新定义比逐条反驳更致命。"
+      },
+      "5": {
+        "why": "一句话结论：while 让步回收便利论 + it does not follow that 的逻辑否定（便利≠不重要）+ 三个身份并列收口（economic anchors, cultural nurseries, genuinely shared）+ no technology has abolished 定性——把批判写成三连标签，结尾整齐有力。",
+        "modelPara": "In conclusion, while the convenience argument explains why many people now stream rather than pay for seats, it does not follow that the venues are unimportant: they remain economic anchors, cultural nurseries and the only places where entertainment is genuinely shared, and that is a form of importance no technology has abolished.",
+        "expressions": [
+          {
+            "en": "it does not follow that",
+            "zh": "但这推不出……（逻辑否定句型）"
+          },
+          {
+            "en": "economic anchors, cultural nurseries and the only places where entertainment is genuinely shared",
+            "zh": "经济锚点、文化摇篮、真正共享的场所（三连标签收口）"
+          }
+        ],
+        "guideQ": "你的结论用「它推不出」点破对方的逻辑跳跃了吗？指出逻辑谬误是讨论题的高级收尾。"
+      }
+    }
+  },
+  "剑21 Test 3 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "Whether every undergraduate course should include a term abroad or a work placement divides both students and employers. I believe the advantages of such a requirement would outweigh the disadvantages, provided universities treat it as part of education rather than as an administrative box-ticking exercise.\n\nThe case for the requirement rests on what classrooms cannot teach. A placement, however modest, forces students to translate theory into the messier currency of real work: deadlines that move, colleagues who disagree and clients who change their minds. Study abroad does the same for character, since navigating a foreign bureaucracy, flat hunt or simply a different classroom culture builds an independence that no lecture can. Employers consistently reward both: graduates who have spent time in industry or overseas receive more interviews and higher starting offers, because they arrive with evidence of initiative as well as knowledge.\n\nThe costs are genuine and fall unevenly. A term abroad can be ruinously expensive, and unless funding follows the student, the requirement quietly filters university opportunity towards the wealthy; a badly chosen placement can be little more than unpaid photocopying, wasting months that might have gone into serious study. Some subjects suffer too, since a chemistry laboratory course cannot simply pause for a semester away. These problems, however, are arguments for careful design rather than for abandonment: means-tested grants can neutralise the financial filter, universities can vet placements instead of outsourcing them to luck, and science degrees can meet the requirement with industrial laboratory terms that strengthen rather than interrupt the discipline.\n\nIn conclusion, a compulsory placement or period abroad would impose real costs on money and timetables, but it supplies the workplace maturity and independence that degrees otherwise lack, and its dangers are design problems that competent universities can solve.",
+    "paraTeach": {
+      "2": {
+        "why": "利弊题开头：句1改写（divides both students and employers 点出争议双方），句2表态 advantages outweigh + provided 条件限定（教育而非形式主义）——条件限定既是立场的一部分，也是后文批判段的伏笔（体系1.2）。",
+        "modelPara": "Whether every undergraduate course should include a term abroad or a work placement divides both students and employers. I believe the advantages of such a requirement would outweigh the disadvantages, provided universities treat it as part of education rather than as an administrative box-ticking exercise.",
+        "expressions": [
+          {
+            "en": "divides both students and employers",
+            "zh": "令学生与雇主都有分歧（争议双方具象）"
+          },
+          {
+            "en": "provided universities treat it as part of education rather than as an administrative box-ticking exercise",
+            "zh": "前提是当作教育而非打勾形式（条件限定+伏笔）"
+          }
+        ],
+        "guideQ": "你的表态条件（provided...）为哪一段埋了伏笔？条件式表态要前后呼应。"
+      },
+      "3": {
+        "why": "优点段「课堂教不了的」双层：实习=把理论翻译成现实工作的乱账（deadlines that move, colleagues who disagree——三个名词性从句排比具象化）；留学=性格独立（foreign bureaucracy/flat hunt 的具体小事）；第三层收在雇主回报（more interviews and higher starting offers 证据句）。",
+        "modelPara": "The case for the requirement rests on what classrooms cannot teach. A placement, however modest, forces students to translate theory into the messier currency of real work: deadlines that move, colleagues who disagree and clients who change their minds. Study abroad does the same for character, since navigating a foreign bureaucracy, flat hunt or simply a different classroom culture builds an independence that no lecture can. Employers consistently reward both: graduates who have spent time in industry or overseas receive more interviews and higher starting offers, because they arrive with evidence of initiative as well as knowledge.",
+        "expressions": [
+          {
+            "en": "translate theory into the messier currency of real work",
+            "zh": "把理论兑换成更混乱的现实货币（隐喻）"
+          },
+          {
+            "en": "deadlines that move, colleagues who disagree and clients who change their minds",
+            "zh": "会漂的截止日、有异议的同事、变卦的客户（三连排比）"
+          },
+          {
+            "en": "they arrive with evidence of initiative as well as knowledge",
+            "zh": "带着主动性+知识的双重证据入职（雇主视角收口）"
+          }
+        ],
+        "guideQ": "你的优点有没有落到「雇主看得见的证据」？抽象成长不如一份面试邀请。"
+      },
+      "4": {
+        "why": "缺点段三连+逐条拆解：钱（ruinously expensive→筛向富人）、质量差实习（unpaid photocopying 的辛辣具象）、学科冲突（化学实验停不了）；每个缺点后 immediately 给解法（means-tested grants/vet placements/工业实验学期）——「缺点与解法一一配对」是 outweigh 题的压舱写法。",
+        "modelPara": "The costs are genuine and fall unevenly. A term abroad can be ruinously expensive, and unless funding follows the student, the requirement quietly filters university opportunity towards the wealthy; a badly chosen placement can be little more than unpaid photocopying, wasting months that might have gone into serious study. Some subjects suffer too, since a chemistry laboratory course cannot simply pause for a semester away. These problems, however, are arguments for careful design rather than for abandonment: means-tested grants can neutralise the financial filter, universities can vet placements instead of outsourcing them to luck, and science degrees can meet the requirement with industrial laboratory terms that strengthen rather than interrupt the discipline.",
+        "expressions": [
+          {
+            "en": "can be little more than unpaid photocopying",
+            "zh": "可能只是无薪复印（辛辣具象）"
+          },
+          {
+            "en": "arguments for careful design rather than for abandonment",
+            "zh": "是改进设计的理由而非放弃的理由（定位句）"
+          },
+          {
+            "en": "means-tested grants can neutralise the financial filter",
+            "zh": "按需助学金可中和金钱筛子（解法对应）"
+          }
+        ],
+        "guideQ": "你的每个缺点后面都配了对策吗？缺点-对策一一配对让 outweigh 无懈可击。"
+      },
+      "5": {
+        "why": "一句话结论：impose real costs on money and timetables 收缺点 + supplies the workplace maturity and independence 收优点 + design problems that competent universities can solve 回收 provided 条件——结尾宣告「问题都是可解的」，与开头条件完全闭环。",
+        "modelPara": "In conclusion, a compulsory placement or period abroad would impose real costs on money and timetables, but it supplies the workplace maturity and independence that degrees otherwise lack, and its dangers are design problems that competent universities can solve.",
+        "expressions": [
+          {
+            "en": "impose real costs on money and timetables",
+            "zh": "对钱包与课表都有真实代价（缺点回收）"
+          },
+          {
+            "en": "design problems that competent universities can solve",
+            "zh": "是称职大学能解决的设计问题（回收条件收尾）"
+          }
+        ],
+        "guideQ": "你的结论回收了开头的 provided 条件吗？首尾闭环是条件式立场的完成动作。"
+      }
+    }
+  },
+  "剑21 Test 4 T2": {
+    "source": "ZCode 体系生成 · 2026-09-17 · 写法标准见 knowledge/13-我的写作体系.md",
+    "essay": "There is a widespread complaint that primary schools have become too academic, drilling young children in formal skills at the expense of play. I largely agree that the balance has shifted too far, and I would go further: play is not a break from learning in these years but the way young children actually learn.\n\nThe concern is grounded in what has visibly changed. Reading targets, standardised tests and structured homework have crept steadily downward into classrooms once filled with sandpits and dressing-up boxes, pushed by the fear that a child who falls behind at seven can never catch up. For a minority of pupils this early formality works, but for many it produces anxiety and a conviction that school is a place where they fail; teachers report seven-year-olds worried about test scores, which tells its own story about the cost of the experiment.\n\nThe importance of play in these years is not sentimental but scientific. Through play children rehearse the very skills that formal teaching later requires: a game of shop is arithmetic in action, building blocks teach the physics of balance, and a playground quarrel over rules is a first lesson in negotiation and fairness. Developmental research adds that concentration, memory and language all grow fastest through self-directed activity, and that children who are hurried into formal instruction early often plateau sooner than those who start later through play. Play also performs the social work that no worksheet can, mixing age groups, teaching children to lose, and burning off the energy that a desk cannot absorb.\n\nIn conclusion, formal learning has indeed pushed too far into the primary years, and since play is the natural engine of young children's cognitive and social development, the case for restoring it to the centre of the early classroom is overwhelming.",
+    "paraTeach": {
+      "2": {
+        "why": "双问题（agree? + play importance）开头：句1改写（drilling... at the expense of play——把 complaint 具象成画面），句2双答：largely agree + go further（play 不只是休息而是学习方式）——go further 把第二问升格为自己的主张，两问有了主从关系。",
+        "modelPara": "There is a widespread complaint that primary schools have become too academic, drilling young children in formal skills at the expense of play. I largely agree that the balance has shifted too far, and I would go further: play is not a break from learning in these years but the way young children actually learn.",
+        "expressions": [
+          {
+            "en": "drilling young children in formal skills at the expense of play",
+            "zh": "以牺牲游戏为代价训练 formal skills（题干的画面化改写）"
+          },
+          {
+            "en": "I largely agree that the balance has shifted too far, and I would go further",
+            "zh": "基本同意+更进一步（双问题递进式表态）"
+          },
+          {
+            "en": "play is not a break from learning in these years but the way young children actually learn",
+            "zh": "游戏不是学习的休息，而是幼儿学习本身（not A but B 立场金句）"
+          }
+        ],
+        "guideQ": "双问题题你的第二问是被动的回答，还是主动的「go further」？后者立意高一档。"
+      },
+      "3": {
+        "why": "同意段=现实证据链：formal 化的下移过程（targets/tests/homework crept downward into sandpits——沙坑与练习册的意象对撞）+动因（七岁落后论）+让步（对少数学生有效）+代价（焦虑+失败者心态+七岁孩子担心分数的「讲自己的故事」句）。",
+        "modelPara": "The concern is grounded in what has visibly changed. Reading targets, standardised tests and structured homework have crept steadily downward into classrooms once filled with sandpits and dressing-up boxes, pushed by the fear that a child who falls behind at seven can never catch up. For a minority of pupils this early formality works, but for many it produces anxiety and a conviction that school is a place where they fail; teachers report seven-year-olds worried about test scores, which tells its own story about the cost of the experiment.",
+        "expressions": [
+          {
+            "en": "have crept steadily downward into classrooms once filled with sandpits",
+            "zh": "悄悄下渗进曾经堆满沙坑的教室（意象对撞）"
+          },
+          {
+            "en": "a conviction that school is a place where they fail",
+            "zh": "「学校是我失败的地方」的信念（代价具象化）"
+          },
+          {
+            "en": "which tells its own story about the cost of the experiment",
+            "zh": "这本身就说明了这场实验的代价（评注句）"
+          }
+        ],
+        "guideQ": "你让证据「自己讲故事」了吗？七岁孩子担心分数，比一百句批判更响。"
+      },
+      "4": {
+        "why": "第二问段=play的科学性三层：游戏即技能排练（shop game=算术/blocks=物理平衡/规则争吵=谈判与公平——三个等号式映射把抽象变具体）→发展研究（concentration/memory/language 经自主动作生长最快+早起步反plateau更早）→社交功能（混龄/学会输/释放精力）——层层递进全是机制不是口号。",
+        "modelPara": "The importance of play in these years is not sentimental but scientific. Through play children rehearse the very skills that formal teaching later requires: a game of shop is arithmetic in action, building blocks teach the physics of balance, and a playground quarrel over rules is a first lesson in negotiation and fairness. Developmental research adds that concentration, memory and language all grow fastest through self-directed activity, and that children who are hurried into formal instruction early often plateau sooner than those who start later through play. Play also performs the social work that no worksheet can, mixing age groups, teaching children to lose, and burning off the energy that a desk cannot absorb.",
+        "expressions": [
+          {
+            "en": "not sentimental but scientific",
+            "zh": "并非多愁善感而是有科学依据（定性句）"
+          },
+          {
+            "en": "a game of shop is arithmetic in action",
+            "zh": "开店游戏就是活的算术课（等号式映射）"
+          },
+          {
+            "en": "hurried into formal instruction early often plateau sooner",
+            "zh": "被匆忙提前的孩子反而更早进入平台期（反直觉证据）"
+          }
+        ],
+        "guideQ": "你的「游戏重要」论据是三个等号式的具体映射，还是「培养创造力」式的空话？"
+      },
+      "5": {
+        "why": "一句话结论：indeed pushed too far 收第一问 + the natural engine of cognitive and social development 收第二问 + restoring it to the centre of the early classroom 的方案式表态收尾——两问各回收半句，结尾给出行动方向。",
+        "modelPara": "In conclusion, formal learning has indeed pushed too far into the primary years, and since play is the natural engine of young children's cognitive and social development, the case for restoring it to the centre of the early classroom is overwhelming.",
+        "expressions": [
+          {
+            "en": "the natural engine of young children's cognitive and social development",
+            "zh": "幼儿认知与社交发展的天然引擎（第二问回收）"
+          },
+          {
+            "en": "restoring it to the centre of the early classroom",
+            "zh": "把游戏恢复到幼儿课堂的中心（方案式收尾）"
+          }
+        ],
+        "guideQ": "你的结尾给出了「该怎么做」吗？overwhelming 的底气来自方案。"
+      }
+    }
+  }
+}
