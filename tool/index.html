@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IELTS Writing Coach · 雅思写作教练（Simon 方法论）</title>
 <link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#2563eb">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 </head>
 <body>
 <div id="errBanner" class="hidden" style="position:fixed;bottom:0;left:0;right:0;background:#dc2626;color:#fff;padding:8px 14px;font-size:13px;z-index:999;white-space:pre-wrap"></div>
@@ -16,6 +19,7 @@
     </div>
     <div style="display:flex;gap:8px;align-items:center">
       <a href="docs/index.html" target="_blank" class="docs-link">📖 知识库</a>
+      <button id="btnAbout" class="theme-btn" title="关于本工具">ℹ️</button>
       <button id="btnTheme" class="theme-btn" title="切换明暗">🌙</button>
     </div>
   </div>
@@ -195,6 +199,7 @@
         <button class="filter-btn" data-mb="2">大作文 28</button>
         <button class="filter-btn" data-mb="1">小作文 28</button>
         <select id="mbBook" style="margin-left:auto"></select>
+        <button id="mbExport" class="small">🖨 导出学习册</button>
       </div>
       <div id="mbGrid" class="q-grid" style="margin-top:10px"></div>
       <div id="mbDetail" class="hidden"></div>
@@ -245,6 +250,7 @@
     <div class="card">
       <h2>学习进度仪表盘</h2>
       <p class="hint">每次在「诊断室」点“保存本次记录”后，这里会累计你的训练记录和四项分数走势（数据保存在本机浏览器里）。</p>
+      <div id="dashBoard"></div>
       <div id="progressSummary" class="score-grid"></div>
       <div id="progressList"></div>
     </div>
@@ -266,11 +272,42 @@
 <footer>
   知识来源：ielts-simon.com 全套课程与范文 · Ideas for IELTS Topics · 剑桥真题 · 顾家北词伙 —— 本工具为本地离线应用，数据都在 js/data-*.js
 </footer>
+<div id="aboutModal" class="hidden" style="position:fixed;inset:0;background:rgba(15,23,42,.55);z-index:999;display:flex;align-items:center;justify-content:center">
+  <div style="background:var(--card);color:var(--ink);border-radius:16px;max-width:560px;width:92%;padding:28px 30px;box-shadow:0 18px 60px rgba(0,0,0,.35)">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <b style="font-size:18px">✍️ IELTS Writing Coach</b>
+      <button id="aboutClose" class="small">关闭</button>
+    </div>
+    <p class="hint" style="margin:0 0 10px">版本 <b id="aboutVersion"></b> · 本地离线应用 · 数据与密钥全部只存在你的浏览器里</p>
+    <p style="font-size:14.5px;line-height:1.8;margin:8px 0">基于前考官 Simon 方法论构建的雅思写作训练工具：审题 → 范文先行 → 逐段跟写 → 诊断复盘的完整闭环；剑15-21 全题库训练营内置 56 篇范文与逐段教学包，零 API 即可完成主流程。</p>
+    <p style="font-size:14.5px;line-height:1.8;margin:8px 0">📄 <a href="../LICENSE" target="_blank">MIT License（含内容边界说明）</a><br>🔒 <a href="../PRIVACY.md" target="_blank">隐私与数据说明</a><br>📚 <a href="docs/index.html" target="_blank">知识库</a>（方法论 13 篇）</p>
+    <p class="hint">IELTS 为剑桥大学等机构注册商标，本工具与之无隶属关系；剑桥真题材料仅供个人学习使用。</p>
+    <details style="margin-top:8px"><summary class="hint" style="cursor:pointer">❓ 常见问题</summary>
+      <ul style="font-size:13.5px;line-height:1.9;margin:8px 0 0;padding-left:18px">
+        <li><b>AI 功能要钱吗？</b>内置范文/审题课全程免费；AI 精批和逐段点评用你自己的 DeepSeek key（③诊断室 → AI 设置粘贴一次）。</li>
+        <li><b>数据会丢吗？</b>数据只在本机浏览器。换电脑/清缓存前，用「⑧ 进度·词本」的备份导出。</li>
+        <li><b>小作文图表哪来的？</b>原书扫描页；克隆仓库后运行 <code>python download-t1-charts.py</code> 获取。</li>
+        <li><b>训练营怎么做题？</b>选一张卡 → 直接看范文 → 逐段学 → 写完「全文送去诊断室」。</li>
+      </ul></details>
+  </div>
+</div>
+<script>
+(function(){
+  var m=document.getElementById("aboutModal");
+  document.getElementById("btnAbout").onclick=function(){
+    document.getElementById("aboutVersion").textContent=(window.IWC_VERSION||"dev");
+    m.classList.remove("hidden");
+  };
+  document.getElementById("aboutClose").onclick=function(){ m.classList.add("hidden"); };
+  m.addEventListener("click",function(e){ if(e.target===m) m.classList.add("hidden"); });
+})();
+</script>
 
 <script src="js/data-questions.js"></script>
 <script src="js/data-questions-extra.js"></script>
 <script src="js/data-questions-recent.js"></script>
 <script src="js/data-questions-c1921.js"></script>
+<script src="js/data-jijing.js"></script>
 <script src="js/data-essays-corpus.js"></script>
 <script src="js/data-t1-essays.js"></script>
 <script src="js/data-context-cards.js"></script>
@@ -294,8 +331,11 @@
 <script src="js/flashcards-v2.js"></script>
 <script src="js/tutor.js"></script>
 <script src="js/training.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/onboarding.js"></script>
 <script src="js/modelbank.js"></script>
 <script>
+window.IWC_VERSION = "0.1.0-dev";
 window.addEventListener("error", e => {
   const b = document.getElementById("errBanner");
   if (b) { b.classList.remove("hidden"); b.textContent = "JS错误: " + e.message + " @" + (e.filename||"").split("/").pop() + ":" + e.lineno; }

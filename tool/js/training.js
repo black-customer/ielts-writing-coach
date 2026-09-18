@@ -6,15 +6,21 @@
 function trainingPool() {
   const pool = [];
   const all = [
+    ...(typeof QuestionBank !== "undefined" ? QuestionBank : []),
     ...(typeof ExtraQuestions !== "undefined" ? ExtraQuestions : []),
-    ...(typeof QuestionsC1921 !== "undefined" ? QuestionsC1921 : [])
+    ...(typeof QuestionsC1921 !== "undefined" ? QuestionsC1921 : []),
+    ...(typeof JijingQuestions !== "undefined" ? JijingQuestions : [])
   ];
   all.forEach(q => {
+    const jijing = /^机经/.test(q.src || "");
     const m = q.src.match(/剑(\d+)\s+Test\s+(\w+)/);
-    if (!m || +m[1] < 15) return; // 训练营范围：剑15-21
-    if (q.t2) pool.push({ src: q.src, book: +m[1], test: m[2], task: 2, question: q.t2, qtype: q.t2type, t1type: q.t1type || "" });
+    if (!jijing && (!m || +m[1] < 10)) return; // 训练营范围：剑10-21 + 机经
+    const book = jijing ? 99 : +m[1];          // 机经以"剑99"分组排序，显示为独立区块
+    const test = jijing ? (q.src.match(/(\d+)月/) || [])[1] || "1" : m[2];
+    const srcField = jijing ? q.src : q.src;
+    if (q.t2) pool.push({ src: srcField, book, test, task: 2, question: q.t2, qtype: q.t2type, t1type: q.t1type || "", jijing });
     // Task 1：题干完整才入池（剑15-18 老数据里是"详见原书"占位）
-    if (q.t1 && !/详见原书/.test(q.t1)) pool.push({ src: q.src, book: +m[1], test: m[2], task: 1, question: q.t1, qtype: q.t1type || "mixed charts", t2type: q.t2type });
+    if (q.t1 && !/详见原书/.test(q.t1)) pool.push({ src: srcField, book, test, task: 1, question: q.t1, qtype: q.t1type || "mixed charts", t2type: q.t2type, jijing });
   });
   return pool.sort((a, b) => a.book - b.book || a.test.localeCompare(b.test, undefined, { numeric: true }) || a.task - b.task);
 }
@@ -22,7 +28,7 @@ function tKey(q) { return `${q.src} T${q.task}`; }
 function trainStore() { return Store.get("training", { done: {} }); }
 function saveTrainStore(s) { Store.set("training", s); }
 const trainTypeName = t => ({ "opinion": "观点题", "discussion": "讨论+观点", "adv-disadv": "纯利弊", "adv-disadv-opinion": "利弊比较", "problem-solution": "问题解决", "two-part": "双问题" }[t] || t);
-const trainChartName = t => ({ "line graph": "线图", "line graphs": "线图", "bar chart": "柱图", "pie chart": "饼图", "pie + bar charts": "饼图+柱图", "table": "表格", "tables": "表格", "maps": "地图", "map": "地图", "process diagram": "流程图", "mixed charts": "混合图", "chart + table": "图表组合" }[t] || t || "图表");
+const trainChartName = t => ({ "line graph": "线图", "line graphs": "线图", "bar chart": "柱图", "bar charts": "柱图", "pie chart": "饼图", "pie charts": "饼图", "pie + bar charts": "饼图+柱图", "pie + table": "饼图+表", "table + pie charts": "表+饼图", "table": "表格", "tables": "表格", "maps": "地图", "map": "地图", "plans": "地图", "process diagram": "流程图", "diagram (life cycle)": "流程图", "diagram (process)": "流程图", "mixed charts": "混合图", "chart + table": "图表组合", "chart": "图表", "letter (GT)": "书信" }[t] || t || "图表");
 function poolBadge(q) { return q.task === 1 ? trainChartName(q.qtype) + " · 小作文" : trainTypeName(q.qtype); }
 
 // ---------- 会话状态 ----------
@@ -88,8 +94,11 @@ function renderHome() {
   const t2 = pool.filter(q => q.task === 2), t1 = pool.filter(q => q.task === 1);
   const stat = list => list.reduce((a, q) => { const st = s.done[tKey(q)]; return st && st.status === "done" ? a + 1 : a; }, 0);
   const totalDone = stat(pool), total = pool.length;
-  const cur = trainFilter.task === 1 ? t1 : t2;
+  const curAll = trainFilter.task === 1 ? t1 : t2;
+  const cur = curAll.filter(q => !trainFilter.src || (trainFilter.src === "jijing" ? q.jijing : !q.jijing));
   const shown = trainFilter.type ? cur.filter(q => q.qtype === trainFilter.type) : cur;
+  const jN = stat(curAll.filter(q => q.jijing)), yN = stat(curAll.filter(q => !q.jijing));
+  const groups = trainFilter.src === "jijing" ? [99] : [...books, ...(trainFilter.src === "" ? [99] : [])];
   const typeCounts = {};
   cur.forEach(q => typeCounts[q.qtype] = (typeCounts[q.qtype] || 0) + 1);
   const cachedCount = cur.filter(q => typeof ModelEssays !== "undefined" && ModelEssays[tKey(q)]).length;
@@ -97,8 +106,8 @@ function renderHome() {
   $("#trainHome").innerHTML = `
     <div class="card">
       <h2>🎓 训练营 — AI 导师逐段带写</h2>
-      <p class="hint">目标：把 <b>剑15-21</b> 的写作全部写完并复盘（共 ${total} 道：大作文 + 小作文）。当前完成：<b>${totalDone}</b> 篇。<br>
-      ✅ 剑15-21 全部 ${cachedCount > 0 ? "56 篇" : ""}范文与逐段教学包<b>已内置</b>——看范文、读教学不消耗任何 API；逐段点评（AI 对比你的版本）才消耗。</p>
+      <p class="hint">目标：把 <b>剑10-21</b> 的写作全部写完并复盘（共 ${total} 道：大作文 + 小作文）。当前完成：<b>${totalDone}</b> 篇。<br>
+      ✅ 剑15-21 的 56 篇范文与逐段教学包、审题课<b>已内置</b>（看范文、读教学零消耗）；剑10-14 的范文自动匹配 Simon 考官语料，AI 仅在点评你的段落时消耗。</p>
       <div class="score-grid">
         ${books.map(b => {
           const qs = pool.filter(q => q.book === b);
@@ -114,6 +123,11 @@ function renderHome() {
       </div>
     </div>
     <div class="card">
+      <div class="q-src-tabs">
+        <button class="chip ${trainFilter.src === "" ? "on" : ""}" data-src="">📚 全部题源</button>
+        <button class="chip ${trainFilter.src === "jianya" ? "on" : ""}" data-src="jianya">📕 剑雅真题 <span class="hint">${yN}</span></button>
+        <button class="chip ${trainFilter.src === "jijing" ? "on" : ""}" data-src="jijing">🗒 机经考题 <span class="hint">${jN}</span></button>
+      </div>
       <div class="q-task-tabs">
         <button class="mode-btn ${trainFilter.task === 2 ? "active" : ""}" data-tf="2">📝 大作文 <span class="hint">${stat(t2)}/${t2.length}</span></button>
         <button class="mode-btn ${trainFilter.task === 1 ? "active" : ""}" data-tf="1">📊 小作文 <span class="hint">${stat(t1)}/${t1.length}</span></button>
@@ -122,10 +136,11 @@ function renderHome() {
         <button class="chip ${trainFilter.type === "" ? "on" : ""}" data-type="">全部</button>
         ${Object.keys(typeCounts).map(t => `<button class="chip ${trainFilter.type === t ? "on" : ""}" data-type="${esc(t)}">${trainFilter.task === 1 ? esc(trainChartName(t)) : esc(T2_SHORT[t] || t)} <span class="hint">${typeCounts[t]}</span></button>`).join("")}
       </div>
-      ${books.map(b => {
+      ${groups.map(b => {
         const qs = shown.filter(q => q.book === b);
         if (!qs.length) return "";
-        return `<h3 class="q-book-head">剑${b}</h3>
+        const head = b === 99 ? "🗒 机经·考场回忆" : `剑${b}`;
+        return `<h3 class="q-book-head">${head}</h3>
         <div class="q-grid">
           ${qs.map(q => {
             const st = s.done[tKey(q)];
@@ -134,7 +149,7 @@ function renderHome() {
             const tag = trainFilter.task === 1 ? trainChartName(q.qtype) : (T2_SHORT[q.qtype] || q.qtype);
             return `<div class="q-card ${done ? "done" : st ? "wip" : ""}" data-tq="${esc(tKey(q))}" title="${esc(q.question.slice(0, 90))}…
 ${esc(q.question.length > 90 ? q.question.slice(90, 180) : "")}">
-              <div class="q-top"><b>${esc(q.src.replace("剑" + b + " ", ""))}</b>
+              <div class="q-top"><b>${esc(b === 99 ? q.src.replace(/^机经 /, "") : q.src.replace("剑" + b + " ", ""))}</b>
                 <span class="badge ${done ? "ok" : st ? "warn" : ""}">${done ? "✅" : st ? "✍️" : has ? "📄" : ""}</span></div>
               <div class="q-tag">${esc(tag)}</div>
             </div>`;
@@ -144,7 +159,8 @@ ${esc(q.question.length > 90 ? q.question.slice(90, 180) : "")}">
       <p class="hint">📄 = 已内置范文 · ✍️ = 进行中 · ✅ = 已完成。点卡片直接开始（不消耗 API，看到范文后才需要你决定是否用 AI 点评）。</p>
     </div>`;
 
-  $$("#trainHome [data-tf]").forEach(b => b.onclick = () => { trainFilter = { task: +b.dataset.tf, type: "" }; renderHome(); });
+  $$("#trainHome [data-src]").forEach(b => b.onclick = () => { trainFilter.src = b.dataset.src; renderHome(); });
+  $$("#trainHome [data-tf]").forEach(b => b.onclick = () => { trainFilter = { task: +b.dataset.tf, type: trainFilter.type, src: trainFilter.src }; renderHome(); });
   $$("#trainHome .chip[data-type]").forEach(b => b.onclick = () => { trainFilter.type = b.dataset.type; renderHome(); });
   $$("#trainHome [data-tq]").forEach(card => card.onclick = () => {
     const q = pool.find(x => tKey(x) === card.dataset.tq);
@@ -257,6 +273,40 @@ function renderSession() {
 function tutorBusy(html) {
   $("#tutorFeed").innerHTML = `<div class="tut-card"><span class="spinner"></span> ${html}</div>`;
 }
+// 流式运行器：SSE 逐字上屏（节流）+ 中断按钮；fn(opts) 返回解析后的 JSON
+let tutorAbort = null;
+async function runTutorStream(icon, title, fn) {
+  tutorAbort = new AbortController();
+  const signal = tutorAbort.signal;
+  $("#tutorFeed").innerHTML = `<div class="tut-card"><div class="tut-title">${icon} ${esc(title)}…</div>
+    <pre class="tut-stream" id="tutStream"></pre>
+    <div class="btn-row" style="margin-top:8px"><span class="hint" id="tutChars">已接收 0 字</span><button class="small" id="tutCancel">■ 中断生成</button></div></div>`;
+  $("#tutCancel").onclick = () => tutorAbort.abort();
+  let acc = "", lastPaint = 0;
+  try {
+    const data = await fn({
+      onChunk: (delta, full) => {
+        acc = full || ((acc += delta));
+        const now = Date.now();
+        if (now - lastPaint < 80) return;
+        lastPaint = now;
+        const e = document.getElementById("tutStream");
+        if (e) { e.textContent = acc.slice(-1600); e.scrollTop = e.scrollHeight; }
+        const ch = document.getElementById("tutChars");
+        if (ch) ch.textContent = `已接收 ${acc.length} 字`;
+      },
+      signal
+    });
+    if (!data) { $("#tutorFeed").insertAdjacentHTML("beforeend", `<div class="tut-card">⏹ 已中断。可重新点击本阶段按钮再次生成。</div>`); return null; }
+    return data;
+  } catch (e) {
+    if (e && (e.name === "AbortError" || /abort/i.test(e.message || ""))) {
+      $("#tutorFeed").insertAdjacentHTML("beforeend", `<div class="tut-card">⏹ 已中断。可重新点击本阶段按钮再次生成。</div>`);
+      return null;
+    }
+    throw e;
+  } finally { tutorAbort = null; }
+}
 function tutorError(e) {
   $("#tutorFeed").insertAdjacentHTML("beforeend", `<div class="tut-card tut-err">❌ ${esc(e.message)}<br><span class="hint">检查「诊断室-AI 设置」的连接；重试即可。</span>
   <div class="btn-row"><button class="small" onclick="renderTraining()">重试本阶段</button></div></div>`);
@@ -313,10 +363,9 @@ function renderTutorStage() {
   feed.querySelectorAll("[data-teach]").forEach(b => b.onclick = async () => {
     const idx = +b.dataset.teach;
     b.disabled = true;
-    tutorBusy(`AI 导师正在教${paraLabel(idx)}的写法…`);
     try {
-      tc.paraTeach[idx] = await Tutor.paraTeach(tc, idx);
-      saveSession(); renderTutorStage();
+      const data = await runTutorStream("📖", paraLabel(idx) + "教学", o => Tutor.paraTeach(tc, idx, o));
+      if (data) { tc.paraTeach[idx] = data; saveSession(); renderTutorStage(); } else b.disabled = false;
     } catch (e) { tutorError(e); }
   });
   feed.querySelectorAll("[data-fb]").forEach(b => b.onclick = async () => {
@@ -324,10 +373,9 @@ function renderTutorStage() {
     const student = tc.paraTexts[idx - 1];
     if (Checker.words(student) < 10) { alert("先在左侧写这一段（哪怕一两句），再点评。"); return; }
     b.disabled = true;
-    tutorBusy("AI 导师正在对比范文点评你的段落…");
     try {
-      tc.paraFeedback[idx] = await Tutor.paraFeedback(tc, idx);
-      saveSession(); renderTutorStage();
+      const data = await runTutorStream("🔍", "点评你的" + paraLabel(idx), o => Tutor.paraFeedback(tc, idx, o));
+      if (data) { tc.paraFeedback[idx] = data; saveSession(); renderTutorStage(); } else b.disabled = false;
     } catch (e) { tutorError(e); }
   });
   feed.querySelectorAll("[data-next]").forEach(b => b.onclick = () => {
@@ -339,9 +387,10 @@ function renderTutorStage() {
     // 来源1：预生成读图/审题课（零 API 消耗）
     const pre = (typeof TutorPrecache !== "undefined") ? TutorPrecache[tc.qKey] : null;
     if (pre) { tc.stage0 = pre; saveSession(); renderTutorStage(); return; }
-    tutorBusy("AI 导师正在分析这道题的审题思路…");
-    try { tc.stage0 = await Tutor.teach0(tc); saveSession(); renderTutorStage(); }
-    catch (e) { tutorError(e); b0.disabled = false; }
+    try {
+      const data = await runTutorStream("🎬", "读图/审题课", o => Tutor.teach0(tc, o));
+      if (data) { tc.stage0 = data; saveSession(); renderTutorStage(); } else b0.disabled = false;
+    } catch (e) { tutorError(e); b0.disabled = false; }
   };
   const bSkip = document.getElementById("tcSkipToModel");
   if (bSkip) bSkip.onclick = () => {
@@ -376,19 +425,20 @@ function renderTutorStage() {
       return;
     }
     // 来源3：AI 生成（强模型）
-    tutorBusy("AI 导师正在写考官级范文（注入审题思路、话题观点、推荐词伙）…");
     try {
-      tc.model = await Tutor.modelEssay(tc); tc.modelSource = "AI";
-      tc.stage = 1; saveSession(); renderTutorStage();
+      const data = await runTutorStream("📝", "写考官级范文（注入审题思路·话题观点·词伙）", o => Tutor.modelEssay(tc, o));
+      if (data) { tc.model = data; tc.modelSource = "AI"; tc.stage = 1; saveSession(); renderTutorStage(); } else b1.disabled = false;
     } catch (e) { tutorError(e); b1.disabled = false; }
   };
   const bn = document.getElementById("tcToPara2");
   if (bn) bn.onclick = () => { tc.stage = 2; saveSession(); renderTutorStage(); };
   const bs = document.getElementById("tcSumBtn");
   if (bs) bs.onclick = async () => {
-    bs.disabled = true; tutorBusy("生成完成总结…");
-    try { tc.summary = await Tutor.summary(tc); tc.stage = 6; saveSession(); renderTutorStage(); }
-    catch (e) { tutorError(e); bs.disabled = false; }
+    bs.disabled = true;
+    try {
+      const data = await runTutorStream("🏁", "完成总结", o => Tutor.summary(tc, o));
+      if (data) { tc.summary = data; tc.stage = 6; saveSession(); renderTutorStage(); } else bs.disabled = false;
+    } catch (e) { tutorError(e); bs.disabled = false; }
   };
   const bd = document.getElementById("tcDoneBtn");
   if (bd) bd.onclick = () => {

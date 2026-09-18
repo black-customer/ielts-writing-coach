@@ -82,12 +82,14 @@ function questionOf(key) {
   return q ? q.question : "";
 }
 
-$$("#mbFilters [data-mb]").forEach(b => b.onclick = () => {
-  $$("#mbFilters [data-mb]").forEach(x => x.classList.remove("active"));
-  b.classList.add("active");
-  mbFilter.task = b.dataset.mb === "all" ? "" : b.dataset.mb;
-  renderModelBank();
-});
+  $$("#mbFilters [data-mb]").forEach(b => b.onclick = () => {
+    $$("#mbFilters [data-mb]").forEach(x => x.classList.remove("active"));
+    b.classList.add("active");
+    mbFilter.task = b.dataset.mb === "all" ? "" : b.dataset.mb;
+    renderModelBank();
+  });
+  const mbExport = $("#mbExport");
+  if (mbExport) mbExport.onclick = exportStudyBooklet;
 const mbBookSel = $("#mbBook");
 if (mbBookSel) {
   const books = [...new Set(Object.keys(ModelEssays || {}).map(k => +k.match(/剑(\d+)/)[1]))].sort((a, b) => a - b);
@@ -95,3 +97,51 @@ if (mbBookSel) {
   mbBookSel.onchange = () => { mbFilter.book = mbBookSel.value; renderModelBank(); };
   renderModelBank();
 }
+
+// ---------- 🖨 导出学习册（当前筛选的范文+教学包 → 可打印 HTML） ----------
+function exportStudyBooklet() {
+  const keys = Object.keys(ModelEssays).filter(k => {
+    const m = k.match(/剑(\d+) Test (\d+) T(\d)/);
+    if (mbFilter.task && +m[3] !== +mbFilter.task) return false;
+    if (mbFilter.book && +m[1] !== +mbFilter.book) return false;
+    return true;
+  });
+  if (!keys.length) { alert("当前筛选没有范文。"); return; }
+  const names = t1 => t1 ? { 2: "开头段", 3: "概括段", 4: "细节段一", 5: "细节段二" } : { 2: "开头段", 3: "主体段 1", 4: "主体段 2", 5: "结尾段" };
+  const sections = keys.map(k => {
+    const e = ModelEssays[k];
+    const m = k.match(/剑(\d+) Test (\d+) T(\d)/);
+    const teach = Object.keys(e.paraTeach).sort().map(pk => {
+      const p = e.paraTeach[pk];
+      return `<div class="teach"><b>${names(t1)[pk]} · 为什么这样写</b>
+        <p>${esc(p.why)}</p>
+        <div class="en">${esc(p.modelPara)}</div>
+        <ul>${p.expressions.map(x => `<li><span class="en">${esc(x.en)}</span> —— ${esc(x.zh)}</li>`).join("")}</ul>
+        <p class="gq">🤔 ${esc(p.guideQ)}</p></div>`;
+    }).join("");
+    return `<section><h2>${esc(k)}（${e.essay.trim().split(/\s+/).length} 词）</h2>
+      ${e.chartNote ? `<p class="cn">📊 图表数据：${esc(e.chartNote)}</p>` : ""}
+      <div class="essay en">${esc(e.essay).replace(/\n/g, "<br>")}</div>
+      <h3>逐段教学</h3>${teach}</section>`;
+  }).join("");
+  const html = `<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>IELTS 范文学习册（${keys.length} 篇）</title>
+<style>@page{size:A4;margin:16mm 14mm}
+body{font-family:"Segoe UI","Microsoft YaHei",sans-serif;max-width:860px;margin:24px auto;padding:0 16px;color:#1f2937;line-height:1.8}
+h1{font-size:22px}h2{font-size:18px;border-bottom:2px solid #2563eb;padding-bottom:6px;margin-top:34px}
+section{page-break-before:always}
+.essay{font-family:Georgia,serif;font-size:15.5px;line-height:1.95;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:16px 20px;margin:12px 0}
+.teach{border-left:3px solid #2563eb;padding:6px 14px;margin:14px 0;background:#f8fafc;border-radius:0 8px 8px 0}
+.teach b{color:#1d4ed8}.en{font-family:Georgia,serif}
+ul{margin:6px 0;padding-left:20px}li{margin:3px 0}.gq{color:#92400e}
+.cn{font-size:13px;color:#64748b}.hint{color:#6b7280;font-size:13px}</style></head><body>
+<h1>📚 IELTS 范文学习册</h1><p class="hint">共 ${keys.length} 篇 · 生成于 ${new Date().toLocaleString("zh-CN")} · IELTS Writing Coach（打印时每篇自动另起一页）</p>
+${sections}</body></html>`;
+  const blob = new Blob([html], { type: "text/html;charset=utf-8" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  const scope = (mbFilter.task === "1" ? "小作文" : mbFilter.task === "2" ? "大作文" : "全题库") + (mbFilter.book ? "_剑" + mbFilter.book : "");
+  a.download = "IELTS范文学习册_" + scope + "_" + keys.length + "篇.html";
+  a.click();
+}
+
+

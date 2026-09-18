@@ -385,18 +385,39 @@ $("#btnAiCheck").onclick = async () => {
   btn.innerHTML = `<span class="spinner"></span>精批中…`;
   const box = $("#aiResult");
   box.classList.remove("hidden");
-  box.innerHTML = `<div class="card"><h2>🤖 AI 考官精批中…</h2><p class="hint"><span class="spinner"></span>DeepSeek 正在按官方评分标准逐段精读（flash 为推理模型，通常需要 20-60 秒），请保持窗口打开。</p></div>`;
+  box.innerHTML = `<div class="card"><h2>🤖 AI 考官精批中…</h2>
+    <p class="hint"><span class="spinner"></span>DeepSeek 正在按官方评分标准逐段精读（推理模型通常 20-60 秒）· <span id="aiChars">已接收 0 字</span></p>
+    <pre class="tut-stream" id="aiStream"></pre>
+    <div class="btn-row"><button class="small" id="aiCancel">■ 中断</button></div></div>`;
   box.scrollIntoView({ behavior: "smooth" });
+  const aiAbort = new AbortController();
+  $("#aiCancel").onclick = () => aiAbort.abort();
+  let acc = "", lastPaint = 0;
   try {
     const questionText = $("#checkQuestion").value.trim() || currentQuestion || "";
     const r = await AI.review({
       essay, mode: checkMode, question: questionText,
       type: checkMode === "t2" ? ($("#checkType").selectedOptions[0] || {}).text : "",
-      chart: checkMode === "t1" ? $("#checkChart").value : ""
+      chart: checkMode === "t1" ? $("#checkChart").value : "",
+      onChunk: (delta, full) => {
+        acc = full || acc;
+        const now = Date.now();
+        if (now - lastPaint < 80) return;
+        lastPaint = now;
+        const st = document.getElementById("aiChars"), el = document.getElementById("aiStream");
+        if (st) st.textContent = `已接收 ${acc.length} 字`;
+        if (el) { el.textContent = acc.slice(-1600); el.scrollTop = el.scrollHeight; }
+      },
+      signal: aiAbort.signal
     });
     lastAi = r;
     renderAiResult(r);
   } catch (e) {
+    if (e && (e.name === "AbortError" || /abort/i.test(e.message || ""))) {
+      box.innerHTML = `<div class="card"><h2>⏹ 已中断</h2><p class="hint">本次精批已取消（不会产生后续费用）。可重新点击「AI 考官精批」。</p></div>`;
+      btn.disabled = false; btn.innerHTML = "🤖 AI 考官精批";
+      return;
+    }
     box.innerHTML = `<div class="card"><h2>❌ AI 精批失败</h2><div class="issue bad">${esc(e.message)}</div>
       <p class="hint">排查：① 点「⚙️ AI 设置 → 测试连接」；② key/额度是否有效；③ 若浏览器拦截了跨域请求（CORS），改用本地服务器打开工具：在 tool 目录运行 <code>python -m http.server 8000</code> 后访问 http://localhost:8000</p></div>`;
   } finally {
@@ -406,6 +427,7 @@ $("#btnAiCheck").onclick = async () => {
 };
 
 function renderAiResult(r) {
+  window._lastAi = r; // 供复盘卡 / 错因入库使用
   const box = $("#aiResult");
   const critNames = { TR: r.mode === "t1" ? "任务达成" : "任务回应", CC: "连贯衔接", LR: "词汇资源", GRA: "语法多样与准确" };
   const scores = r.scores || {};
@@ -427,9 +449,16 @@ function renderAiResult(r) {
         ${r.rewrite.para ? `<p class="hint">原段落：${esc(r.rewrite.para.slice(0, 80))}...</p>` : ""}
         <div class="tpl" style="font-size:14.5px">${esc(r.rewrite.improved)}</div>` : ""}
       <p class="hint">AI 评分为参考值（模型评分普遍存在 ±0.5 浮动）；与上方规则诊断 + 自评清单交叉印证更可靠。此结果不自动存入进度记录。</p>
-      <div class="btn-row"><button id="btnAiSaveRecord">💾 把 AI 分数存入进度</button></div>
+      <div class="btn-row"><button id="btnAiSaveRecord">💾 把 AI 分数存入进度</button><button id="btnAiReviewCard">📋 复盘卡 + 错因入库</button></div>
     </div>`;
   box.scrollIntoView({ behavior: "smooth" });
+  $("#btnAiReviewCard").onclick = () => {
+    $("#aiResult").insertAdjacentHTML("beforeend",
+      buildReviewCard((typeof lastCheck !== "undefined" && lastCheck) ? lastCheck.res : { issues: [], score: { TR: 6, TA: 6, CC: 6, GRA: 6, LR: 6 } }, r)
+      + `<div class="btn-row"><button class="primary" id="btnErrImport">🩹 错因入库（生成复习卡，进 SRS 队列）</button></div><div id="errImportResult"></div>`);
+    $("#btnErrImport").onclick = errCardsImport;
+    $("#btnErrImport").scrollIntoView({ behavior: "smooth", block: "center" });
+  };
   $("#btnAiSaveRecord").onclick = () => {
     Store.addRecord({
       date: Date.now(), mode: r.mode, ai: true,
@@ -610,6 +639,7 @@ function renderCheck() {
       ${checklistHtml}
       <div class="btn-row">
         <button class="primary" id="btnAiCheck2">🤖 AI 考官精批（评分 + 逐段点评）</button>
+        <button id="btnReviewCard">📋 生成复盘卡 + 错因入库</button>
         <button id="btnPrintReport">🖨 打印/导出报告</button>
         <button id="btnDownloadReport">⬇️ 下载报告文件</button>
       </div>
@@ -617,6 +647,13 @@ function renderCheck() {
     </div>`;
 
   $("#btnAiCheck2").onclick = () => $("#btnAiCheck").click();
+  $("#btnReviewCard").onclick = () => {
+    if (!lastCheck) { alert("先点「开始诊断」。"); return; }
+    $("#finalScoreBox").innerHTML = buildReviewCard(lastCheck.res, window._lastAi || null)
+      + `<div class="btn-row"><button class="primary" id="btnErrImport">🩹 错因入库（生成复习卡，进 SRS 队列）</button></div><div id="errImportResult"></div>`;
+    $("#btnErrImport").onclick = errCardsImport;
+    $("#finalScoreBox").scrollIntoView({ behavior: "smooth" });
+  };
   $("#btnPrintReport").onclick = () => window.print();
   $("#btnDownloadReport").onclick = () => {
     const html = `<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>IELTS 写作诊断报告</title>
@@ -708,6 +745,37 @@ function buildReviewCard(res, ai) {
     ${items || "<p class='hint'>规则层面没有发现明显问题——用下面的自评清单和 AI 精批做更深层的检查。</p>"}
     ${aiFixes}
     <div class="issue ok"><b>弱项聚焦：</b>本篇最弱的一项是 <b>${weakest[0]}（${weakestName}）</b>。下次练习前，先重读 ${docLink(CRIT_DOC[weakest[0]] || "03")} 对应章节。</div>`;
+}
+
+// ---------- 🩹 错因入库：诊断问题 → SRS 错因复习卡 ----------
+function errCardsImport() {
+  if (!lastCheck) { alert("先做一次诊断。"); return; }
+  const now = Date.now();
+  const srcLabel = "诊断 " + new Date().toLocaleDateString("zh-CN");
+  const existing = new Set(Store.get("errCards", []).map(c => (c.quote || "") + "|" + (c.problem || "").slice(0, 30)));
+  const cards = [];
+  const push = c => {
+    const k = (c.quote || "") + "|" + (c.problem || "").slice(0, 30);
+    if (c.quote && existing.has(k)) return;
+    existing.add(k);
+    cards.push({ id: now + "-" + cards.length, kind: "err", ...c, from: c.from || srcLabel });
+  };
+  (lastCheck.res.issues || []).forEach(i => {
+    if (i.sev === "ok" || !i.msg) return;
+    const tag = tagOf(i);
+    push({ quote: i.evidence || "", problem: (tag && TAG_NAMES[tag] ? "[" + TAG_NAMES[tag] + "] " : "") + i.msg, fix: "", tag: tag || "", crit: i.crit || "" });
+  });
+  const ai = window._lastAi;
+  ((ai && ai.sentenceIssues) || []).forEach(i => {
+    if (!i.quote) return;
+    push({ quote: i.quote, problem: i.problem || "", fix: i.fix || "", tag: "ai", crit: "", from: "AI 精批 " + srcLabel });
+  });
+  if (!cards.length) { alert("这次诊断没有可入库的句子级问题。"); return; }
+  const arr = Store.get("errCards", []);
+  arr.push(...cards);
+  Store.set("errCards", arr);
+  const box = $("#errImportResult");
+  if (box) box.innerHTML = `<div class="issue ok">✅ 已入库 ${cards.length} 张错因卡（跳过 ${cards.length ? "重复项" : ""}）。去「⑤ 弹药库 → ⚡ 词伙闪卡 → 🩹 错因复习」开始复习；到期卡也会出现在「今日复习」里。</div>`;
 }
 
 // ---------------- 💾 全量备份导出/导入 ----------------
@@ -936,16 +1004,18 @@ function renderBank() {
     ...QuestionBank,
     ...(typeof ExtraQuestions !== "undefined" ? ExtraQuestions : []),
     ...(typeof RecentQuestions !== "undefined" ? RecentQuestions : []),
-    ...(typeof QuestionsC1921 !== "undefined" ? QuestionsC1921 : [])
+    ...(typeof QuestionsC1921 !== "undefined" ? QuestionsC1921 : []),
+    ...(typeof JijingQuestions !== "undefined" ? JijingQuestions : [])
   ];
   const PER = 15;
-  const list = bank.filter(q => bankFilter === "all" || TYPE_GROUP[bankFilter].includes(q.t2type));
+  const list = bank.filter(q => q.t2 && (bankFilter === "all" || TYPE_GROUP[bankFilter].includes(q.t2type)));
   const pageCount = Math.max(1, Math.ceil(list.length / PER));
   bankPage = Math.min(bankPage, pageCount);
   const pageList = list.slice((bankPage - 1) * PER, bankPage * PER);
   $("#bankList").innerHTML = pageList.map(q => `
     <div class="q-item" data-i="${bank.indexOf(q)}">
       <span class="q-src">${esc(q.src)}</span><span class="badge type">${esc(typeName(q.t2type))}</span>
+      ${/^机经/.test(q.src) ? '<span class="badge warn">机经</span>' : ""}
       <div class="en" style="margin-top:4px">${esc(q.t2)}</div>
     </div>`).join("") + pagerHtml(bankPage, pageCount) || "<p class='hint'>无匹配。</p>";
   $$("#bankList .q-item").forEach(el => el.onclick = () => {
@@ -982,7 +1052,10 @@ window.gotoAnalyzeEssay = i => { $("#questionInput").value = EssayBank[i].questi
 
 // ---------------- ⑥ 学习路线 ----------------
 function renderPlan() {
+  const placement = Store.get("placement", null);
+  const badge = placement ? `<div class="issue ok"><b>📏 摸底结果：</b>${esc(placement.level)} · 建议从 <b>${esc(placement.start)}</b> 学起（摸底日期 ${new Date(placement.date).toLocaleDateString("zh-CN")}）。下面的路线图按 4-8 周设计，起点靠后的同学可压缩前几周。</div>` : "";
   $("#planContent").innerHTML = `
+    ${badge}
     <p>${esc(Plan.intro)}</p>
     ${Plan.weeks.map(w => `<div class="week-plan"><h3>${esc(w.t)}</h3><ul>${w.items.map(i => `<li>${linkifyDocs(esc(i))}</li>`).join("")}</ul></div>`).join("")}
     <h3>五条写作铁律</h3><ol>${Plan.rules.map(r => `<li>${esc(r)}</li>`).join("")}</ol>
@@ -993,6 +1066,39 @@ function renderPlan() {
 
 // ---------------- ⑦ 进度·词本 ----------------
 let progShowAll = false;
+function exportProgressReport() {
+  const records = Store.get("records", []);
+  if (!records.length) { alert("还没有诊断记录可导出。"); return; }
+  const avg = (records.reduce((a, r) => a + (r.overall || 0), 0) / records.length).toFixed(1);
+  const rows = records.map(r => `<tr>
+    <td>${new Date(r.date).toLocaleString("zh-CN")}</td><td>${r.mode === "t1" ? "Task 1" : "Task 2"}</td>
+    <td class="en">${esc(r.title || "")}</td><td>${r.W || ""}</td>
+    <td>${Object.entries(r.scores || {}).map(([c, v]) => c + " " + v).join(" / ")}</td>
+    <td><b>${r.aiOverall ? "🤖" + r.aiOverall + " / " : ""}${r.overall || "-"}</b></td>
+    <td>${(r.tags || []).map(t => esc(TAG_NAMES[t] || t)).join("、")}</td></tr>`).join("");
+  const tagCount = {};
+  records.forEach(r => (r.tags || []).forEach(t => tagCount[t] = (tagCount[t] || 0) + 1));
+  const tagRows = Object.entries(tagCount).sort((a, b) => b[1] - a[1])
+    .map(([t, n]) => `<tr><td>${esc(TAG_NAMES[t] || t)}</td><td>${n} 次</td></tr>`).join("");
+  const html = `<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>IELTS 写作进度报告</title>
+<style>body{font-family:"Segoe UI","Microsoft YaHei",sans-serif;max-width:900px;margin:24px auto;padding:0 16px;color:#1f2937;line-height:1.7}
+table{border-collapse:collapse;width:100%;font-size:13.5px}th,td{border:1px solid #e5e7eb;padding:6px 9px;text-align:left}
+th{background:#eff6ff}.en{font-family:Georgia,serif}.hint{color:#6b7280;font-size:13px}
+.kpi{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}.kpi div{border:1px solid #e5e7eb;border-radius:10px;padding:10px 16px}
+.kpi b{font-size:24px;color:#1d4ed8}</style></head><body>
+<h1>📊 IELTS 写作进度报告</h1><p class="hint">生成于 ${new Date().toLocaleString("zh-CN")} · IELTS Writing Coach</p>
+<div class="kpi"><div>累计练习<b>${records.length}</b> 篇</div><div>平均预估分<b>${avg}</b></div><div>最近一次<b>${records[0].overall || "-"}</b></div></div>
+<h2>高频问题档案</h2><table><tr><th>问题类型</th><th>出现次数</th></tr>${tagRows}</table>
+<h2>全部记录（${records.length}）</h2>
+<table><tr><th>时间</th><th>类型</th><th>题目/作文</th><th>词数</th><th>分项</th><th>总分</th><th>问题标签</th></tr>${rows}</table>
+</body></html>`;
+  const blob = new Blob([html], { type: "text/html;charset=utf-8" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "IELTS写作进度报告_" + new Date().toISOString().slice(0, 10) + ".html";
+  a.click();
+}
+
 function renderCompare(oldRec, newRes) {
   const box = $("#finalScoreBox");
   if (!box) return;
@@ -1074,6 +1180,12 @@ function renderProgress() {
     });
     const tg = $("#btnToggleAll");
     if (tg) tg.onclick = () => { progShowAll = !progShowAll; renderProgress(); };
+    if (typeof renderDashboard === "function") renderDashboard();
+    // ⬇️ 进度报告导出（单文件 HTML）
+    if (!$("#btnExportProgress")) {
+      sum.insertAdjacentHTML("beforeend", `<div class="btn-row"><button id="btnExportProgress">⬇️ 导出进度报告（HTML）</button></div>`);
+      $("#btnExportProgress").onclick = exportProgressReport;
+    }
   }
   // 📌 我的系统性错误档案（聚合所有记录的问题标签）
   const tagged = records.filter(r => (r.tags || []).length);
@@ -1086,6 +1198,7 @@ function renderProgress() {
       return row ? row[1] : { act: "按对应方法论条目自查", doc: "03" };
     };
     const maxN = top[0][1];
+    const box = $("#progressList");
     box.insertAdjacentHTML("beforeend", `
       <div class="card" style="border-color:var(--warn-border)">
         <h3>📌 你的系统性错误 Top ${top.length}（${tagged.length} 篇有标签记录）</h3>

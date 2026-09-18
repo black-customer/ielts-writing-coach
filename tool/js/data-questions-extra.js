@@ -1,12 +1,12 @@
 /* data-questions-extra.js — 剑桥 14-18 学术类写作 Task 2 真题（网络多源核实版，来源：engnovate.com / ieltsessaybank.com / howtodoielts.com 交叉验证） */
 const ExtraQuestions = [
-  { src: "剑14 Test 1", t2type: "discussion", t1type: "chart", t1: "（T1：图表题，详见原书）",
+  { src: "剑14 Test 1", t2type: "discussion", t1type: "pie charts", t1: "The charts below show the average percentages in typical meals of three types of nutrients, all of which may be unhealthy if eaten too much. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
     t2: "Some people believe that it is best to accept a bad situation, such as an unsatisfactory job or shortage of money. Others argue that it is better to try and improve such situations. Discuss both these views and give your own opinion." },
-  { src: "剑14 Test 2", t2type: "discussion", t1type: "maps", t1: "（T1：地图题，详见原书）",
+  { src: "剑14 Test 2", t2type: "discussion", t1type: "bar chart + table", t1: "The chart below shows the value of one country's exports in various categories during 2015 and 2016. The table shows the percentage change in each category of exports in 2016 compared with 2015. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
     t2: "Some people say that the main environmental problem of our time is the loss of particular species of plants and animals. Others say that there are more important environmental problems. Discuss both these views and give your own opinion." },
-  { src: "剑14 Test 3", t2type: "two-part", t1type: "line graph", t1: "（T1：线图题，详见原书）",
+  { src: "剑14 Test 3", t2type: "two-part", t1type: "process diagram", t1: "The diagram below shows how hydroelectric power is generated. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
     t2: "Nowadays many people choose to be self-employed, rather than to work for a company or organisation. Why might this be the case? What could be the disadvantages of being self-employed?" },
-  { src: "剑14 Test 4", t2type: "two-part", t1type: "bar chart", t1: "（T1：柱图题，详见原书）",
+  { src: "剑14 Test 4", t2type: "two-part", t1type: "maps", t1: "The plans below show a public park when it first opened in 1920 and the same park in the present day. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
     t2: "Some people say that music is a good way of bringing people of different cultures and ages together. To what extent do you agree or disagree with this opinion?" },
   { src: "剑15 Test 1", t2type: "two-part", t1type: "bar chart", t1: "The chart below shows the results of a survey about people's coffee and tea buying and drinking habits in five Australian cities. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
     t2: "In some countries, owning a home rather than renting one is very important for people. Why might this be the case? Do you think this is a positive or negative situation?" },

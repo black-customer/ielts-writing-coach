@@ -90,45 +90,16 @@ ${pbCompact}${ammo}${coll}
 ${tc.stage === 0 ? "尚未动笔，需要从审题开始教。" : `已写内容：\n${tc.paraTexts.filter(Boolean).join("\n") || "（暂无）"}`}`;
   }
 
-  async function call(stagePrompt, tc, maxTokens) {
+  async function call(stagePrompt, tc, maxTokens, opts) {
     const messages = [
       { role: "system", content: buildSystem(tc) },
       { role: "user", content: stagePrompt }
     ];
-    const content = await AICall(messages, maxTokens || 4000);
-    return content;
+    // 统一走 ai.js 的流式助手（SSE 逐字 + AbortController 中断），两套实现收敛为一套
+    const text = await AI.streamChat(messages, maxTokens || 4000, opts || {});
+    return AI.extractJSON(text); // 解析 + 截断修复（复用 ai.js）
   }
 
-  // AICall：与 ai.js 相同的 DeepSeek 调用（独立实现避免耦合其 review 流程）
-  async function AICall(messages, maxTokens) {
-    const saved = Store.get("ai", {});
-    const c = Object.assign({}, IWC_CONFIG, saved);
-    const res = await fetch(c.baseUrl.replace(/\/$/, "") + "/chat/completions", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "Authorization": "Bearer " + c.apiKey },
-      body: JSON.stringify({ model: c.model, messages, temperature: 0.4, max_tokens: maxTokens || 4000, response_format: { type: "json_object" } })
-    });
-    if (!res.ok) {
-      let msg = "HTTP " + res.status;
-      try { const e = await res.json(); msg += " " + (e.error && e.error.message || ""); } catch (_) {}
-      throw new Error("API 请求失败：" + msg);
-    }
-    const d = await res.json();
-    let text = d.choices && d.choices[0] && d.choices[0].message && d.choices[0].message.content || "";
-    text = text.trim().replace(/^```(json)?/i, "").replace(/```$/, "").trim();
-    const start = text.indexOf("{"), end = text.lastIndexOf("}");
-    if (start === -1) throw new Error("AI 返回不是有效 JSON");
-    let body = text.slice(start, end === -1 ? undefined : end + 1);
-    try { return JSON.parse(body); } catch (_) {}
-    // 截断容错（复用思路）
-    const attempts = [
-      body.replace(/,\s*"[^"]*"\s*:\s*"[^"]*$/, "") + "}",
-      body.replace(/,\s*\{[^{}]*$/, "") + "}",
-      body.replace(/,\s*"[^"]*"?\s*:?\s*$/, "") + "}"
-    ];
-    for (const a of attempts) { try { return JSON.parse(a); } catch (_) {} }
-    throw new Error("AI 返回的 JSON 不完整，请重试");
-  }
 
   // ---------- 各阶段提示词 ----------
   // 段落名（按任务类型）：T2 = 开头/主体1/主体2/结尾；T1 = 开头/概括/细节一/细节二
@@ -233,9 +204,9 @@ ${focus}`;
   }
 
   // ---------- 对外接口 ----------
-  async function teach0(tc) { return call(promptStage0(tc), tc, 3000); }
-  async function modelEssay(tc) { return call(promptStage1(tc), tc, 6000); }
-  async function paraTeach(tc, paraIdx) {
+  async function teach0(tc, opts) { return call(promptStage0(tc), tc, 3000, opts); }
+  async function modelEssay(tc, opts) { return call(promptStage1(tc), tc, 6000, opts); }
+  async function paraTeach(tc, paraIdx, opts) {
     const names = paraNames(tc);
     const focus = TEACH_FOCUS[tc.task === 1 ? "t1" : "t2"][paraIdx];
     const modelPara = extractPara(tc.model && tc.model.essay, paraIdx - 1);
@@ -247,13 +218,13 @@ ${focus}`;
 
 ${focus}
 范文对应段：
-"""${modelPara}"""`, tc, 3000);
+"""${modelPara}"""`, tc, 3000, opts);
   }
-  async function paraFeedback(tc, paraIdx) {
+  async function paraFeedback(tc, paraIdx, opts) {
     const studentText = tc.paraTexts[paraIdx - 1] || "";
-    return call(promptParaStage(tc, paraIdx, studentText), tc, 4000);
+    return call(promptParaStage(tc, paraIdx, studentText), tc, 4000, opts);
   }
-  async function summary(tc) { return call(promptSummary(tc), tc, 2500); }
+  async function summary(tc, opts) { return call(promptSummary(tc), tc, 2500, opts); }
 
   return { teach0, modelEssay, paraTeach, paraFeedback, summary, buildSystem };
 })();

@@ -50,7 +50,9 @@ const AI = (() => {
     return parts.join("\n\n");
   }
 
-  async function callAPI(messages, maxTokens) {
+  async function callAPI(messages, maxTokens, opts) {
+    const o = opts || {};
+    if (o.onChunk || o.signal) return streamChat(messages, maxTokens, o);
     const c = cfg();
     const res = await fetch(c.baseUrl.replace(/\/$/, "") + "/chat/completions", {
       method: "POST",
@@ -70,6 +72,60 @@ const AI = (() => {
     }
     const data = await res.json();
     return data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content || "";
+  }
+
+  // 流式对话（SSE）：onChunk(增量, 全文)；signal 支持「中断」；返回完整文本
+  async function streamChat(messages, maxTokens, opts) {
+    const o = opts || {};
+    const c = cfg();
+    const res = await fetch(c.baseUrl.replace(/\/$/, "") + "/chat/completions", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Authorization": "Bearer " + c.apiKey },
+      signal: o.signal,
+      body: JSON.stringify({
+        model: c.model,
+        messages,
+        temperature: 0.2,
+        max_tokens: maxTokens || 8000,
+        stream: true,
+        response_format: { type: "json_object" }
+      })
+    });
+    if (!res.ok) {
+      let msg = "HTTP " + res.status;
+      try { const e = await res.json(); msg += " " + (e.error && e.error.message || ""); } catch (_) {}
+      throw new Error("API 请求失败：" + msg);
+    }
+    // 端点不支持流式时回退到一次性解析
+    const ct = (res.headers.get("content-type") || "");
+    if (!ct.includes("event-stream")) {
+      const data = await res.json();
+      const text = data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content || "";
+      if (o.onChunk) o.onChunk(text, text);
+      return text;
+    }
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buf = "", full = "";
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buf += decoder.decode(value, { stream: true });
+      const lines = buf.split("\n");
+      buf = lines.pop(); // 末行可能不完整
+      for (const line of lines) {
+        const s = line.trim();
+        if (!s.startsWith("data:")) continue;
+        const payload = s.slice(5).trim();
+        if (payload === "[DONE]") continue;
+        try {
+          const j = JSON.parse(payload);
+          const delta = j.choices && j.choices[0] && (j.choices[0].delta && j.choices[0].delta.content || j.choices[0].message && j.choices[0].message.content) || "";
+          if (delta) { full += delta; if (o.onChunk) o.onChunk(delta, full); }
+        } catch (_) { /* 心跳或半包，忽略 */ }
+      }
+    }
+    return full;
   }
 
   function extractJSON(text) {
@@ -93,11 +149,12 @@ const AI = (() => {
   }
 
   // 精批主入口
-  async function review({ essay, mode, question, type, chart }) {
+  async function review(optsIn) {
+    const { essay, mode, question, type, chart, onChunk, signal } = optsIn || {};
     const content = await callAPI([
       { role: "system", content: SYSTEM_PROMPT },
       { role: "user", content: buildUserPrompt({ essay, mode, question, type, chart }) }
-    ], 8000);
+    ], 8000, { onChunk, signal });
     const r = extractJSON(content);
     // 规范化：只保留四项评分键（模型可能混入 overall/comment 等额外键）
     if (!r.scores) throw new Error("AI 返回缺少 scores");
@@ -124,5 +181,5 @@ const AI = (() => {
     return { ok: content.includes("OK"), ms: Date.now() - t0, model: cfg().model };
   }
 
-  return { review, ping, cfg };
+  return { review, ping, cfg, streamChat, extractJSON };
 })();

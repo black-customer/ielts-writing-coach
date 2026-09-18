@@ -1,110 +1,4 @@
 {
-  "剑15 Test 1 T2": {
-    "source": "ZCode 知识库生成 · 2026-09-17",
-    "essay": "In many countries, buying a home is seen as one of the most important goals in adult life, and far more people dream of owning property than of renting it. There are clear reasons why this is the case, and in my view the situation it creates is a positive one overall.\n\nThe main reason is that a house is much more than a place to live; it represents security. Tenants can be asked to leave, or face rising rents, through no fault of their own, whereas owners control their own homes and are protected from this uncertainty. A second reason is financial. Although a mortgage is a heavy burden, each payment gradually builds up something valuable instead of disappearing into a landlord's pocket, and property often rises in value over time. Finally, in many cultures there is a deep-rooted belief that owning a home is a sign of success, and that only those who have bought property have truly settled down.\n\nOn balance, I believe this desire to own property is a positive situation, despite the risks involved. The security that comes from ownership gives families a stable base, and homeowners tend to put down roots in a community, which strengthens neighbourhoods as a whole. Buying a home also encourages people to save, because each mortgage payment is an investment rather than an expense. Admittedly, taking out a large loan carries obvious dangers: owners who lose their income may struggle to service their debts, and it is harder to move to another city to find work. Even so, these risks can be reduced if people borrow only what they can afford, and the benefits clearly outweigh them.\n\nIn conclusion, people want to own their homes because property provides security, control and a form of saving, and I believe the stability this creates for families and communities makes it a positive situation.",
-    "paraTeach": {
-      "2": {
-        "why": "开头两句 = 任务模板：句1 改写题目（owning a home rather than renting → buying a home... than of renting it；is very important → one of the most important goals in adult life），句2 一句话回答题目两问——'clear reasons why' 对应 Why 段，'a positive one overall' 对应评价段。改写手法：上义词替换、短语替换、语序重组。",
-        "modelPara": "In many countries, buying a home is seen as one of the most important goals in adult life, and far more people dream of owning property than of renting it. There are clear reasons why this is the case, and in my view the situation it creates is a positive one overall.",
-        "expressions": [
-          {
-            "en": "is seen as one of the most important goals in adult life",
-            "zh": "被视为成年生活中最重要的目标之一"
-          },
-          {
-            "en": "dream of owning property",
-            "zh": "梦想拥有房产"
-          },
-          {
-            "en": "There are clear reasons why this is the case",
-            "zh": "这种现象的原因很清楚（引出解释段）"
-          },
-          {
-            "en": "a positive one overall",
-            "zh": "总体上是积极的（一句话亮明评价立场）"
-          }
-        ],
-        "guideQ": "题目有两个问句——你的开头第二句是否把两个问题都概括回答了？"
-      },
-      "3": {
-        "why": "原因段用一条主线（安全感）串起三个原因，层层递进：控制权（不被赶、不涨租）→ 经济（月供变资产，租房是替房东打工）→ 文化（根深蒂固的成功标志）。衔接用 The main reason / A second reason / Finally，朴素但清晰。注意 deep-rooted belief、truly settled down 这类文化角度词伙。",
-        "modelPara": "The main reason is that a house is much more than a place to live; it represents security. Tenants can be asked to leave, or face rising rents, through no fault of their own, whereas owners control their own homes and are protected from this uncertainty. A second reason is financial. Although a mortgage is a heavy burden, each payment gradually builds up something valuable instead of disappearing into a landlord's pocket, and property often rises in value over time. Finally, in many cultures there is a deep-rooted belief that owning a home is a sign of success, and that only those who have bought property have truly settled down.",
-        "expressions": [
-          {
-            "en": "represents security",
-            "zh": "代表安全感"
-          },
-          {
-            "en": "through no fault of their own",
-            "zh": "并非他们自身的过错"
-          },
-          {
-            "en": "a heavy burden",
-            "zh": "沉重的负担"
-          },
-          {
-            "en": "disappearing into a landlord's pocket",
-            "zh": "钱白白流进房东口袋（租房=替房东打工）"
-          },
-          {
-            "en": "a deep-rooted belief",
-            "zh": "一种根深蒂固的观念"
-          },
-          {
-            "en": "truly settled down",
-            "zh": "真正安定下来"
-          }
-        ],
-        "guideQ": "三个原因分别来自什么角度？（提示：法律/经济/文化——任何'为什么人们想要X'的题都可以这样扫一遍）"
-      },
-      "4": {
-        "why": "评价段 = 立场 + 让步。先亮明 On balance... a positive situation，再给两个正面论证：心理层面（安全感→稳定→社区扎根，which 从句把个人好处推到社会层面）+ 经济层面（月供是投资不是开销）。随后 Admittedly 让步承认风险（还不起贷、锁死流动性），Even so 反驳：风险可控、利大于弊。这就是官方 7+ 描述里的 a clear and developed position。",
-        "modelPara": "On balance, I believe this desire to own property is a positive situation, despite the risks involved. The security that comes from ownership gives families a stable base, and homeowners tend to put down roots in a community, which strengthens neighbourhoods as a whole. Buying a home also encourages people to save, because each mortgage payment is an investment rather than an expense. Admittedly, taking out a large loan carries obvious dangers: owners who lose their income may struggle to service their debts, and it is harder to move to another city to find work. Even so, these risks can be reduced if people borrow only what they can afford, and the benefits clearly outweigh them.",
-        "expressions": [
-          {
-            "en": "gives families a stable base",
-            "zh": "给家庭一个稳定的基础"
-          },
-          {
-            "en": "put down roots in a community",
-            "zh": "在社区扎根"
-          },
-          {
-            "en": "an investment rather than an expense",
-            "zh": "是投资而非开销"
-          },
-          {
-            "en": "service their debts",
-            "zh": "偿还债务（band 8 级搭配）"
-          },
-          {
-            "en": "the benefits clearly outweigh them",
-            "zh": "利明显大于弊"
-          }
-        ],
-        "guideQ": "让步（Admittedly）之后，作者是用什么词把立场拉回来的？（Even so——先承认再反驳的经典结构）"
-      },
-      "5": {
-        "why": "结尾一句话完成两件事：换词概括原因（security, control and a form of saving 分别对应三个原因）+ 重申评价（a positive situation）。绝不出现新观点。'the stability this creates for families and communities' 把收束推到社会层面，格局比复读题目高一层。",
-        "modelPara": "In conclusion, people want to own their homes because property provides security, control and a form of saving, and I believe the stability this creates for families and communities makes it a positive situation.",
-        "expressions": [
-          {
-            "en": "provides security, control and a form of saving",
-            "zh": "三个原因的一句话概括（排比收束）"
-          },
-          {
-            "en": "the stability this creates for families and communities",
-            "zh": "给家庭和社区带来的稳定"
-          },
-          {
-            "en": "makes it a positive situation",
-            "zh": "重申正面评价（呼应开头）"
-          }
-        ],
-        "guideQ": "你的结论有没有出现范文里没有的新观点？（不应该有——结论只收束，不扩展）"
-      }
-    }
-  },
   "剑15 Test 2 T2": {
     "source": "ZCode 知识库生成 · 2026-09-17 · 食谱组装+人工审稿（待爱听写验证）",
     "essay": "Some people predict that printed newspapers and books are likely to disappear, since readers will soon be able to read whatever they want through free online content. I completely disagree with this view for two main reasons.\n\nThe main reason for my position is that printed books and papers offer a reading experience that screens simply cannot replicate. A physical page invites deep, focused reading, free from the notifications and pop-ups that fragment attention on a screen. Paper is also considerably easier on the eyes, which matters to anyone who reads for more than a few minutes at a time. Such deep-rooted reading habits explain why so many people still buy physical books for pleasure and why new bestsellers routinely sell millions of copies. As long as this demand exists, printed media will retain a loyal audience, however advanced screens become.\n\nA second problem with the prediction is that much online content is free precisely because it is cheap to produce. Websites that rely on advertising revenue are rewarded for attracting clicks rather than for accuracy, so clickbait headlines and barely checked stories dominate. Serious newspapers, by contrast, employ trained journalists and editors who verify every claim before publication, and readers willingly pay for a reliable source of information. These professionals cannot work for nothing; publishers must invest time and money in investigating stories, and that money has to come from somewhere. If nobody paid for news or books, this investment would dry up, and the quality of public information would fall with it.\n\nIn conclusion, I firmly believe that the future of the printed word is secure because people will always value writing they have paid for.",
@@ -368,6 +262,112 @@
           }
         ],
         "guideQ": "你的结论有没有出现前面没提过的新观点？（不应该有）"
+      }
+    }
+  },
+  "剑15 Test 1 T2": {
+    "source": "ZCode 知识库生成 · 2026-09-17",
+    "essay": "In many countries, buying a home is seen as one of the most important goals in adult life, and far more people dream of owning property than of renting it. There are clear reasons why this is the case, and in my view the situation it creates is a positive one overall.\n\nThe main reason is that a house is much more than a place to live; it represents security. Tenants can be asked to leave, or face rising rents, through no fault of their own, whereas owners control their own homes and are protected from this uncertainty. A second reason is financial. Although a mortgage is a heavy burden, each payment gradually builds up something valuable instead of disappearing into a landlord's pocket, and property often rises in value over time. Finally, in many cultures there is a deep-rooted belief that owning a home is a sign of success, and that only those who have bought property have truly settled down.\n\nOn balance, I believe this desire to own property is a positive situation, despite the risks involved. The security that comes from ownership gives families a stable base, and homeowners tend to put down roots in a community, which strengthens neighbourhoods as a whole. Buying a home also encourages people to save, because each mortgage payment is an investment rather than an expense. Admittedly, taking out a large loan carries obvious dangers: owners who lose their income may struggle to service their debts, and it is harder to move to another city to find work. Even so, these risks can be reduced if people borrow only what they can afford, and the benefits clearly outweigh them.\n\nIn conclusion, people want to own their homes because property provides security, control and a form of saving, and I believe the stability this creates for families and communities makes it a positive situation.",
+    "paraTeach": {
+      "2": {
+        "why": "开头两句 = 任务模板：句1 改写题目（owning a home rather than renting → buying a home... than of renting it；is very important → one of the most important goals in adult life），句2 一句话回答题目两问——'clear reasons why' 对应 Why 段，'a positive one overall' 对应评价段。改写手法：上义词替换、短语替换、语序重组。",
+        "modelPara": "In many countries, buying a home is seen as one of the most important goals in adult life, and far more people dream of owning property than of renting it. There are clear reasons why this is the case, and in my view the situation it creates is a positive one overall.",
+        "expressions": [
+          {
+            "en": "is seen as one of the most important goals in adult life",
+            "zh": "被视为成年生活中最重要的目标之一"
+          },
+          {
+            "en": "dream of owning property",
+            "zh": "梦想拥有房产"
+          },
+          {
+            "en": "There are clear reasons why this is the case",
+            "zh": "这种现象的原因很清楚（引出解释段）"
+          },
+          {
+            "en": "a positive one overall",
+            "zh": "总体上是积极的（一句话亮明评价立场）"
+          }
+        ],
+        "guideQ": "题目有两个问句——你的开头第二句是否把两个问题都概括回答了？"
+      },
+      "3": {
+        "why": "原因段用一条主线（安全感）串起三个原因，层层递进：控制权（不被赶、不涨租）→ 经济（月供变资产，租房是替房东打工）→ 文化（根深蒂固的成功标志）。衔接用 The main reason / A second reason / Finally，朴素但清晰。注意 deep-rooted belief、truly settled down 这类文化角度词伙。",
+        "modelPara": "The main reason is that a house is much more than a place to live; it represents security. Tenants can be asked to leave, or face rising rents, through no fault of their own, whereas owners control their own homes and are protected from this uncertainty. A second reason is financial. Although a mortgage is a heavy burden, each payment gradually builds up something valuable instead of disappearing into a landlord's pocket, and property often rises in value over time. Finally, in many cultures there is a deep-rooted belief that owning a home is a sign of success, and that only those who have bought property have truly settled down.",
+        "expressions": [
+          {
+            "en": "represents security",
+            "zh": "代表安全感"
+          },
+          {
+            "en": "through no fault of their own",
+            "zh": "并非他们自身的过错"
+          },
+          {
+            "en": "a heavy burden",
+            "zh": "沉重的负担"
+          },
+          {
+            "en": "disappearing into a landlord's pocket",
+            "zh": "钱白白流进房东口袋（租房=替房东打工）"
+          },
+          {
+            "en": "a deep-rooted belief",
+            "zh": "一种根深蒂固的观念"
+          },
+          {
+            "en": "truly settled down",
+            "zh": "真正安定下来"
+          }
+        ],
+        "guideQ": "三个原因分别来自什么角度？（提示：法律/经济/文化——任何'为什么人们想要X'的题都可以这样扫一遍）"
+      },
+      "4": {
+        "why": "评价段 = 立场 + 让步。先亮明 On balance... a positive situation，再给两个正面论证：心理层面（安全感→稳定→社区扎根，which 从句把个人好处推到社会层面）+ 经济层面（月供是投资不是开销）。随后 Admittedly 让步承认风险（还不起贷、锁死流动性），Even so 反驳：风险可控、利大于弊。这就是官方 7+ 描述里的 a clear and developed position。",
+        "modelPara": "On balance, I believe this desire to own property is a positive situation, despite the risks involved. The security that comes from ownership gives families a stable base, and homeowners tend to put down roots in a community, which strengthens neighbourhoods as a whole. Buying a home also encourages people to save, because each mortgage payment is an investment rather than an expense. Admittedly, taking out a large loan carries obvious dangers: owners who lose their income may struggle to service their debts, and it is harder to move to another city to find work. Even so, these risks can be reduced if people borrow only what they can afford, and the benefits clearly outweigh them.",
+        "expressions": [
+          {
+            "en": "gives families a stable base",
+            "zh": "给家庭一个稳定的基础"
+          },
+          {
+            "en": "put down roots in a community",
+            "zh": "在社区扎根"
+          },
+          {
+            "en": "an investment rather than an expense",
+            "zh": "是投资而非开销"
+          },
+          {
+            "en": "service their debts",
+            "zh": "偿还债务（band 8 级搭配）"
+          },
+          {
+            "en": "the benefits clearly outweigh them",
+            "zh": "利明显大于弊"
+          }
+        ],
+        "guideQ": "让步（Admittedly）之后，作者是用什么词把立场拉回来的？（Even so——先承认再反驳的经典结构）"
+      },
+      "5": {
+        "why": "结尾一句话完成两件事：换词概括原因（security, control and a form of saving 分别对应三个原因）+ 重申评价（a positive situation）。绝不出现新观点。'the stability this creates for families and communities' 把收束推到社会层面，格局比复读题目高一层。",
+        "modelPara": "In conclusion, people want to own their homes because property provides security, control and a form of saving, and I believe the stability this creates for families and communities makes it a positive situation.",
+        "expressions": [
+          {
+            "en": "provides security, control and a form of saving",
+            "zh": "三个原因的一句话概括（排比收束）"
+          },
+          {
+            "en": "the stability this creates for families and communities",
+            "zh": "给家庭和社区带来的稳定"
+          },
+          {
+            "en": "makes it a positive situation",
+            "zh": "重申正面评价（呼应开头）"
+          }
+        ],
+        "guideQ": "你的结论有没有出现范文里没有的新观点？（不应该有——结论只收束，不扩展）"
       }
     }
   }

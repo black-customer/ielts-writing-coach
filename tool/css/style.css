@@ -306,11 +306,16 @@ body.dark .outline-form label { color: var(--primary-dark); }
 
 /* ---------- 打印：只打印诊断报告 ---------- */
 @media print {
+  @page { size: A4; margin: 14mm 12mm; }
   body * { visibility: hidden; }
-  #checkResult, #checkResult * { visibility: visible; }
-  #aiResult, #aiResult * { visibility: visible; }
-  #checkResult, #aiResult { position: absolute; left: 0; top: 0; width: 100%; }
-  header, footer, .btn-row, button { display: none !important; }
+  #checkResult, #checkResult *,
+  #aiResult, #aiResult *,
+  #printRoot, #printRoot * { visibility: visible; }
+  #checkResult, #aiResult, #printRoot { position: absolute; left: 0; top: 0; width: 100%; }
+  header, footer, .btn-row, button, nav, select, input, textarea { display: none !important; }
+  .card { border: none; box-shadow: none; padding: 0 0 8px; page-break-inside: avoid; }
+  .en { color: #111 !important; }
+  details { page-break-inside: avoid; }
 }
 
 footer { text-align: center; color: var(--muted); font-size: var(--fs-sm); padding: var(--sp-4); }
@@ -367,3 +372,19 @@ li .star-btn { margin-left: 6px; }
 
 /* ---------- Task 1 原书原图 ---------- */
 .t1img { width: 100%; max-width: 760px; display: block; margin: 0 auto; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+
+/* ---------- AI 流式输出 ---------- */
+.tut-stream { background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; max-height: 240px; overflow: auto; white-space: pre-wrap; word-break: break-word; font-size: 12.5px; line-height: 1.7; color: var(--muted); margin: 8px 0 0; }
+
+/* ---------- 智能复盘仪表盘 ---------- */
+.dash-head { display: flex; gap: 12px; flex-wrap: wrap; }
+.dash-card { flex: 1 1 260px; background: var(--accent-bg, var(--accent)); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; }
+.dash-card p { margin: 6px 0; font-size: var(--fs-md); }
+.rx { margin: 6px 0 0; padding-left: 4px; list-style: none; }
+.rx li { margin: 8px 0; display: flex; gap: 8px; align-items: center; }
+table.heat { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+table.heat th, table.heat td { border: 1px solid var(--line); padding: 5px 8px; text-align: center; }
+table.heat td.hd { color: var(--muted); text-align: left; }
+table.heat td.g { background: #dcfce7; } table.heat td.y { background: #fef9c3; } table.heat td.r { background: #fee2e2; }
+.lg { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: middle; }
+.lg.g { background: #dcfce7; border: 1px solid #86efac; } .lg.y { background: #fef9c3; border: 1px solid #fde047; } .lg.r { background: #fee2e2; border: 1px solid #fca5a5; }
