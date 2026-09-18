@@ -1,3 +1,5 @@
+[![CI](https://github.com/black-customer/ielts-writing-coach/actions/workflows/ci.yml/badge.svg)](https://github.com/black-customer/ielts-writing-coach/actions/workflows/ci.yml)
+
 # 写作研习室 · IELTS Writing —— 项目总览与使用说明
 
 > 目标：**看到任何一道雅思写作题，都知道怎么写；写完任何一篇，都明确知道差在哪。**
