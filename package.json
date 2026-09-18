@@ -1,0 +1,25 @@
+{
+  "name": "writingzcode",
+  "version": "1.0.0",
+  "description": "> 目标：**看到任何一道雅思写作题，都知道怎么写；写完任何一篇，都明确知道差在哪。**\r > 全部知识体系从前考官 Simon 的全套课程（网站课程全篇 + worksheets + 30 篇 band 9 范文 + 2026 年归档增量课）、《Ideas for IELTS Topics》、顾家北词伙表、剑桥真题 10-13、2023-2026 考场真题回忆中提炼，通过 7 路深度分析 + 人工精读交叉验证。",
+  "main": "analyze-calibration.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/black-customer/ielts-writing-coach.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/black-customer/ielts-writing-coach/issues"
+  },
+  "homepage": "https://github.com/black-customer/ielts-writing-coach#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "http-server": "^14.1.1"
+  }
+}

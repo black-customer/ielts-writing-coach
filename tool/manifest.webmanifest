@@ -1,0 +1,22 @@
+{
+ "name": "IELTS Writing Coach",
+ "short_name": "写作教练",
+ "start_url": "./index.html",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#f4f6fb",
+ "theme_color": "#2563eb",
+ "description": "基于 Simon 方法论的雅思写作离线训练工具",
+ "icons": [
+  {
+   "src": "icons/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "icons/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}
