@@ -37,7 +37,7 @@ def retry(fn, tries=4, wait=8):
 files = [f for f in subprocess.run(["git", "-c", "core.quotepath=false", "ls-files"], capture_output=True, text=True, encoding="utf-8").stdout.split("\n") if f.strip()]
 print(f"staged files: {len(files)}")
 
-# blob 缓存（断点续传）
+# blob 缓存（断点续传；带文件大小校验，文件变化即失效）
 CACHE = "models/.blob-cache.json"
 cache = json.load(open(CACHE, encoding="utf-8")) if os.path.exists(CACHE) else {}
 
@@ -60,15 +60,16 @@ except Exception:
 tree_entries = []
 for i, path in enumerate(files, 1):
     p = path.replace(os.sep, "/")
-    if p in cache:
-        tree_entries.append({"path": p, "mode": "100644", "type": "blob", "sha": cache[p]})
+    fsize = os.path.getsize(path)
+    if p in cache and cache[p].get("size") == fsize:
+        tree_entries.append({"path": p, "mode": "100644", "type": "blob", "sha": cache[p]["sha"]})
         continue
     with open(path, "rb") as f:
         b64 = base64.b64encode(f.read()).decode("ascii")
     def make(p=path, b=b64):
         return gh(f"repos/{OWNER}/{REPO}/git/blobs", "POST", {"content": b, "encoding": "base64"})
     blob = retry(make)
-    cache[p] = blob["sha"]
+    cache[p] = {"sha": blob["sha"], "size": fsize}
     json.dump(cache, open(CACHE, "w", encoding="utf-8"))
     tree_entries.append({"path": p, "mode": "100644", "type": "blob", "sha": blob["sha"]})
     if i % 25 == 0: print(f"  blobs {i}/{len(files)}")
