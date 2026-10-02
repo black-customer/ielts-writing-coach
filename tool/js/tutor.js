@@ -5,25 +5,21 @@
  * ========================================================= */
 const Tutor = (() => {
 
-  const METHOD_COMPACT = `【教学法（前雅思考官 Simon 体系，务必贯彻）】
-- Task 2 万能骨架：4 段 13-15 句。开头 2 句（句1改写题目+句2亮明立场）；主体段各 5-6 句（主题句→解释→具体例子→结果）；结尾 1 句换词重申，绝不加新观点。
-- 开头改写手法：同义替换/词性转换/语序重组，但保留题目核心词。
-- 主体段展开：一个观点写透（idea→explain→example），例子要具体（谁/哪里/什么事/数字）；不用贪多，全文只展开 2 个观点。
-- 立场选择标准：哪个立场词伙最多、最好展开就写哪个（不是"最真实"的）。让步式用 While I accept A, I believe B。
-- 衔接真相：Firstly/Moreover 连发是 6 分特征；高分靠 this/these 指代、关键词复现、代词回指。
-- 词汇真相：主题词伙（topic collocations）才加分；utilize/plethora 这类大词反而扣分。
-- 语法真相：准确性优先于复杂度。9 分=无懈可击；7 分=立场清晰+观点有延伸支撑+错误少。
-- 评分锚点：官方样卷校准显示该体系评分与官方一致（MAE 0.05）。`;
+  const METHOD_COMPACT = `【教学参考：Task 2】
+- 本工具的逐段训练使用四段脚手架；独立作文的段数和句数由内容决定，不能以模板匹配程度判分。
+- 回应题目的主要部分，保持清楚的立场。用解释、细节或具体情境支撑观点，不要求固定例子标记。
+- 根据真实逻辑使用连接、指代与替换，不能因某个连接词出现或缺失直接判断分数。
+- 词汇看准确性、范围、搭配和语体，不按大词清单扣分，也不按词伙数量加分。
+- 按原稿指出一个最重要的问题，逐字引用证据，给自己能完成的修改动作与检查标准。保留学生原意，不添加虚构事实。
+- 准确性与句式范围都需要考虑，不能由一个句式保证某个 Band。`;
 
-  const METHOD_T1 = `【教学法（前雅思考官 Simon 体系，Task 1 小作文，务必贯彻）】
-- Task 1 万能骨架：4 段 160-190 词。开头 1-2 句（改写题干：同义替换 show/对象/地点/时间）；概括段 2 句（选 1-2 个最显著/最总体特征，写趋势或总差异，不写细节数字）；细节段×2（把数据按"组"分开写，每段一个组，数字要选代表性的：起点/终点/峰值/交点/倍数）。
-- 概括段是 8 分的分水岭：没有概括段 TA 上不了 6。概括=能从图上一眼看出的结论，不是流水账开头。
-- 永远不写观点、原因、推测图外信息；数字必须来自图（教学场景图数据由题干描述给出，保持内部一致即可）。
-- 时态由时间决定：过去年份用过去时；无年份/流程图用一般现在时+被动；有将来年份用将来时。
-- 对比是灵魂：每个数字尽量带比较对象（倍数/差距/反超/最值），不许孤立罗列。
-- 数据描述词伙按图型积累：趋势（surge, double, plateau, a threefold increase）、占比（account for, make up）、流程（is converted, before being）。
-- 衔接真相：Firstly/Moreover 连发是 6 分特征；高分靠 this/these 指代、对比句内衔接、关键词复现。
-- 语法真相：准确性优先于复杂度。9 分=无懈可击；7 分=概括到位+数据分组清晰+错误少。`;
+  const METHOD_T1 = `【教学参考：Task 1】
+- 本工具的逐段训练使用开头、概括、两组细节作为脚手架；不要求固定句数、数字数量或概括位置。
+- 对照原图选择主要特征，组织重要细节和比较。地图与流程图按实际位置、变化和阶段解释。
+- 数字、单位和年份来自原图或已提供的数据；没有原图时明确无法核验，不补造数据或图外原因。
+- 时态由时间关系决定，语态由主语与动作决定，不要求所有人工流程用被动或自然过程用主动。
+- 衔接要表达真实关系，用词准确得体；模板、特定连接词和段落位置不能换算为分数。
+- 保留学生原意，引用实际原句，给一个可执行动作和自查标准。`;
 
   // ---------- 知识注入组装 ----------
   // Task 1 图型指导（替代 T2 的题型 playbook）
@@ -31,8 +27,8 @@ const Tutor = (() => {
     "line graph": "线图：按趋势走向分组（上升组/下降组/波动组），或按时间段分组。核心语言：increase/rise/surge/double/plateau/decline/remain stable + 倍数表达。",
     "bar chart": "柱图：柱子高低即排名，按「最大组 vs 其他」或时间前后分组。核心语言：the most popular, twice as many, followed by, in contrast。",
     "pie chart": "饼图：按占比大小分组，突出最大与最小份额及变化。核心语言：account for, make up, the largest proportion, a quarter of。",
-    "table": "表格：数字最密，必须先找「最值+例外」再分组。核心语言：ranked first, at the top/bottom of the list, the exception was。",
-    "tables": "表格：数字最密，必须先找「最值+例外」再分组。核心语言：ranked first, at the top/bottom of the list, the exception was。",
+    "table": "表格：数字较密，可先找「最值+例外」再分组。核心语言：ranked first, at the top/bottom of the list, the exception was。",
+    "tables": "表格：数字较密，可先找「最值+例外」再分组。核心语言：ranked first, at the top/bottom of the list, the exception was。",
     "maps": "地图：按时间前后分两段写变化，突出「新增/拆除/扩建/用途改变」。核心语言：was replaced by, was converted into, a new ... was built to the north of。",
     "process diagram": "流程图：按工序先后顺序写，用被动语态+顺序连接。核心语言：is transported, is then converted, before being, the final step is。",
     "mixed charts": "混合图：先分别概括两图各自的最显著特征，细节段一图一段。",
@@ -154,7 +150,7 @@ ${tc.stage === 0 ? "尚未动笔，需要从审题开始教。" : `已写内容�
 "expressions": [{"en":"范文中的数据描述/对比表达","zh":"中文"}, 8-10 条，从范文中摘取],
 "wordCount": 数字}
 
-要求：概括段绝不写细节数字；细节段的每个数字尽量带对比（倍数/差距/最值）；不写任何观点或原因；时态与题干时间范围一致；如果题干没给具体数字，就按题干描述合理设定一组内部一致的数字写出示范。`;
+要求：概括段聚焦总体特征；细节段选择关键数据并作相关比较；不写图外观点或原因；时态与题干一致；没有原图数据时不能自行设定数字。`;
     }
     return `请为这道题写一篇 band 8-9 的完整考官风格范文，作为教学示范。严格输出 JSON：
 {"essay": "完整范文（4段，段落间用\\n\\n分隔，250-300词）",
@@ -172,8 +168,8 @@ ${tc.stage === 0 ? "尚未动笔，需要从审题开始教。" : `已写内容�
 """${studentText || "（未写）"}"""
 
 范文对应段是：
-"""${(tc.model && tc.model.paraNotes && tc.model.paraNotes[paraIdx - 1] || "")}
-范文该段原文：${extractPara(tc.model && tc.model.essay, paraIdx - 1)}"""
+"""${(tc.model && tc.model.paraNotes && tc.model.paraNotes[paraIdx - 2] || "")}
+范文该段原文：${extractPara(tc.model && tc.model.essay, paraIdx - 2)}"""
 
 请作为导师点评学生的这一段，并教学。严格输出 JSON：
 {"verdict": "对学生这一段的总评（对比范文差距在哪，中文，80字内；未写则说明这段要完成什么任务）",
@@ -205,11 +201,14 @@ ${focus}`;
 
   // ---------- 对外接口 ----------
   async function teach0(tc, opts) { return call(promptStage0(tc), tc, 3000, opts); }
-  async function modelEssay(tc, opts) { return call(promptStage1(tc), tc, 6000, opts); }
+  async function modelEssay(tc, opts) {
+    if (tc.task === 1) throw new Error("这道小作文尚无内置范文，当前 AI 请求也未接收原图数据。请选有内置范文的题目练习，或对照原图独立作答后做语言诊断。");
+    return call(promptStage1(tc), tc, 6000, opts);
+  }
   async function paraTeach(tc, paraIdx, opts) {
     const names = paraNames(tc);
     const focus = TEACH_FOCUS[tc.task === 1 ? "t1" : "t2"][paraIdx];
-    const modelPara = extractPara(tc.model && tc.model.essay, paraIdx - 1);
+    const modelPara = extractPara(tc.model && tc.model.essay, paraIdx - 2);
     return call(`请为这道题的"${names[paraIdx]}"上一节微教学课（学生还没写这一段，范文对应段供你参考）。严格输出 JSON：
 {"why": "这一段在全文中的任务 + 范文是怎么完成这个任务的（中文，100字内，讲清思路从哪来）",
 "modelPara": "范文对应段的英文原文",
@@ -221,7 +220,7 @@ ${focus}
 """${modelPara}"""`, tc, 3000, opts);
   }
   async function paraFeedback(tc, paraIdx, opts) {
-    const studentText = tc.paraTexts[paraIdx - 1] || "";
+    const studentText = tc.paraTexts[paraIdx - 2] || "";
     return call(promptParaStage(tc, paraIdx, studentText), tc, 4000, opts);
   }
   async function summary(tc, opts) { return call(promptSummary(tc), tc, 2500, opts); }

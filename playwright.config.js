@@ -17,8 +17,8 @@ module.exports = defineConfig({
     video: "off",
   },
   webServer: [
-    { command: "python -m http.server 8123 --directory tool", port: 8123, reuseExistingServer: true, timeout: 30_000 },
-    { command: "python -m http.server 8200 --directory dist", port: 8200, reuseExistingServer: true, timeout: 30_000 },
+    { command: "python -m http.server 8123 --bind 127.0.0.1 --directory tool", port: 8123, reuseExistingServer: true, timeout: 30_000, stdout: 'ignore', stderr: 'ignore' },
+    { command: "python -m http.server 8200 --bind 127.0.0.1 --directory dist", port: 8200, reuseExistingServer: true, timeout: 30_000, stdout: 'ignore', stderr: 'ignore' },
   ],
   projects: [{ name: "desktop", use: { ...devices["Desktop Chrome"] } }],
 });

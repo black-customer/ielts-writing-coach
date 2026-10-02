@@ -10,6 +10,11 @@ let checkMode = "t2";
 let timerId = null, timerLeft = 40 * 60, timerRunning = false;
 let lastCheck = null;   // 最近一次诊断结果（供保存记录用）
 let lastAi = null;      // 最近一次 AI 精批结果
+let lastAiContext = null;
+let aiReviewSeq = 0;
+function matchingAi(context) {
+  return lastAiContext && lastAiContext.essay === context.essay && lastAiContext.question === context.question && lastAiContext.mode === context.mode ? lastAi : null;
+}
 let rewriteOf = null;   // 改写对比：基于哪条旧记录
 let flash = null;       // 闪卡会话状态
 let corpusKind = "t2";  // 范文库当前页签
@@ -18,8 +23,8 @@ let mockT1Text = "";    // 模考第 1 阶段（Task 1）暂存内容
 
 const $ = sel => document.querySelector(sel);
 const $$ = sel => [...document.querySelectorAll(sel)];
-const esc = s => (s || "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-function debounce(fn, ms) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; }
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+function debounce(fn, ms) { let t; return (...a) => { clearTimeout(t); if(a[0]?.isComposing)return; t = setTimeout(() => fn(...a), ms); }; }
 // 知识文档链接：《01-Task2核心方法论》→ docs/01.html；docRef 如 "01 §6"、"04 §2"
 function docLink(docRef) {
   const m = String(docRef).match(/^(0\d|1[0-2])/);
@@ -42,54 +47,58 @@ function pagerHtml(page, pageCount) {
   }
   return `<div class="pager"><button class="small" data-pg="${page - 1}" ${page <= 1 ? "disabled" : ""}>‹ 上一页</button>${btns}<button class="small" data-pg="${page + 1}" ${page >= pageCount ? "disabled" : ""}>下一页 ›</button><span class="hint">第 ${page} / ${pageCount} 页</span></div>`;
 }
-function pagerHtml(page, pageCount) {
-  if (pageCount <= 1) return "";
-  let btns = "";
-  for (let i = 1; i <= pageCount; i++) {
-    if (pageCount > 9 && i > 2 && i < pageCount - 1 && Math.abs(i - page) > 1) {
-      if (!btns.endsWith("…")) btns += `<span class="hint">…</span>`;
-      continue;
-    }
-    btns += `<button class="pg-btn small ${i === page ? "active" : ""}" data-pg="${i}">${i}</button>`;
-  }
-  return `<div class="pager"><button class="small" data-pg="${page - 1}" ${page <= 1 ? "disabled" : ""}>‹ 上一页</button>${btns}<button class="small" data-pg="${page + 1}" ${page >= pageCount ? "disabled" : ""}>下一页 ›</button><span class="hint">第 ${page} / ${pageCount} 页</span></div>`;
-}
 
 // ---------------- 主题（明/暗） ----------------
 function applyTheme(t) {
   document.body.classList.toggle("dark", t === "dark");
-  $("#btnTheme").textContent = t === "dark" ? "☀️" : "🌙";
+  $("#btnTheme").innerHTML = UI.icon('sun');
+  $("#btnTheme").setAttribute('aria-label',t === 'dark' ? '切换到浅色主题' : '切换到深色主题');
   Store.set("theme", t);
 }
 $("#btnTheme").onclick = () => applyTheme(Store.get("theme", "light") === "dark" ? "light" : "dark");
 applyTheme(Store.get("theme", "light"));
 
 // ---------------- 导航 ----------------
-$$(".nav-btn").forEach(b => b.onclick = () => {
+const viewPositions = new Map();
+const viewSelections = new Map();
+const VIEW_COPY = {train:['今日训练','从一个明确的目标开始，把反馈变成自己的表达。'],write:['写作室','让想法成为完整的文章。'],check:['诊断与改写','在原文中定位问题，再写出自己的下一版。'],analyze:['审题与提纲','先想清楚题目在问什么，再组织你的答案。'],library:['词伙与闪卡','在语境中回忆，把表达用进自己的文章。'],bank:['题库与范文','选一道题，读一种写法。'],plan:['学习路线','把长期目标拆成今天可以完成的练习。'],progress:['记录与词本','回看改写与复测，观察自己的进步。']};
+function activateView(view, task = false) {
+  const current = $('.view.active')?.id.replace('view-','');
+  UI.flush();
+  if (current !== view) { viewPositions.set(current,window.scrollY); viewSelections.set(current,EssayEditor.captureSelection()); }
+  const b=$(`.nav-btn[data-view="${view}"]`);
   $$(".nav-btn").forEach(x => x.classList.remove("active"));
   b.classList.add("active");
+  $$('.nav-btn').forEach(x=>x.setAttribute('aria-current',x===b?'page':'false'));
   $$(".view").forEach(v => v.classList.remove("active"));
   $("#view-" + b.dataset.view).classList.add("active");
-  if (b.dataset.view === "progress") renderProgress();
-  if (b.dataset.view === "train" && typeof renderTraining === "function") renderTraining();
-  window.scrollTo(0, 0);
-});
-function goto(view) { $$(".nav-btn").find(b => b.dataset.view === view).click(); }
+  if (view === "progress") renderProgress();
+  if (view === "train" && typeof renderTraining === "function" && (!$('#trainHome').children.length || task)) renderTraining();
+  else if(view==='train' && current!==view && !tc && !$('#learningPractice')?.childElementCount) renderHome();
+  $('#pageTitle').textContent=VIEW_COPY[view][0];$('#pageDescription').textContent=VIEW_COPY[view][1];
+  $('#pageMeta').textContent=new Date().toLocaleDateString('zh-CN',{month:'long',day:'numeric'});
+  if(current!==view) requestAnimationFrame(()=>{window.scrollTo(0,task?0:viewPositions.get(view)||0);if(!task)EssayEditor.restoreSelection(viewSelections.get(view));});
+}
+$$(".nav-btn").forEach(b => b.onclick = () => activateView(b.dataset.view));
+function goto(view) { activateView(view,true); }
 
-// ---------------- ⭐ 收藏（事件委托） ----------------
+// ---------------- 收藏（事件委托） ----------------
 document.addEventListener("click", e => {
   const btn = e.target.closest(".star-btn");
   if (!btn) return;
   const item = { topic: btn.dataset.topic || "", en: btn.dataset.en || "", zh: btn.dataset.zh || "", kind: btn.dataset.kind || "" };
   const on = Store.toggleStar(item);
+  if(on===null){UI.notice('收藏保存失败，请重试。',{error:true});return;}
   btn.classList.toggle("on", on);
+  btn.setAttribute('aria-label',on?'取消收藏':'收藏到词本');
+  UI.notice(on?'已收藏到词本':'已取消收藏');
 });
 function starBtn(topic, en, zh, kind) {
   const on = Store.isStarred(en);
-  return `<button class="star-btn ${on ? "on" : ""}" data-topic="${esc(topic)}" data-en="${esc(en)}" data-zh="${esc(zh)}" data-kind="${esc(kind || "")}" title="收藏到词本">★</button>`;
+  return `<button class="star-btn ${on ? "on" : ""}" data-topic="${esc(topic)}" data-en="${esc(en)}" data-zh="${esc(zh)}" data-kind="${esc(kind || "")}" title="收藏到词本"></button>`;
 }
 
-// ---------------- ① 审题室 ----------------
+// ---------------- ① 审题与提纲 ----------------
 $("#btnAnalyze").onclick = () => {
   const q = $("#questionInput").value.trim();
   const res = Analyzer.analyze(q);
@@ -112,7 +121,7 @@ function renderAnalysis(res) {
     const libs = TopicsLibrary.filter(t => (t.keys || []).some(k => topics.includes(k)));
     const li = (arr) => (arr || []).map(x => `<li class="en">${esc(x.en)}${x.zh ? ` <span class="zh" style="color:var(--muted)">（${esc(x.zh)}）</span>` : ""}${starBtn("", x.en, x.zh, "idea")}</li>`).join("");
     const tBlocks = libs.map(lib => {
-      let html = `<div class="topic-block"><h3>💡 ${esc(lib.name)} 观点弹药</h3>`;
+      let html = `<div class="topic-block"><h3>${esc(lib.name)} 观点弹药</h3>`;
       if (lib.ask && lib.ask.length) html += `<p class="hint">常考问法：${lib.ask.slice(0, 3).map(esc).join(" / ")}</p>`;
       if (lib.pro && lib.pro.length) html += `<div class="persp"><div class="ptitle">正方 / 支持观点（${lib.pro.length}）</div><ul>${li(lib.pro)}</ul></div>`;
       if (lib.con && lib.con.length) html += `<div class="persp"><div class="ptitle">反方 / 反对观点（${lib.con.length}）</div><ul>${li(lib.con)}</ul></div>`;
@@ -120,13 +129,13 @@ function renderAnalysis(res) {
       html += `</div>`;
       return html;
     }).join("");
-    if (tBlocks) ammoHtml += `<div class="ammo-box"><h3>🧠 话题观点库（想观点先来这里借，完整版在「弹药库」）</h3>${tBlocks}</div>`;
+    if (tBlocks) ammoHtml += `<div class="ammo-box"><h3>话题观点库（想观点先来这里借，完整版在「词伙与闪卡」）</h3>${tBlocks}</div>`;
   }
   if (typeof Collocations !== "undefined" && topics.length) {
     const items = [];
     topics.forEach(name => (Collocations.BY_TOPIC[name] || []).slice(0, 10).forEach(c => items.push(c)));
     if (items.length) {
-      ammoHtml += `<div class="ammo-box"><h3>🔤 本题话题词伙（LR 7 分的子弹，完整词表去弹药库）</h3><div class="coll-grid">${items.map(c => `<div class="coll-item"><span class="en">${esc(c.en)}</span> <span class="zh">—— ${esc(c.zh)}</span>${starBtn(topics[0], c.en, c.zh, "coll")}</div>`).join("")}</div></div>`;
+      ammoHtml += `<div class="ammo-box"><h3>本题话题词伙（LR 7 分的子弹，完整词表去词伙与闪卡）</h3><div class="coll-grid">${items.map(c => `<div class="coll-item"><span class="en">${esc(c.en)}</span> <span class="zh">—— ${esc(c.zh)}</span>${starBtn(topics[0], c.en, c.zh, "coll")}</div>`).join("")}</div></div>`;
     }
   }
 
@@ -138,12 +147,12 @@ function renderAnalysis(res) {
          ${res.det.evidence.map(e => `<span class="badge ok">依据："${esc(e)}"</span>`).join(" ")}
          ${topics.length ? `<span class="badge warn">话题：${topics.map(esc).join(" · ")}</span>` : `<span class="badge warn">话题：未匹配到主题库（用视角法自己生成观点：个人/经济/社会/环境/健康/时间/公平）</span>`}</p>
 
-      <details class="fold" open><summary>🎯 立场怎么选</summary><div class="fold-body">
+      <details class="fold" open><summary>立场怎么选</summary><div class="fold-body">
         <div>${pb.stance}</div>
         <div style="margin-top:6px">${pb.choose}</div>
       </div></details>
 
-      <details class="fold" open><summary>🗺️ 四段作战图 <span class="badge-count">主体段占 70% 篇幅与分数</span></summary><div class="fold-body">
+      <details class="fold" open><summary>四段作战图 <span class="badge-count">主体段占 70% 篇幅与分数</span></summary><div class="fold-body">
         <div class="roadmap-grid">
           ${pb.paragraphs.map((p, i) => `
             <div class="para-card">
@@ -153,26 +162,24 @@ function renderAnalysis(res) {
         </div>
       </div></details>
 
-      <details class="fold" open><summary>📝 句式模板 <span class="badge-count">照着填空，5 分钟写完开头</span></summary><div class="fold-body">
+      <details class="fold" open><summary>句式模板 <span class="badge-count">照着填空，5 分钟写完开头</span></summary><div class="fold-body">
         ${pb.templates.map(t => `<div class="tpl"><b>${t.label}：</b><br>${t.text}</div>`).join("")}
       </div></details>
 
-      <details class="fold"><summary>⚠️ 这类题最容易踩的坑</summary><div class="fold-body">
+      <details class="fold"><summary>这类题最容易踩的坑</summary><div class="fold-body">
         <div class="trap">${pb.traps.map(t => `• ${t}`).join("<br>")}</div>
       </div></details>
       ${ammoHtml}
       <div class="btn-row">
         <button class="primary" onclick="gotoWrite()">→ 带着这道题去写作室</button>
-        <button onclick="startOutline()">✏️ 提纲训练（10 分钟）</button>
+        <button onclick="startOutline()">提纲训练（10 分钟）</button>
       </div>
     </div>`;
 }
 
-window.gotoWrite = function () {
+window.gotoWrite = async function () {
   if (!currentQuestion) return;
-  $("#writeQuestion").textContent = currentQuestion;
-  setWriteMode("t2");
-  goto("write");
+  await TaskFlow.write({task:2,question:currentQuestion,qtype:currentAnalysis?.det?.type||''});
 };
 
 // ---------------- ② 写作室 ----------------
@@ -186,14 +193,14 @@ function renderMockBanner() {
   div.id = "mockBanner";
   div.className = "mock-banner";
   div.innerHTML = mockPhase === 1
-    ? `<span>🎓 模考第 1 阶段 / 2 —— Task 1 小作文，20 分钟。倒计时结束后自动进入 Task 2。</span><button onclick="abortMock()">退出模考</button>`
-    : `<span>🎓 模考第 2 阶段 / 2 —— Task 2 大作文，40 分钟。写完后先点右侧按钮取回 Task 1，再去诊断室。</span>
-       <span><button onclick="recallMockT1()">📋 取回 Task 1</button> <button onclick="abortMock()">退出模考</button></span>`;
+    ? `<span>模考第 1 阶段 / 2 —— Task 1 小作文，20 分钟。倒计时结束后自动进入 Task 2。</span><button onclick="abortMock()">退出模考</button>`
+    : `<span>模考第 2 阶段 / 2 —— Task 2 大作文，40 分钟。写完后先点右侧按钮取回 Task 1，再去诊断与改写。</span>
+       <span><button onclick="recallMockT1()">取回 Task 1</button> <button onclick="abortMock()">退出模考</button></span>`;
   $("#paragraphBoxes").before(div);
 }
 window.abortMock = function () { setWriteMode("t2"); };
 window.recallMockT1 = function () {
-  if (!mockT1Text) { alert("第 1 阶段没有内容。"); return; }
+  if (!mockT1Text) { UI.notice("第 1 阶段没有内容。"); return; }
   setCheckMode("t1");
   $("#essayInput").value = mockT1Text;
   $("#checkQuestion").value = $("#t1QuestionInput").value || "";
@@ -201,10 +208,13 @@ window.recallMockT1 = function () {
 };
 
 function setWriteMode(mode) {
+  if ($('#fullEssay') && !saveWritingDraft(true)) return;
   writeMode = mode;
   if (mode === "mock") mockPhase = 1;
   $$("#writeModeSwitch .mode-btn").forEach(b => b.classList.toggle("active", b.dataset.mode === mode));
   $("#t1ChartPicker").classList.toggle("hidden", !(mode === "t1" || (mode === "mock" && mockPhase === 1)));
+  $('#writeQuestionInput').classList.toggle('hidden',effMode()==='t1');
+  $('label[for="writeQuestionInput"]').classList.toggle('hidden',effMode()==='t1');
   resetTimer(mode === "t2" ? 40 * 60 : 20 * 60);
   syncTargets();
   buildParagraphBoxes();
@@ -215,42 +225,31 @@ function syncTargets() {
   $("#sentTarget").textContent = isT1 ? "8–11" : "13–15";
 }
 $$("#writeModeSwitch .mode-btn").forEach(b => b.onclick = () => setWriteMode(b.dataset.mode));
-$("#t1ChartSelect").onchange = buildParagraphBoxes;
+$('#t1ChartSelect').onchange=()=>{UI.flush();saveWritingDraft(true);renderSideGuide();};
 
 function t1Paragraphs() {
   const ct = $("#t1ChartSelect").value;
   const rule = (T1.chartTypes.find(c => c.type === ct) || {});
   return [
     { t: "Introduction（1 句改写题干）", items: ["shows → compares / illustrates / gives information about", "换核心词：the number of ↔ the figure for；proportion ↔ percentage", "换时间表达：between 1999 and 2009 ↔ over a 10-year period"] },
-    { t: "Overview（2 句总体特征，不带数字）", items: ["句式：It is clear that... / It is also noticeable that... / Overall,...", "本图 overview 找什么：" + (rule.overview || "最显眼的两个总体特征"), "⚠️ 没有清晰 overview，TA 上不了 6"] },
-    { t: "Details 1（约 3 句，≥3 个数字）", items: ["本图分组法：" + (rule.rule || ""), "首年/最大值优先，每段 ≥3 个数字"] },
-    { t: "Details 2（约 3 句，≥3 个数字）", items: ["特殊年（峰值/交叉/剧变）+ 末年", "全文合计 6–7 个数字，中间值直接忽略"] }
+    { t: "Overview（2 句总体特征，不带数字）", items: ["句式：It is clear that... / It is also noticeable that... / Overall,...", "本图 overview 找什么：" + (rule.overview || "最显眼的两个总体特征"), "概括应准确呈现原图的主要特征，不能由关键词判断质量"] },
+    { t: "Details 1（组织一组相关信息）", items: ["本图分组法：" + (rule.rule || ""), "核对所选信息与比较关系，数字数量取决于图表"] },
+    { t: "Details 2（补齐另一组重要信息）", items: ["特殊年（峰值/交叉/剧变）+ 末年", "选能说明主要变化的节点，不机械省略或罗列"] }
   ];
 }
 
 function buildParagraphBoxes() {
   renderMockBanner();
   const mode = effMode();
-  let paras, targetWords;
-  if (mode === "t1") {
-    paras = t1Paragraphs();
-    targetWords = [[30, 60], [40, 80], [80, 140], [80, 140]];
-  } else {
-    const type = currentAnalysis ? currentAnalysis.det.type : "opinion";
-    const pb = Analyzer.PLAYBOOK[type] || Analyzer.PLAYBOOK.opinion;
-    paras = pb.paragraphs;
-    targetWords = [[40, 60], [85, 200], [85, 200], [25, 60]];
-  }
-  $("#paragraphBoxes").innerHTML = paras.map((p, i) => `
-    <div class="card para-box" data-idx="${i}">
-      <div class="box-head">
-        <span class="box-title">${i + 1}. ${p.t}</span>
-        <span class="box-count" id="pc-${i}">0 词</span>
-      </div>
-      <div class="skeleton">✅ 骨架：${p.items.join(" · ")}</div>
-      <textarea rows="6" id="pt-${i}" placeholder="照着上面的骨架写..."></textarea>
-    </div>`).join("");
-  $$("#paragraphBoxes textarea").forEach(t => t.oninput = updateCounts);
+  const draft=Store.getDraft(writeMode==='mock'?'mock_'+mode:mode);
+  TaskFlow.writingMeta={qKey:draft?.qKey||'',chartKey:draft?.chartKey||'',qtype:draft?.qtype||''};
+  if(mode==='t1' && draft?.chart) $('#t1ChartSelect').value=draft.chart;
+  $('#writeTaskChart').innerHTML=mode==='t1'?TaskFlow.writingMeta.chartKey?`<details class="chart-fold" open><summary>本次题目图表</summary><div class="chart-wrap">${T1Charts.render(TaskFlow.writingMeta.chartKey)}</div></details>`:'<p class="hint">未关联原图，请对照自己的题目图表写作。</p>':'';
+  $("#paragraphBoxes").innerHTML = `<div class="editor-sheet"><div class="editor-label"><label for="fullEssay">我的作文</label><span>Task ${mode==='t1'?'1':'2'} · 自由分段</span></div><textarea id="fullEssay" rows="15" spellcheck="false" placeholder="从你的第一句话开始。段落之间空一行。">${esc(draft?.text||'')}</textarea></div>`;
+  $('#fullEssay').oninput=()=>{updateCounts();saveWritingDraft();};
+  if (draft?.question) { $('#writeQuestionInput').value=draft.question; if(mode==='t1')$('#t1QuestionInput').value=draft.question; }
+  else $('#writeQuestionInput').value=mode==='t2'?currentQuestion:$('#t1QuestionInput').value;
+  $('#writeSaveStatus').textContent=draft?'已恢复本机草稿':'草稿自动保存';
   renderSideGuide();
   updateCounts();
 }
@@ -269,32 +268,42 @@ function updateCounts() {
   $("#totalSentences").textContent = totalS;
 }
 
+function saveWritingDraft(immediate=false) {
+  const text=EssayEditor.getText(), mode=effMode();
+  const key=writeMode==='mock'?'mock_'+mode:mode;
+  const question=mode==='t1'?$('#t1QuestionInput').value:$('#writeQuestionInput').value;
+  const chart=$('#t1ChartSelect').value;
+  const meta={...TaskFlow.writingMeta,question,chart};
+  return UI.save('writing',()=>Store.saveDraft(key,text,meta),$('#writeSaveStatus'),immediate);
+}
+$('#writeQuestionInput').oninput=()=>{currentQuestion=$('#writeQuestionInput').value;TaskFlow.writingMeta={};saveWritingDraft();};
+$('#t1QuestionInput').oninput=()=>{TaskFlow.writingMeta={};$('#writeTaskChart').innerHTML='<p class="hint">题干已修改，请核对原图是否仍对应当前题目。</p>';saveWritingDraft();};
 function renderSideGuide() {
   if (effMode() === "t1") {
     const ct = $("#t1ChartSelect").value;
     const rule = (T1.chartTypes.find(c => c.type === ct) || {});
     $("#writeGuide").innerHTML = `
-      <h3>⏱ 20 分钟分配</h3>
-      <ul><li>0-5'：读图找 overview + intro 改写</li><li>5-10'：Overview 两句</li><li>10-20'：细节两段</li><li>⚠️ Task 1 只占总分 1/3，绝不超时</li></ul>
-      <h3>📊 ${esc(ct)}</h3>
+      <h3>20 分钟参考分配</h3>
+      <ul><li>0-5'：读图找 overview + intro 改写</li><li>5-10'：概括主要特征</li><li>10-20'：细节两段</li><li>Task 1 只占总分 1/3，绝不超时</li></ul>
+      <h3>${esc(ct)}</h3>
       <ul><li><b>分组法：</b>${esc(rule.rule || "")}</li><li><b>Overview 找：</b>${esc(rule.overview || "")}</li></ul>
-      <h3>🩹 交卷七查</h3>
+      <h3>交卷七查</h3>
       <ul>${T1.checklist.map(m => `<li>${m}</li>`).join("")}</ul>
-      <h3>❌ 万人坑</h3>
+      <h3>万人坑</h3>
       <ul>${T1.mistakes.slice(0, 6).map(m => `<li>${m}</li>`).join("")}</ul>`;
   } else {
-    const type = currentAnalysis ? currentAnalysis.det.type : "opinion";
+    const type = TaskFlow.writingMeta.qtype || currentAnalysis?.det?.type || "opinion";
     const pb = Analyzer.PLAYBOOK[type] || Analyzer.PLAYBOOK.opinion;
     $("#writeGuide").innerHTML = `
-      <h3>⏱ 40 分钟分配</h3>
-      <ul><li>0-10'：读题3遍+列提纲</li><li>10-15'：开头 2 句</li><li>15-35'：两个主体段（10'/段）</li><li>35-40'：1 句结尾+检查</li></ul>
-      <h3>🎯 立场提醒</h3>
+      <h3>40 分钟参考分配</h3>
+      <ul><li>0-10'：读题+列提纲</li><li>10-15'：交代话题与回答</li><li>15-35'：两个主体段（10'/段）</li><li>35-40'：总结回答+检查</li></ul>
+      <h3>立场提醒</h3>
       <div>${pb.choose}</div>
-      <h3>📝 模板</h3>
+      <h3>参考表达</h3><p class="hint">按自己的回答调整，不要求固定句数或短语。</p>
       ${pb.templates.slice(0, 2).map(t => `<div class="tpl">${t.label}：${t.text}</div>`).join("")}
-      <h3>⚠️ 避坑</h3>
+      <h3>避坑</h3>
       <ul>${pb.traps.map(t => `<li>${t}</li>`).join("")}</ul>
-      <h3>🩹 交卷三查</h3>
+      <h3>交卷三查</h3>
       <ul><li>动词时态/主谓一致</li><li>名词单复数/冠词</li><li>Although...but、逗号粘连</li></ul>`;
   }
 }
@@ -316,44 +325,41 @@ $("#btnTimerStart").onclick = () => {
     if (timerLeft <= 0) {
       clearInterval(timerId); timerRunning = false;
       if (writeMode === "mock" && mockPhase === 1) {
+        saveWritingDraft(true);
         // 模考第 1 阶段结束 → 保留 T1 内容，进入 T2
         mockT1Text = $$("#paragraphBoxes textarea").map(t => t.value.trim()).filter(Boolean).join("\n\n");
         mockPhase = 2;
+        $('#writeQuestionInput').classList.remove('hidden');$('label[for="writeQuestionInput"]').classList.remove('hidden');
         $("#t1ChartPicker").classList.add("hidden");
         syncTargets();
         buildParagraphBoxes();
         resetTimer(40 * 60);
-        alert("Task 1 时间到！现在开始 Task 2 大作文（40 分钟）。T1 内容已暂存，模考结束后在下方按钮取回。");
+        UI.notice("Task 1 时间到！现在开始 Task 2 大作文（40 分钟）。T1 内容已暂存，模考结束后在下方按钮取回。");
         renderMockBanner();
       } else if (writeMode === "mock") {
-        alert("模考结束！点击「取回 Task 1 内容」按钮，然后去诊断室分别诊断两篇。");
+        UI.notice("模考结束！点击「取回 Task 1 内容」按钮，然后去诊断与改写分别诊断两篇。");
         renderMockBanner();
       } else {
-        alert("时间到！" + (writeMode === "t1" ? "Task 1 只占 1/3 分，立刻停笔。" : "Task 2 必须停笔。"));
+        UI.notice("时间到！" + (writeMode === "t1" ? "Task 1 只占 1/3 分，立刻停笔。" : "Task 2 必须停笔。"));
       }
     }
   }, 1000);
 };
-$("#btnTimerReset").onclick = () => resetTimer(writeMode === "t1" ? 20 * 60 : 40 * 60);
+$('#btnTimerReset').onclick=()=>resetTimer(effMode()==='t1'?20*60:40*60);
 
 $("#btnSaveDraft").onclick = () => {
-  const text = $$("#paragraphBoxes textarea").map(t => t.value).join("\n\n");
-  Store.saveDraft(writeMode, text);
-  alert("草稿已保存到本机。下次打开写作室可恢复。");
+  if(saveWritingDraft(true)) UI.notice('草稿已保存到本机');
 };
+$('#btnCopyDraft').onclick=()=>UI.copy(EssayEditor.getText());
 
 $("#btnToCheck").onclick = () => {
-  const text = $$("#paragraphBoxes textarea").map(t => t.value.trim()).filter(Boolean).join("\n\n");
-  if (!text) alert("先在写作室写点内容，或直接在下面粘贴作文。");
-  $("#essayInput").value = text;
-  setCheckMode(writeMode);
-  if (writeMode === "t2" && currentAnalysis) $("#checkType").value = currentAnalysis.det.type;
-  if (writeMode === "t1") $("#checkQuestion").value = $("#t1QuestionInput").value || "";
-  else $("#checkQuestion").value = currentQuestion || "";
-  goto("check");
+  const text=EssayEditor.getText().trim();
+  if(!text){UI.errorAt($('#fullEssay'),'请先写下你的作文。');return;}
+  if(!saveWritingDraft(true))return;
+  TaskFlow.diagnose(text,{...TaskFlow.writingMeta,mode:effMode(),question:effMode()==='t1'?$('#t1QuestionInput').value:$('#writeQuestionInput').value,chart:$('#t1ChartSelect').value});
 };
 
-// ---------------- 🤖 AI 考官精批 ----------------
+// ---------------- AI 考官精批 ----------------
 $("#btnAiSettings").onclick = () => {
   const p = $("#aiSettingsPanel");
   p.classList.toggle("hidden");
@@ -365,41 +371,45 @@ $("#btnAiSettings").onclick = () => {
   }
 };
 $("#btnAiSave").onclick = () => {
-  Store.set("ai", { apiKey: $("#aiKey").value.trim() || IWC_CONFIG.apiKey, baseUrl: $("#aiBase").value.trim() || IWC_CONFIG.baseUrl, model: $("#aiModel").value });
-  alert("已保存 AI 设置。");
+  if(!Store.set("ai", { apiKey: $("#aiKey").value.trim() || IWC_CONFIG.apiKey, baseUrl: $("#aiBase").value.trim() || IWC_CONFIG.baseUrl, model: $("#aiModel").value })){UI.notice('AI 设置保存失败，请重试。',{error:true});return;}
+  UI.notice("已保存 AI 设置。");
 };
 $("#btnAiTest").onclick = async () => {
-  Store.set("ai", { apiKey: $("#aiKey").value.trim() || IWC_CONFIG.apiKey, baseUrl: $("#aiBase").value.trim() || IWC_CONFIG.baseUrl, model: $("#aiModel").value });
+  if(!Store.set("ai", { apiKey: $("#aiKey").value.trim() || IWC_CONFIG.apiKey, baseUrl: $("#aiBase").value.trim() || IWC_CONFIG.baseUrl, model: $("#aiModel").value })){ $('#aiTestResult').textContent='设置保存失败，请重试后测试连接。';return; }
   $("#aiTestResult").textContent = "测试中...";
   try {
     const r = await AI.ping();
-    $("#aiTestResult").textContent = r.ok ? `✅ 连接成功（${r.model}，${r.ms}ms）` : "⚠️ 有响应但返回异常";
-  } catch (e) { $("#aiTestResult").textContent = "❌ " + e.message; }
+    $("#aiTestResult").textContent = r.ok ? `连接成功（${r.model}，${r.ms}ms）` : "有响应但返回异常";
+  } catch (e) { $("#aiTestResult").textContent = "" + e.message; }
 };
 
 $("#btnAiCheck").onclick = async () => {
   const essay = $("#essayInput").value.trim();
-  if (Checker.words(essay) < 60) { alert("先粘贴一篇完整作文（至少 60 词）再精批。"); return; }
+  if (Checker.words(essay) < 60) { UI.errorAt($('#essayInput'),'请至少写 60 个英文词，再请求精批。'); return; }
+  UI.errorAt($('#essayInput'),'');
+  const requestId = ++aiReviewSeq;
+  const context = { ...TaskFlow.checkMeta, essay, question: $("#checkQuestion").value.trim(), mode: checkMode, qtype: $("#checkType").value, chart: $("#checkChart").value };
   const btn = $("#btnAiCheck");
   btn.disabled = true;
   btn.innerHTML = `<span class="spinner"></span>精批中…`;
   const box = $("#aiResult");
   box.classList.remove("hidden");
-  box.innerHTML = `<div class="card"><h2>🤖 AI 考官精批中…</h2>
+  box.querySelectorAll('.ai-pending,.ai-failure').forEach(el=>el.remove());
+  box.insertAdjacentHTML('beforeend', `<div class="ai-pending"><h2>AI 考官精批中…</h2>
     <p class="hint"><span class="spinner"></span>DeepSeek 正在按官方评分标准逐段精读（推理模型通常 20-60 秒）· <span id="aiChars">已接收 0 字</span></p>
     <pre class="tut-stream" id="aiStream"></pre>
-    <div class="btn-row"><button class="small" id="aiCancel">■ 中断</button></div></div>`;
-  box.scrollIntoView({ behavior: "smooth" });
+    <div class="btn-row"><button class="small" id="aiCancel">取消生成</button></div></div>`);
   const aiAbort = new AbortController();
-  $("#aiCancel").onclick = () => aiAbort.abort();
+  $('#aiCancel').onclick = () => {aiAbort.abort();aiReviewSeq++;box.querySelector('.ai-pending')?.remove();UI.notice('已取消本次生成');btn.disabled=false;btn.textContent='AI 考官精批';};
   let acc = "", lastPaint = 0;
   try {
-    const questionText = $("#checkQuestion").value.trim() || currentQuestion || "";
+    const questionText = context.question;
     const r = await AI.review({
-      essay, mode: checkMode, question: questionText,
-      type: checkMode === "t2" ? ($("#checkType").selectedOptions[0] || {}).text : "",
-      chart: checkMode === "t1" ? $("#checkChart").value : "",
+      essay, mode: context.mode, question: questionText,
+      type: context.mode === "t2" ? context.qtype : "",
+      chart: context.mode === "t1" ? context.chart : "",
       onChunk: (delta, full) => {
+        if (requestId !== aiReviewSeq || aiAbort.signal.aborted) return;
         acc = full || acc;
         const now = Date.now();
         if (now - lastPaint < 80) return;
@@ -410,63 +420,70 @@ $("#btnAiCheck").onclick = async () => {
       },
       signal: aiAbort.signal
     });
+    if (requestId !== aiReviewSeq || aiAbort.signal.aborted) return;
     lastAi = r;
+    lastAiContext = context;
+    r.context = context;
     renderAiResult(r);
   } catch (e) {
+    if (requestId !== aiReviewSeq) return;
     if (e && (e.name === "AbortError" || /abort/i.test(e.message || ""))) {
-      box.innerHTML = `<div class="card"><h2>⏹ 已中断</h2><p class="hint">本次精批已取消（不会产生后续费用）。可重新点击「AI 考官精批」。</p></div>`;
-      btn.disabled = false; btn.innerHTML = "🤖 AI 考官精批";
+      box.querySelector('.ai-pending')?.remove();UI.notice('已取消本次精批');
+      btn.disabled = false; btn.innerHTML = "AI 考官精批";
       return;
     }
-    box.innerHTML = `<div class="card"><h2>❌ AI 精批失败</h2><div class="issue bad">${esc(e.message)}</div>
-      <p class="hint">排查：① 点「⚙️ AI 设置 → 测试连接」；② key/额度是否有效；③ 若浏览器拦截了跨域请求（CORS），改用本地服务器打开工具：在 tool 目录运行 <code>python -m http.server 8000</code> 后访问 http://localhost:8000</p></div>`;
+    box.querySelector('.ai-pending')?.remove();
+    box.insertAdjacentHTML('beforeend', `<div class="issue bad ai-failure" role="alert">精批失败：${esc(e.message)}<div class="btn-row"><button id="aiRetry">用当前作文重试</button><button id="aiSettingsRetry">检查 AI 设置</button></div></div>`);
+    $('#aiRetry').onclick=()=>$('#btnAiCheck').click();$('#aiSettingsRetry').onclick=()=>$('#btnAiSettings').click();
   } finally {
-    btn.disabled = false;
-    btn.innerHTML = "🤖 AI 考官精批";
+    if(requestId === aiReviewSeq) {btn.disabled = false;btn.innerHTML = 'AI 考官精批';}
   }
 };
 
 function renderAiResult(r) {
   window._lastAi = r; // 供复盘卡 / 错因入库使用
   const box = $("#aiResult");
-  const critNames = { TR: r.mode === "t1" ? "任务达成" : "任务回应", CC: "连贯衔接", LR: "词汇资源", GRA: "语法多样与准确" };
+  box.classList.remove("hidden");
+  const critNames = { TR: "任务回应", TA: "任务达成", CC: "连贯衔接", LR: "词汇资源", GRA: "语法多样与准确" };
   const scores = r.scores || {};
+  const context = r.context || lastAiContext;
+  const matchingRule = lastCheck && context && lastCheck.essay === context.essay && lastCheck.questionText === context.question && lastCheck.mode === context.mode ? lastCheck.res : null;
   box.innerHTML = `
     <div class="card">
-      <h2>🤖 AI 考官精批（${r.mode === "t1" ? "Task 1" : "Task 2"} · DeepSeek）</h2>
+      <h2>AI 考官精批（${r.mode === "t1" ? "Task 1" : "Task 2"} · DeepSeek）</h2>
       <div class="score-grid">
         ${Object.entries(scores).map(([c, s]) => `<div class="score-card"><div class="crit">${c} ${critNames[c] || ""}</div><div class="score ${scoreClass(s)}">${s}</div></div>`).join("")}
         <div class="score-card" style="background:var(--accent-bg)"><div class="crit">预估总分</div><div class="score">${r.overall}</div></div>
       </div>
       ${r.summary ? `<p><b>总评：</b>${esc(r.summary)}</p>` : ""}
-      ${r.priorityFixes && r.priorityFixes.length ? `<h3>🎯 最优先修复</h3><ol>${r.priorityFixes.map(f => `<li>${esc(f)}</li>`).join("")}</ol>` : ""}
-      ${r.paragraphComments && r.paragraphComments.length ? `<h3>📝 逐段点评</h3>${r.paragraphComments.map(p => `<div class="issue"><b>${esc(p.para || p.paragraph || "段落")}：</b>${esc(p.comment || "")}</div>`).join("")}` : ""}
-      ${r.sentenceIssues && r.sentenceIssues.length ? `<h3>🔍 句子级问题（原文 → 改法）</h3>${r.sentenceIssues.map(i => `
-        <div class="issue bad"><span class="en" style="text-decoration:line-through;color:var(--bad)">“${esc(i.quote)}”</span>
-        <div style="margin-top:4px">⚠️ ${esc(i.problem || "")}</div>
-        ${i.fix ? `<div class="en" style="margin-top:4px;color:var(--ok)">✓ ${esc(i.fix)}</div>` : ""}</div>`).join("")}` : ""}
-      ${r.rewrite && r.rewrite.improved ? `<h3>✨ 最弱段落改写示范（保持你的观点，升级到 7-7.5 水平）</h3>
-        ${r.rewrite.para ? `<p class="hint">原段落：${esc(r.rewrite.para.slice(0, 80))}...</p>` : ""}
-        <div class="tpl" style="font-size:14.5px">${esc(r.rewrite.improved)}</div>` : ""}
-      <p class="hint">AI 评分为参考值（模型评分普遍存在 ±0.5 浮动）；与上方规则诊断 + 自评清单交叉印证更可靠。此结果不自动存入进度记录。</p>
-      <div class="btn-row"><button id="btnAiSaveRecord">💾 把 AI 分数存入进度</button><button id="btnAiReviewCard">📋 复盘卡 + 错因入库</button></div>
+      ${r.priorityFixes && r.priorityFixes.length ? `<h3>最优先修复</h3><ol>${r.priorityFixes.map(f => `<li>${esc(f)}</li>`).join("")}</ol>` : ""}
+      ${r.paragraphComments && r.paragraphComments.length ? `<h3>逐段点评</h3>${r.paragraphComments.map(p => `<div class="issue"><b>${esc(p.para || p.paragraph || "段落")}：</b>${esc(p.comment || "")}</div>`).join("")}` : ""}
+      <p class="hint">AI 评分是参考意见，误差大小不能保证；请结合原题、自己的证据和外部反馈核对。此结果不自动存入进度记录。</p>
+      <div class="btn-row"><button id="btnAiSaveRecord">把 AI 分数存入进度</button><button id="btnAiReviewCard">复盘卡 + 错因入库</button></div>
     </div>`;
-  box.scrollIntoView({ behavior: "smooth" });
   $("#btnAiReviewCard").onclick = () => {
+    document.getElementById("aiReviewPanel")?.remove();
     $("#aiResult").insertAdjacentHTML("beforeend",
-      buildReviewCard((typeof lastCheck !== "undefined" && lastCheck) ? lastCheck.res : { issues: [], score: { TR: 6, TA: 6, CC: 6, GRA: 6, LR: 6 } }, r)
-      + `<div class="btn-row"><button class="primary" id="btnErrImport">🩹 错因入库（生成复习卡，进 SRS 队列）</button></div><div id="errImportResult"></div>`);
-    $("#btnErrImport").onclick = errCardsImport;
-    $("#btnErrImport").scrollIntoView({ behavior: "smooth", block: "center" });
+      `<div id="aiReviewPanel">` + buildReviewCard(matchingRule || { issues: [], score: {} }, r)
+      + `<div class="btn-row"><button class="primary" id="btnAiErrImport">错因入库（生成复习卡，进 SRS 队列）</button></div><div id="aiErrImportResult"></div></div>`);
+    $("#btnAiErrImport").onclick = () => errCardsImport(context, matchingRule, r, $("#aiErrImportResult"));
+    $("#btnAiErrImport").scrollIntoView({ behavior: "smooth", block: "center" });
   };
   $("#btnAiSaveRecord").onclick = () => {
-    Store.addRecord({
+    if (!context) return;
+    const saved=Store.addRecord({
       date: Date.now(), mode: r.mode, ai: true,
-      title: "AI 精批：" + ($("#essayInput").value.trim().slice(0, 50) || "作文"),
-      W: Checker.words($("#essayInput").value), scores: scores, overall: r.overall
+      title: context.question || "未附题干的作文", question: context.question, essay: context.essay, qtype: context.qtype, chart: context.chart, qKey:context.qKey||'',chartKey:context.chartKey||'',
+      tags: matchingRule ? issueTags(matchingRule) : [], priorityFixes: r.priorityFixes,
+      W: Checker.words(context.essay), scores: scores, overall: r.overall
     });
-    alert("已保存（标注为 AI 评分）。去「⑦ 进度·词本」看走势。");
+    $("#btnAiSaveRecord").textContent = "已保存原题、作文与 AI 评分";
+    if(!saved){UI.notice('评分保存失败，请重试。',{error:true});$('#btnAiSaveRecord').textContent='重试保存评分';return;}
+    $("#btnAiSaveRecord").disabled = true;
   };
+  if (context) mountLearningFeedback(box, context, matchingRule, r);
+  if(context) Annotations.render(box,context,(r.sentenceIssues||[]).map(i=>({quote:i.quote,problem:i.problem,fix:i.fix,kind:i.kind})),r.rewrite?.improved);
+  UI.foldReport(box,'完整评分、逐段分析与自评');
 }
 
 
@@ -475,71 +492,73 @@ function setCheckMode(mode) {
   $("#checkTypeLabel").classList.toggle("hidden", mode === "t1");
   $("#checkChartLabel").classList.toggle("hidden", mode !== "t1");
   $("#checkTopicLabel").classList.toggle("hidden", mode === "t1");
+  Annotations.stale();
 }
 $$("#checkModeSwitch .mode-btn").forEach(b => b.onclick = () => setCheckMode(b.dataset.mode));
 
 const CHECKLISTS = {
   TR: [
-    "题目的每一个问句 / sub-topic 都有专门段落回应了",
-    "开头第二句和结尾第一句的立场是同一个（没有漂移）",
-    "每个主体段都是“观点 + 解释 + 例子”齐全，没有一句话带过的观点",
-    "字数 ≥ 250（不足几乎必扣）",
+    "回应了题目要求的对象、范围与每个问题",
+    "自己的回答清楚，立场在全文保持一致",
+    "主要观点得到相关解释、细节或例子支撑",
+    "字数 ≥ 250",
     "没有写题目没问的东西（如纯利弊题硬给观点）"
   ],
   CC: [
-    "4 段结构，每段一个中心",
+    "分段服务内容组织，每段中心清楚",
     "每个主体段开头有明确的主题句",
-    "段内有 this/these 指代或主题词重复等“隐形衔接”，不是全靠 Firstly/Furthermore",
+    "句间关系与指代清楚，衔接手段适合内容",
     "两个主体段没有用一模一样的连接词套路",
     "每个 this / it 都能明确指向"
   ],
   LR: [
-    "每个主体段至少 2–3 个主题词伙（对照弹药库）",
-    "同一概念用了 2 种以上说法（paraphrase 链）",
-    "没有堆大词（utilize/demerits/hence 之类）",
+    "用词和搭配准确表达了内容",
+    "表达有足够范围，必要改写保留原意",
+    "词语的语体和精确度适合语境，没有生硬换词",
     "拼写检查过（government, environment, beneficial...）",
     "词性正确（affect/effect, economic/economical）"
   ],
   GRA: [
-    "用到多种句式：让步(Although/While)、条件(If...would)、定语从句(which)、被动",
+    "按表达需要使用自己能控制的简单与复杂句式",
     "没有逗号粘连（两个完整句只用逗号连接）",
     "没有 Although...but / Because...so 连用",
-    "主谓一致、单复数、冠词抽查三遍",
+    "检查主谓一致、单复数和冠词",
     "句长有变化（不是清一色长句或短句）"
   ]
 };
 const CHECKLISTS_T1 = {
   TA: [
-    "有 overview（两句、总体特征、不带数字）",
+    "准确概括了原图的主要特征或主要阶段",
     "开头改写了题干（没有照抄）",
     "细节段做了挑选（最大/最小/首末年/特殊年），没有罗列所有数字",
-    "全程有比较（while/whereas/by far/compared to），不是逐线逐国报数",
+    "体现原图中重要的比较、变化、位置或阶段关系",
     "字数 ≥ 150"
   ],
   CC: [
-    "4 段结构（intro/overview/细节×2），段落空行分明",
-    "overview 在第 2 段",
+    "分段和分组清楚，概括与细节有组织",
+    "概括容易找到，没有混在机械罗列中",
     "没有逐线/逐国单独成段",
     "句子之间用指代和关键词自然衔接"
   ],
   LR: [
     "趋势/比较/数据语言多样（the figure for / accounted for / stood at / respectively...）",
-    "没用 soar/rocket/plummet 等夸张词",
-    "没用 depicts/exhibits 等 show 的花哨同义词",
+    "趋势动词和幅度与原图一致",
+    "用词准确、语体得当，没有生硬替换同义词",
     "拼写检查过"
   ],
   GRA: [
     "时态正确（过去年→过去式；未来年→is expected to）",
     "主谓逻辑：没有“国家 was 数字”“国家 increased”",
-    "数字+单位正确（10 million，不写 -5%）",
+    "数字、单位和增减表达准确（区分数值与变化量）",
     "句式有变化（名词式/动词式趋势句、while 对比句）"
   ]
 };
 
 $("#btnCheck").onclick = () => {
   const essay = $("#essayInput").value.trim();
-  if (Checker.words(essay) < 30) { alert("作文太短，先粘贴完整作文。"); return; }
-  const questionText = $("#checkQuestion").value.trim() || currentQuestion || "";
+  if (Checker.words(essay) < 30) {UI.errorAt($('#essayInput'),'请至少写 30 个英文词，再开始诊断。');return;}
+  UI.errorAt($('#essayInput'),'');
+  const questionText = $("#checkQuestion").value.trim();
   let res, critNames, checklists;
   if (checkMode === "t1") {
     res = Checker.checkT1(essay, $("#checkChart").value, questionText);
@@ -556,7 +575,7 @@ $("#btnCheck").onclick = () => {
     critNames = { TR: "任务回应", CC: "连贯衔接", LR: "词汇资源", GRA: "语法多样与准确" };
     checklists = CHECKLISTS;
   }
-  lastCheck = { res, critNames, checklists, essay, questionText, mode: checkMode };
+  lastCheck = { ...TaskFlow.checkMeta, res, critNames, checklists, essay, questionText, mode: checkMode, qtype:$('#checkType').value,chart:$('#checkChart').value };
   renderCheck();
 };
 
@@ -602,8 +621,8 @@ function renderCheck() {
   const fold = (title, inner, open) => `<details class="fold"${open ? " open" : ""}><summary>${title}</summary><div class="fold-body">${inner}</div></details>`;
 
   const checklistHtml = crits.map(crit => `
-    <h3>${crit} · ${critNames[crit]}（默认已勾选=确认做到；没做到的请取消勾选）</h3>
-    ${checklists[crit].map(it => `<label class="checklist-item"><input type="checkbox" data-crit="${crit}" checked> ${it}</label>`).join("")}
+    <h3>${crit} · ${critNames[crit]}（逐项核对自己的原文，确认做到再勾选）</h3>
+    ${checklists[crit].map(it => `<label class="checklist-item"><input type="checkbox" data-crit="${crit}"> ${it}</label>`).join("")}
   `).join("");
 
   const issuesHtml = ["bad", "warn", "ok"].map(sev => {
@@ -627,30 +646,30 @@ function renderCheck() {
     </div>
     <div class="card">
       <h2>硬伤扫描（规则引擎 · 不打分）</h2>
-      <p class="hint">⚠️ 规则引擎<strong>不做评分</strong>——经官方样卷校准，它无法识别优秀作文，给分没有参考价值（已下架）。它的唯一作用是<strong>定位硬伤</strong>。要拿分数，点右侧的「🤖 AI 考官精批」（已在官方样卷上校准，见《12-评分校准报告》）。</p>
+      <p class="hint">规则引擎<strong>不做评分</strong>——经官方样卷校准，它无法识别优秀作文，给分没有参考价值（已下架）。它的唯一作用是<strong>定位硬伤</strong>。要拿分数，点右侧的「AI 考官精批」（已在官方样卷上校准，见《12-评分校准报告》）。</p>
       <div class="score-grid">
-        <div class="score-card"><div class="crit">🔴 硬伤</div><div class="score" style="font-size:26px;color:var(--bad)">${badN}</div><div class="crit">必须修</div></div>
-        <div class="score-card"><div class="crit">🟡 建议</div><div class="score" style="font-size:26px;color:var(--warn)">${warnN}</div><div class="crit">值得改</div></div>
-        <div class="score-card"><div class="crit">🟢 通过项</div><div class="score" style="font-size:26px;color:var(--ok)">${okN}</div><div class="crit">已达标</div></div>
+        <div class="score-card"><div class="crit">硬伤</div><div class="score" style="font-size:26px;color:var(--bad)">${badN}</div><div class="crit">必须修</div></div>
+        <div class="score-card"><div class="crit">建议</div><div class="score" style="font-size:26px;color:var(--warn)">${warnN}</div><div class="crit">值得改</div></div>
+        <div class="score-card"><div class="crit">通过项</div><div class="score" style="font-size:26px;color:var(--ok)">${okN}</div><div class="crit">已达标</div></div>
       </div>
       ${res.info.map(i => `<p class="hint">${i}</p>`).join("")}
       ${issuesBlock}
-      <h3 style="margin-top:18px">✅ 逐项自评（考官视角清单——用于复盘，不生成数字分）</h3>
+      <h3 style="margin-top:18px">逐项自评（考官视角清单——用于复盘，不生成数字分）</h3>
       ${checklistHtml}
       <div class="btn-row">
-        <button class="primary" id="btnAiCheck2">🤖 AI 考官精批（评分 + 逐段点评）</button>
-        <button id="btnReviewCard">📋 生成复盘卡 + 错因入库</button>
-        <button id="btnPrintReport">🖨 打印/导出报告</button>
-        <button id="btnDownloadReport">⬇️ 下载报告文件</button>
+        <button class="primary" id="btnAiCheck2">AI 考官精批（评分 + 逐段点评）</button>
+        <button id="btnReviewCard">生成复盘卡 + 错因入库</button>
+        <button id="btnPrintReport">打印/导出报告</button>
+        <button id="btnDownloadReport">下载报告文件</button>
       </div>
       <div id="finalScoreBox"></div>
     </div>`;
 
   $("#btnAiCheck2").onclick = () => $("#btnAiCheck").click();
   $("#btnReviewCard").onclick = () => {
-    if (!lastCheck) { alert("先点「开始诊断」。"); return; }
-    $("#finalScoreBox").innerHTML = buildReviewCard(lastCheck.res, window._lastAi || null)
-      + `<div class="btn-row"><button class="primary" id="btnErrImport">🩹 错因入库（生成复习卡，进 SRS 队列）</button></div><div id="errImportResult"></div>`;
+    if (!lastCheck) { UI.notice("先点「开始诊断」。"); return; }
+    $("#finalScoreBox").innerHTML = buildReviewCard(lastCheck.res, matchingAi({ essay: lastCheck.essay, question: lastCheck.questionText, mode: lastCheck.mode }))
+      + `<div class="btn-row"><button class="primary" id="btnErrImport">错因入库（生成复习卡，进 SRS 队列）</button></div><div id="errImportResult"></div>`;
     $("#btnErrImport").onclick = errCardsImport;
     $("#finalScoreBox").scrollIntoView({ behavior: "smooth" });
   };
@@ -673,31 +692,36 @@ ${$("#checkResult").innerHTML}
     a.download = "IELTS写作诊断报告_" + new Date().toISOString().slice(0, 10) + ".html";
     a.click();
   };
+  mountLearningFeedback(box, { qKey:lastCheck.qKey,chartKey:lastCheck.chartKey,essay: lastCheck.essay, question: lastCheck.questionText, mode: lastCheck.mode, qtype:lastCheck.qtype,chart:lastCheck.chart }, lastCheck.res, matchingAi({ essay: lastCheck.essay, question: lastCheck.questionText, mode: lastCheck.mode }));
+  Annotations.render(box,{...TaskFlow.checkMeta,essay:lastCheck.essay,question:lastCheck.questionText,mode:lastCheck.mode,qtype:lastCheck.qtype,chart:lastCheck.chart},res.issues.filter(i=>i.sev!=='ok').map(i=>({quote:(i.evidence||'').replace(/<[^>]*>/g,''),problem:i.msg.replace(/<[^>]*>/g,''),fix:adviceFor(i).act,kind:i.noscore?'可选建议':i.sev==='bad'?'明确错误':'需要核对'})));
+  UI.foldReport(box,'完整硬伤扫描与自评清单');
 }
+$('#essayInput').addEventListener('input',()=>{Annotations.stale();UI.errorAt($('#essayInput'),'');});
+$('#checkQuestion').addEventListener('input',Annotations.stale);
 
-// ---------------- 📋 教学闭环：问题标签 / 复盘卡 / 错误档案 / 改写对比 ----------------
+// ---------------- 教学闭环：问题标签 / 复盘卡 / 错误档案 / 改写对比 ----------------
 // 每类问题 → 提升动作 + 方法论出处（复盘卡用）
 const FIX_MAP = [
-  [/不足 250|字数只有|不足 150/, { act: "扩写主体段：每个观点补 explain + example，写满 5 句", doc: "01 §6" }, "word-count"],
-  [/段落|只有 \d 段|段.*偏多/, { act: "回到四段骨架：开头2句/主体各5句/结尾1句，先列提纲再动笔", doc: "01 §1" }, "structure"],
-  [/立场|some people|观点题问的是你/, { act: "开头第二句亮明立场，全文只用 I believe / In my opinion 表态，不替别人说观点", doc: "01 §4" }, "stance"],
-  [/开头段没有|照抄|开头段太短|开头与题目原文/, { act: "用两句公式重写开头：句1改写题目，句2概括回答（同义替换至少 2 处）", doc: "01 §5" }, "intro"],
-  [/Overview|overview|结论段|不写结论/, { act: "Task 1 第 2 段固定写两句总体特征（It is clear that...），不带数字", doc: "04 §2" }, "overview"],
-  [/例子/, { act: "给每个主体段配 1-2 句具体例子（谁/哪里/什么事/数字）", doc: "01 §6" }, "example"],
+  [/不足 250|字数只有|不足 150/, { act: "补齐题目遗漏的内容，解释观点并用相关细节支撑；完成当前 Task 的最低字数", doc: "01 §6" }, "word-count"],
+  [/段落|只有 \d 段|段.*偏多/, { act: "按信息与观点重新分组，让每段有清楚的中心；段数由内容决定", doc: "01 §1" }, "structure"],
+  [/立场|some people|观点题问的是你/, { act: "明确表达自己的回答，检查全文立场是否一致；不要求指定位置或短语", doc: "01 §4" }, "stance"],
+  [/开头段没有|照抄|开头段太短|开头与题目原文/, { act: "用自己的话准确交代题目与回答方向，避免照抄或改变题意", doc: "01 §5" }, "intro"],
+  [/Overview|overview|结论段|不写结论/, { act: "对照原图概括显著特征，覆盖主要趋势、差异或阶段；不要求固定位置和句数", doc: "04 §2" }, "overview"],
+  [/例子/, { act: "给薄弱观点补充解释、相关细节或具体情境；例子是支撑方式之一", doc: "01 §6" }, "example"],
   [/比较语言|罗列|一条线/, { act: "细节段改成“挑关键数据+比较”：while/whereas/by far/compared to", doc: "04 §4" }, "compare"],
   [/连接词|Moreover|Furthermore|机械|Firstly.*两次|一模一样的连接/, { act: "两段换用不同连接体系，并加 this/these 指代链替代机械连接", doc: "01 §6" }, "linker"],
   [/隐形衔接|this\/these 指代/, { act: "学隐形衔接：this/these 回指上一句、关键词复现、代词回指", doc: "01 §6" }, "cohesion"],
-  [/词伙|主题搭配|数据表达单一/, { act: "去弹药库背本题话题词伙 10 条，每段用进 2-3 条", doc: "06" }, "coll"],
+  [/词伙|主题搭配|数据表达单一/, { act: "从词伙与闪卡中查一个需要的表达，在自己的相关句子里核对词义和搭配", doc: "06" }, "coll"],
   [/重复过多|换说法/, { act: "同一概念准备 2-3 种说法轮换（students→these young people→school leavers）", doc: "01 §5" }, "paraphrase"],
-  [/拼写/, { act: "建立错词本：把拼错的词抄 3 遍 + 写入例句", doc: "03 §2 LR" }, "spelling"],
+  [/拼写/, { act: "遮住正确拼写，凭记忆写进自己的句子；核对后隔天再试", doc: "03 §2 LR" }, "spelling"],
   [/逗号粘连/, { act: "两个完整句之间用句号/which 从句/分号，不能只用逗号", doc: "01 §9" }, "comma-splice"],
   [/Although|because.*so/i, { act: "Although 不带 but；Because 不带 so——从句和主句直接相连", doc: "01 §9" }, "although-but"],
   [/不可数| informations|单复数误用|peoples/, { act: "背不可数名词清单：information/research/advice/equipment... 不加 s", doc: "03 §2 GRA" }, "uncountable"],
-  [/被动|条件句|句式多样/, { act: "每篇刻意用：1 个 If...would 推演、2 个 which 从句、1 处被动", doc: "03 §2 GRA" }, "variety"],
+  [/被动|条件句|句式多样/, { act: "按真实逻辑选择句式，检查从句、时态和标点；不为凑句式增加错误", doc: "03 §2 GRA" }, "variety"],
   [/平均句长|句长/, { act: "长短句交替：主题句短句起，解释句用从句展开", doc: "01 §6" }, "sentence-length"],
   [/套话|Every coin|As we all know|With the development/, { act: "删掉套话，换成具体观点+论证", doc: "01 §9" }, "cliche"],
   [/国家不能|升跌的是数据/, { act: "Task 1 主谓逻辑：数据作主语（exports increased / the figure for X rose）", doc: "04 §5" }, "subj-logic"],
-  [/大词|怪词|夸张|花哨同义/, { act: "删大词怪词，换成朴素准确的主题词伙", doc: "06 §1" }, "big-words"],
+  [/大词|怪词|夸张|花哨同义/, { act: "检查词义、搭配和语体；只替换在当前语境中不准确或不合适的词", doc: "06 §1" }, "big-words"],
   [/答偏|没有出现在文中|sub-topic/, { act: "回读题目，划出所有问句/sub-topic，确认每部分都有对应段落", doc: "01 §3" }, "coverage"],
 ];
 const CRIT_DOC = { TR: "01 §3 题型判定表", TA: "04 §1-2", CC: "01 §6 段落与衔接", LR: "06 词伙库", GRA: "03 §2 GRA" };
@@ -723,7 +747,7 @@ const TAG_NAMES = {
 };
 function issueTags(res) {
   const tags = new Set();
-  res.issues.forEach(i => { const tg = tagOf(i); if (tg) tags.add(tg); });
+  res.issues.filter(i => i.sev !== "ok").forEach(i => { const tg = tagOf(i); if (tg) tags.add(tg); });
   return [...tags];
 }
 function buildReviewCard(res, ai) {
@@ -734,22 +758,28 @@ function buildReviewCard(res, ai) {
   const items = top.map(i => {
     const adv = adviceFor(i);
     return `<div class="issue ${i.sev === "bad" ? "bad" : ""}"><b>[${critNames[i.crit] || i.crit}]</b> ${i.msg}
-      <div class="tr-con">👉 <b>下次动作：</b>${adv.act} <span class="hint">（${docLink(adv.doc)}）</span></div></div>`;
+      <div class="tr-con"><b>下次动作：</b>${adv.act} <span class="hint">（${docLink(adv.doc)}）</span></div></div>`;
   }).join("");
-  const aiFixes = ai && ai.priorityFixes ? ai.priorityFixes.map(f => `<div class="issue">🤖 ${esc(f)}</div>`).join("") : "";
-  const weakest = Object.entries(res.score).sort((a, b) => a[1] - b[1])[0];
-  const weakestName = critNames[weakest[0]] || weakest[0];
+  const aiFixes = ai && ai.priorityFixes ? ai.priorityFixes.map(f => `<div class="issue">${esc(f)}</div>`).join("") : "";
+  const weakest = Object.entries(ai?.scores || {}).filter(([, s]) => Number.isFinite(s)).sort((a, b) => a[1] - b[1])[0];
+  const focus = weakest ? weakest[0] : top[0]?.crit;
   return `
-    <h3>📋 本篇复盘卡</h3>
+    <h3>本篇复盘卡</h3>
     <p class="hint">复盘的目的是“发现问题 → 明确改法 → 下次验证”，分数只是定位用的参考。</p>
     ${items || "<p class='hint'>规则层面没有发现明显问题——用下面的自评清单和 AI 精批做更深层的检查。</p>"}
     ${aiFixes}
-    <div class="issue ok"><b>弱项聚焦：</b>本篇最弱的一项是 <b>${weakest[0]}（${weakestName}）</b>。下次练习前，先重读 ${docLink(CRIT_DOC[weakest[0]] || "03")} 对应章节。</div>`;
+    ${focus ? `<p><b>本次检查重点：</b>${esc(focus)}（${esc(critNames[focus] || focus)}）。${weakest ? "来自本次 AI 参考评分。" : "来自规则提示，不代表最弱分项。"}先完成上方的针对性改写；需要方法时查 ${docLink(CRIT_DOC[focus] || "03")}。</p>` : ""}`;
 }
 
-// ---------- 🩹 错因入库：诊断问题 → SRS 错因复习卡 ----------
-function errCardsImport() {
-  if (!lastCheck) { alert("先做一次诊断。"); return; }
+// ---------- 错因入库：诊断问题 → SRS 错因复习卡 ----------
+function errCardsImport(context, result, aiResult, output) {
+  // onclick 直接绑定时第一个参数是鼠标事件，不是作文快照。
+  if (!context?.essay) {
+    if (!lastCheck) { UI.notice("先做一次诊断。"); return; }
+    context = { essay: lastCheck.essay, question: lastCheck.questionText, mode: lastCheck.mode };
+    result = lastCheck.res;
+    aiResult = matchingAi(context);
+  }
   const now = Date.now();
   const srcLabel = "诊断 " + new Date().toLocaleDateString("zh-CN");
   const existing = new Set(Store.get("errCards", []).map(c => (c.quote || "") + "|" + (c.problem || "").slice(0, 30)));
@@ -760,25 +790,25 @@ function errCardsImport() {
     existing.add(k);
     cards.push({ id: now + "-" + cards.length, kind: "err", ...c, from: c.from || srcLabel });
   };
-  (lastCheck.res.issues || []).forEach(i => {
+  (result?.issues || []).forEach(i => {
     if (i.sev === "ok" || !i.msg) return;
     const tag = tagOf(i);
     push({ quote: i.evidence || "", problem: (tag && TAG_NAMES[tag] ? "[" + TAG_NAMES[tag] + "] " : "") + i.msg, fix: "", tag: tag || "", crit: i.crit || "" });
   });
-  const ai = window._lastAi;
+  const ai = aiResult;
   ((ai && ai.sentenceIssues) || []).forEach(i => {
     if (!i.quote) return;
     push({ quote: i.quote, problem: i.problem || "", fix: i.fix || "", tag: "ai", crit: "", from: "AI 精批 " + srcLabel });
   });
-  if (!cards.length) { alert("这次诊断没有可入库的句子级问题。"); return; }
+  if (!cards.length) { UI.notice("这次诊断没有可入库的句子级问题。"); return; }
   const arr = Store.get("errCards", []);
   arr.push(...cards);
-  Store.set("errCards", arr);
-  const box = $("#errImportResult");
-  if (box) box.innerHTML = `<div class="issue ok">✅ 已入库 ${cards.length} 张错因卡（跳过 ${cards.length ? "重复项" : ""}）。去「⑤ 弹药库 → ⚡ 词伙闪卡 → 🩹 错因复习」开始复习；到期卡也会出现在「今日复习」里。</div>`;
+  if(!Store.set("errCards",arr)){UI.notice("错因卡保存失败，请重试。",{error:true});return;}
+  const box = output || $("#errImportResult");
+  if (box) box.innerHTML = `<div class="issue ok">已入库 ${cards.length} 张错因卡（跳过 ${cards.length ? "重复项" : ""}）。去「词伙与闪卡 → 错因复习」开始复习；到期卡也会出现在「今日复习」里。</div>`;
 }
 
-// ---------------- 💾 全量备份导出/导入 ----------------
+// ---------------- 全量备份导出/导入 ----------------
 $("#btnExportAll").onclick = () => {
   const data = { _app: "IELTS Writing Coach", _version: 3, _date: new Date().toISOString() };
   for (let i = 0; i < localStorage.length; i++) {
@@ -796,31 +826,28 @@ $("#importFile").onchange = e => {
   const f = e.target.files[0];
   if (!f) return;
   const reader = new FileReader();
-  reader.onload = () => {
+  reader.onload = async () => {
     try {
       const data = JSON.parse(reader.result);
-      if (!data._app) { alert("不是有效的备份文件。"); return; }
-      if (!confirm(`备份日期 ${data._date || "未知"}。导入会覆盖当前本地数据（含训练记录/收藏/词卡进度），确认？`)) return;
-      Object.entries(data).forEach(([k, v]) => {
-        if (k.startsWith("_")) return;
-        localStorage.setItem("iwc_" + k, v);
-      });
-      alert("导入完成，页面将刷新。");
+      if (!data._app) { UI.notice("不是有效的备份文件。"); return; }
+      if (!(await UI.confirm(`备份日期 ${data._date || '未知'}。导入会覆盖备份中的同名本地数据，包括记录、收藏和草稿。`,{label:'导入并覆盖',danger:true}))) return;
+      Store.importBackup(data);
+      UI.notice("导入完成，页面将刷新。");
       location.reload();
-    } catch (err) { alert("备份文件解析失败：" + err.message); }
+    } catch (err) { UI.notice("备份文件解析失败：" + err.message); }
   };
   reader.readAsText(f);
   e.target.value = "";
 };
 
-// ---------------- 🕯 填空精读 ----------------
+// ---------------- 填空精读 ----------------
 let clozeSession = null;
 function renderCloze() {
   const box = $("#libContent");
   if (!clozeSession) {
     const st = Store.get("cloze", { done: 0, correct: 0 });
     box.innerHTML = `<div class="card flash-wrap">
-      <h3 style="margin-top:0">🕯 填空精读（Simon worksheet 教学法）</h3>
+      <h3 style="margin-top:0">填空精读（Simon worksheet 教学法）</h3>
       <p class="hint">系统从考官范文中挖掉主题词伙，你凭记忆填回——把"读范文"变成"主动回忆"，这正是 Simon 在 worksheet 里训练学生的方式。</p>
       <div class="btn-row" style="justify-content:center">
         <select id="clKind"><option value="t2">大作文范文</option><option value="t1">小作文范文</option></select>
@@ -834,7 +861,7 @@ function renderCloze() {
       const picked = Cloze.pickEssay(kind);
       const bank = Object.values(Collocations.BY_TOPIC).flat().concat(Collocations.UNIVERSAL, Collocations.GUJIABEI_EXTRA || []);
       const built = Cloze.build(picked.essay, bank, +$("#clCount").value);
-      if (!built) { alert("这篇范文没找到足够的词伙，再试一次。"); return; }
+      if (!built) { UI.notice("这篇范文没找到足够的词伙，再试一次。"); return; }
       clozeSession = { ...picked, ...built, checked: false };
       renderCloze();
     };
@@ -846,11 +873,11 @@ function renderCloze() {
     return ` <input class="cl-blank" data-i="${p.blank}" size="${Math.min(28, Math.max(8, p.len))}" placeholder="${p.zh ? esc(p.zh.slice(0, 10)) : "词伙"}"> `;
   }).join("");
   box.innerHTML = `<div class="card">
-    <div class="box-head"><span class="box-title">🕯 ${s.kind === "t1" ? "Task 1" : "Task 2"} 范文填空（${s.blanks.length} 空）</span>
+    <div class="box-head"><span class="box-title">${s.kind === "t1" ? "Task 1" : "Task 2"} 范文填空（${s.blanks.length} 空）</span>
     <button class="small" onclick="clozeQuit()">换一篇</button></div>
     ${s.q ? `<p class="en hint" style="font-style:italic">${esc(s.q.slice(0, 160))}...</p>` : ""}
     <div class="cloze-text en" style="font-size:15px;line-height:2.3">${html}</div>
-    <div class="btn-row"><button class="primary" id="clCheck">✅ 对答案</button><button id="clReveal">👀 直接看答案</button></div>
+    <div class="btn-row"><button class="primary" id="clCheck">对答案</button><button id="clReveal">直接看答案</button></div>
     <div id="clFeedback"></div>
   </div>`;
   $("#clCheck").onclick = () => clozeGrade(false);
@@ -875,7 +902,7 @@ function clozeGrade(revealOnly) {
   if (!revealOnly) { st.done += s.blanks.length; st.correct += correct; Store.set("cloze", st); }
   $("#clFeedback").innerHTML = `<div class="card" style="background:var(--accent-bg);margin-top:10px">
     成绩：<b>${revealOnly ? "（直接看答案，不计入统计）" : correct + " / " + s.blanks.length}</b>
-    <span class="hint">错过的词伙点右上角换一篇再战，或去词伙库 ⭐ 收藏后用闪卡复习。</span></div>`;
+    <span class="hint">错过的词伙点右上角换一篇再战，或去词伙库点星标收藏后用闪卡复习。</span></div>`;
 }
 
 
@@ -889,9 +916,12 @@ $("#libSearch").oninput = debounce(e => {
   renderLib(active, e.target.value);
 }, 300);
 
+$('#libClear').onclick=()=>{$('#libSearch').value='';renderLib($('.lib-tab.active').dataset.lib,'');$('#libSearch').focus();};
 function renderLib(tab, query) {
   const q = (query || "").toLowerCase();
   const box = $("#libContent");
+  $('#libResults').textContent='';box.className='lib-content';
+  const searchable=tab==='topics'||tab==='collocations';$('#libSearch').disabled=!searchable;$('#libClear').disabled=!searchable;
   if (tab === "flashcards") { renderFlashcards(); return; }
   if (tab === "cloze") { renderCloze(); return; }
   if (tab === "topics") {
@@ -933,11 +963,11 @@ function renderLib(tab, query) {
     const renderGroup = (topic, items) => {
       const f = items.filter(c => !q || c.en.toLowerCase().includes(q) || c.zh.includes(query || ""));
       if (!f.length) return "";
-      return `<div class="card topic-block"><h3>${esc(topic)}（${items.length}）</h3><div class="coll-grid">${f.map(c => renderItem(c, topic)).join("")}</div></div>`;
+      return `<div class="card topic-block"><h3>${esc(topic)}（${f.length}）</h3><div class="coll-grid">${f.map(c => renderItem(c, topic)).join("")}</div></div>`;
     };
     const viewBar = `<div class="btn-row" style="margin:0 0 12px">
-      <button class="small ${window._collView === "scene" ? "primary" : ""}" data-cv="scene">📑 按写作场景</button>
-      <button class="small ${window._collView === "topic" ? "primary" : ""}" data-cv="topic">📚 按主题查</button>
+      <button class="small ${window._collView === "scene" ? "primary" : ""}" data-cv="scene">按写作场景</button>
+      <button class="small ${window._collView === "topic" ? "primary" : ""}" data-cv="topic">按主题查</button>
       ${fsBar}</div>`;
     let html = viewBar;
     if (window._collView === "scene") {
@@ -947,7 +977,7 @@ function renderLib(tab, query) {
       html += groups.map(g => renderGroup(`场景 · ${g}（${sceneDesc[g] || ""}）`, (Collocations.UNIVERSAL || []).filter(c => (c.group || "") === g))).join("");
       const extra = (Collocations.GUJIABEI_EXTRA || []).filter(c => !q || c.en.toLowerCase().includes(q) || c.zh.includes(query || ""));
       if (extra.length) html += `<div class="card topic-block"><h3>场景 · 顾家北补充</h3><div class="coll-grid">${extra.map(c => renderItem(c, "通用")).join("")}</div></div>`;
-      html += `<p class="hint">💡 主题词伙（教育/环境/犯罪…）在「按主题查」里——场景视图专管"论证语言"。每个词伙下面的灰字是考官范文/例句用法。</p>`;
+      html += `<p class="hint">主题词伙（教育/环境/犯罪…）在「按主题查」里——场景视图专管"论证语言"。每个词伙下面的灰字是考官范文/例句用法。</p>`;
     } else {
       const sel = `<div class="btn-row" style="margin:0 0 12px"><label class="hint" style="margin:0">主题：</label><select id="collTopicSel" style="width:auto">${topics.map(x => `<option ${x === window._collTopic ? "selected" : ""}>${x}</option>`).join("")}<option value="__all" ${window._collTopic === "__all" ? "selected" : ""}>全部（折叠）</option></select></div>`;
       html += sel;
@@ -984,12 +1014,14 @@ function renderLib(tab, query) {
   } else if (tab === "mistakes") {
     box.innerHTML = `<div class="card"><h3>中国考生高频错误对照表（错误写法 → 正确写法）</h3>
       <table style="width:100%;font-size:13.5px;border-collapse:collapse">
-      ${Plan.mistakes.map(m => `<tr style="border-bottom:1px solid var(--line)"><td style="padding:8px;color:var(--bad)" class="en">✗ ${esc(m.bad)}</td><td style="padding:8px;color:var(--ok)" class="en">✓ ${esc(m.good)}</td><td style="padding:8px;color:var(--muted)">${esc(m.why)}</td></tr>`).join("")}
+      ${Plan.mistakes.map(m => `<tr style="border-bottom:1px solid var(--line)"><td style="padding:8px;color:var(--bad)" class="en">${esc(m.bad)}</td><td style="padding:8px;color:var(--ok)" class="en">${esc(m.good)}</td><td style="padding:8px;color:var(--muted)">${esc(m.why)}</td></tr>`).join("")}
       </table></div>`;
   }
+  const count=tab==='topics'?box.querySelectorAll('details.fold').length:tab==='collocations'?box.querySelectorAll('.coll-item').length:null;
+  if(count!==null){$('#libResults').textContent=`当前范围找到 ${count} ${tab==='topics'?'个话题':'条表达'}`;if(!count)box.insertAdjacentHTML('afterbegin','<p class="empty-state">没有匹配内容。试试更短的关键词，或切换到“按主题查”扩大范围。</p>');}
 }
 
-// ---------------- ⑤ 题库·范文 ----------------
+// ---------------- ⑤ 题库与范文 ----------------
 let bankFilter = "all";
 $$("#bankFilters .filter-btn").forEach(b => b.onclick = () => {
   $$("#bankFilters .filter-btn").forEach(x => x.classList.remove("active"));
@@ -1008,24 +1040,31 @@ function renderBank() {
     ...(typeof JijingQuestions !== "undefined" ? JijingQuestions : [])
   ];
   const PER = 15;
-  const list = bank.filter(q => q.t2 && (bankFilter === "all" || TYPE_GROUP[bankFilter].includes(q.t2type)));
+  const task=$('#bankTask').value,query=$('#bankSearch').value.trim().toLowerCase();
+  const list = bank.filter(q => (task==='1'?q.t1&&!/详见原书/.test(q.t1):q.t2) && (task==='1'||bankFilter === "all" || TYPE_GROUP[bankFilter].includes(q.t2type)) && (!query||`${q.src} ${task==='1'?q.t1:q.t2}`.toLowerCase().includes(query)));
+  $('#bankResults').textContent=`找到 ${list.length} 道 Task ${task} 题目`;
+  $('#bankFilters').hidden=task==='1';
   const pageCount = Math.max(1, Math.ceil(list.length / PER));
   bankPage = Math.min(bankPage, pageCount);
   const pageList = list.slice((bankPage - 1) * PER, bankPage * PER);
   $("#bankList").innerHTML = pageList.map(q => `
     <div class="q-item" data-i="${bank.indexOf(q)}">
-      <span class="q-src">${esc(q.src)}</span><span class="badge type">${esc(typeName(q.t2type))}</span>
+      <span class="q-src">${esc(q.src)}</span><span class="badge type">${esc(task==='1'?trainChartName(q.t1type):typeName(q.t2type))}</span>
       ${/^机经/.test(q.src) ? '<span class="badge warn">机经</span>' : ""}
-      <div class="en" style="margin-top:4px">${esc(q.t2)}</div>
+      <div class="en" style="margin-top:4px">${esc(task==='1'?q.t1:q.t2)}</div>
     </div>`).join("") + pagerHtml(bankPage, pageCount) || "<p class='hint'>无匹配。</p>";
   $$("#bankList .q-item").forEach(el => el.onclick = () => {
     const q = bank[+el.dataset.i];
+    if(task==='1'){TaskFlow.write({task:1,question:q.t1,qtype:q.t1type,src:q.src});return;}
     $("#questionInput").value = q.t2;
     goto("analyze");
     $("#btnAnalyze").click();
   });
   $$("#bankList .pg-btn").forEach(b => b.onclick = () => { bankPage = +b.dataset.pg; renderBank(); });
 }
+$('#bankSearch').oninput=debounce(()=>{bankPage=1;renderBank();},250);
+$('#bankTask').onchange=()=>{bankPage=1;bankFilter='all';$('#bankFilters [data-filter="all"]').click();};
+$('#bankClear').onclick=()=>{$('#bankSearch').value='';bankPage=1;$('#bankFilters [data-filter="all"]').click();$('#bankSearch').focus();};
 function typeName(t) {
   return { "opinion": "观点题", "discussion": "讨论+观点", "adv-disadv": "纯利弊", "adv-disadv-opinion": "利弊比较", "problem-solution": "问题解决", "two-part": "双问题" }[t] || t;
 }
@@ -1037,66 +1076,77 @@ function renderEssayList() {
 }
 function renderEssay(i) {
   const e = EssayBank[i];
+  const returnY=window.scrollY,trigger=$(`#essayList [data-i="${i}"]`);
   const roleSpan = (text, role) => `<span class="sent role-${role}">${esc(text)}</span>`;
   $("#essayDetail").classList.remove("hidden");
   $("#essayDetail").innerHTML = `
     <div class="card essay-detail">
-      <h3>${esc(e.title)}（band 9）</h3>
+      <div class="box-head"><h3>${esc(e.title)}（考官参考范文）</h3><button id="essayClose" class="small">返回范文列表</button></div>
       <p class="en" style="font-style:italic;color:var(--muted)">${esc(e.question)}</p>
       <div class="legend"><span class="role-topic">主题句/话题</span><span class="role-example">例子</span><span class="role-link">紫色=立场句</span></div>
       ${e.paras.map(p => `<div class="para"><b>${esc(p.label)}</b><br>${p.sents.map(([t, r]) => roleSpan(t, r) + " ").join("")}</div>`).join("")}
-      <div class="btn-row"><button onclick="gotoAnalyzeEssay(${i})">🔍 拿这道题去审题室</button></div>
+      <div class="btn-row"><button onclick="gotoAnalyzeEssay(${i})">拿这道题去审题</button></div>
     </div>`;
+  $('#essayClose').onclick=()=>{$('#essayDetail').classList.add('hidden');trigger?.focus({preventScroll:true});window.scrollTo(0,returnY);};
+  $('#essayClose').focus({preventScroll:true});$('#essayDetail').scrollIntoView({block:'start'});
 }
 window.gotoAnalyzeEssay = i => { $("#questionInput").value = EssayBank[i].question; goto("analyze"); $("#btnAnalyze").click(); };
 
 // ---------------- ⑥ 学习路线 ----------------
 function renderPlan() {
   const placement = Store.get("placement", null);
-  const badge = placement ? `<div class="issue ok"><b>📏 摸底结果：</b>${esc(placement.level)} · 建议从 <b>${esc(placement.start)}</b> 学起（摸底日期 ${new Date(placement.date).toLocaleDateString("zh-CN")}）。下面的路线图按 4-8 周设计，起点靠后的同学可压缩前几周。</div>` : "";
+  const badge = placement ? `<div class="issue ok"><b>知识自测记录：</b>${esc(placement.level)} · 建议从 <b>${esc(placement.start)}</b> 学起（${new Date(placement.date).toLocaleDateString("zh-CN")}）。选择题不能估算写作分数，训练目标以独立答卷为准。</div>` : "";
   $("#planContent").innerHTML = `
     ${badge}
     <p>${esc(Plan.intro)}</p>
     ${Plan.weeks.map(w => `<div class="week-plan"><h3>${esc(w.t)}</h3><ul>${w.items.map(i => `<li>${linkifyDocs(esc(i))}</li>`).join("")}</ul></div>`).join("")}
-    <h3>五条写作铁律</h3><ol>${Plan.rules.map(r => `<li>${esc(r)}</li>`).join("")}</ol>
+    <h3>按评分标准写，避免模板误区</h3><ol>${Plan.rules.map(r => `<li>${esc(r)}</li>`).join("")}</ol>
+    <p class="hint">方法依据：<a href="https://ielts.org/cdn/ielts-guides/ielts-writing-band-descriptors.pdf" target="_blank" rel="noopener">IELTS 官方量表</a> · <a href="https://doi.org/10.1016/j.learninstruc.2024.101961" target="_blank" rel="noopener">写作反馈元分析（2024）</a> · <a href="https://doi.org/10.1111/lang.12479" target="_blank" rel="noopener">二语间隔练习元分析（2022）</a>。研究支持这些方向，不能据此保证个人提分幅度或唯一最优路径。</p>
     <h3>高频错误对照表</h3><table style="width:100%;font-size:13.5px;border-collapse:collapse">
-    ${Plan.mistakes.map(m => `<tr style="border-bottom:1px solid var(--line)"><td style="padding:8px;color:var(--bad)" class="en">✗ ${esc(m.bad)}</td><td style="padding:8px;color:var(--ok)" class="en">✓ ${esc(m.good)}</td><td style="padding:8px;color:var(--muted)">${esc(m.why)}</td></tr>`).join("")}
+    ${Plan.mistakes.map(m => `<tr style="border-bottom:1px solid var(--line)"><td style="padding:8px;color:var(--bad)" class="en">${esc(m.bad)}</td><td style="padding:8px;color:var(--ok)" class="en">${esc(m.good)}</td><td style="padding:8px;color:var(--muted)">${esc(m.why)}</td></tr>`).join("")}
     </table>`;
 }
 
-// ---------------- ⑦ 进度·词本 ----------------
+// ---------------- ⑦ 记录与词本 ----------------
 let progShowAll = false;
 function exportProgressReport() {
   const records = Store.get("records", []);
-  if (!records.length) { alert("还没有诊断记录可导出。"); return; }
-  const avg = (records.reduce((a, r) => a + (r.overall || 0), 0) / records.length).toFixed(1);
+  const learning = Learning.read().items;
+  if (!records.length && !learning.length) { UI.notice("还没有学习记录可导出。"); return; }
+  const averages = ['t2','t1'].map(mode=>{
+    const scored=records.filter(r=>r.mode===mode && r.ai && Number.isFinite(r.overall) && r.overall>=0 && r.overall<=9);
+    return `<p>Task ${mode==='t1'?1:2} AI 参考均值：${scored.length ? (scored.reduce((n,r)=>n+r.overall,0)/scored.length).toFixed(1) : '暂无'}（${scored.length} 份）。</p>`;
+  }).join('');
   const rows = records.map(r => `<tr>
     <td>${new Date(r.date).toLocaleString("zh-CN")}</td><td>${r.mode === "t1" ? "Task 1" : "Task 2"}</td>
     <td class="en">${esc(r.title || "")}</td><td>${r.W || ""}</td>
-    <td>${Object.entries(r.scores || {}).map(([c, v]) => c + " " + v).join(" / ")}</td>
-    <td><b>${r.aiOverall ? "🤖" + r.aiOverall + " / " : ""}${r.overall || "-"}</b></td>
+    <td>${r.ai ? Object.entries(r.scores || {}).map(([c, v]) => esc(c) + " " + esc(v)).join(" / ") : '规则记录'} </td>
+    <td>${r.ai && Number.isFinite(r.overall) && r.overall>=0 && r.overall<=9 ? `<b>${r.overall}</b>（AI 参考）` : '未提供 AI 评分'}</td>
     <td>${(r.tags || []).map(t => esc(TAG_NAMES[t] || t)).join("、")}</td></tr>`).join("");
   const tagCount = {};
   records.forEach(r => (r.tags || []).forEach(t => tagCount[t] = (tagCount[t] || 0) + 1));
   const tagRows = Object.entries(tagCount).sort((a, b) => b[1] - a[1])
     .map(([t, n]) => `<tr><td>${esc(TAG_NAMES[t] || t)}</td><td>${n} 次</td></tr>`).join("");
+  const attempts = learning.map(item=>`<section><h3>${esc(Learning.drill(item).name)} · Task ${item.mode==='t1'?1:2}</h3><p class="en">${esc(item.question)}</p><p class="en original">${esc(item.essay)}</p>${item.attempts.map(a=>`<h4>${a.stage==='repair'?'原题改写':a.stage==='benchmark'?'整篇验证':'换题练习'} · ${a.passed?'自查通过':'继续练习'}${a.stage==='repair'?'':a.independent===true?' · 自报独立':a.independent===false?' · 辅助或缺少独立快照':' · 独立性未知'}</h4><p class="en">${esc(a.question)}</p><p class="en original">${esc(a.text)}</p>${a.quote?`<p class="en">证据：${esc(a.quote)}</p>`:''}<p>${esc(a.note)}</p>${a.criteria?`<ul>${a.criteria.map((c,n)=>`<li>${a.checks?.[n]?'已自查':'未确认'}：${esc(c)}</li>`).join('')}</ul>`:''}`).join('')}</section>`).join('');
   const html = `<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>IELTS 写作进度报告</title>
 <style>body{font-family:"Segoe UI","Microsoft YaHei",sans-serif;max-width:900px;margin:24px auto;padding:0 16px;color:#1f2937;line-height:1.7}
 table{border-collapse:collapse;width:100%;font-size:13.5px}th,td{border:1px solid #e5e7eb;padding:6px 9px;text-align:left}
 th{background:#eff6ff}.en{font-family:Georgia,serif}.hint{color:#6b7280;font-size:13px}
 .kpi{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}.kpi div{border:1px solid #e5e7eb;border-radius:10px;padding:10px 16px}
-.kpi b{font-size:24px;color:#1d4ed8}</style></head><body>
-<h1>📊 IELTS 写作进度报告</h1><p class="hint">生成于 ${new Date().toLocaleString("zh-CN")} · IELTS Writing Coach</p>
-<div class="kpi"><div>累计练习<b>${records.length}</b> 篇</div><div>平均预估分<b>${avg}</b></div><div>最近一次<b>${records[0].overall || "-"}</b></div></div>
+.kpi b{font-size:24px;color:#1d4ed8}.original{white-space:pre-wrap}section{border-top:1px solid #e5e7eb;margin-top:24px;padding-top:16px}</style></head><body>
+<h1>IELTS 写作进度报告</h1><p class="hint">生成于 ${new Date().toLocaleString("zh-CN")} · IELTS Writing Coach</p>
+<p>已保存 ${records.length} 份诊断记录、${learning.length} 项训练目标。</p>${averages}<p class="hint">AI 分数为参考，自查不代表考官认可。规则记录不进入评分均值，Task 1 和 Task 2 分别汇总。</p>
 <h2>高频问题档案</h2><table><tr><th>问题类型</th><th>出现次数</th></tr>${tagRows}</table>
 <h2>全部记录（${records.length}）</h2>
 <table><tr><th>时间</th><th>类型</th><th>题目/作文</th><th>词数</th><th>分项</th><th>总分</th><th>问题标签</th></tr>${rows}</table>
+<h2>诊断原稿与作答证据</h2>${attempts || '<p>暂无改写或复测记录。</p>'}
 </body></html>`;
   const blob = new Blob([html], { type: "text/html;charset=utf-8" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
   a.download = "IELTS写作进度报告_" + new Date().toISOString().slice(0, 10) + ".html";
   a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),5000);
 }
 
 function renderCompare(oldRec, newRes) {
@@ -1112,82 +1162,97 @@ function renderCompare(oldRec, newRes) {
   const cls = d => d > 0 ? "score-7" : d < 0 ? "score-low" : "";
   box.insertAdjacentHTML("beforeend", `
     <div class="card" style="background:var(--ok-bg);border-color:var(--ok-border)">
-      <h3>🔁 改写对比（vs ${new Date(oldRec.date).toLocaleDateString("zh-CN")} 的上一版）</h3>
+      <h3>改写对比（vs ${new Date(oldRec.date).toLocaleDateString("zh-CN")} 的上一版）</h3>
       <div class="score-grid">
         ${deltas.map(({ c, d }) => `<div class="score-card"><div class="crit">${c}</div><div class="score ${cls(d)}">${fmt(d)}</div><div class="crit">${oldRec.scores[c] || "-"} → ${newRes.scores[c] || "-"}</div></div>`).join("")}
         <div class="score-card"><div class="crit">定位分变化</div><div class="score ${cls(newRes.overall - oldRec.overall)}">${fmt(newRes.overall - oldRec.overall)}</div><div class="crit">${oldRec.overall} → ${newRes.overall}</div></div>
       </div>
-      ${fixed.length ? `<div class="issue ok"><b>✅ 已修复 ${fixed.length} 类问题：</b>${fixed.map(tg => TAG_NAMES[tg] || tg).join("、")}——这就是真实的提升。</div>` : ""}
-      ${introduced.length ? `<div class="issue bad"><b>⚠️ 新出现 ${introduced.length} 类问题：</b>${introduced.map(tg => TAG_NAMES[tg] || tg).join("、")}——改的时候别引入新毛病。</div>` : ""}
+      ${fixed.length ? `<div class="issue ok"><b>已修复 ${fixed.length} 类问题：</b>${fixed.map(tg => TAG_NAMES[tg] || tg).join("、")}——这就是真实的提升。</div>` : ""}
+      ${introduced.length ? `<div class="issue bad"><b>新出现 ${introduced.length} 类问题：</b>${introduced.map(tg => TAG_NAMES[tg] || tg).join("、")}——改的时候别引入新毛病。</div>` : ""}
       <p class="hint">提升 = 问题类别的减少 + 分数的稳定上升。把这次改写中学会的表达记进收藏本。</p>
     </div>`);
   box.scrollIntoView({ behavior: "smooth" });
 }
+$("#progressTask").onchange = () => renderProgress();
 function renderProgress() {
   const records = Store.get("records", []);
+  const mode = $("#progressTask").value;
+  const scored = records.filter(r => r.mode === mode && r.ai && Number.isFinite(r.overall) && r.overall >= 0 && r.overall <= 9);
   const sum = $("#progressSummary");
+  if (typeof renderDashboard === "function") renderDashboard();
   if (!records.length) {
-    sum.innerHTML = `<p class="hint">还没有记录——去「诊断室」诊断一篇作文，点“保存本次记录”。</p>`;
+    sum.innerHTML = `<p class="hint">还没有 AI 评分记录。改写与复测不需要分数，可以直接从上方开始。</p>`;
     $("#progressList").innerHTML = "";
   } else {
-    const avg = (records.reduce((a, r) => a + (r.overall || 0), 0) / records.length).toFixed(1);
-    const latest = records[0];
+    const avg = scored.length ? (scored.reduce((a, r) => a + r.overall, 0) / scored.length).toFixed(1) : "—";
+    const latest = scored[0];
     // 分项统计（最近 5 次平均）
-    const critKeys = [...new Set(records.flatMap(r => Object.keys(r.scores || {})))];
-    const recent5 = records.slice(0, 5);
-    const critTiles = critKeys.map(c => {
-      const vals = recent5.map(r => (r.scores || {})[c]).filter(v => v !== undefined);
-      const avg = vals.length ? (vals.reduce((a, b) => a + b, 0) / vals.length).toFixed(1) : "-";
-      return `<div class="score-card"><div class="crit">${c} · 近${vals.length}次均值</div><div class="score ${/\d/.test(avg) ? scoreClass(+avg) : ""}">${avg}</div><div class="crit">${c === "TA" || c === "TR" ? "最弱项重点练" : ""}</div></div>`;
+    const critKeys = mode === "t1" ? ["TA", "CC", "LR", "GRA"] : ["TR", "CC", "LR", "GRA"];
+    const recent5 = scored.slice(0, 5);
+    const critStats=critKeys.map(c=>{
+      const vals=recent5.map(r=>r.scores?.[c]??(c==='TA'?r.scores?.TR:undefined)).filter(v=>Number.isFinite(v)&&v>=0&&v<=9);
+      return {c,n:vals.length,mean:vals.length?vals.reduce((a,b)=>a+b,0)/vals.length:null};
+    });
+    const means=critStats.map(s=>s.mean);
+    const lowest=means.every(v=>v!==null)&&Math.min(...means)<Math.max(...means)?Math.min(...means):null;
+    const critTiles = critStats.map(({c,n,mean}) => {
+      const avg=mean===null?'—':mean.toFixed(1);
+      return `<div class="score-card"><div class="crit">${c} · 近${n}次均值</div><div class="score ${mean===null?'':scoreClass(mean)}">${avg}</div><div class="crit">${lowest!==null&&mean===lowest?'参考均值较低':''}</div></div>`;
     }).join("");
     sum.innerHTML = `
       <div class="score-card"><div class="crit">累计练习</div><div class="score" style="color:var(--primary-dark)">${records.length}</div><div class="crit">篇</div></div>
-      <div class="score-card"><div class="crit">平均预估分</div><div class="score ${scoreClass(+avg)}">${avg}</div><div class="crit">全部记录</div></div>
-      <div class="score-card"><div class="crit">最近一次</div><div class="score ${scoreClass(latest.overall)}">${latest.overall}</div><div class="crit">${new Date(latest.date).toLocaleDateString("zh-CN")}</div></div>
+      <div class="score-card"><div class="crit">同 Task AI 均值</div><div class="score ${/\d/.test(avg) ? scoreClass(+avg) : ""}">${avg}</div><div class="crit">${scored.length} 份参考评分</div></div>
+      <div class="score-card"><div class="crit">同 Task 最近一次</div><div class="score ${Number.isFinite(latest?.overall) ? scoreClass(latest.overall) : ""}">${latest?.overall ?? "—"}</div><div class="crit">${latest ? new Date(latest.date).toLocaleDateString("zh-CN") : "暂无评分"}</div></div>
       ${critTiles}`;
     // 走势条形图（最近 12 次 overall）
-    const recent = records.slice(0, 12).reverse();
+    const recent = scored.slice(0, 12).reverse();
     const maxS = 9;
     $("#progressList").innerHTML = `
-      <h3>总分走势（最近 ${recent.length} 次）</h3>
+      <h3>Task ${mode === "t1" ? "1" : "2"} AI 参考分（最近 ${recent.length} 次）</h3>
       <div class="trend-bars">${recent.map(r => `<div class="bar" style="height:${(r.overall / maxS) * 100}%" title="${new Date(r.date).toLocaleDateString("zh-CN")} ${r.overall}"><span>${r.overall}</span></div>`).join("")}</div>
       <h3>全部记录（${records.length}）<span class="badge-count">${progShowAll ? "" : "显示最近 10 条"}</span></h3>
       ${records.slice(0, progShowAll ? undefined : 10).map((r, i) => `
         <div class="prog-item">
           <div>
             <span class="badge type">${r.mode === "t1" ? "Task 1" : "Task 2"}</span>
-            <span class="hint">${new Date(r.date).toLocaleString("zh-CN")} · ${r.W} 词${r.aiOverall ? " · 🤖AI已批" : ""}</span>
+            <span class="hint">${new Date(r.date).toLocaleString("zh-CN")} · ${r.W} 词${r.aiOverall ? " · AI已批" : ""}</span>
             <div class="en" style="color:var(--muted)">${esc(r.title)}</div>
             ${(r.tags || []).length ? `<div style="margin-top:4px">${r.tags.map(tg => `<span class="badge warn" style="font-size:11px;padding:1px 7px">${esc(TAG_NAMES[tg] || tg)}</span>`).join(" ")}</div>` : ""}
           </div>
-          <div class="mini-scores">${Object.entries(r.scores).map(([c, s]) => `<span class="mini">${c} ${s}</span>`).join("")}<span class="mini">${r.aiOverall ? `🤖${r.aiOverall}` : ""}</span><span class="mini">${r.overall}</span></div>
+          <div class="mini-scores">${Object.entries(r.scores || {}).map(([c, s]) => `<span class="mini">${c} ${s}</span>`).join("")}<span class="mini">${r.aiOverall ? `${r.aiOverall}` : ""}</span><span class="mini">${r.overall ?? "—"}</span></div>
           <div>
-            <button class="small" data-rewrite="${records.indexOf(r)}" title="用同一道题再写一版，写完自动对比">🔁 再写一版</button>
+            <button class="small" data-rewrite="${records.indexOf(r)}" title="用同一道题再写一版，写完自动对比">再写一版</button>
             <button class="small" data-del="${records.indexOf(r)}">删除</button>
           </div>
         </div>`).join("")}
       ${records.length > 10 ? `<div class="btn-row"><button class="small" id="btnToggleAll">${progShowAll ? "收起" : "显示全部 " + records.length + " 条"}</button></div>` : ""}`;
-    $$("#progressList [data-del]").forEach(b => b.onclick = () => { Store.removeRecord(+b.dataset.del); renderProgress(); });
+    $$('#progressList [data-del]').forEach(b=>b.onclick=async()=>{if(await UI.confirm('删除这份评分记录？原稿与改写练习仍保留。',{label:'删除记录',danger:true})){if(!Store.removeRecord(+b.dataset.del)){UI.notice('删除保存失败，记录仍保留。',{error:true});return;}renderProgress();}});
     $$("#progressList [data-rewrite]").forEach(b => b.onclick = () => {
       const r = records[+b.dataset.rewrite];
       rewriteOf = r;
-      $("#checkQuestion").value = r.title || "";
+      $("#checkQuestion").value = r.question || (r.essay ? r.title : "") || "";
       setCheckMode(r.mode || "t2");
+      if (r.qtype) $("#checkType").value = r.qtype;
+      if (r.chart) $("#checkChart").value = r.chart;
       $("#essayInput").value = "";
       $("#finalScoreBox") && ($("#finalScoreBox").innerHTML = "");
+      TaskFlow.checkMeta={qKey:r.qKey||'',chartKey:r.chartKey||''};TaskFlow.renderCheckChart();
       goto("check");
-      alert("改写模式已就绪：针对同一道题写新一版（已带入题目），诊断并保存后会自动与上一版对比。");
+      UI.notice("已带入原题。请写新一版再诊断；具体问题的短改写与隔天复测可从今日训练的今日任务开始。");
     });
     const tg = $("#btnToggleAll");
     if (tg) tg.onclick = () => { progShowAll = !progShowAll; renderProgress(); };
-    if (typeof renderDashboard === "function") renderDashboard();
-    // ⬇️ 进度报告导出（单文件 HTML）
+    // 进度报告导出（单文件 HTML）
     if (!$("#btnExportProgress")) {
-      sum.insertAdjacentHTML("beforeend", `<div class="btn-row"><button id="btnExportProgress">⬇️ 导出进度报告（HTML）</button></div>`);
+      sum.insertAdjacentHTML("beforeend", `<div class="btn-row"><button id="btnExportProgress">导出进度报告（HTML）</button></div>`);
       $("#btnExportProgress").onclick = exportProgressReport;
     }
   }
-  // 📌 我的系统性错误档案（聚合所有记录的问题标签）
+  if (!records.length && Learning.read().items.length) {
+    sum.insertAdjacentHTML('beforeend','<div class="btn-row"><button id="btnExportProgress">导出进度报告（HTML）</button></div>');
+    $('#btnExportProgress').onclick=exportProgressReport;
+  }
+  // 我的系统性错误档案（聚合所有记录的问题标签）
   const tagged = records.filter(r => (r.tags || []).length);
   if (tagged.length) {
     const cnt = {};
@@ -1201,13 +1266,13 @@ function renderProgress() {
     const box = $("#progressList");
     box.insertAdjacentHTML("beforeend", `
       <div class="card" style="border-color:var(--warn-border)">
-        <h3>📌 你的系统性错误 Top ${top.length}（${tagged.length} 篇有标签记录）</h3>
+        <h3>你的系统性错误 Top ${top.length}（${tagged.length} 篇有标签记录）</h3>
         <p class="hint">这就是你的个人弱点画像——每次写作前先看一眼，写完后用它检查。出现篇数越多越优先修。</p>
         ${top.map(([tag, n]) => {
           const adv = adviceOfTag(tag);
           return `<div class="issue ${n >= maxN * 0.6 ? "bad" : ""}">
             <b>${esc(TAG_NAMES[tag] || tag)}</b> · 出现于 ${n}/${tagged.length} 篇
-            <div class="tr-con">👉 ${esc(adv.act)} <span class="hint">(${docLink(adv.doc)})</span></div>
+            <div class="tr-con">${esc(adv.act)} <span class="hint">(${docLink(adv.doc)})</span></div>
           </div>`;
         }).join("")}
       </div>`);
@@ -1215,7 +1280,7 @@ function renderProgress() {
   // 词本
   const stars = Store.getStars();
   const nb = $("#notebookContent");
-  if (!stars.length) nb.innerHTML = "<p class='hint'>收藏夹是空的——去「弹药库」点 ⭐ 收藏词伙和观点。</p>";
+  if (!stars.length) nb.innerHTML = "<p class='hint'>收藏夹是空的——去「词伙与闪卡」点星标收藏词伙和观点。</p>";
   else {
     const groups = {};
     stars.forEach(s => { (groups[s.topic || "未分类"] = groups[s.topic || "未分类"] || []).push(s); });
@@ -1223,12 +1288,12 @@ function renderProgress() {
       <div class="notebook-topic"><h4>${esc(topic)}（${items.length}）</h4>
         ${items.map(s => `<div class="coll-item"><span class="en">${esc(s.en)}</span> <span class="zh">—— ${esc(s.zh || "")}</span> <button class="small" data-unstar="${esc(s.en)}">移除</button></div>`).join("")}
       </div>`).join("");
-    $$("#notebookContent [data-unstar]").forEach(b => b.onclick = () => { Store.removeStar(b.dataset.unstar); renderProgress(); });
+    $$('#notebookContent [data-unstar]').forEach(b=>b.onclick=()=>{if(!Store.removeStar(b.dataset.unstar)){UI.notice('移除失败，收藏仍保留。',{error:true});return;}renderProgress();});
   }
 }
 $("#btnExportNotebook").onclick = () => {
   const stars = Store.getStars();
-  if (!stars.length) { alert("收藏夹是空的。"); return; }
+  if (!stars.length) { UI.notice("收藏夹是空的。"); return; }
   const text = "我的雅思写作收藏本（" + new Date().toLocaleDateString("zh-CN") + "）\n\n" +
     Object.entries(stars.reduce((g, s) => { (g[s.topic || "未分类"] = g[s.topic || "未分类"] || []).push(s); return g; }, {}))
       .map(([topic, items]) => `【${topic}】\n` + items.map(s => `• ${s.en}${s.zh ? "  —— " + s.zh : ""}`).join("\n")).join("\n\n");
@@ -1238,14 +1303,14 @@ $("#btnExportNotebook").onclick = () => {
   a.download = "我的雅思收藏本.txt";
   a.click();
 };
-$("#btnClearProgress").onclick = () => {
-  if (confirm("确定清空全部本地数据（训练记录+收藏+草稿）？")) {
+$('#btnClearProgress').onclick = async () => {
+  if (await UI.confirm('清除评分记录、收藏和独立作文草稿？今日训练与复测记录将保留。建议先导出备份。',{label:'清除这些数据',danger:true})) {
     ["records", "stars", "draft_t1", "draft_t2"].forEach(k => localStorage.removeItem("iwc_" + k));
     renderProgress();
   }
 };
 
-// ---------------- ✏️ 提纲训练（审题室，10 分钟练习） ----------------
+// ---------------- 提纲训练（审题与提纲，10 分钟练习） ----------------
 window.startOutline = function () {
   if (!currentAnalysis) return;
   const t = currentAnalysis.det.type;
@@ -1279,11 +1344,11 @@ window.startOutline = function () {
   }
   box.innerHTML = `
     <div class="card">
-      <h2>✏️ 提纲训练（目标：10 分钟内完成）</h2>
+      <h2>提纲训练（目标：10 分钟内完成）</h2>
       <p class="hint">Simon：把"想"和"写"分开。提纲列好了，写作就是把提纲翻译成英语。题干：<span class="en" style="font-style:italic">${esc(currentQuestion)}</span></p>
       <div class="outline-form">${form}
         <div class="btn-row">
-          <button class="primary" onclick="checkOutline()">✅ 检查提纲</button>
+          <button class="primary" onclick="checkOutline()">检查提纲</button>
           <button onclick="gotoWrite()">提纲完成，去写作室 →</button>
         </div>
         <div id="outlineFeedback"></div>
@@ -1330,14 +1395,14 @@ window.checkOutline = function () {
       <div>提纲完整度：<span class="overall-band" style="font-size:28px">${pct}%</span> ${pct === 100 && coverageOk ? '<span class="badge ok">合格，可以开写</span>' : ""}</div>
       <p class="hint">题目概念覆盖度约 ${Math.round(coverage * 100)}%（提纲只需覆盖题目的核心概念，不必逐词出现；低于 25% 说明可能跑题）</p>
       ${issues.length ? issues.map(m => `<div class="issue bad">• ${m}</div>`).join("") : "<p>结构全部达标——照着这份提纲写，主体段直接展开就行。</p>"}
-      ${!coverageOk ? `<div class="issue bad">⚠️ 题目核心概念覆盖不足——回读题目，确认每个 sub-topic 都有对应观点（工具提示：换词也算覆盖，但概念必须都出现）。</div>` : ""}
+      ${!coverageOk ? `<div class="issue bad">题目核心概念覆盖不足——回读题目，确认每个 sub-topic 都有对应观点（工具提示：换词也算覆盖，但概念必须都出现）。</div>` : ""}
     </div>`;
 };
 
-// ---------------- ⚡ 词伙闪卡 ----------------
+// ---------------- 词伙闪卡 ----------------
 function shuffle(a) { const r = [...a]; for (let i = r.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [r[i], r[j]] = [r[j], r[i]]; } return r; }
 
-// ---------------- 📚 范文全库浏览 ----------------
+// ---------------- 范文全库浏览 ----------------
 function annotateEssayText(essay) {
   return essay.split(/\n\s*\n/).map(para => {
     const sents = para.split(/(?<=[.!?])\s+/).filter(Boolean);
@@ -1369,6 +1434,7 @@ function renderCorpus() {
   }
   const ft = $("#corpusType").value;
   const list = bank.filter(e => (!ft || (corpusKind === "t1" ? e.chart : e.type) === ft) && (!q || (e.q + " " + e.essay).toLowerCase().includes(q)));
+  $('#corpusResults').textContent=`找到 ${list.length} 篇 Task ${corpusKind==='t1'?'1':'2'} 范文`;
   const PER = 15;
   const pages = Math.max(1, Math.ceil(list.length / PER));
   corpusPage = Math.min(corpusPage, pages);
@@ -1381,20 +1447,24 @@ function renderCorpus() {
   $$("#corpusList .pg-btn").forEach(b => b.onclick = () => { corpusPage = +b.dataset.pg; renderCorpus(); });
   $$("#corpusList .q-item").forEach(el => el.onclick = () => {
     const e = bank[+el.dataset.ci];
+    const returnY=window.scrollY;
     $("#corpusDetail").classList.remove("hidden");
     $("#corpusDetail").innerHTML = `
       <div class="card essay-detail">
-        <h3>范文（${esc(e.src || "")} · ${e.essay.split(/\s+/).length} 词）</h3>
+        <div class="box-head"><h3>范文（${esc(e.src || "")} · ${e.essay.split(/\s+/).length} 词）</h3><button id="corpusClose" class="small">返回结果</button></div>
         ${e.q ? `<p class="en" style="font-style:italic;color:var(--muted)">${esc(e.q)}</p>` : ""}
         <div class="legend"><span class="role-topic">主题句/段首</span><span class="role-example">例子</span><span class="role-link">立场/转折</span></div>
         ${annotateEssayText(e.essay)}
-        ${e.q ? `<div class="btn-row"><button onclick="corpusToAnalyze(${bank.indexOf(e)})">🔍 拿这道题去审题室</button></div>` : ""}
+        ${e.q ? `<div class="btn-row"><button onclick="corpusToAnalyze(${bank.indexOf(e)})">${corpusKind==='t1'?'拿这道题去写作':'拿这道题去审题'}</button></div>` : ""}
       </div>`;
+    $('#corpusClose').onclick=()=>{$('#corpusDetail').classList.add('hidden');el.focus({preventScroll:true});window.scrollTo(0,returnY);};
+    $('#corpusClose').focus({preventScroll:true});
     $("#corpusDetail").scrollIntoView({ behavior: "smooth" });
   });
 }
 window.corpusToAnalyze = function (i) {
   const e = corpusKind === "t1" ? T1EssayCorpus[i] : EssayCorpus[i];
+  if(corpusKind==='t1'){TaskFlow.write({task:1,question:e.q,qtype:e.chart,src:e.src});return;}
   $("#questionInput").value = e.q;
   goto("analyze");
   $("#btnAnalyze").click();
@@ -1407,6 +1477,7 @@ $$("#corpusTabs .filter-btn").forEach(b => b.onclick = () => {
   $("#corpusType").value = "";
   renderCorpus();
 });
+$('#corpusClear').onclick=()=>{$('#corpusSearch').value='';$('#corpusType').value='';corpusPage=1;renderCorpus();$('#corpusSearch').focus();};
 $("#corpusSearch").oninput = debounce(() => { corpusPage = 1; renderCorpus(); }, 300);
 $("#corpusType").onchange = () => { corpusPage = 1; renderCorpus(); };
 
@@ -1420,15 +1491,8 @@ function init() {
   renderLib("topics", "");
   buildParagraphBoxes();
   renderCorpus();
-  const draft = Store.getDraft(writeMode);
-  if (draft && draft.text && draft.text.trim().length > 50) {
-    setTimeout(() => {
-      if (confirm("检测到上次保存的写作草稿（" + new Date(draft.t).toLocaleString("zh-CN") + "），要恢复到写作室吗？")) {
-        const parts = draft.text.split(/\n\s*\n/);
-        $$("#paragraphBoxes textarea").forEach((t, i) => { if (parts[i] !== undefined) t.value = parts[i]; });
-        updateCounts();
-      }
-    }, 300);
-  }
 }
 init();
+
+$('#checkQuestion').addEventListener('input',()=>{TaskFlow.checkMeta={};TaskFlow.renderCheckChart();});
+$('#checkModeSwitch').addEventListener('click',()=>{TaskFlow.checkMeta={};TaskFlow.renderCheckChart();});

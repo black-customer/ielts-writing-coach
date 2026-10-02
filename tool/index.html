@@ -5,45 +5,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IELTS Writing Coach · 雅思写作教练（Simon 方法论）</title>
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/workbench.css">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#2563eb">
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 </head>
 <body>
-<div id="errBanner" class="hidden" style="position:fixed;bottom:0;left:0;right:0;background:#dc2626;color:#fff;padding:8px 14px;font-size:13px;z-index:999;white-space:pre-wrap"></div>
+<div id="errBanner" class="hidden" role="alert"></div>
 <header>
   <div class="header-row">
     <div>
-      <div class="logo">✍️ IELTS Writing Coach</div>
+      <div class="brand-symbol" aria-hidden="true">W</div>
+      <div class="logo">Writing Studio</div>
+      <div class="brand-subtitle">IELTS WRITING COACH</div>
       <div class="tagline">基于前雅思考官 Simon 方法论 · 看题有思路 · 写完知好坏</div>
     </div>
-    <div style="display:flex;gap:8px;align-items:center">
-      <a href="docs/index.html" target="_blank" class="docs-link">📖 知识库</a>
-      <button id="btnAbout" class="theme-btn" title="关于本工具">ℹ️</button>
-      <button id="btnTheme" class="theme-btn" title="切换明暗">🌙</button>
+    <div class="sidebar-utility">
+      <a href="docs/index.html" target="_blank" class="docs-link">知识库</a>
+      <button id="btnAbout" class="theme-btn" title="关于本工具">ℹ</button>
+      <button id="btnTheme" class="theme-btn" title="切换明暗"></button>
     </div>
   </div>
   <nav id="mainNav">
-    <button class="nav-btn active" data-view="analyze">① 审题室</button>
-    <button class="nav-btn" data-view="write">② 写作室</button>
-    <button class="nav-btn" data-view="check">③ 诊断室</button>
-    <button class="nav-btn" data-view="train">④ 训练营</button>
-    <button class="nav-btn" data-view="library">⑤ 弹药库</button>
-    <button class="nav-btn" data-view="bank">⑥ 题库·范文</button>
-    <button class="nav-btn" data-view="plan">⑦ 学习路线</button>
-    <button class="nav-btn" data-view="progress">⑧ 进度·词本</button>
+    <button class="nav-btn active" data-view="train">今日训练</button>
+    <span class="nav-group">写作练习</span>
+    <button class="nav-btn" data-view="analyze">审题与提纲</button>
+    <button class="nav-btn" data-view="write">写作室</button>
+    <button class="nav-btn" data-view="check">诊断与改写</button>
+    <span class="nav-group">复习资料</span>
+    <button class="nav-btn" data-view="library">词伙与闪卡</button>
+    <button class="nav-btn" data-view="bank">题库与范文</button>
+    <button class="nav-btn" data-view="plan">学习路线</button>
+    <span class="nav-group">学习进度</span>
+    <button class="nav-btn" data-view="progress">记录与词本</button>
   </nav>
+  <div class="sidebar-foot">独立写作，持续改进。<br>学习数据保存在本机</div>
 </header>
 
 <main>
-  <!-- ① 审题室 -->
+  <div class="page-heading"><div><h1 id="pageTitle">今日训练</h1><p id="pageDescription">从一个明确的目标开始，把反馈变成自己的表达。</p></div><span class="page-meta" id="pageMeta"></span></div>
+  <!-- ① 审题与提纲 -->
   <section id="view-analyze" class="view active">
     <div class="card">
       <h2>把题目贴进来，30 秒拿到写作路线图</h2>
-      <p class="hint">粘贴任意雅思大作文题目（英文）。也可以在「题库·范文」里直接选一道剑桥真题。</p>
+      <p class="hint">粘贴任意雅思大作文题目（英文）。也可以在「题库与范文」里直接选一道剑桥真题。</p>
       <textarea id="questionInput" rows="4" placeholder="e.g. Some people think that governments should spend money on public services rather than on the arts. To what extent do you agree or disagree?"></textarea>
       <div class="btn-row">
-        <button id="btnAnalyze" class="primary">🔍 分析题目 · 生成路线图</button>
+        <button id="btnAnalyze" class="primary">分析题目 · 生成路线图</button>
         <button id="btnUseInWrite">→ 带着这道题去写作室</button>
       </div>
       <div id="analyzeError" class="error hidden"></div>
@@ -62,7 +70,7 @@
               <div class="mode-switch" id="writeModeSwitch">
                 <button class="mode-btn active" data-mode="t2">Task 2 大作文（40 分钟）</button>
                 <button class="mode-btn" data-mode="t1">Task 1 小作文（20 分钟）</button>
-                <button class="mode-btn" data-mode="mock" id="btnMock">🎓 全真模考（T1+T2）</button>
+                <button class="mode-btn" data-mode="mock" id="btnMock">全真模考（T1+T2）</button>
               </div>
               <div id="t1ChartPicker" class="t1-picker hidden">
                 <label>图表类型：
@@ -78,23 +86,27 @@
                 </label>
                 <input id="t1QuestionInput" type="text" placeholder="（可选）粘贴 Task 1 题干，用于检测“照抄题目”">
               </div>
-              <div id="writeQuestion" class="question-echo">（还没有题目——先去「审题室」分析一道题）</div>
-            </div>
-            <div class="timer-box">
-              <div id="timerDisplay">40:00</div>
-              <div class="btn-row">
-                <button id="btnTimerStart" class="small">开始</button>
-                <button id="btnTimerReset" class="small">重置</button>
-              </div>
+              <label for="writeQuestionInput" class="hint">本次题目</label><textarea id="writeQuestionInput" class="write-question-input" rows="3" placeholder="粘贴本次 Task 2 题目，或从审题与题库带入"></textarea>
+              <div id="writeQuestion" class="question-echo hidden">（还没有题目——先去「审题与提纲」分析一道题）</div>
+              <div id="writeTaskChart"></div>
             </div>
           </div>
         </div>
         <div id="paragraphBoxes"></div>
         <div class="card total-bar">
           <span>总字数：<b id="totalWords">0</b> / <span id="wordTarget">250+</span></span>
-          <span>总句数：<b id="totalSentences">0</b> / <span id="sentTarget">13–15</span></span>
-          <button id="btnSaveDraft" class="small">💾 存草稿</button>
-          <button id="btnToCheck" class="primary">→ 写完了，去诊断室</button>
+          <span>总句数：<b id="totalSentences">0</b><span id="sentTarget" class="hidden">13–15</span></span>
+          <div class="timer-box footer-timer" role="group" aria-label="写作计时">
+            <div id="timerDisplay" role="timer" aria-live="off">40:00</div>
+            <div class="btn-row">
+              <button id="btnTimerStart" class="small">开始</button>
+              <button id="btnTimerReset" class="small">重置</button>
+            </div>
+          </div>
+          <span id="writeSaveStatus" class="save-status" role="status">草稿自动保存</span>
+          <button id="btnSaveDraft" class="small">存草稿</button>
+          <button id="btnCopyDraft" class="small">复制全文</button>
+          <button id="btnToCheck" class="primary">→ 写完了，去诊断与改写</button>
         </div>
       </div>
       <aside class="write-side">
@@ -103,15 +115,16 @@
     </div>
   </section>
 
-  <!-- ③ 诊断室 -->
+  <!-- ③ 诊断与改写 -->
   <section id="view-check" class="view">
     <div class="card">
       <h2>作文诊断</h2>
-      <p class="hint">把写好的作文贴进来（或在写作室点「去诊断室」自动带入）。工具自动扫描硬伤并定位到句子，再引导你逐项自评，给出四项分数估计和最优先修复项。</p>
+      <p class="hint">把写好的作文贴进来（或在写作室点「去诊断与改写」自动带入）。工具自动扫描硬伤并定位到句子，再引导你逐项自评，给出四项分数估计和最优先修复项。</p>
       <div class="mode-switch" id="checkModeSwitch">
         <button class="mode-btn active" data-mode="t2">Task 2 大作文</button>
         <button class="mode-btn" data-mode="t1">Task 1 小作文</button>
       </div>
+      <div id="checkTaskChart"></div>
       <div class="check-meta">
         <label id="checkTypeLabel">题型：
           <select id="checkType">
@@ -137,11 +150,11 @@
         <label id="checkTopicLabel">话题：<select id="checkTopic"></select></label>
         <label>题目原文：<input id="checkQuestion" type="text" placeholder="（可选）粘贴题目，用于“答全题目”与照抄检测" style="width:280px"></label>
       </div>
-      <textarea id="essayInput" rows="14" placeholder="Paste your essay here..."></textarea>
+      <textarea id="essayInput" rows="14" aria-label="待诊断作文" placeholder="Paste your essay here..."></textarea>
       <div class="btn-row">
-        <button id="btnCheck" class="primary">🩺 开始诊断</button>
-        <button id="btnAiCheck">🤖 AI 考官精批</button>
-        <button id="btnAiSettings">⚙️ AI 设置</button>
+        <button id="btnCheck" class="primary">开始诊断</button>
+        <button id="btnAiCheck">AI 考官精批</button>
+        <button id="btnAiSettings">AI 设置</button>
       </div>
       <div id="aiSettingsPanel" class="card hidden" style="margin-top:12px">
         <h3>AI 精批设置（DeepSeek API）</h3>
@@ -167,45 +180,50 @@
     <div id="checkResult" class="hidden"></div>
   </section>
 
-  <!-- ④ 训练营 -->
+  <!-- ④ 今日训练 -->
   <section id="view-train" class="view">
     <div id="trainHome"></div>
     <div id="trainSession" class="hidden"></div>
   </section>
 
-  <!-- ⑤ 弹药库 -->
+  <!-- ⑤ 词伙与闪卡 -->
   <section id="view-library" class="view">
     <div class="lib-tabs">
       <button class="lib-tab active" data-lib="topics">话题观点库</button>
       <button class="lib-tab" data-lib="collocations">词伙库</button>
       <button class="lib-tab" data-lib="t1">Task 1 语言库</button>
       <button class="lib-tab" data-lib="mistakes">高频错误清单</button>
-      <button class="lib-tab" data-lib="flashcards">⚡ 闪卡自测</button>
-      <button class="lib-tab" data-lib="cloze">🕯 填空精读</button>
+      <button class="lib-tab" data-lib="flashcards">闪卡自测</button>
+      <button class="lib-tab" data-lib="cloze">填空精读</button>
     </div>
     <div class="card">
-      <input id="libSearch" type="text" placeholder="搜索：education / environment / 上升 / 让步 ...">
+      <div class="search-row"><label class="sr-only" for="libSearch">搜索词伙与资料</label><input id="libSearch" type="search" placeholder="搜索：education / environment / 上升 / 让步 ..."><button id="libClear" class="small">清除搜索</button></div>
+      <p id="libResults" class="hint" role="status"></p>
     </div>
     <div id="libContent" class="lib-content"></div>
   </section>
 
-  <!-- ⑤ 题库·范文 -->
+  <!-- ⑤ 题库与范文 -->
   <section id="view-bank" class="view">
     <div class="card">
-      <h2>📑 预生成范文库（剑15-21 · 56 篇）</h2>
-      <p class="hint">ZCode 写作体系生成的考官级范文 + 逐段教学包（写法标准见知识库 13）。点开即读、一键复制去外部平台验证（目标均分 ≥7.5）；小作文附对照图表；也可直达训练营逐段学。</p>
+      <h2>预生成范文库（剑15-21 · 56 篇）</h2>
+      <p class="hint">56 篇练习范文与逐段讲解。搜索题目、正文或表达，也可按 Task 和册号筛选。范文供学习参考，AI 分数不能保证达到对应考试水平。</p>
+      <div class="search-row"><label class="sr-only" for="mbSearch">搜索内置范文</label><input id="mbSearch" type="search" placeholder="题目、范文或表达关键词，例如 transport"><button id="mbClear" class="small">清除筛选</button></div>
       <div class="btn-row" id="mbFilters">
         <button class="filter-btn active" data-mb="all">全部 56</button>
         <button class="filter-btn" data-mb="2">大作文 28</button>
         <button class="filter-btn" data-mb="1">小作文 28</button>
-        <select id="mbBook" style="margin-left:auto"></select>
-        <button id="mbExport" class="small">🖨 导出学习册</button>
+        <select id="mbBook" aria-label="筛选范文册号" style="margin-left:auto"></select>
+        <button id="mbExport" class="small">导出学习册</button>
       </div>
+      <p id="mbResults" class="hint" role="status"></p>
       <div id="mbGrid" class="q-grid" style="margin-top:10px"></div>
+      <div id="mbPager"></div>
       <div id="mbDetail" class="hidden"></div>
     </div>
     <div class="card">
       <h2>剑桥真题·考场真题写作题库</h2>
+      <div class="search-row"><label class="sr-only" for="bankSearch">搜索写作题库</label><input id="bankSearch" type="search" placeholder="题目或来源关键词"><select id="bankTask" aria-label="题库 Task"><option value="2">Task 2 大作文</option><option value="1">Task 1 小作文</option></select><button id="bankClear" class="small">清除筛选</button></div>
       <div class="btn-row" id="bankFilters">
         <button class="filter-btn active" data-filter="all">全部</button>
         <button class="filter-btn" data-filter="opinion">观点题</button>
@@ -214,7 +232,7 @@
         <button class="filter-btn" data-filter="problem-solution">问题解决</button>
         <button class="filter-btn" data-filter="two-part">双问题</button>
       </div>
-      <div id="bankList" class="bank-list"></div>
+      <p id="bankResults" class="hint" role="status"></p><div id="bankList" class="bank-list"></div>
     </div>
     <div class="card">
       <h2>Simon 考官范文精读（带结构批注）</h2>
@@ -222,16 +240,17 @@
       <div id="essayDetail" class="hidden"></div>
     </div>
     <div id="corpusSection" class="card hidden">
-      <h2>📚 Simon 范文全库检索</h2>
+      <h2>Simon 范文全库检索</h2>
       <p class="hint" id="corpusHint"></p>
       <div class="btn-row" id="corpusTabs">
         <button class="filter-btn active" data-corpus="t2">大作文</button>
         <button class="filter-btn" data-corpus="t1">小作文</button>
       </div>
       <div class="check-meta">
-        <input id="corpusSearch" type="text" placeholder="搜索题目关键词：education / crime / graph...">
+        <input id="corpusSearch" type="search" aria-label="搜索 Simon 范文" placeholder="搜索题目关键词：education / crime / graph...">
         <select id="corpusType"><option value="">全部题型/图型</option></select>
       </div>
+      <div class="btn-row"><button id="corpusClear" class="small">清除筛选</button><span id="corpusResults" class="hint" role="status"></span></div>
       <div id="corpusList" class="bank-list"></div>
       <div id="corpusDetail" class="hidden"></div>
     </div>
@@ -240,7 +259,7 @@
   <!-- ⑥ 学习路线 -->
   <section id="view-plan" class="view">
     <div class="card">
-      <h2>6.5 → 7.5 提分路线（4–8 周，每天 1 小时）</h2>
+      <h2>写作练习路线（4–8 周参考安排）</h2>
       <div id="planContent"></div>
     </div>
   </section>
@@ -249,20 +268,21 @@
   <section id="view-progress" class="view">
     <div class="card">
       <h2>学习进度仪表盘</h2>
-      <p class="hint">每次在「诊断室」点“保存本次记录”后，这里会累计你的训练记录和四项分数走势（数据保存在本机浏览器里）。</p>
+      <p class="hint">诊断原稿与改写自动保存；AI 分数需在精批结果中点击保存。自查与 AI 参考评分分别记录，数据保存在本机浏览器。</p>
       <div id="dashBoard"></div>
+      <label for="progressTask">分数走势：<select id="progressTask"><option value="t2">Task 2 · AI 参考评分</option><option value="t1">Task 1 · AI 参考评分</option></select></label>
       <div id="progressSummary" class="score-grid"></div>
       <div id="progressList"></div>
     </div>
     <div class="card">
       <h2>我的词伙·观点本</h2>
-      <p class="hint">在「弹药库」和「审题室」里点 ⭐ 收藏词伙/观点，就会出现在这里。考前只复习这一个本子。</p>
+      <p class="hint">在「词伙与闪卡」和「审题与提纲」里点星标收藏词伙/观点，就会出现在这里。考前只复习这一个本子。</p>
       <div class="btn-row">
-        <button id="btnExportNotebook" class="small">📋 导出词本为文本</button>
-        <button id="btnExportAll" class="small">💾 导出全部数据（JSON 备份）</button>
-        <button id="btnImportAll" class="small">📥 导入备份</button>
+        <button id="btnExportNotebook" class="small">导出词本为文本</button>
+        <button id="btnExportAll" class="small">导出全部数据（JSON 备份）</button>
+        <button id="btnImportAll" class="small">导入备份</button>
         <input type="file" id="importFile" accept=".json" class="hidden">
-        <button id="btnClearProgress" class="small">🗑 清空全部本地数据</button>
+        <button id="btnClearProgress" class="small">清除评分、收藏与写作草稿</button>
       </div>
       <div id="notebookContent"></div>
     </div>
@@ -272,34 +292,35 @@
 <footer>
   知识来源：ielts-simon.com 全套课程与范文 · Ideas for IELTS Topics · 剑桥真题 · 顾家北词伙 —— 本工具为本地离线应用，数据都在 js/data-*.js
 </footer>
-<div id="aboutModal" class="hidden" style="position:fixed;inset:0;background:rgba(15,23,42,.55);z-index:999;display:flex;align-items:center;justify-content:center">
-  <div style="background:var(--card);color:var(--ink);border-radius:16px;max-width:560px;width:92%;padding:28px 30px;box-shadow:0 18px 60px rgba(0,0,0,.35)">
+<div id="uiNotices" aria-live="polite"></div>
+<dialog id="aboutModal" class="ui-dialog about-dialog" aria-labelledby="aboutTitle">
+  <div>
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-      <b style="font-size:18px">✍️ IELTS Writing Coach</b>
+      <b id="aboutTitle" style="font-size:18px">IELTS Writing Coach</b>
       <button id="aboutClose" class="small">关闭</button>
     </div>
     <p class="hint" style="margin:0 0 10px">版本 <b id="aboutVersion"></b> · 本地离线应用 · 数据与密钥全部只存在你的浏览器里</p>
-    <p style="font-size:14.5px;line-height:1.8;margin:8px 0">基于前考官 Simon 方法论构建的雅思写作训练工具：审题 → 范文先行 → 逐段跟写 → 诊断复盘的完整闭环；剑15-21 全题库训练营内置 56 篇范文与逐段教学包，零 API 即可完成主流程。</p>
-    <p style="font-size:14.5px;line-height:1.8;margin:8px 0">📄 <a href="docs/LICENSE" target="_blank">MIT License（含内容边界说明）</a><br>🔒 <a href="docs/PRIVACY.md" target="_blank">隐私与数据说明</a><br>📚 <a href="docs/index.html" target="_blank">知识库</a>（方法论 13 篇）</p>
+    <p style="font-size:14.5px;line-height:1.8;margin:8px 0">基于前考官 Simon 方法论构建的雅思写作训练工具：独立作答 → 诊断反馈 → 针对性改写 → 隔天换题复测；剑15-21 内置 56 篇范文与教学包。改写、保存与复测无需 API。</p>
+    <p style="font-size:14.5px;line-height:1.8;margin:8px 0"><a href="docs/LICENSE" target="_blank">MIT License（含内容边界说明）</a><br><a href="docs/PRIVACY.md" target="_blank">隐私与数据说明</a><br><a href="docs/index.html" target="_blank">知识库</a>（方法论 13 篇）</p>
     <p class="hint">IELTS 为剑桥大学等机构注册商标，本工具与之无隶属关系；剑桥真题材料仅供个人学习使用。</p>
-    <details style="margin-top:8px"><summary class="hint" style="cursor:pointer">❓ 常见问题</summary>
+    <details style="margin-top:8px"><summary class="hint" style="cursor:pointer">常见问题</summary>
       <ul style="font-size:13.5px;line-height:1.9;margin:8px 0 0;padding-left:18px">
-        <li><b>AI 功能要钱吗？</b>内置范文/审题课全程免费；AI 精批和逐段点评用你自己的 DeepSeek key（③诊断室 → AI 设置粘贴一次）。</li>
+        <li><b>AI 功能要钱吗？</b>内置范文/审题课全程免费；AI 精批和逐段点评用你自己的 DeepSeek key（③诊断与改写 → AI 设置粘贴一次）。</li>
         <li><b>数据会丢吗？</b>数据只在本机浏览器。换电脑/清缓存前，用「⑧ 进度·词本」的备份导出。</li>
         <li><b>小作文图表哪来的？</b>原书扫描页；克隆仓库后运行 <code>python download-t1-charts.py</code> 获取。</li>
-        <li><b>训练营怎么做题？</b>选一张卡 → 直接看范文 → 逐段学 → 写完「全文送去诊断室」。</li>
+        <li><b>今日训练怎么做题？</b>选一张卡 → 直接看范文 → 逐段学 → 写完「全文送去诊断与改写」。</li>
       </ul></details>
   </div>
-</div>
+</dialog>
 <script>
 (function(){
   var m=document.getElementById("aboutModal");
   document.getElementById("btnAbout").onclick=function(){
     document.getElementById("aboutVersion").textContent=(window.IWC_VERSION||"dev");
-    m.classList.remove("hidden");
+    m.showModal();
   };
-  document.getElementById("aboutClose").onclick=function(){ m.classList.add("hidden"); };
-  m.addEventListener("click",function(e){ if(e.target===m) m.classList.add("hidden"); });
+  document.getElementById("aboutClose").onclick=function(){ m.close(); };
+  m.addEventListener("click",function(e){ if(e.target===m) m.close(); });
 })();
 </script>
 
@@ -327,6 +348,9 @@
 <script src="js/cloze.js"></script>
 <script src="js/analyzer.js"></script>
 <script src="js/checker.js"></script>
+<script src="js/workbench.js"></script>
+<script src="js/learning-lessons.js"></script>
+<script src="js/learning.js"></script>
 <script src="js/app.js"></script>
 <script src="js/flashcards-v2.js"></script>
 <script src="js/tutor.js"></script>
@@ -335,7 +359,9 @@
 <script src="js/onboarding.js"></script>
 <script src="js/modelbank.js"></script>
 <script>
-window.IWC_VERSION = "0.1.0-dev";
+window.IWC_VERSION = "1.4.0";
+UI.init();
+goto("train");
 window.addEventListener("error", e => {
   const b = document.getElementById("errBanner");
   if (b) { b.classList.remove("hidden"); b.textContent = "JS错误: " + e.message + " @" + (e.filename||"").split("/").pop() + ":" + e.lineno; }

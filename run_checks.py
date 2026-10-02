@@ -6,6 +6,9 @@ import subprocess, sys, time
 CHECKS = [
     ("逻辑单元测试 (51项)", [sys.executable, "-c", "print('skip: run via node')"]) if False else ("逻辑单元测试 (51项)", ["node", "test-logic.js"]),
     ("范法语料测试 (9项)", ["node", "test-corpus.js"]),
+    ("学习流程、训练策略与电脑体验", ["node", "--test", "test-learning.js", "test-learning-strategy.js", "test-desktop-ux.js"]),
+    ("离线构建缓存测试", [sys.executable, "-X", "utf8", "-m", "unittest", "discover", "-s", "tests", "-p", "test_build.py"]),
+    ("GitHub 发布保护", [sys.executable, "-X", "utf8", "-m", "unittest", "discover", "-s", "tests", "-p", "test_publish.py"]),
     ("范文构建+验收 (56篇)", ["node", "build-model-essays.js"]),
     ("内容质量门禁 (schema+引用一致性)", ["node", "check-data.js"]),
 ]

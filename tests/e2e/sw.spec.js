@@ -14,4 +14,15 @@ test("Service Worker 注册并完成预缓存", async ({ page }) => {
   });
   expect(cached.keys).toBeGreaterThanOrEqual(1);
   expect(cached.n).toBeGreaterThan(50); // 预缓存应覆盖大部分资源
+  await page.context().setOffline(true);
+  await page.reload();
+  await expect(page.locator('#learningHome')).toBeVisible();
+  const offline=await page.evaluate(async()=>({
+    css:(await fetch('css/workbench.css')).ok,
+    js:(await fetch('js/workbench.js')).ok,
+    lessons:(await fetch('js/learning-lessons.js')).ok,
+    color:getComputedStyle(document.body).backgroundColor,
+    version:window.IWC_VERSION
+  }));
+  expect(offline).toEqual({css:true,js:true,lessons:true,color:'rgb(243, 245, 247)',version:require('../../package.json').version});
 });

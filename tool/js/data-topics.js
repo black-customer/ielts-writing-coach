@@ -386,7 +386,6 @@ const TopicsLibrary = [
       { en: "Households can use several rubbish bins to separate waste.", zh: "家庭可用多个垃圾桶分类。" },
       { en: "Recycling saves energy and raw materials.", zh: "回收节省能源和原材料。" },
       { en: "There are several benefits to building more nuclear power stations.", zh: "多建核电站有若干好处。" },
-      { en: "Fossil fuels like oil and gas are running out.", zh: "油气等化石燃料正在枯竭。" },
       { en: "Nuclear power is a relatively sustainable energy source.", zh: "核能是相对可持续的能源。" },
       { en: "It can be used to produce electricity without wasting natural resources.", zh: "它发电不浪费自然资源。" },
       { en: "It could replace the use of natural resources like coal, oil or gas.", zh: "它可替代煤、石油、天然气等资源。" },

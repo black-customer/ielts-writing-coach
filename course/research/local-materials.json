@@ -1,0 +1,1744 @@
+{
+  "summary": {
+    "date": "2026-10-01",
+    "files": 173,
+    "videos": 21,
+    "video_hours": 4.52,
+    "pdfs": 42,
+    "empty_extractions": [
+      "extracted/[真题]10-16__【14】剑桥雅思真题14.pdf.txt",
+      "extracted/[真题]10-16__【16】剑桥雅思真题16.pdf.txt",
+      "extracted/剑桥雅思真题18.pdf.txt"
+    ],
+    "scan_pdfs": [
+      "[真题]10-16/【14】剑桥雅思真题14.pdf",
+      "[真题]10-16/【16】剑桥雅思真题16.pdf",
+      "剑桥雅思真题18.pdf"
+    ],
+    "asr_draft_videos": 21,
+    "asr_segments": 3323
+  },
+  "items": [
+    {
+      "path": "[真题]10-16/【10】剑桥雅思真题10.pdf",
+      "bytes": 54693972,
+      "kind": "pdf",
+      "sha256": "fdf0181a930b792ebcf77576f7e3c29dceeeac49674b53593cf0f1451fc71fe6",
+      "pages": 166,
+      "text_chars": 266161,
+      "review_status": "text available"
+    },
+    {
+      "path": "[真题]10-16/【11】剑桥雅思真题11.pdf",
+      "bytes": 13110828,
+      "kind": "pdf",
+      "sha256": "b5e7b8ce40016c10f5e8aca400c66d667a858bd56074cc57cd6b6e1feaec4e66",
+      "pages": 145,
+      "text_chars": 232157,
+      "review_status": "text available"
+    },
+    {
+      "path": "[真题]10-16/【12】剑桥雅思真题12.pdf",
+      "bytes": 32779142,
+      "kind": "pdf",
+      "sha256": "f791300937f11d8380eba7b7997db1da751d66802a96aed996db704947e52407",
+      "pages": 138,
+      "text_chars": 239963,
+      "review_status": "text available"
+    },
+    {
+      "path": "[真题]10-16/【13】剑桥雅思真题13.pdf",
+      "bytes": 2931943,
+      "kind": "pdf",
+      "sha256": "f6bbbbf97633bc8dfd71f11b68b8fff4da607cbe2408cfebdbe54cf05c6b18cf",
+      "pages": 143,
+      "text_chars": 240829,
+      "review_status": "text available"
+    },
+    {
+      "path": "[真题]10-16/【14】剑桥雅思真题14.pdf",
+      "bytes": 10860223,
+      "kind": "pdf",
+      "sha256": "a285c5b7196d4b4d595886ca215fca40a841dd91b7ff9d95e7e9a272488da8b9",
+      "pages": 143,
+      "text_chars": 0,
+      "review_status": "scan/low text: requires visual/OCR review"
+    },
+    {
+      "path": "[真题]10-16/【15】剑桥雅思真题15.pdf",
+      "bytes": 29303600,
+      "kind": "pdf",
+      "sha256": "79c8e28b0049fa40362e45f05f6639c409e6d32cea8e139e049e444a247200d3",
+      "pages": 147,
+      "text_chars": 1018,
+      "review_status": "text available"
+    },
+    {
+      "path": "[真题]10-16/【16】剑桥雅思真题16.pdf",
+      "bytes": 60818332,
+      "kind": "pdf",
+      "sha256": "1710016df36f1ac47c644fd26322a927bae5ad581a44b903ea388eba56adf71a",
+      "pages": 144,
+      "text_chars": 0,
+      "review_status": "scan/low text: requires visual/OCR review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b10_t1_1_45.txt",
+      "bytes": 849,
+      "kind": "txt",
+      "sha256": "39906d491bb91751e9ba6a2f77be80bd7c5b339bafd986498deb4f8b2a6d9e64",
+      "text_chars": 849,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b10_t2_2_35.txt",
+      "bytes": 1421,
+      "kind": "txt",
+      "sha256": "8b3d7180a85f726557060ea21daa8f1efe06b449609fbd2ab746820178a2a4b5",
+      "text_chars": 1421,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b10_t3_1_65.txt",
+      "bytes": 1265,
+      "kind": "txt",
+      "sha256": "43f51b8e3dd20b6af6b36a9ef3c8a0207137ac9bd7acea4ea44687064693dc8b",
+      "text_chars": 1265,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b10_t4_2_55.txt",
+      "bytes": 1277,
+      "kind": "txt",
+      "sha256": "d9fbde6a6eb85d46a5c06f765f7dca0cddb2f6b04fd0c26780657bf8742a6d1e",
+      "text_chars": 1277,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b10_tA_2_50.txt",
+      "bytes": 1276,
+      "kind": "txt",
+      "sha256": "dcaefa2812902c72aec47073728687588e2d8ea79eb3df4da0c16a9ec6e7aa2b",
+      "text_chars": 1276,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b10_tB_1_80.txt",
+      "bytes": 1512,
+      "kind": "txt",
+      "sha256": "382f019249f65943f35fd3a1ebf5064e48159e4abc8c26f50e27ec84ec210f79",
+      "text_chars": 1512,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b11_t1_2_55.txt",
+      "bytes": 1527,
+      "kind": "txt",
+      "sha256": "6facd972b1cbc20082e279dca3fd53c963384e1b5743fa766a4c486977ea96e8",
+      "text_chars": 1527,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b11_t3_1_60.txt",
+      "bytes": 1222,
+      "kind": "txt",
+      "sha256": "bba8ba581dea1f95ba1040e2fbac19f90285f2632f781b483b6fa7372187e8a3",
+      "text_chars": 1222,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b11_t3_2_70.txt",
+      "bytes": 1491,
+      "kind": "txt",
+      "sha256": "38a6599d18102dc36a856baa2c681f06030d85ec86c288b8196b41b35de48c63",
+      "text_chars": 1491,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b11_t4_1_70.txt",
+      "bytes": 1085,
+      "kind": "txt",
+      "sha256": "c19ce100e7151420192739b46defc008346483f9305684e9724592ac4c4bdb34",
+      "text_chars": 1085,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b11_t4_2_55.txt",
+      "bytes": 1545,
+      "kind": "txt",
+      "sha256": "133d4a1bad232a1af9360aac3bb92cc65c4fc5b7ff8d4d22347a6bac3c9eca61",
+      "text_chars": 1545,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b12_t5_1_50.txt",
+      "bytes": 1048,
+      "kind": "txt",
+      "sha256": "68fe6bf9acc9f603cc54844077aa52161533ac0c35b33f29a44acab25a29e7a3",
+      "text_chars": 1048,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b12_t5_2_60.txt",
+      "bytes": 1593,
+      "kind": "txt",
+      "sha256": "3779cfd36a8ed9b4ea61e9bc4fa476970bc8e97eae10ba36f8b6fe6150af2d17",
+      "text_chars": 1593,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b12_t6_1_70.txt",
+      "bytes": 1234,
+      "kind": "txt",
+      "sha256": "1262bb52fca8604673b5da99d592cc97ae605059fddc2ce2be0833c8735e6b29",
+      "text_chars": 1234,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b12_t6_2_50.txt",
+      "bytes": 1872,
+      "kind": "txt",
+      "sha256": "586a376dafe745f4eb6846c37d6a9e431d60e77e994e914a6da628ea2b0f0bfd",
+      "text_chars": 1872,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b12_t7_1_65.txt",
+      "bytes": 1322,
+      "kind": "txt",
+      "sha256": "81acb32a9ec5917d438a52b14ff93294db1d41bba34f1f236c6a879f7c817a44",
+      "text_chars": 1322,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b12_t7_2_75.txt",
+      "bytes": 2002,
+      "kind": "txt",
+      "sha256": "d68e46734260df83f15394e4d9cbe20378fc11d8e8d85c4c4551f9e0f4fa8585",
+      "text_chars": 2002,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b12_t8_1_60.txt",
+      "bytes": 847,
+      "kind": "txt",
+      "sha256": "76f8458f81d6205db3a10822989cf0181b78ab40efea688fa949b1388228c914",
+      "text_chars": 847,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b12_t8_2_50.txt",
+      "bytes": 1342,
+      "kind": "txt",
+      "sha256": "ae3d85158d8b04abd9a671a00c23a1a2fd41831fabbeec36578520f55ec2b218",
+      "text_chars": 1342,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b13_t3_1_50.txt",
+      "bytes": 1532,
+      "kind": "txt",
+      "sha256": "3ae0137247891576f743d15190ffd008cd3e6246e001827ea7cf343710c6978e",
+      "text_chars": 1532,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b13_t3_1_60.txt",
+      "bytes": 2332,
+      "kind": "txt",
+      "sha256": "c2540a4a346bbf63c5ea9c89e69deb0bd3837dcd082657553e7c1fe50eff3729",
+      "text_chars": 2332,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b13_t3_1_65.txt",
+      "bytes": 931,
+      "kind": "txt",
+      "sha256": "eb7cca88f7f07be2ecdc9605837e37591b1340cc924bb6a22d66be5021498f77",
+      "text_chars": 931,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b13_tNone_None_55.txt",
+      "bytes": 956,
+      "kind": "txt",
+      "sha256": "2d03f26f738fcf5e62c177f75085513f780e396aa2db7a0bb54b7fbc8c74958d",
+      "text_chars": 956,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b13_tNone_None_60.txt",
+      "bytes": 840,
+      "kind": "txt",
+      "sha256": "26992e9fc2da8909ab7231486550a602dee15b8bee91b957e3bf2b2cf3e38d16",
+      "text_chars": 840,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b13_tNone_None_65.txt",
+      "bytes": 1827,
+      "kind": "txt",
+      "sha256": "c3ab6120445a3ce538ab410903ab69650199e09a1ae4af51cb37a40fb9376093",
+      "text_chars": 1827,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "calibration/transcripts/cal_b13_tNone_None_70.txt",
+      "bytes": 1693,
+      "kind": "txt",
+      "sha256": "238d47eb6c09011cba4e94176d2b7bcb11900a5c5c06506fda65cdae396a672a",
+      "text_chars": 1693,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/[真题]10-16__【10】剑桥雅思真题10.pdf.txt",
+      "bytes": 279757,
+      "kind": "txt",
+      "sha256": "ea226e56e71e30970696e3db1b2bfa04661560fb033ceae6be6612ee83960866",
+      "text_chars": 270014,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/[真题]10-16__【11】剑桥雅思真题11.pdf.txt",
+      "bytes": 252867,
+      "kind": "txt",
+      "sha256": "0d9611a7ef342c8bd0c2db5ba1b48d561c3e5ab225649be912ccfabf871b9101",
+      "text_chars": 235212,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/[真题]10-16__【12】剑桥雅思真题12.pdf.txt",
+      "bytes": 249739,
+      "kind": "txt",
+      "sha256": "879ea12e76e176fdf9cc15cbcad8253af221b6df8391acdb03e6a66461f6e2f2",
+      "text_chars": 242870,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/[真题]10-16__【13】剑桥雅思真题13.pdf.txt",
+      "bytes": 253275,
+      "kind": "txt",
+      "sha256": "6b362fdc250b4c7100e7f844ac5bcb3cec8b6b4cfaa056c567eb7fe3867a32f1",
+      "text_chars": 244126,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/[真题]10-16__【14】剑桥雅思真题14.pdf.txt",
+      "bytes": 0,
+      "kind": "txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text_chars": 0,
+      "review_status": "empty extraction"
+    },
+    {
+      "path": "extracted/[真题]10-16__【15】剑桥雅思真题15.pdf.txt",
+      "bytes": 1096,
+      "kind": "txt",
+      "sha256": "fa4b60aec185411ee54d94220bec1865b9e6c2e2e7a0f9303e983319eb530a4b",
+      "text_chars": 1040,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/[真题]10-16__【16】剑桥雅思真题16.pdf.txt",
+      "bytes": 0,
+      "kind": "txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text_chars": 0,
+      "review_status": "empty extraction"
+    },
+    {
+      "path": "extracted/_index.txt",
+      "bytes": 4657,
+      "kind": "txt",
+      "sha256": "269fec066f4f9a3c60f668f9a47b6370a9f5b7b6b89310232d361c796b89cd78",
+      "text_chars": 3495,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/Ideas for IELTS Topics.pdf.txt",
+      "bytes": 74618,
+      "kind": "txt",
+      "sha256": "3e5d1f5ad947c6a29b99b0df3dba293a6d466e4237ded2204d8d261c32a8d89f",
+      "text_chars": 72264,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__9 Band Essays from ielts-simon.com 2010 - 2016.pdf.txt",
+      "bytes": 42095,
+      "kind": "txt",
+      "sha256": "1110676186ce3d1e8a35158ec081a850f9ba760379e26301d85533aea54ceded",
+      "text_chars": 41490,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__Ideas_for_IELTS_topics_(simon 写作ebook)重要.pdf.txt",
+      "bytes": 88132,
+      "kind": "txt",
+      "sha256": "bf3bed36a8fcf08956c8ea38431e9d7d3c68a4a34295a6c4e59c4812ee03d102",
+      "text_chars": 86287,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__simon 9 分范文  重要！__14年的范文__simon  9分范文整理 14年.docx.txt",
+      "bytes": 41487,
+      "kind": "txt",
+      "sha256": "3c4c8bbd80048bc5a50b41d351cba29cf370a9384e444ef8d622fb2468ef8306",
+      "text_chars": 40988,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__simon 9 分范文  重要！__14年的范文__Simon 作文整理2.docx.txt",
+      "bytes": 24176,
+      "kind": "txt",
+      "sha256": "6c64cb1b148fb501d1483b42ffdfdc5848e986c09c7d5d93d94c2c84808b1a90",
+      "text_chars": 23436,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__simon 9 分范文  重要！__14年的范文__Simon 作文整理3.docx.txt",
+      "bytes": 16703,
+      "kind": "txt",
+      "sha256": "1b14bac2005eb236f13680df415c24de3f167acb4c82b1073c5512f28e16cfc9",
+      "text_chars": 16530,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__simon 9 分范文  重要！__9分范文.docx.txt",
+      "bytes": 197943,
+      "kind": "txt",
+      "sha256": "4019a0e61f449f0ab034c440397968b9bfeeda39ee3fce59012be2f888040748",
+      "text_chars": 194393,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__simon 9 分范文  重要！__economic-success-essay 一篇带改错的范文.pdf.txt",
+      "bytes": 2138,
+      "kind": "txt",
+      "sha256": "6e436d7aa28abb33789c7f8473482cb3e0da37935ad9e98c531b910b60e6bc0e",
+      "text_chars": 2102,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__simon 9 分范文  重要！__essay-correction-example-1.pdf.txt",
+      "bytes": 2759,
+      "kind": "txt",
+      "sha256": "bbf8fc620d575086929fa4e5f098dff7e73a1b7c95db5a2531478634adb9cdf8",
+      "text_chars": 2681,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__simon 9 分范文  重要！__simon&#39;s examples 52页 包括大小作文 无改错纯范文版.pdf.txt",
+      "bytes": 75652,
+      "kind": "txt",
+      "sha256": "a9245d866fc739397c6ffa617f73a668f4cb40f9a561ca7380b89d0895b79628",
+      "text_chars": 74263,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__simon 9 分范文  重要！__simon--大作文1_decrypted.pdf.txt",
+      "bytes": 81122,
+      "kind": "txt",
+      "sha256": "3d3fbc3e2e4769e3d064d359e1cf1ca9e938b2af0090a7dc369117e07c439945",
+      "text_chars": 79297,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__simon 9 分范文  重要！__simon--大作文2_decrypted.pdf.txt",
+      "bytes": 27347,
+      "kind": "txt",
+      "sha256": "fcba2a3bc71561344eb0bb310d0ae8d889bdcf05e305d72e1b73b87266cca9f5",
+      "text_chars": 26655,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__simon 9 分范文  重要！__simon--大作文3_decrypted.pdf.txt",
+      "bytes": 36765,
+      "kind": "txt",
+      "sha256": "53aa1cbd51bb02373ca2a37358f022d9805f53ed1d31e323dc100303bd1490db",
+      "text_chars": 35877,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__simon 9 分范文  重要！__simon--小作文1_decrypted.pdf.txt",
+      "bytes": 84198,
+      "kind": "txt",
+      "sha256": "fc506ff7467b0693000225fa9ab8e787a418e4261cb4a5e04018f146c5ce53c1",
+      "text_chars": 81829,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__simon 9 分范文  重要！__simon--小作文2_decrypted.pdf.txt",
+      "bytes": 30268,
+      "kind": "txt",
+      "sha256": "05f5bb2cf73ad34f1763931db3314d5c4e51de56872060a3ac6063d60b878148",
+      "text_chars": 29472,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__simon 9 分范文  重要！__t2-career-essay.pdf.txt",
+      "bytes": 2168,
+      "kind": "txt",
+      "sha256": "25d221b614231fcbff7f7e1b19dffcb96b8d28a2de7e6978c4e78e6f37d21b63",
+      "text_chars": 2136,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__simon 9 分范文  重要！__重要的 task1的资料 包括语法 重要！！！.docx.txt",
+      "bytes": 193708,
+      "kind": "txt",
+      "sha256": "b7623a51d4f58fac633854f4963601ce6591af921dd0b5ee7adbc298ba66ca02",
+      "text_chars": 189516,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__Simon Writing PDF__2 Introductions worksheet.pdf.txt",
+      "bytes": 1938,
+      "kind": "txt",
+      "sha256": "9a82cdfe36a4a5abcb6fcc152c836367d0d7db6ee093e6fc0a4d54bee576cd47",
+      "text_chars": 1885,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__Simon Writing PDF__21 Line graph worksheet.pdf.txt",
+      "bytes": 2427,
+      "kind": "txt",
+      "sha256": "2c8862f970c542bb0c3207b05eea05116e3b794f84613a0781369a2f6a8f8288",
+      "text_chars": 2359,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__Simon Writing PDF__22 Bar chart worksheet.pdf.txt",
+      "bytes": 2415,
+      "kind": "txt",
+      "sha256": "ca4d0cbf759026b6cb1acb5730c1a0e7920e1b26d51f6242a6510bdb2d3877bf",
+      "text_chars": 2333,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__Simon Writing PDF__23 Pie chart worksheet.pdf.txt",
+      "bytes": 2502,
+      "kind": "txt",
+      "sha256": "fe465981ce95f96f18492135c9b989950c26d8e799595ade0b1ed66661288e29",
+      "text_chars": 2424,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__Simon Writing PDF__24 Table worksheet.pdf.txt",
+      "bytes": 2574,
+      "kind": "txt",
+      "sha256": "1d713ad6a2da5ae92d4489eb09945b7733f6588a13bd87684b69ee4ec20df73f",
+      "text_chars": 2489,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__Simon Writing PDF__25 2 chart worksheet.pdf.txt",
+      "bytes": 2842,
+      "kind": "txt",
+      "sha256": "b30ebeed34d009e2eb45ca4f3bc4e59d7edcdedd6be7d037600e3ada6b311067",
+      "text_chars": 2745,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__Simon Writing PDF__26 Process worksheet.pdf.txt",
+      "bytes": 2555,
+      "kind": "txt",
+      "sha256": "5f838bd43b6dfbd3dfe27ac489580fce1b41d3472f1c7d0f02f0677733d4d801",
+      "text_chars": 2451,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__Simon Writing PDF__27 Comparison worksheet.pdf.txt",
+      "bytes": 2387,
+      "kind": "txt",
+      "sha256": "25f3aa96db74c0e6e4e6cdd5f4aae5e97dea38d192ef9e0ce37498e006be2e1d",
+      "text_chars": 2309,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__Simon Writing PDF__3 Main paragraphs worksheet.pdf.txt",
+      "bytes": 4424,
+      "kind": "txt",
+      "sha256": "d58306747ec9eabc55bfec9cc7b8c5f64969dcc3d69ac5909124bc0a4d7c94b2",
+      "text_chars": 4249,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__Simon Writing PDF__4 Conclusions worksheet.pdf.txt",
+      "bytes": 3345,
+      "kind": "txt",
+      "sha256": "d932e0d3d6d1e8cbf342574523bf92103b9eed7ac2d19301cbe8da351216458e",
+      "text_chars": 3257,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__Simon Writing PDF__6 Opinion essay worksheet.pdf.txt",
+      "bytes": 3051,
+      "kind": "txt",
+      "sha256": "21366bd101bf25535224bb679d4014d093b32b3cafb11a28929470c7c003fed4",
+      "text_chars": 2986,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__Simon Writing PDF__7. Discussion essay worksheet.pdf.txt",
+      "bytes": 3073,
+      "kind": "txt",
+      "sha256": "45635b3511a5870fcdc5070dd65eb68eea9094278b89cdec2481b3db6bc8aa48",
+      "text_chars": 2978,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__Simon Writing PDF__8 Problem and Solution worksheet.pdf.txt",
+      "bytes": 3050,
+      "kind": "txt",
+      "sha256": "5921dd08cfd1196d15456ed896b6fae8c4113fa39598cff0a229f4a5c915f51c",
+      "text_chars": 2941,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__Simon Writing PDF__9 &#39;2-part question&#39; worksheet.pdf.txt",
+      "bytes": 3252,
+      "kind": "txt",
+      "sha256": "72ee03288d1683a758efd599c1f5fde10f1f1b200c763c3ff346cd5a4b65aa0e",
+      "text_chars": 3167,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__Simon Writing PDF__Example &#39;map&#39; reports.pdf.txt",
+      "bytes": 4673,
+      "kind": "txt",
+      "sha256": "080d48ac4957cc83fa08aef8216cb752e0dfa581c3977d3198b974354c99727b",
+      "text_chars": 4555,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__Simon 写作使用建议.docx.txt",
+      "bytes": 1780,
+      "kind": "txt",
+      "sha256": "0f3b3f4046cab5f3c46b0fb7f4cfb4ceebc1263355399a203a440d5ae8b0e391",
+      "text_chars": 1447,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__simon网站关于写作技巧的整理 重要.pdf.txt",
+      "bytes": 165577,
+      "kind": "txt",
+      "sha256": "b6188aa480f19662d562e3e7b8d8dfd3493338ea197feb2ede037507c84f7695",
+      "text_chars": 162191,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__官网补充的话题idea__cctv-benefits.pdf.txt",
+      "bytes": 2341,
+      "kind": "txt",
+      "sha256": "0cfb4cc3702386713eda41d998bcea002d4f29a1608ae06763a4f7b6815dad4d",
+      "text_chars": 2282,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__官网补充的话题idea__family-history-Simon.pdf.txt",
+      "bytes": 1914,
+      "kind": "txt",
+      "sha256": "b7ece35d0abd4f9a2d0be3c8a49308701ddc8fa1b2d573e675340fef96594da1",
+      "text_chars": 1861,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__网友整理Simon网站资料（不看也行）__(精华)顾家北手把手词伙整理和总结 Sheet1.pdf.txt",
+      "bytes": 7077,
+      "kind": "txt",
+      "sha256": "1a720e81543473a6438c43d9fcc4f5cf99b4b2527e29696a195d25f4f367eae8",
+      "text_chars": 5030,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__网友整理Simon网站资料（不看也行）__Simon 词伙 一般 里面有的翻译不太准.docx.txt",
+      "bytes": 17764,
+      "kind": "txt",
+      "sha256": "d7a4eb306474facfee9a7f08ce434cca729f6ecd1478fcb040b4a7b6d05110ee",
+      "text_chars": 11013,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/simon writting 9+12讲 写作__网友整理Simon网站资料（不看也行）__作文类型总结.docx.txt",
+      "bytes": 839,
+      "kind": "txt",
+      "sha256": "717b8450a123e821ecc553d4e892ce9d5922ecb6d8e19fd1b8da28a1de8ce475",
+      "text_chars": 753,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/剑19样题.pdf.txt",
+      "bytes": 15335,
+      "kind": "txt",
+      "sha256": "0b518f2465444817d8fe321915a99324d5be0dfa593a48489fc2bc4ea01adb9f",
+      "text_chars": 14731,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/剑桥雅思真题18.pdf.txt",
+      "bytes": 0,
+      "kind": "txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text_chars": 0,
+      "review_status": "empty extraction"
+    },
+    {
+      "path": "extracted/考官Simon雅思大作文范文(28篇).pdf.txt",
+      "bytes": 59557,
+      "kind": "txt",
+      "sha256": "a97ee93b24ee85abd544b53ee3642e820834385fd7aa39019106b8b77be757ea",
+      "text_chars": 56923,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "extracted/考官Simon雅思小作文范文(22篇).pdf.txt",
+      "bytes": 22899,
+      "kind": "txt",
+      "sha256": "8c3d855b2b739d1a8e8774db3b9404e7a126a44af73e3a7ddb122755ba2ef8c0",
+      "text_chars": 22515,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "Ideas for IELTS Topics.pdf",
+      "bytes": 417741,
+      "kind": "pdf",
+      "sha256": "6aad854be3fdd2c07efc794082b7764ab33d54a2e3232b9ab57ed2762634d9df",
+      "pages": 51,
+      "text_chars": 71101,
+      "review_status": "text available"
+    },
+    {
+      "path": "knowledge/00-知识体系总纲.md",
+      "bytes": 6097,
+      "kind": "md",
+      "sha256": "e16366463b712829a0933f65421d72177a80b2a983686f7f61742c76afdb7151",
+      "text_chars": 2996,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/01-Task2核心方法论.md",
+      "bytes": 17840,
+      "kind": "md",
+      "sha256": "4d8f8b9f688be8a971cd1cc5432c32c3efd8ffdeba6d6907e02d336a6b4a2564",
+      "text_chars": 10582,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/02-考官范文规律.md",
+      "bytes": 4503,
+      "kind": "md",
+      "sha256": "f03c3ee758afbe1c97351797ddf2e2bb588849e621c25d56d528c211b4667507",
+      "text_chars": 2583,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/03-评分标准与自查清单.md",
+      "bytes": 9535,
+      "kind": "md",
+      "sha256": "62cc829db3e7e74af146e7fc776fd2fd5fd417e3aa1b505d2697af34c42ae03a",
+      "text_chars": 5214,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/04-Task1小作文完全指南.md",
+      "bytes": 11475,
+      "kind": "md",
+      "sha256": "532767a11f6d00f42028eb4899b451fd5cd4117d6d6edfb6965629b91e6f03df",
+      "text_chars": 8052,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/05-话题思路库.md",
+      "bytes": 149916,
+      "kind": "md",
+      "sha256": "b13fadcb40786e8eff217d324b949c3a6419d93f3751fe18b3a203c224d9921b",
+      "text_chars": 103113,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/06-词伙与句式储备.md",
+      "bytes": 71104,
+      "kind": "md",
+      "sha256": "52f686ce8bf55ae9c3af4676092cf99ae7b218948aa26ebf9d2c98ade500dc3e",
+      "text_chars": 44695,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/08-近期考场真题回忆.md",
+      "bytes": 34097,
+      "kind": "md",
+      "sha256": "d9f3dca060df49804625291a4c101e8701bfebe452d6758e8795010fdbe1407f",
+      "text_chars": 27877,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/09-Simon网站增量调研.md",
+      "bytes": 19684,
+      "kind": "md",
+      "sha256": "7c96e7c2c1e41911be6e55d7e796c478567ae4acb3d6d77cc2748ece5511f621",
+      "text_chars": 12246,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/10-范文全库与仿写训练指南.md",
+      "bytes": 3103,
+      "kind": "md",
+      "sha256": "5048adc2ca64ab34c52101ef0e590cbfb8e899ee49630cabb8c667695e1605ee",
+      "text_chars": 1462,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/11-AI考官精批使用指南.md",
+      "bytes": 2429,
+      "kind": "md",
+      "sha256": "cbe54c02a4a931a7285223842103b5cc97afc23ac8dad05b2eb9ef92e13f1d4b",
+      "text_chars": 1116,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/12-评分校准报告.md",
+      "bytes": 3152,
+      "kind": "md",
+      "sha256": "4f5813326998a1bd203e35618ffeb8bc635741c555ced60709e12898e739e2ca",
+      "text_chars": 1580,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/13-我的写作体系.md",
+      "bytes": 5539,
+      "kind": "md",
+      "sha256": "620cf463bfc16a10234aff0382eb5b263eccc1a3fd2d54640179787f0732a02b",
+      "text_chars": 2867,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/digests/Simon网站调研补充.md",
+      "bytes": 19684,
+      "kind": "md",
+      "sha256": "7c96e7c2c1e41911be6e55d7e796c478567ae4acb3d6d77cc2748ece5511f621",
+      "text_chars": 12246,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/digests/剑14-18真题补录.md",
+      "bytes": 5558,
+      "kind": "md",
+      "sha256": "06c5efd8a831f48f5c945f6a79ed28b9ee83f2f800d144d2274bfb6e0a76b110",
+      "text_chars": 5086,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/digests/剑19-21真题补录.md",
+      "bytes": 10408,
+      "kind": "md",
+      "sha256": "4de5538dac16bca9eb21ec28ab6fe273fa6911027de10fd6e3216aae93917142",
+      "text_chars": 8440,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/digests/剑桥真题写作题库.md",
+      "bytes": 18316,
+      "kind": "md",
+      "sha256": "976f3ba6a869c6c7144e935a278f224b13642002d20a7ce7a7c61a0e43de8152",
+      "text_chars": 15208,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/digests/大作文范文规律.md",
+      "bytes": 42406,
+      "kind": "md",
+      "sha256": "319c8ce21f4a545820a14dad2d7cf0887b547f0ebd1502b1988e1c3d63e87bb5",
+      "text_chars": 35687,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/digests/官方评分标准验证.md",
+      "bytes": 20706,
+      "kind": "md",
+      "sha256": "d00e53d62ba507645f7716911cfa9941f102edcc8f7e5e9614488f3ef315acb5",
+      "text_chars": 16249,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/digests/小作文范文规律.md",
+      "bytes": 55957,
+      "kind": "md",
+      "sha256": "19f5a53d2cb742cc3181f53a7dc0888fb6abf8a54c85607228ce190f266355b7",
+      "text_chars": 48733,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/digests/词伙库.md",
+      "bytes": 69999,
+      "kind": "md",
+      "sha256": "13a712cd2ef5b7d7958063f69bc76407605fc309896c381c9ab1b654d08de202",
+      "text_chars": 44619,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/digests/话题思路库.md",
+      "bytes": 149916,
+      "kind": "md",
+      "sha256": "b13fadcb40786e8eff217d324b949c3a6419d93f3751fe18b3a203c224d9921b",
+      "text_chars": 103113,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "knowledge/digests/近期考场真题回忆.md",
+      "bytes": 34097,
+      "kind": "md",
+      "sha256": "d9f3dca060df49804625291a4c101e8701bfebe452d6758e8795010fdbe1407f",
+      "text_chars": 27877,
+      "review_status": "text available; inventory is not proof of full review"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/9 Band Essays from ielts-simon.com 2010 - 2016.pdf",
+      "bytes": 331072,
+      "kind": "pdf",
+      "sha256": "3904d4715e28999c6ac66642b13cb358090fe941094f479effdc6c4c1298628f",
+      "pages": 13,
+      "text_chars": 41226,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Ideas_for_IELTS_topics_(simon 写作ebook)重要.pdf",
+      "bytes": 790586,
+      "kind": "pdf",
+      "sha256": "9901234f36144291a59a1581fbc75c7a3629de75093bee7c305f4e2683a43063",
+      "pages": 52,
+      "text_chars": 85295,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/simon 9 分范文  重要！/14年的范文/simon  9分范文整理 14年.docx",
+      "bytes": 182184,
+      "kind": "docx",
+      "sha256": "36927d76f1014dcf5a5655d161ff4c82415ce7d56d293c939be8924b5d8fbb9f"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/simon 9 分范文  重要！/14年的范文/Simon 作文整理2.docx",
+      "bytes": 152414,
+      "kind": "docx",
+      "sha256": "b2dacf1ff59488b3ec84760e3cf1b6156bfe642d0669310bb4b20bfe4e698279"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/simon 9 分范文  重要！/14年的范文/Simon 作文整理3.docx",
+      "bytes": 143545,
+      "kind": "docx",
+      "sha256": "3adc7ae36c833fd5bca13d34967b554a3b42d239464acd9f8017a1fddae8467d"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/simon 9 分范文  重要！/9分范文.docx",
+      "bytes": 626554,
+      "kind": "docx",
+      "sha256": "139ef5d84130b6404b15dcff1b3837994637a7e04c6041c1c15b06b645c4ab76"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/simon 9 分范文  重要！/economic-success-essay 一篇带改错的范文.pdf",
+      "bytes": 49122,
+      "kind": "pdf",
+      "sha256": "3d66de7709ffa6db3b720e584c6e766f1f53ce8038d57d5a543bfb36dff40fca",
+      "pages": 1,
+      "text_chars": 2081,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/simon 9 分范文  重要！/essay-correction-example-1.pdf",
+      "bytes": 127268,
+      "kind": "pdf",
+      "sha256": "f00f909fe0ee5c1ba498f3b47880a7a378f48520d89305d7c15dc8b08e412b4b",
+      "pages": 1,
+      "text_chars": 2660,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/simon 9 分范文  重要！/simon&#39;s examples 52页 包括大小作文 无改错纯范文版.pdf",
+      "bytes": 1434302,
+      "kind": "pdf",
+      "sha256": "e748ac2679319e57160aef31c2d112e6f869bff6b84922345f1a259347e12b0b",
+      "pages": 52,
+      "text_chars": 73633,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/simon 9 分范文  重要！/simon--大作文1_decrypted.pdf",
+      "bytes": 341442,
+      "kind": "pdf",
+      "sha256": "22dc3216a386084bde4dd04eac10bea4e20eb3b27404d8c4e8037f67a2b80db6",
+      "pages": 20,
+      "text_chars": 78847,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/simon 9 分范文  重要！/simon--大作文2_decrypted.pdf",
+      "bytes": 175869,
+      "kind": "pdf",
+      "sha256": "63d7972e9c184ace7f418d529586cdd8e5e9801a99cd7f4e932f85e9c13d14a2",
+      "pages": 6,
+      "text_chars": 26524,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/simon 9 分范文  重要！/simon--大作文3_decrypted.pdf",
+      "bytes": 902267,
+      "kind": "pdf",
+      "sha256": "c940d5e7df701196eb4803a51a92096f41aa3481bcd9633cca3e3538f0871a27",
+      "pages": 8,
+      "text_chars": 35702,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/simon 9 分范文  重要！/simon--小作文1_decrypted.pdf",
+      "bytes": 1102908,
+      "kind": "pdf",
+      "sha256": "554f850bedb1d58b6591e2c7d52c0a6f154de6cad2592731b71f472d2c7b654d",
+      "pages": 24,
+      "text_chars": 81287,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/simon 9 分范文  重要！/simon--小作文2_decrypted.pdf",
+      "bytes": 730188,
+      "kind": "pdf",
+      "sha256": "75cc8dd33cdb9b1d80e5a54998c6c6b83e268e93cf18d7a4fb7c8a96fdc50114",
+      "pages": 10,
+      "text_chars": 29252,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/simon 9 分范文  重要！/t2-career-essay.pdf",
+      "bytes": 45583,
+      "kind": "pdf",
+      "sha256": "7b46e74d3f3f4fe265cc748c83c002b89968bbee08eee98a992e2d1ca40e4e3c",
+      "pages": 1,
+      "text_chars": 2115,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/simon 9 分范文  重要！/重要的 task1的资料 包括语法 重要！！！.docx",
+      "bytes": 3111895,
+      "kind": "docx",
+      "sha256": "6d2381aa110678cfd700cf0dc75ad7ab792f7353b4d0504f2f54502848673060"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon videos Task 1/Lesson 00.mp4",
+      "bytes": 46744094,
+      "kind": "mp4",
+      "duration_seconds": 472.990476,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1152,
+          "height": 720
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon videos Task 1/Lesson 01.mp4",
+      "bytes": 74110484,
+      "kind": "mp4",
+      "duration_seconds": 905.206712,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1152,
+          "height": 720
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon videos Task 1/Lesson 02.mp4",
+      "bytes": 83822807,
+      "kind": "mp4",
+      "duration_seconds": 1014.247619,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1152,
+          "height": 720
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon videos Task 1/Lesson 03.mp4",
+      "bytes": 82885832,
+      "kind": "mp4",
+      "duration_seconds": 973.984218,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1152,
+          "height": 720
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon videos Task 1/Lesson 04.mp4",
+      "bytes": 69116540,
+      "kind": "mp4",
+      "duration_seconds": 814.347029,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1152,
+          "height": 720
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon videos Task 1/Lesson 05.mp4",
+      "bytes": 93114699,
+      "kind": "mp4",
+      "duration_seconds": 944.285896,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1152,
+          "height": 720
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon videos Task 1/Lesson 06.mp4",
+      "bytes": 73921500,
+      "kind": "mp4",
+      "duration_seconds": 981.484263,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1152,
+          "height": 720
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon videos Task 1/Lesson 07.mp4",
+      "bytes": 70898003,
+      "kind": "mp4",
+      "duration_seconds": 1045.548118,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1152,
+          "height": 720
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon videos Task 1/Lesson 08.mp4",
+      "bytes": 31879635,
+      "kind": "mp4",
+      "duration_seconds": 152.949841,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1152,
+          "height": 720
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon Videos Task 2/Lesson 00.mp4",
+      "bytes": 8595019,
+      "kind": "mp4",
+      "duration_seconds": 40.2,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon Videos Task 2/Lesson 01.mp4",
+      "bytes": 32181542,
+      "kind": "mp4",
+      "duration_seconds": 523.703311,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 576,
+          "height": 360
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon Videos Task 2/Lesson 02.mp4",
+      "bytes": 50245608,
+      "kind": "mp4",
+      "duration_seconds": 929.635011,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 576,
+          "height": 360
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon Videos Task 2/Lesson 03.mp4",
+      "bytes": 55691095,
+      "kind": "mp4",
+      "duration_seconds": 1007.467846,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 576,
+          "height": 360
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon Videos Task 2/Lesson 04.mp4",
+      "bytes": 27908405,
+      "kind": "mp4",
+      "duration_seconds": 726.901134,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 576,
+          "height": 360
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon Videos Task 2/Lesson 05.mp4",
+      "bytes": 36987227,
+      "kind": "mp4",
+      "duration_seconds": 911.755646,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 576,
+          "height": 360
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon Videos Task 2/Lesson 06.mp4",
+      "bytes": 122033561,
+      "kind": "mp4",
+      "duration_seconds": 1004.286259,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1152,
+          "height": 720
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon Videos Task 2/Lesson 07.mp4",
+      "bytes": 110060735,
+      "kind": "mp4",
+      "duration_seconds": 1051.213787,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1152,
+          "height": 720
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon Videos Task 2/Lesson 08.mp4",
+      "bytes": 97526949,
+      "kind": "mp4",
+      "duration_seconds": 1021.004626,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1152,
+          "height": 720
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon Videos Task 2/Lesson 09.mp4",
+      "bytes": 101417775,
+      "kind": "mp4",
+      "duration_seconds": 979.765986,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1152,
+          "height": 720
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon Videos Task 2/lesson 10.mp4",
+      "bytes": 62365334,
+      "kind": "mp4",
+      "duration_seconds": 605.204898,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1152,
+          "height": 720
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon videos Task/Simon Videos Task 2/Lesson 11.mp4",
+      "bytes": 34515594,
+      "kind": "mp4",
+      "duration_seconds": 158.84771,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1152,
+          "height": 720
+        },
+        {
+          "codec_type": "audio"
+        },
+        {
+          "codec_type": "data"
+        },
+        {
+          "codec_type": "data"
+        }
+      ],
+      "review_status": "offline ASR draft generated; no full line-by-line verification"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon Writing PDF/2 Introductions worksheet.pdf",
+      "bytes": 29765,
+      "kind": "pdf",
+      "sha256": "977ef0824ea1b9b70e6734238d21776cacab0b59bf094d0e0467652315872d77",
+      "pages": 2,
+      "text_chars": 1842,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon Writing PDF/21 Line graph worksheet.pdf",
+      "bytes": 93677,
+      "kind": "pdf",
+      "sha256": "1e8ce2fa46624ac5b1aa28a0cf0a912cdc50ad2999ffb014254c69ca38a4248e",
+      "pages": 2,
+      "text_chars": 2316,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon Writing PDF/22 Bar chart worksheet.pdf",
+      "bytes": 193642,
+      "kind": "pdf",
+      "sha256": "390b009676ae72d21ebbd8a188e572a5f621f28382ee3b84e5cdc50730715769",
+      "pages": 2,
+      "text_chars": 2290,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon Writing PDF/23 Pie chart worksheet.pdf",
+      "bytes": 449043,
+      "kind": "pdf",
+      "sha256": "63edabfb077ec9a5d9ba0ed248aeb46ddc0e35257ef05c24fb4dff1496424b33",
+      "pages": 2,
+      "text_chars": 2381,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon Writing PDF/24 Table worksheet.pdf",
+      "bytes": 232763,
+      "kind": "pdf",
+      "sha256": "45b5f78f125c8d690ea771e15c8f60cdcf6cf83a70844ec00d4ea75aa763e654",
+      "pages": 2,
+      "text_chars": 2446,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon Writing PDF/25 2 chart worksheet.pdf",
+      "bytes": 302261,
+      "kind": "pdf",
+      "sha256": "b33cf92db1452ebf76dcde8bb8322f6c60073c00e790821fedc9c8912cc84d89",
+      "pages": 2,
+      "text_chars": 2702,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon Writing PDF/26 Process worksheet.pdf",
+      "bytes": 260651,
+      "kind": "pdf",
+      "sha256": "55b791468a38f75c2409324215b5d341fcb8b33ff36f4381c55668ebf205a8c1",
+      "pages": 2,
+      "text_chars": 2408,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon Writing PDF/27 Comparison worksheet.pdf",
+      "bytes": 237333,
+      "kind": "pdf",
+      "sha256": "118a401ca001debf195ccd8f38021df61b2f4b4b1b8cc7341b6925970f4e1add",
+      "pages": 2,
+      "text_chars": 2266,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon Writing PDF/3 Main paragraphs worksheet.pdf",
+      "bytes": 47731,
+      "kind": "pdf",
+      "sha256": "e26a70c5305cd011ea70ea1493e7d1991a93edbb58fb27d131823fed7e161677",
+      "pages": 3,
+      "text_chars": 4184,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon Writing PDF/4 Conclusions worksheet.pdf",
+      "bytes": 48141,
+      "kind": "pdf",
+      "sha256": "7a6e45da466e07a5e77750ac3e3cdc71ffcab0ddff2a1c902c6f9885b760a3a0",
+      "pages": 3,
+      "text_chars": 3192,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon Writing PDF/6 Opinion essay worksheet.pdf",
+      "bytes": 70899,
+      "kind": "pdf",
+      "sha256": "49d652321173e3151ce7fcd4812767fded79422fdfbd4290e4989a22bf9823ed",
+      "pages": 2,
+      "text_chars": 2943,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon Writing PDF/7. Discussion essay worksheet.pdf",
+      "bytes": 98492,
+      "kind": "pdf",
+      "sha256": "ae614c693b2452c79b1a6362d1bbe575ab8d68bb3c87a71cebe9ed5cad4e93d3",
+      "pages": 2,
+      "text_chars": 2935,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon Writing PDF/8 Problem and Solution worksheet.pdf",
+      "bytes": 98773,
+      "kind": "pdf",
+      "sha256": "98d6ee613dfa5f59cfd44fd18d6828107ac02e7f40f4acf871101e572f1ec444",
+      "pages": 2,
+      "text_chars": 2898,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon Writing PDF/9 &#39;2-part question&#39; worksheet.pdf",
+      "bytes": 97491,
+      "kind": "pdf",
+      "sha256": "0da389356bdc2ce377c88a4bd66c1b83c1880906bfce40adb329867499fabcd9",
+      "pages": 2,
+      "text_chars": 3124,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon Writing PDF/Example &#39;map&#39; reports.pdf",
+      "bytes": 1292581,
+      "kind": "pdf",
+      "sha256": "9af423819841ad52e4552d51d47333c5fe0da824091dcaccc9f165eb39e604cf",
+      "pages": 4,
+      "text_chars": 4472,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/Simon 写作使用建议.docx",
+      "bytes": 95504,
+      "kind": "docx",
+      "sha256": "08e01da326ed75f9d5283ff0e2eedefa8a93d8fee565199d476262ad1f1f9249"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/simon网站关于写作技巧的整理 重要.pdf",
+      "bytes": 1667836,
+      "kind": "pdf",
+      "sha256": "1d261e7828b2152f28938372e08aaa7f11ed93f8182747371ab3e1676a352bb7",
+      "pages": 60,
+      "text_chars": 160916,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/官网补充的话题idea/cctv-benefits.pdf",
+      "bytes": 50760,
+      "kind": "pdf",
+      "sha256": "a69bd2d5912f9577f6c797488a7f99b330048d99bc1c4b63d56c1a59c518b75d",
+      "pages": 1,
+      "text_chars": 2261,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/官网补充的话题idea/family-history-Simon.pdf",
+      "bytes": 63453,
+      "kind": "pdf",
+      "sha256": "3d36740eae73e962d6d4d397fd585e73e7138a94503ee621cb8881cee2913fe0",
+      "pages": 1,
+      "text_chars": 1840,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/网友整理Simon网站资料（不看也行）/(精华)顾家北手把手词伙整理和总结 Sheet1.pdf",
+      "bytes": 97424,
+      "kind": "pdf",
+      "sha256": "7cf4cb4f2449d941b625b90cc432f60f39840ad2774d08923e91c2de7582cb69",
+      "pages": 4,
+      "text_chars": 4943,
+      "review_status": "text available"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/网友整理Simon网站资料（不看也行）/(精华)顾家北手把手词伙整理和总结(1).xls",
+      "bytes": 39936,
+      "kind": "xls",
+      "sha256": "0a4f0ee2993c0b904649f2616fbfe36545c178d756b0ffb18754f4f0be9df781"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/网友整理Simon网站资料（不看也行）/(精华)顾家北手把手词伙整理和总结.xls",
+      "bytes": 39936,
+      "kind": "xls",
+      "sha256": "b16a03174af23f17c01fbd09fcd31d77085d3387b3a9f1409f34c7f14031dfcc"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/网友整理Simon网站资料（不看也行）/Simon 词伙 一般 里面有的翻译不太准.docx",
+      "bytes": 104916,
+      "kind": "docx",
+      "sha256": "ea984124b5514878b7505045a184ea1319c0d2d03f646dbed0311b07609e3764"
+    },
+    {
+      "path": "simon writting 9+12讲 写作/网友整理Simon网站资料（不看也行）/作文类型总结.docx",
+      "bytes": 70788,
+      "kind": "docx",
+      "sha256": "c53a3af3e5560d376de4bc5a3fa93cc59cf200c500696dfc8b2628ab5fe22a5f"
+    },
+    {
+      "path": "剑19样题.pdf",
+      "bytes": 287608,
+      "kind": "pdf",
+      "sha256": "8ac9833033c314bb17f1658f50b89b61beb485c05ea450f543e5666d793d10aa",
+      "pages": 10,
+      "text_chars": 14511,
+      "review_status": "text available"
+    },
+    {
+      "path": "剑桥雅思真题18.pdf",
+      "bytes": 53619087,
+      "kind": "pdf",
+      "sha256": "2071584f4ec8aa8046a0b928c3a90542e722de5f775ca978a99b40a7c81078e2",
+      "pages": 147,
+      "text_chars": 0,
+      "review_status": "scan/low text: requires visual/OCR review"
+    },
+    {
+      "path": "考官Simon雅思大作文范文(28篇).pdf",
+      "bytes": 406968,
+      "kind": "pdf",
+      "sha256": "3ec311405e1a94c95e1726e7088719e9431cb7c8d984a453244efd055c292016",
+      "pages": 29,
+      "text_chars": 56363,
+      "review_status": "text available"
+    },
+    {
+      "path": "考官Simon雅思小作文范文(22篇).pdf",
+      "bytes": 1051512,
+      "kind": "pdf",
+      "sha256": "6cfc76e2dde28237b5ee70e62710c3a5b313ca2952524a12ef1e8781cdca0277",
+      "pages": 22,
+      "text_chars": 22234,
+      "review_status": "text available"
+    }
+  ]
+}

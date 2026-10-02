@@ -86,6 +86,14 @@ const ModelEssays = {
 ${lines.join(",\n")}
 };
 `;
+// Reviewed reading lessons have a source file, so rebuilds cannot restore stale chart claims.
+const readingSource = 'models/t1-reading-lessons.json';
+if (fs.existsSync(readingSource)) {
+  const lessons=JSON.parse(fs.readFileSync(readingSource,'utf8'));
+  fs.writeFileSync('tool/js/data-tutor-precache-t1.js',
+    '/* 28 份已审校读图课，由 models/t1-reading-lessons.json 生成。 */\nconst TutorPrecacheT1 = '+JSON.stringify(lessons,null,2)+';\nconst TutorPrecache = Object.assign({}, TutorPrecacheT2, TutorPrecacheT1);\n','utf8');
+}
+
 fs.writeFileSync(outFile, out, "utf8");
 console.log(`✅ 已生成 ${outFile}：${count} 篇（剑15-21 目标 56）`);
 sortedKeys.forEach(k => {

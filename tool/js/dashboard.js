@@ -1,95 +1,35 @@
-/* dashboard.js — 智能复盘仪表盘（M7）
- * 弱点画像（分项×题型×错误标签聚合）→ 今日处方（弱项题+到期卡+专题）→ 一键直达
- * 注入位置：进度页顶部（renderProgress 调用）
- */
+/* 自查不当成分数，Task 1 / Task 2 分别汇总。 */
 function renderDashboard() {
   const host = document.getElementById("dashBoard");
   if (!host) return;
-  const records = Store.get("records", []);
-  if (records.length < 5) {
-    host.innerHTML = `<div class="issue ok"><b>📈 智能复盘需要至少 5 篇诊断记录</b>（当前 ${records.length} 篇）。
-      去训练营完成几道题，或在诊断室诊断你写过的作文，仪表盘就能给出弱点画像和今日处方。</div>`;
-    return;
-  }
-
-  // ---- 1. 弱点画像 ----
-  const critOf = r => Object.entries(r.scores || {});
-  const critAgg = {}; // crit -> {sum,n}
-  const typeAgg = {}; // t2type/mode -> {sum,n}
-  records.forEach(r => {
-    critOf(r).forEach(([c, v]) => { (critAgg[c] = critAgg[c] || { sum: 0, n: 0 }).sum += v; critAgg[c].n++; });
-    const t = r.title || "";
-    const mode = r.mode === "t1" ? "Task 1" : "Task 2";
-    (typeAgg[mode] = typeAgg[mode] || { sum: 0, n: 0 }).sum += r.overall || 0; typeAgg[mode].n++;
-  });
-  const crits = Object.entries(critAgg).map(([c, a]) => ({ c, avg: a.sum / a.n, n: a.n })).sort((x, y) => x.avg - y.avg);
-  const weakest = crits[0];
+  const items = Learning.read().items;
   const names = { TR: "任务回应", TA: "任务达成", CC: "连贯衔接", LR: "词汇资源", GRA: "语法" };
-  const critDoc = { TR: "01 §3", TA: "04 §1-2", CC: "01 §6", LR: "06", GRA: "03 §2" };
-
-  // 错误标签 top3
-  const tagCount = {};
-  records.forEach(r => (r.tags || []).forEach(t => tagCount[t] = (tagCount[t] || 0) + 1));
-  const topTags = Object.entries(tagCount).sort((a, b) => b[1] - a[1]).slice(0, 3);
-  const TAG_NAMES2 = (typeof TAG_NAMES !== "undefined") ? TAG_NAMES : {};
-
-  // 近 5 次是否在进步
-  const recent = records.slice(0, 5).map(r => r.overall || 0);
-  const older = records.slice(5, 10).map(r => r.overall || 0);
-  const trend = older.length ? (recent.reduce((a, b) => a + b, 0) / recent.length) - (older.reduce((a, b) => a + b, 0) / older.length) : 0;
-  const trendTxt = trend > 0.2 ? `近 5 篇比之前平均高 ${trend.toFixed(1)} 分，保持节奏 👍` : trend < -0.2 ? `近 5 篇比之前平均低 ${Math.abs(trend).toFixed(1)} 分，建议放慢速度、逐篇复盘` : "水平总体稳定";
-
-  // ---- 2. 今日处方 ----
-  const rx = [];
-  if (weakest) {
-    // 从训练营挑 1 道未做过的、匹配最弱分项的题
-    let q = null;
-    try {
-      const pool = (typeof trainingPool === "function") ? trainingPool().filter(x => x.book >= 15) : [];
-      const s = (typeof trainStore === "function") ? trainStore() : { done: {} };
-      const undone = pool.filter(x => !s.done[tKey(x)]);
-      const wantT1 = weakest.c === "TA";
-      q = undone.find(x => (x.task === 1) === wantT1) || undone[0];
-    } catch (_) {}
-    if (q) rx.push({ icon: "✍️", txt: `练 1 道${weakest.c} 弱项题（${q.src}·${q.task === 1 ? "小作文" : "大作文"}）`, act: `startTraining(trainingPool().find(x => tKey(x) === ${JSON.stringify(tKey(q))})); goto("train");` });
-  }
-  const due = (typeof dueCount === "function") ? dueCount() + (typeof errDueCount === "function" ? errDueCount() : 0) : 0;
-  if (due > 0) rx.push({ icon: "🔁", txt: `复习 ${due} 张到期闪卡（含错因卡）`, act: `goto("library"); setTimeout(function(){ var t=document.querySelector(".lib-tab[data-lib=flashcards]"); if(t) t.click(); }, 50);` });
-  if (topTags.length) {
-    const t = topTags[0][0];
-    rx.push({ icon: "📖", txt: `重读高频问题「${TAG_NAMES2[t] || t}」的改法（近 ${topTags[0][1]} 篇反复出现）`, act: `goto("library"); setTimeout(function(){ var el=document.querySelector(".lib-tab[data-lib=mistakes]"); if(el) el.click(); }, 50);` });
-  } else if (weakest) {
-    rx.push({ icon: "📖", txt: `重读《${critDoc[weakest.c] || "03"}》里 ${weakest.c} 的 7 分要求`, act: `window.open("docs/index.html","_blank")` });
-  }
-  if (rx.length < 3) {
-    rx.push({ icon: "✍️", txt: "在训练营再完成 1 道未做过的题", act: `goto("train");` });
-  }
-
-  // ---- 3. 热力图（最近 12 次 × 分项） ----
-  const recent12 = records.slice(0, 12).reverse();
-  const allCrits = [...new Set(recent12.flatMap(r => Object.keys(r.scores || {})))];
-  const heat = `<table class="heat"><tr><th></th>${allCrits.map(c => `<th>${c}</th>`).join("")}<th>总分</th></tr>
-    ${recent12.map(r => `<tr><td class="hd">${new Date(r.date).toLocaleDateString("zh-CN", { month: "numeric", day: "numeric" })}</td>
-      ${allCrits.map(c => { const v = (r.scores || {})[c]; const cls = v == null ? "" : v >= 7 ? "g" : v >= 6 ? "y" : "r"; return `<td class="${cls}">${v == null ? "—" : v}</td>`; }).join("")}
-      <td><b>${r.overall || "—"}</b></td></tr>`).join("")}
-  </table>`;
-
-  host.innerHTML = `
-    <div class="dash-head">
-      <div class="dash-card">
-        <div class="ptitle">🎯 弱点画像</div>
-        ${weakest ? `<p>最弱分项：<b>${weakest.c}（${names[weakest.c] || weakest.c}）</b> 近 ${weakest.n} 次均值 ${weakest.avg.toFixed(1)}</p>` : ""}
-        ${topTags.map(([t, n]) => `<p class="hint">· 高频问题：<b>${TAG_NAMES2[t] || t}</b>（${n} 次）</p>`).join("")}
-        <p class="hint">${trendTxt}</p>
-      </div>
-      <div class="dash-card">
-        <div class="ptitle">💊 今日处方</div>
-        <ul class="rx">${rx.map(x => `<li><button class="small" onclick='${x.act}'>${x.icon} 开始</button> ${x.txt}</li>`).join("")}</ul>
-      </div>
-    </div>
-    <div class="ptitle" style="margin-top:12px">📊 最近 12 次分项热力图（<span class="lg g">≥7</span> <span class="lg y">6-6.5</span> <span class="lg r">&lt;6</span>）</div>
-    ${heat}`;
-
-  host.querySelectorAll("button").forEach(b => { if (!b.onclick) b.onclick = new Function(b.getAttribute("onclick")); });
+  const records = Store.get("records", []).filter(r => r.ai);
+  const repairs = items.reduce((n, i) => n + i.attempts.filter(a => a.stage === "repair" && a.passed).length, 0);
+  const transfers = items.reduce((n, i) => n + i.attempts.filter(Learning.independentPass).length, 0);
+  const week = Learning.stats();
+  host.innerHTML = `<h3>从改对，到换题也能写出来</h3>
+    <p>已保存 ${items.length} 份诊断原稿 · 改写自查通过 ${repairs} 次 · 独立换题自查通过 ${transfers} 次</p>
+    <p>最近 7 天：独立复测 ${week.independent} 次，其中自查通过 ${week.passed} 次；借助提示 ${week.assisted} 次${week.unknown ? `；独立性未知 ${week.unknown} 次` : ''}。</p>
+    <p>整篇验证 ${week.benchmarks} 次，其中独立自查通过 ${week.benchmarkPassed} 次。</p>
+    <p class="hint">自查是练习记录，不是考官评分。反复在新题中独立做到，再用完整限时作文检验。</p>
+    <button id="dashboardPractice">${Learning.next() ? "继续今日改写与复测" : "去训练营独立练习"}</button>
+    ${["t2", "t1"].map(mode => {
+      const group = records.filter(r => r.mode === mode).slice(0, 5);
+      if (!group.length) return `<p class="hint">Task ${mode === "t1" ? "1" : "2"}：暂无 AI 评分记录。完成一次诊断就可以开始针对性练习，无需等到 5 篇。</p>`;
+      const keys = mode === "t1" ? ["TA", "CC", "LR", "GRA"] : ["TR", "CC", "LR", "GRA"];
+      const stats = keys.map(key => {
+        const values = group.map(r => r.scores?.[key] ?? (key === "TA" ? r.scores?.TR : undefined)).filter(v => Number.isFinite(v) && v >= 0 && v <= 9);
+        return values.length ? `${names[key]} ${(values.reduce((a, b) => a + b, 0) / values.length).toFixed(1)}` : "";
+      }).filter(Boolean);
+      return `<p><b>Task ${mode === "t1" ? "1" : "2"} · 最近 ${group.length} 次 AI 参考均值</b><br>${stats.join(" · ")}</p>`;
+    }).join("")}
+    ${items.length ? `<details class="learning-history"><summary>查看诊断原稿与练习记录（最近 12 份）</summary>
+      ${items.slice(0, 12).map(i => `<details><summary>${esc(new Date(i.date).toLocaleDateString("zh-CN"))} · ${esc(i.focus.title)}</summary>
+        <p class="en learning-text">${esc(i.question)}</p><p class="en learning-text">${esc(i.essay)}</p>
+        ${i.attempts.map(a => `<h4>${a.stage === "repair" ? "原题改写" : a.stage === 'benchmark' ? `整篇验证 · ${a.independent ? '独立' : '辅助或独立性未知'}` : a.independent === true ? "独立换题" : a.independent === false ? "辅助练习" : "换题练习 · 独立性未知"} · ${a.passed ? "自查通过" : "继续练习"}</h4>${a.timed ? `<p class="hint">开启限时计时 · 用时约 ${Math.ceil(a.elapsedMs/60000)} 分钟${a.elapsedMs > (i.mode==='t1'?20:40)*60000 ? ' · 已超时' : ''}</p>` : ''}<p class="en">${esc(a.question)}</p><p class="en learning-text">${esc(a.text)}</p>${a.quote ? `<p class="en">证据：${esc(a.quote)}</p>` : ''}<p>${esc(a.note)}</p>${a.criteria ? `<ul>${a.criteria.map((c,n)=>`<li>${a.checks?.[n] ? '已自查' : '未确认'}：${esc(c)}</li>`).join('')}</ul>` : ''}`).join("")}
+        <button data-review-packet="${esc(i.id)}">复制给老师的复核材料</button>
+      </details>`).join("")}</details>` : ""}`;
+  host.querySelector("button").onclick = () => goto("train");
+  host.querySelectorAll('[data-review-packet]').forEach(b=>b.onclick=()=>UI.copy(Learning.reviewPacket(b.dataset.reviewPacket)));
 }
-

@@ -1,0 +1,55 @@
+{
+  "renderer_version": 1,
+  "generated_on": "2026-10-01",
+  "title": "选择太多了吗？｜部分同意的完整写作示范",
+  "duration_seconds": 1778.3319999999997,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 12,
+  "essay_words": 273,
+  "voice_rate": "-8%",
+  "voices": [
+    "zh-CN-XiaoxiaoNeural",
+    "en-GB-SoniaNeural"
+  ],
+  "voice_type": "synthetic neural",
+  "chapters": [
+    {
+      "title": "审题",
+      "start": 0
+    },
+    {
+      "title": "构思",
+      "start": 214.488
+    },
+    {
+      "title": "落笔·开头",
+      "start": 421.79999999999995
+    },
+    {
+      "title": "落笔·主体1",
+      "start": 572.1999999999999
+    },
+    {
+      "title": "落笔·主体2",
+      "start": 929.8359999999999
+    },
+    {
+      "title": "落笔·结尾",
+      "start": 1258.704
+    },
+    {
+      "title": "检查修改",
+      "start": 1346.576
+    }
+  ],
+  "caption_cues": 222,
+  "frames": 347,
+  "video": "media/episode-001.mp4",
+  "captions": "media/episode-001.vtt",
+  "disclosure": "AI创作的教学模拟；旁白为供学习的简短写作说明，非真实考生或AI内部思维的实录。",
+  "encoded_file": "D:\\project\\writingzcode\\video-series\\episode-001\\media\\episode-001.mp4",
+  "bytes": 43926543
+}

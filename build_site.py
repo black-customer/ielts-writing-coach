@@ -13,6 +13,17 @@ def version():
     vfile = os.path.join(ROOT, "VERSION")
     return open(vfile, encoding="utf-8").read().strip() if os.path.exists(vfile) else "0.1.0-dev"
 
+def cache_stamp(base_dir, assets, release):
+    digest = hashlib.sha256(release.encode("utf-8"))
+    for asset in sorted(set(assets)):
+        if asset == "./":
+            continue
+        digest.update(asset.encode("utf-8"))
+        with open(os.path.join(base_dir, asset), "rb") as source:
+            for chunk in iter(lambda: source.read(65536), b""):
+                digest.update(chunk)
+    return digest.hexdigest()[:12]
+
 def build():
     v = version()
     if os.path.exists(DIST):
@@ -71,7 +82,11 @@ def build():
         print("data 合并: " + str(len(data_tags)) + " 个文件 -> js/data-bundle.js" + (" (minify)" if MINIFY else ""))
 
     # 收集静态资源清单（sw 预缓存）
-    assets = ["./", "index.html", "css/style.css", "manifest.webmanifest"]
+    assets = ["./", "index.html", "manifest.webmanifest"]
+    for root, _, fs in os.walk(os.path.join(DIST, "css")):
+        for f in sorted(fs):
+            if f.endswith(".css"):
+                assets.append(os.path.relpath(os.path.join(root, f), DIST).replace("\\", "/"))
     jsdir = os.path.join(DIST, "js")
     for f in sorted(os.listdir(jsdir)):
         if f.endswith(".js"):
@@ -86,7 +101,7 @@ def build():
         for f in sorted(os.listdir(imgdir)):
             assets.append("img/t1/" + f)
 
-    stamp = hashlib.md5(("|".join(assets) + v).encode()).hexdigest()[:10]
+    stamp = cache_stamp(DIST, assets, v)
 
     sw = ("// sw.js — 由 build_site.py 自动生成（cache " + stamp + ", v" + v + "）\n"
           "const CACHE = \"iwc-" + stamp + "\";\n"
@@ -96,7 +111,7 @@ def build():
           "});\n"
           "self.addEventListener(\"activate\", e => {\n"
           "  e.waitUntil(caches.keys().then(keys =>\n"
-          "    Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))\n"
+          "    Promise.all(keys.filter(k => k.startsWith(\"iwc-\") && k !== CACHE).map(k => caches.delete(k)))\n"
           "  ).then(() => self.clients.claim()));\n"
           "});\n"
           "self.addEventListener(\"fetch\", e => {\n"
@@ -120,7 +135,7 @@ def build():
     # 版本号写入 index.html
     idx = os.path.join(DIST, "index.html")
     html = open(idx, encoding="utf-8").read()
-    html = html.replace('window.IWC_VERSION = "0.1.0-dev";', 'window.IWC_VERSION = "' + v + '";')
+    html = re.sub(r'window\.IWC_VERSION\s*=\s*"[^"]+";', 'window.IWC_VERSION = "' + v + '";', html, count=1)
     open(idx, "w", encoding="utf-8").write(html)
 
     # sw 注册（仅 http/https）

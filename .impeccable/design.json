@@ -1,0 +1,644 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-02",
+  "title": "Design System: IELTS Writing Coach — Desktop Workbench",
+  "extensions": {
+    "sourceFiles": [
+      "tool/css/style.css",
+      "tool/css/workbench.css",
+      "tool/js/workbench.js",
+      "tool/index.html",
+      "tool/js/training.js"
+    ],
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "深蓝",
+        "tonalRamp": [
+          "oklch(15% 0.0765 251.32)",
+          "oklch(26% 0.0765 251.32)",
+          "oklch(38% 0.0765 251.32)",
+          "oklch(49% 0.0765 251.32)",
+          "oklch(61% 0.0765 251.32)",
+          "oklch(72% 0.0765 251.32)",
+          "oklch(84% 0.0765 251.32)",
+          "oklch(95% 0.0765 251.32)"
+        ]
+      },
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "深蓝悬停",
+        "tonalRamp": [
+          "oklch(15% 0.0656 250.11)",
+          "oklch(26% 0.0656 250.11)",
+          "oklch(38% 0.0656 250.11)",
+          "oklch(49% 0.0656 250.11)",
+          "oklch(61% 0.0656 250.11)",
+          "oklch(72% 0.0656 250.11)",
+          "oklch(84% 0.0656 250.11)",
+          "oklch(95% 0.0656 250.11)"
+        ]
+      },
+      "primary-soft": {
+        "role": "primary",
+        "displayName": "浅蓝纸面",
+        "tonalRamp": [
+          "oklch(15% 0.0103 247.94)",
+          "oklch(26% 0.0103 247.94)",
+          "oklch(38% 0.0103 247.94)",
+          "oklch(49% 0.0103 247.94)",
+          "oklch(61% 0.0103 247.94)",
+          "oklch(72% 0.0103 247.94)",
+          "oklch(84% 0.0103 247.94)",
+          "oklch(95% 0.0103 247.94)"
+        ]
+      },
+      "primary-ink": {
+        "role": "primary",
+        "displayName": "软底深蓝文字",
+        "tonalRamp": [
+          "oklch(15% 0.0671 250.05)",
+          "oklch(26% 0.0671 250.05)",
+          "oklch(38% 0.0671 250.05)",
+          "oklch(49% 0.0671 250.05)",
+          "oklch(61% 0.0671 250.05)",
+          "oklch(72% 0.0671 250.05)",
+          "oklch(84% 0.0671 250.05)",
+          "oklch(95% 0.0671 250.05)"
+        ]
+      },
+      "fog": {
+        "role": "neutral",
+        "displayName": "雾灰",
+        "tonalRamp": [
+          "oklch(15% 0.0034 247.86)",
+          "oklch(26% 0.0034 247.86)",
+          "oklch(38% 0.0034 247.86)",
+          "oklch(49% 0.0034 247.86)",
+          "oklch(61% 0.0034 247.86)",
+          "oklch(72% 0.0034 247.86)",
+          "oklch(84% 0.0034 247.86)",
+          "oklch(95% 0.0034 247.86)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "纸白",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "墨色",
+        "tonalRamp": [
+          "oklch(15% 0.0273 257.53)",
+          "oklch(26% 0.0273 257.53)",
+          "oklch(38% 0.0273 257.53)",
+          "oklch(49% 0.0273 257.53)",
+          "oklch(61% 0.0273 257.53)",
+          "oklch(72% 0.0273 257.53)",
+          "oklch(84% 0.0273 257.53)",
+          "oklch(95% 0.0273 257.53)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "辅助灰",
+        "tonalRamp": [
+          "oklch(15% 0.0290 255.64)",
+          "oklch(26% 0.0290 255.64)",
+          "oklch(38% 0.0290 255.64)",
+          "oklch(49% 0.0290 255.64)",
+          "oklch(61% 0.0290 255.64)",
+          "oklch(72% 0.0290 255.64)",
+          "oklch(84% 0.0290 255.64)",
+          "oklch(95% 0.0290 255.64)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "分隔灰",
+        "tonalRamp": [
+          "oklch(15% 0.0104 247.94)",
+          "oklch(26% 0.0104 247.94)",
+          "oklch(38% 0.0104 247.94)",
+          "oklch(49% 0.0104 247.94)",
+          "oklch(61% 0.0104 247.94)",
+          "oklch(72% 0.0104 247.94)",
+          "oklch(84% 0.0104 247.94)",
+          "oklch(95% 0.0104 247.94)"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "输入描边灰",
+        "tonalRamp": [
+          "oklch(15% 0.0190 250.62)",
+          "oklch(26% 0.0190 250.62)",
+          "oklch(38% 0.0190 250.62)",
+          "oklch(49% 0.0190 250.62)",
+          "oklch(61% 0.0190 250.62)",
+          "oklch(72% 0.0190 250.62)",
+          "oklch(84% 0.0190 250.62)",
+          "oklch(95% 0.0190 250.62)"
+        ]
+      },
+      "accent-bg": {
+        "role": "neutral",
+        "displayName": "次级浅灰蓝",
+        "tonalRamp": [
+          "oklch(15% 0.0069 247.90)",
+          "oklch(26% 0.0069 247.90)",
+          "oklch(38% 0.0069 247.90)",
+          "oklch(49% 0.0069 247.90)",
+          "oklch(61% 0.0069 247.90)",
+          "oklch(72% 0.0069 247.90)",
+          "oklch(84% 0.0069 247.90)",
+          "oklch(95% 0.0069 247.90)"
+        ]
+      },
+      "ok": {
+        "role": "semantic",
+        "displayName": "成功绿",
+        "tonalRamp": [
+          "oklch(15% 0.0861 164.56)",
+          "oklch(26% 0.0861 164.56)",
+          "oklch(38% 0.0861 164.56)",
+          "oklch(49% 0.0861 164.56)",
+          "oklch(61% 0.0861 164.56)",
+          "oklch(72% 0.0861 164.56)",
+          "oklch(84% 0.0861 164.56)",
+          "oklch(95% 0.0861 164.56)"
+        ]
+      },
+      "ok-bg": {
+        "role": "semantic",
+        "displayName": "成功浅底",
+        "tonalRamp": [
+          "oklch(15% 0.0107 158.85)",
+          "oklch(26% 0.0107 158.85)",
+          "oklch(38% 0.0107 158.85)",
+          "oklch(49% 0.0107 158.85)",
+          "oklch(61% 0.0107 158.85)",
+          "oklch(72% 0.0107 158.85)",
+          "oklch(84% 0.0107 158.85)",
+          "oklch(95% 0.0107 158.85)"
+        ]
+      },
+      "ok-border": {
+        "role": "semantic",
+        "displayName": "成功描边",
+        "tonalRamp": [
+          "oklch(15% 0.0302 157.82)",
+          "oklch(26% 0.0302 157.82)",
+          "oklch(38% 0.0302 157.82)",
+          "oklch(49% 0.0302 157.82)",
+          "oklch(61% 0.0302 157.82)",
+          "oklch(72% 0.0302 157.82)",
+          "oklch(84% 0.0302 157.82)",
+          "oklch(95% 0.0302 157.82)"
+        ]
+      },
+      "warn": {
+        "role": "semantic",
+        "displayName": "警告棕",
+        "tonalRamp": [
+          "oklch(15% 0.0845 73.69)",
+          "oklch(26% 0.0845 73.69)",
+          "oklch(38% 0.0845 73.69)",
+          "oklch(49% 0.0845 73.69)",
+          "oklch(61% 0.0845 73.69)",
+          "oklch(72% 0.0845 73.69)",
+          "oklch(84% 0.0845 73.69)",
+          "oklch(95% 0.0845 73.69)"
+        ]
+      },
+      "warn-bg": {
+        "role": "semantic",
+        "displayName": "警告浅底",
+        "tonalRamp": [
+          "oklch(15% 0.0131 82.40)",
+          "oklch(26% 0.0131 82.40)",
+          "oklch(38% 0.0131 82.40)",
+          "oklch(49% 0.0131 82.40)",
+          "oklch(61% 0.0131 82.40)",
+          "oklch(72% 0.0131 82.40)",
+          "oklch(84% 0.0131 82.40)",
+          "oklch(95% 0.0131 82.40)"
+        ]
+      },
+      "warn-border": {
+        "role": "semantic",
+        "displayName": "警告描边",
+        "tonalRamp": [
+          "oklch(15% 0.0408 83.12)",
+          "oklch(26% 0.0408 83.12)",
+          "oklch(38% 0.0408 83.12)",
+          "oklch(49% 0.0408 83.12)",
+          "oklch(61% 0.0408 83.12)",
+          "oklch(72% 0.0408 83.12)",
+          "oklch(84% 0.0408 83.12)",
+          "oklch(95% 0.0408 83.12)"
+        ]
+      },
+      "bad": {
+        "role": "semantic",
+        "displayName": "错误红",
+        "tonalRamp": [
+          "oklch(15% 0.1315 20.72)",
+          "oklch(26% 0.1315 20.72)",
+          "oklch(38% 0.1315 20.72)",
+          "oklch(49% 0.1315 20.72)",
+          "oklch(61% 0.1315 20.72)",
+          "oklch(72% 0.1315 20.72)",
+          "oklch(84% 0.1315 20.72)",
+          "oklch(95% 0.1315 20.72)"
+        ]
+      },
+      "bad-bg": {
+        "role": "semantic",
+        "displayName": "错误浅底",
+        "tonalRamp": [
+          "oklch(15% 0.0119 17.36)",
+          "oklch(26% 0.0119 17.36)",
+          "oklch(38% 0.0119 17.36)",
+          "oklch(49% 0.0119 17.36)",
+          "oklch(61% 0.0119 17.36)",
+          "oklch(72% 0.0119 17.36)",
+          "oklch(84% 0.0119 17.36)",
+          "oklch(95% 0.0119 17.36)"
+        ]
+      },
+      "bad-border": {
+        "role": "semantic",
+        "displayName": "错误描边",
+        "tonalRamp": [
+          "oklch(15% 0.0303 15.19)",
+          "oklch(26% 0.0303 15.19)",
+          "oklch(38% 0.0303 15.19)",
+          "oklch(49% 0.0303 15.19)",
+          "oklch(61% 0.0303 15.19)",
+          "oklch(72% 0.0303 15.19)",
+          "oklch(84% 0.0303 15.19)",
+          "oklch(95% 0.0303 15.19)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "页面标题",
+        "purpose": "页面主标题与相邻说明建立清楚层级。"
+      },
+      "title": {
+        "displayName": "章节标题",
+        "purpose": "主章节标题；小节标题沿用现有 15px 角色。"
+      },
+      "body": {
+        "displayName": "界面正文",
+        "purpose": "系统 UI 字体承担中文界面；导航与字段有局部字号。"
+      },
+      "label": {
+        "displayName": "提示与状态",
+        "purpose": "编辑标签、辅助说明和保存文字。"
+      },
+      "essay": {
+        "displayName": "英文作文",
+        "purpose": "连续作文编辑、诊断原稿和个人改写；参考片段字号依组件。"
+      }
+    },
+    "shadows": [
+      {
+        "name": "notice",
+        "value": "0 8px 28px rgba(0,0,0,.15)",
+        "purpose": "右下角临时通知浮层。"
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-color",
+        "value": "180ms",
+        "purpose": "按钮背景、边框和文字颜色过渡；默认 CSS ease。"
+      },
+      {
+        "name": "notice-entry",
+        "value": "180ms ease-out",
+        "purpose": "通知从 translateY(6px) 回到原位。"
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "关闭动画、过渡与平滑滚动。"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "desktop-sidebar",
+        "value": "1000px"
+      },
+      {
+        "name": "compact-desktop-upper-bound",
+        "value": "1199px"
+      },
+      {
+        "name": "wide-desktop-padding",
+        "value": "1500px"
+      }
+    ],
+    "layout": {
+      "supportedDeviceClasses": [
+        "desktop"
+      ],
+      "acceptanceWidths": [
+        "1280px",
+        "1440px",
+        "1600px"
+      ],
+      "sidebarWidth": "216px",
+      "mainMaxWidth": "1480px",
+      "mainPadding": "38px 36px 64px",
+      "wideHorizontalPadding": "52px",
+      "writeColumns": "minmax(0,1fr) 336px",
+      "writeGap": "24px",
+      "compactDesktop": {
+        "range": "1000–1199px",
+        "mainPadding": "32px 24px",
+        "auxiliaryWidth": "300px",
+        "writeGap": "18px",
+        "editorPadding": "28px"
+      },
+      "annotationColumns": "minmax(0,1fr) 336px",
+      "annotationGap": "32px",
+      "compareColumns": "minmax(0,1fr) minmax(0,1fr)",
+      "compareAnnotations": "below both text columns",
+      "focusMainMaxWidth": "980px",
+      "panelCollapse": "manual user toggle",
+      "saveBarPosition": "normal document flow; position: static",
+      "narrowFallback": "Existing CSS collapses columns below 1000px; mobile design and acceptance are out of scope.",
+      "questionPlacement": "independent writing: above the essay",
+      "bottomBarContents": [
+        "word count",
+        "sentence count",
+        "timer and start/reset controls",
+        "save status",
+        "writing actions"
+      ],
+      "independentWritingTimer": {
+        "placement": "normal-flow bottom status/actions bar",
+        "wrapper": "footer-timer; display: flex; align-items: center",
+        "groupRole": "group",
+        "groupLabel": "写作计时",
+        "timerRole": "timer",
+        "ariaLive": "off",
+        "behavior": "Existing control IDs and timing behavior retained; guided training timing unchanged."
+      }
+    },
+    "themes": {
+      "default": "light",
+      "dark": {
+        "name": "蓝黑纸面",
+        "selector": "body.dark",
+        "tokenOverrides": {
+          "primary": "#ACC7E3",
+          "primary-hover": "#C6DBF0",
+          "primary-soft": "#2D4055",
+          "primary-ink": "#C6DBF0",
+          "fog": "#171D25",
+          "paper": "#202832",
+          "ink": "#E2E8EF",
+          "muted": "#ABB6C3",
+          "line": "#36424F",
+          "line-strong": "#526274",
+          "accent-bg": "#283440",
+          "ok": "#9DCEB5",
+          "ok-bg": "#263B32",
+          "ok-border": "#486455",
+          "warn": "#DFC291",
+          "warn-bg": "#3B3429",
+          "warn-border": "#64553A",
+          "bad": "#E8AAAC",
+          "bad-bg": "#3A2B30",
+          "bad-border": "#65434C"
+        },
+        "componentOverrides": {
+          "button-primary.textColor": "#172432",
+          "chip-selected.textColor": "#172432",
+          "button-primary-active.backgroundColor": "#BBD2E9",
+          "button-primary-active.textColor": "#172432"
+        },
+        "notes": "Independent dark palette. Primary buttons use #C6DBF0 on hover and an explicit #BBD2E9 background with #172432 text while pressed. These observed states do not assert full contrast certification."
+      }
+    },
+    "preview": {
+      "tokenBinding": "Snippets inherit existing CSS variables through shadow DOM, with default light fallbacks.",
+      "darkBinding": "Dark primary-button and selected-chip text use :host-context(.dark); other colors inherit body.dark variables.",
+      "interactionBoundary": "HTML/CSS samples illustrate visual states only; application persistence, navigation and annotation selection require the application runtime.",
+      "tonalRamps": "Synthesized OKLCH ramps are preview metadata, not additional application palette tokens.",
+      "evidence": "Extracted from current CSS/JavaScript; write-1280.png and write-dark-1600.png inspected as existing captures. No new detector or UI acceptance run performed for this documentation refresh."
+    },
+    "observedComponents": {
+      "about-dialog": {
+        "element": "native dialog",
+        "sharedStyle": "ui-dialog",
+        "variant": "about-dialog",
+        "maxWidth": "560px",
+        "width": "calc(100vw - 48px)",
+        "padding": "28px",
+        "radius": "14px",
+        "background": "{colors.paper}",
+        "foreground": "{colors.ink}",
+        "border": "1px solid var(--line)",
+        "backdrop": "rgba(15,25,35,.45)",
+        "defaultConfirmationMaxWidth": "480px"
+      },
+      "error-banner": {
+        "selector": "#errBanner",
+        "position": "fixed; bottom: 0; left: 0; right: 0",
+        "background": "{colors.bad}",
+        "foreground": "{colors.paper}",
+        "padding": "8px 14px",
+        "fontSize": "var(--fs-sm)",
+        "purpose": "视口底部错误横幅；与正常流保存状态条不同。"
+      },
+      "book-coverage-number": {
+        "fontSize": "19px",
+        "foreground": "var(--primary-dark)",
+        "purpose": "该册练习的完成数量与总量，不是写作分数。"
+      },
+      "training-coverage-progress": {
+        "height": "12px",
+        "radius": "var(--r-sm)",
+        "track": "var(--line)",
+        "fill": "var(--primary)",
+        "overflow": "hidden"
+      },
+      "confirmation-dialog": {
+        "element": "native dialog",
+        "sharedStyle": "ui-dialog",
+        "ariaLabel": "确认操作",
+        "maxWidth": "480px",
+        "closeBehavior": "restore previous focus"
+      }
+    },
+    "desktopUx": {
+      "version": "1.4.0",
+      "platformDefault": "电脑端浏览器",
+      "mobilePolicy": "只有项目所有者明确重新要求，才规划手机端 App、专项适配和验收。",
+      "viewports": [
+        1280,
+        1440,
+        1600
+      ],
+      "zoomEquivalent": 1.25,
+      "readingSizes": {
+        "reference": 17,
+        "evidence": 16,
+        "searchResults": 13,
+        "annotationKind": 11
+      },
+      "modelPageSize": 12,
+      "questionPageSize": 15,
+      "defaultPickerOpen": false
+    }
+  },
+  "components": [
+    {
+      "name": "主按钮",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "主要学习或诊断操作；明暗主题按现有颜色切换。",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">写完了，去诊断</button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:36px;padding:9px 16px;border:1px solid var(--line-strong,#BDC7D2);border-radius:var(--r-sm,8px);background:var(--card,#FFFFFF);color:var(--ink,#202936);font:14px/1.7 'Segoe UI','Microsoft YaHei',-apple-system,sans-serif;cursor:pointer;transition:background-color 180ms,border-color 180ms,color 180ms}.ds-btn-primary:hover:not(:disabled){border-color:var(--primary,#294D73);color:var(--primary,#294D73)}.ds-btn-primary:active:not(:disabled){background:var(--accent-bg,#EEF2F6)}.ds-btn-primary:disabled{opacity:.55;cursor:not-allowed}.ds-btn-primary:focus-visible{outline:2px solid var(--primary,#294D73);outline-offset:3px}.ds-btn-primary{background:var(--primary,#294D73);border-color:var(--primary,#294D73);color:#FFF;font-weight:600}.ds-btn-primary:hover:not(:disabled),.ds-btn-primary:active:not(:disabled){background:#203F5E;color:#FFF}:host-context(.dark) .ds-btn-primary{color:#172432}:host-context(.dark) .ds-btn-primary:hover:not(:disabled){background:#C6DBF0;color:#172432}:host-context(.dark) .ds-btn-primary:active:not(:disabled){background:#BBD2E9;color:#172432}@media(prefers-reduced-motion:reduce){[class^=ds-]{transition:none;animation:none;scroll-behavior:auto}}"
+    },
+    {
+      "name": "次级按钮",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "复制、保存和面板工具的次级动作。",
+      "html": "<button class=\"ds-btn-secondary\" type=\"button\">复制全文</button>",
+      "css": ".ds-btn-secondary{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:36px;padding:9px 16px;border:1px solid var(--line-strong,#BDC7D2);border-radius:var(--r-sm,8px);background:var(--card,#FFFFFF);color:var(--ink,#202936);font:14px/1.7 'Segoe UI','Microsoft YaHei',-apple-system,sans-serif;cursor:pointer;transition:background-color 180ms,border-color 180ms,color 180ms}.ds-btn-secondary:hover:not(:disabled){border-color:var(--primary,#294D73);color:var(--primary,#294D73)}.ds-btn-secondary:active:not(:disabled){background:var(--accent-bg,#EEF2F6)}.ds-btn-secondary:disabled{opacity:.55;cursor:not-allowed}.ds-btn-secondary:focus-visible{outline:2px solid var(--primary,#294D73);outline-offset:3px}@media(prefers-reduced-motion:reduce){[class^=ds-]{transition:none;animation:none;scroll-behavior:auto}}"
+    },
+    {
+      "name": "文本输入",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "基础文本字段，边框与软色焦点；写作题目字段有独立字号覆盖。",
+      "html": "<label class=\"ds-input-label\" for=\"ds-question\">本次题目</label><input class=\"ds-input\" id=\"ds-question\" type=\"text\" placeholder=\"输入英文题目\">",
+      "css": ".ds-input-label{display:block;margin:0 0 6px;color:var(--muted,#647080);font:12px/1.7 'Segoe UI','Microsoft YaHei',-apple-system,sans-serif}.ds-input{width:100%;padding:10px 12px;border:1px solid var(--line-strong,#BDC7D2);border-radius:var(--r-sm,8px);background:var(--card,#FFFFFF);color:var(--ink,#202936);font:15.5px/1.7 'Segoe UI','Microsoft YaHei',-apple-system,sans-serif}.ds-input::placeholder{color:var(--muted,#647080);opacity:1}.ds-input:hover{border-color:var(--line-strong,#BDC7D2)}.ds-input:focus{outline:2px solid var(--primary-soft,#E8EEF4);border-color:var(--primary,#294D73)}.ds-input[aria-invalid=true]{border-color:var(--bad,#A23F43)}@media(prefers-reduced-motion:reduce){[class^=ds-]{transition:none;animation:none;scroll-behavior:auto}}"
+    },
+    {
+      "name": "侧栏导航项",
+      "kind": "nav",
+      "refersTo": "navigation-item",
+      "description": "左对齐细线图标，软色底表示当前位置。",
+      "html": "<nav class=\"ds-nav\" aria-label=\"写作练习\"><button class=\"ds-nav-item\" type=\"button\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m16 3 5 5-12 12-6 1 1-6Z\"/><path d=\"m14 5 5 5\"/></svg>审题与提纲</button><button class=\"ds-nav-item ds-nav-active\" type=\"button\" aria-current=\"page\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m16 3 5 5-12 12-6 1 1-6Z\"/><path d=\"m14 5 5 5\"/></svg>写作室</button></nav>",
+      "css": ".ds-nav{display:flex;flex-direction:column;gap:4px;width:176px}.ds-nav-item{display:flex;align-items:center;gap:11px;width:100%;text-align:left;padding:10px 12px;min-height:36px;border:0;border-radius:var(--r-sm,8px);background:transparent;color:var(--muted,#647080);font:13px/1.7 'Segoe UI','Microsoft YaHei',-apple-system,sans-serif;cursor:pointer;transition:background-color 180ms,color 180ms}.ds-nav-item svg{width:18px;height:18px;flex:none}.ds-nav-item:hover{background:var(--accent-bg,#EEF2F6);color:var(--ink,#202936)}.ds-nav-active,.ds-nav-active:hover{background:var(--primary-soft,#E8EEF4);color:var(--primary-dark,#294D73);font-weight:600}.ds-nav-item:focus-visible{outline:2px solid var(--primary,#294D73);outline-offset:3px}@media(prefers-reduced-motion:reduce){[class^=ds-]{transition:none;animation:none;scroll-behavior:auto}}"
+    },
+    {
+      "name": "筛选标签",
+      "kind": "chip",
+      "refersTo": "chip-selected",
+      "description": "胶囊标签的未选与选中状态，使用实色强调底。",
+      "html": "<div class=\"ds-chip-row\"><button class=\"ds-chip\" type=\"button\" aria-pressed=\"false\">全部</button><button class=\"ds-chip ds-chip-selected\" type=\"button\" aria-pressed=\"true\">练习中</button></div>",
+      "css": ".ds-chip-row{display:flex;gap:8px;flex-wrap:wrap}.ds-chip{padding:5px 14px;min-height:36px;border:1px solid var(--line-strong,#BDC7D2);border-radius:999px;background:var(--card,#FFFFFF);color:var(--ink,#202936);font:13px/1.7 'Segoe UI','Microsoft YaHei',-apple-system,sans-serif;cursor:pointer;transition:background-color 180ms,border-color 180ms,color 180ms}.ds-chip:hover{border-color:var(--primary,#294D73);color:var(--primary,#294D73)}.ds-chip-selected,.ds-chip-selected:hover{background:var(--primary,#294D73);border-color:var(--primary,#294D73);color:#FFFFFF;font-weight:600}:host-context(.dark) .ds-chip-selected,:host-context(.dark) .ds-chip-selected:hover{color:#172432}.ds-chip:focus-visible{outline:2px solid var(--primary,#294D73);outline-offset:3px}@media(prefers-reduced-motion:reduce){[class^=ds-]{transition:none;animation:none;scroll-behavior:auto}}"
+    },
+    {
+      "name": "纸面卡片",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "常驻内容容器以细线和纸面区分层级，内部用分隔线。",
+      "html": "<article class=\"ds-card\"><h2 class=\"ds-card-title\">今日训练</h2><p class=\"ds-card-copy\">从本次题目继续独立作答。</p><div class=\"ds-card-section\"><button class=\"ds-card-action\" type=\"button\">继续草稿</button></div></article>",
+      "css": ".ds-card{padding:24px;border:1px solid var(--line,#DCE2E8);border-radius:var(--r-md,12px);background:var(--card,#FFFFFF);color:var(--ink,#202936);max-width:420px;box-shadow:none;font:14px/1.7 'Segoe UI','Microsoft YaHei',-apple-system,sans-serif}.ds-card-title{margin:0 0 8px;font-size:19px;line-height:1.5;font-weight:600;letter-spacing:-.02em}.ds-card-copy{color:var(--muted,#647080)}.ds-card-section{padding-top:16px;border-top:1px solid var(--line,#DCE2E8)}.ds-card-action{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:36px;padding:9px 16px;border:1px solid var(--line-strong,#BDC7D2);border-radius:var(--r-sm,8px);background:var(--card,#FFFFFF);color:var(--ink,#202936);font:14px/1.7 'Segoe UI','Microsoft YaHei',-apple-system,sans-serif;cursor:pointer;transition:background-color 180ms,border-color 180ms,color 180ms}.ds-card-action:hover:not(:disabled){border-color:var(--primary,#294D73);color:var(--primary,#294D73)}.ds-card-action:active:not(:disabled){background:var(--accent-bg,#EEF2F6)}.ds-card-action:disabled{opacity:.55;cursor:not-allowed}.ds-card-action:focus-visible{outline:2px solid var(--primary,#294D73);outline-offset:3px}@media(prefers-reduced-motion:reduce){[class^=ds-]{transition:none;animation:none;scroll-behavior:auto}}"
+    },
+    {
+      "name": "作文纸张",
+      "kind": "custom",
+      "refersTo": "editor-sheet",
+      "description": "连续英文作文的纸面编辑样本，外框承担聚焦反馈。",
+      "html": "<section class=\"ds-editor-sheet\"><div class=\"ds-editor-label\"><label for=\"ds-essay\">我的作文</label><span>Task 2 · 自由分段</span></div><textarea class=\"ds-essay\" id=\"ds-essay\" rows=\"6\">Reliable public transport can reduce traffic congestion because one bus carries people who would otherwise drive separate cars.</textarea></section>",
+      "css": ".ds-editor-sheet{padding:32px 40px;border:1px solid var(--line,#DCE2E8);border-radius:12px;background:var(--card,#FFFFFF);color:var(--ink,#202936);max-width:680px}.ds-editor-sheet:focus-within{border-color:var(--primary,#294D73)}.ds-editor-label{display:flex;justify-content:space-between;gap:16px;margin-bottom:18px;color:var(--muted,#647080);font:12px/1.7 'Segoe UI','Microsoft YaHei',-apple-system,sans-serif}.ds-essay{width:100%;max-width:72ch;min-height:180px;padding:0;border:0;border-radius:0;background:var(--card,#FFFFFF);color:var(--ink,#202936);font:18px/1.8 Georgia,serif;resize:vertical;caret-color:var(--primary,#294D73)}.ds-essay:focus{outline:none}.ds-essay::selection{background:var(--primary-soft,#E8EEF4);color:var(--ink,#202936)}"
+    },
+    {
+      "name": "可定位批注",
+      "kind": "custom",
+      "refersTo": "annotation-mark",
+      "description": "原文高亮和选中批注的静态样本；定位行为由实际应用提供。",
+      "html": "<article class=\"ds-annotation\"><p class=\"ds-original\">Public transport can <mark class=\"ds-mark\" role=\"button\" tabindex=\"0\" aria-label=\"查看批注 1\">reduce traffic</mark> in cities.</p><div class=\"ds-annotation-selected\"><button class=\"ds-annotation-select\" type=\"button\">1. 说明因果关系</button><p class=\"ds-annotation-hint\">原文中 1 处</p></div></article>",
+      "css": ".ds-annotation{max-width:500px;color:var(--ink,#202936)}.ds-original{max-width:72ch;font:18px/1.8 Georgia,serif}.ds-mark{background:var(--warn-bg,#F7F2E9);color:var(--ink,#202936);border-bottom:1px solid var(--warn,#85602B);border-radius:2px;cursor:pointer;padding:1px 0}.ds-mark:hover,.ds-mark:focus-visible{background:var(--primary-soft,#E8EEF4);border-color:var(--primary,#294D73)}.ds-mark:focus-visible{outline:2px solid var(--primary,#294D73);outline-offset:3px}.ds-annotation-selected{background:var(--accent-bg,#EEF2F6);border-radius:8px;padding:14px 12px;border-bottom:1px solid var(--line,#DCE2E8)}.ds-annotation-select{display:block;text-align:left;min-height:28px;border:0;border-radius:0;background:transparent;padding:0;color:var(--ink,#202936);font:600 14px/1.7 'Segoe UI','Microsoft YaHei',-apple-system,sans-serif;cursor:pointer}.ds-annotation-select:hover{color:var(--primary,#294D73)}.ds-annotation-select:focus-visible{outline:2px solid var(--primary,#294D73);outline-offset:3px}.ds-annotation-hint{color:var(--muted,#647080);font:12px/1.8 'Segoe UI','Microsoft YaHei',-apple-system,sans-serif;margin:8px 0}"
+    },
+    {
+      "name": "正常流保存状态条",
+      "kind": "custom",
+      "refersTo": "save-status",
+      "description": "在正文之后显示字数、句数、计时与控制、保存文字和写作操作；此样本不执行计时或持久化。",
+      "html": "<div class=\"ds-save-bar\"><span>总字数：76 / 250+</span><span>总句数：5</span><div class=\"ds-footer-timer\" role=\"group\" aria-label=\"写作计时\"><div class=\"ds-timer-display\" role=\"timer\" aria-live=\"off\">40:00</div><div class=\"ds-timer-controls\"><button class=\"ds-save-action\" type=\"button\">开始</button><button class=\"ds-save-action\" type=\"button\">重置</button></div></div><span class=\"ds-save-status\" role=\"status\">已保存到本机</span><button class=\"ds-save-action\" type=\"button\">存草稿</button><button class=\"ds-save-action\" type=\"button\">复制全文</button></div>",
+      "css": ".ds-save-bar{display:flex;gap:18px;align-items:center;flex-wrap:wrap;position:static;padding:14px 18px;margin-top:12px;background:var(--card,#FFFFFF);color:var(--ink,#202936);border:1px solid var(--line,#DCE2E8);border-radius:12px;font:12px/1.7 'Segoe UI','Microsoft YaHei',-apple-system,sans-serif;box-shadow:none}.ds-save-status{color:var(--muted,#647080)}.ds-save-status[data-state=error]{color:var(--bad,#A23F43)}.ds-save-action{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:36px;padding:9px 16px;border:1px solid var(--line-strong,#BDC7D2);border-radius:var(--r-sm,8px);background:var(--card,#FFFFFF);color:var(--ink,#202936);font:14px/1.7 'Segoe UI','Microsoft YaHei',-apple-system,sans-serif;cursor:pointer;transition:background-color 180ms,border-color 180ms,color 180ms}.ds-save-action:hover:not(:disabled){border-color:var(--primary,#294D73);color:var(--primary,#294D73)}.ds-save-action:active:not(:disabled){background:var(--accent-bg,#EEF2F6)}.ds-save-action:disabled{opacity:.55;cursor:not-allowed}.ds-save-action:focus-visible{outline:2px solid var(--primary,#294D73);outline-offset:3px}.ds-save-action{min-height:32px;padding:5px 11px;font-size:13px}@media(prefers-reduced-motion:reduce){[class^=ds-]{transition:none;animation:none;scroll-behavior:auto}}.ds-footer-timer{display:flex;align-items:center;gap:10px;text-align:left;min-width:100px}.ds-timer-controls{display:flex;margin:0;gap:6px;flex-wrap:nowrap}.ds-timer-display{font-size:25px;font-weight:500;letter-spacing:-.03em;color:var(--ink,#202936);font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "资料搜索",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "本地搜索与筛选；结果数量、清除和无结果提示相邻。明暗背景继承纸面色。",
+      "html": "<label for=\"ds-search\">搜索范文</label><input id=\"ds-search\" type=\"search\" placeholder=\"题目、范文或表达关键词\"><p role=\"status\">找到 12 篇范文</p>",
+      "css": "input[type=\"search\"]{font:14px/1.7 \"Segoe UI\",\"Microsoft YaHei\",sans-serif;color:var(--ink);background:var(--card);padding:10px 12px;border:1px solid var(--line-strong);border-radius:8px}input[type=\"search\"]:focus{border-color:var(--primary);outline:2px solid var(--primary-soft);outline-offset:1px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "安静、精密的写作工作台",
+    "overview": "安静、精密的写作工作台。界面退后、内容向前：雾灰工作区衬托纸面式编辑区，墨色承载正文，深蓝标记操作与定位。系统 UI 字体组织中文界面，Georgia 承载英文作文与参考文本。\n\n密度服务持续写作、阅读反馈与改写。细线分隔、克制圆角和色调层次建立秩序；保存与反馈状态用明确文字呈现，可定位批注把问题与原句连接起来。此文是对已确认方向和当前实现的刷新，数值以 frontmatter 与现有 CSS 为准。",
+    "keyCharacteristics": [
+      "雾灰、纸白、墨色与深蓝组成工作环境。",
+      "系统 UI 字体与 Georgia 分担界面和英文阅读。",
+      "平面容器、细线分隔、可见焦点与真实状态。",
+      "桌面正文与辅助栏并行，允许手动收起辅助栏。"
+    ],
+    "rules": [
+      {
+        "name": "The One Accent Rule",
+        "body": "深蓝承担操作和选中强调；成功、警告与错误色只表达对应状态，不承担装饰。",
+        "section": "colors"
+      },
+      {
+        "name": "The Essay First Rule",
+        "body": "界面文字使用系统无衬线字体，连续作文与诊断原稿使用 Georgia；正文可读性优先于界面装饰。",
+        "section": "typography"
+      },
+      {
+        "name": "The Explicit Panel Rule",
+        "body": "教学面板由用户手动切换；不要把现有桌面布局描述为自动收起面板。",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Surface Rule",
+        "body": "常驻卡片与编辑纸张用边框和色调区分层级，不通过彩色发光或悬停抬升制造深度。",
+        "section": "elevation"
+      },
+      {
+        "name": "The Visible State Rule",
+        "body": "保存中、保存成功、保存失败与旧版反馈必须使用可见文字；不要只依赖颜色。",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do 沿用已确认的雾灰、纸白、墨色和深蓝，以及对应深色主题。",
+      "Do 为中文界面使用系统 UI 字体，为连续英文作文与诊断原稿使用 Georgia。",
+      "Do 保持可见键盘焦点，并用文字说明保存、错误和反馈版本状态。",
+      "Do 用细线分隔容器内部内容，并保留用户手动收起教学面板的控制。",
+      "Do 在本次桌面验收范围（1280 / 1440 / 1600px）分别复核布局、明暗主题和交互。"
+    ],
+    "donts": [
+      "Don't 添加装饰性 emoji、大面积渐变、紫色装饰或彩色发光阴影。",
+      "Don't 用新的卡片边框和投影反复套住已有卡片内部内容。",
+      "Don't 以阻塞式 alert/confirm 替代现有通知和原生确认对话框。",
+      "Don't 把保存状态条写成固定或吸底控件，也不要声称面板会自动收起。",
+      "Don't 将桌面验收推广为移动端设计保证，或声称未经逐项证明的完整 WCAG AA 合规。"
+    ]
+  }
+}

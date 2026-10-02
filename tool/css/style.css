@@ -23,8 +23,8 @@
   --tpl-bg: #f0f7ff; --tpl-border: #7dd3fc; --slot: #b45309;
   --trap-bg: #fff8ed; --trap-border: #fed7aa;
   --ammo-bg: #f2fbf5; --ammo-border: #bbf7d0;
-  --persp-border: #a5b4fc; --persp-title: #4338ca;
-  --role-topic-bg: #dbeafe; --role-example-bg: #fef9c3; --role-link: #6d28d9;
+  --persp-border: #dce2e8; --persp-title: #294d73;
+  --role-topic-bg: #dbeafe; --role-example-bg: #fef9c3; --role-link: #294d73;
   --star-off: #94a3b8; --star-on: #f59e0b;
   --mini-bg: var(--primary-soft); --mini-ink: var(--primary-dark);
   --sv-bad-bg: #fee2e2; --sv-warn-bg: #fef3c7; --sv-ok-bg: #d1fae5;
@@ -40,8 +40,8 @@ body.dark {
   --tpl-bg: #10233a; --tpl-border: #38bdf8; --slot: #fbbf24;
   --trap-bg: #241a0e; --trap-border: #92400e;
   --ammo-bg: #0e2418; --ammo-border: #166534;
-  --persp-border: #4c5fc4; --persp-title: #a5b4fc;
-  --role-topic-bg: #14304f; --role-example-bg: #33300e; --role-link: #c4b5fd;
+  --persp-border: #36424f; --persp-title: #acc7e3;
+  --role-topic-bg: #14304f; --role-example-bg: #33300e; --role-link: #acc7e3;
   --star-off: #475569; --star-on: #f59e0b;
   --mini-bg: #1e3a5f; --mini-ink: #bfdbfe;
   --sv-bad-bg: #3b1416; --sv-warn-bg: #33290e; --sv-ok-bg: #0f2a1d;
@@ -89,6 +89,27 @@ h2 { margin: 0 0 var(--sp-2); font-size: var(--fs-xl); line-height: 1.35; }
 h3 { margin: var(--sp-4) 0 var(--sp-2); font-size: var(--fs-lg); }
 .hint { color: var(--muted); font-size: var(--fs-sm); margin: var(--sp-1) 0 var(--sp-2); }
 .hidden { display: none !important; }
+.learning-feedback, .learning-work { padding: var(--sp-5) 0; border-top: 1px solid var(--line); margin-top: var(--sp-4); }
+.learning-feedback { background: var(--card); padding: var(--sp-5); margin-bottom: var(--sp-4); border-radius: var(--r-md); }
+.learning-work p, #learningHome > p { max-width: 72ch; overflow-wrap: anywhere; }
+.learning-work details { margin: var(--sp-4) 0; }
+.learning-work summary, #trainHome summary { cursor: pointer; padding: var(--sp-2) 0; }
+.learning-label { display: block; margin: var(--sp-4) 0 var(--sp-2); font-weight: 600; }
+.learning-text { white-space: pre-wrap; }
+.learning-stats { margin-top: var(--sp-4); }
+.learning-notice { color: var(--ok); }
+.learning-work button, #learningHome button { min-height: 44px; }
+button:focus-visible, summary:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+@media (max-width: 600px) {
+  .header-row { flex-wrap: wrap; }
+  .header-row > div:first-child { flex-basis: 100%; }
+  .docs-link { white-space: nowrap; }
+  .learning-feedback { padding: var(--sp-4); }
+  .learning-work .btn-row { align-items: stretch; flex-direction: column; }
+  .learning-work .chart-wrap, .learning-work svg, .learning-work img { max-width: 100%; }
+}
+.learning-history { margin: var(--sp-5) 0; overflow-wrap: anywhere; }
+.learning-history details { margin: var(--sp-3) 0; }
 .error { color: var(--bad); margin-top: var(--sp-2); font-size: var(--fs-md); }
 code { background: var(--accent-bg); border-radius: 4px; padding: 1px 5px; font-size: var(--fs-sm); }
 
@@ -241,8 +262,7 @@ body.dark .q-item .q-src { color: var(--primary-dark); }
 .prog-item .mini-scores { display: flex; gap: var(--sp-2); flex-wrap: wrap; }
 .prog-item .mini { padding: 2px 9px; border-radius: 6px; background: var(--mini-bg); font-weight: 700; color: var(--mini-ink); }
 .trend-bars { display: flex; align-items: flex-end; gap: 6px; height: 96px; margin: var(--sp-3) 0; }
-.trend-bars .bar { width: 28px; background: linear-gradient(180deg, #60a5fa, #2563eb); border-radius: 4px 4px 0 0; position: relative; min-height: 4px; }
-body.dark .trend-bars .bar { background: linear-gradient(180deg, #3b82f6, #1e40af); }
+.trend-bars .bar { width: 28px; background: var(--primary); border-radius: 3px 3px 0 0; position: relative; min-height: 4px; }
 .trend-bars .bar span { position: absolute; top: -22px; left: 50%; transform: translateX(-50%); font-size: var(--fs-xs); color: var(--primary-dark); white-space: nowrap; }
 body.dark .trend-bars .bar span { color: var(--primary-dark); }
 .notebook-topic { margin: var(--sp-3) 0; }
@@ -283,8 +303,8 @@ body.dark .outline-form label { color: var(--primary-dark); }
 .outline-radio input { width: auto; }
 
 /* ---------- 模考横幅 ---------- */
-.mock-banner { background: linear-gradient(90deg, #7c3aed, #2563eb); color: #fff; border-radius: var(--r-md); padding: 11px var(--sp-4); font-size: var(--fs-md); font-weight: 600; margin-bottom: var(--sp-3); display: flex; justify-content: space-between; align-items: center; gap: var(--sp-3); flex-wrap: wrap; }
-.mock-banner button { background: rgba(255,255,255,.16); color: #fff; border: none; }
+.mock-banner { background: var(--accent-bg); color: var(--ink); border: 1px solid var(--line); border-radius: var(--r-md); padding: 11px var(--sp-4); font-size: var(--fs-md); font-weight: 600; margin-bottom: var(--sp-3); display: flex; justify-content: space-between; align-items: center; gap: var(--sp-3); flex-wrap: wrap; }
+.mock-banner button { background: var(--primary-soft); color: var(--primary-ink); border: none; }
 
 /* ---------- 进度·词本 ---------- */
 #checkQuestion { min-width: 200px; }
@@ -346,8 +366,8 @@ li .star-btn { margin-left: 6px; }
 .q-book-head { margin: 18px 0 8px; font-size: 15px; color: var(--muted); border-bottom: 1px dashed var(--line); padding-bottom: 4px; }
 .q-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(158px, 1fr)); gap: 10px; }
 .q-card { background: var(--bg); border: 1.5px solid var(--line); border-radius: 12px; padding: 10px 12px; cursor: pointer; transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease; }
-.q-card:hover { transform: translateY(-2px); border-color: var(--primary); box-shadow: 0 4px 14px rgba(37,99,235,.12); }
-.q-card.open { border-color: var(--primary); background: var(--accent); }
+.q-card:hover { transform: translateY(-2px); border-color: var(--primary); box-shadow: var(--shadow-1); }
+.q-card.open { border-color: var(--primary); background: var(--accent-bg); }
 .q-card.done { border-color: var(--ok); }
 .q-card.wip { border-style: dashed; border-color: var(--warn, #d97706); }
 .q-card .q-top { display: flex; justify-content: space-between; align-items: center; gap: 6px; }

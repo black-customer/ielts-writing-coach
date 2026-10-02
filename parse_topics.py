@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 """Parse 话题思路库.md into tool/js/data-topics.js (full version, 24 topics)"""
 import re, io, json
+from pathlib import Path
 
-SRC = r"D:\project\writingzcode\knowledge\digests\话题思路库.md"
-OUT = r"D:\project\writingzcode\tool\js\data-topics.js"
+ROOT = Path(__file__).resolve().parent
+SRC = ROOT / 'knowledge' / 'digests' / '话题思路库.md'
+OUT = ROOT / 'tool' / 'js' / 'data-topics.js'
 
 # 中文匹配键（与词伙库 BY_TOPIC 键一致）
 KEYMAP = {
@@ -116,6 +118,18 @@ for line in body.splitlines():
             flush_section(); section = None
 
 flush_section()
+
+# 同一话题、同一用途只保留一次相同表达；跨话题或不同用途仍保留。
+for topic in topics:
+    for field in ('pro', 'con', 'neutral'):
+        seen = set()
+        unique = []
+        for item in topic[field]:
+            key = item['en'].strip().casefold()
+            if key not in seen:
+                seen.add(key)
+                unique.append(item)
+        topic[field] = unique
 
 total = sum(len(t["pro"]) + len(t["con"]) + len(t["neutral"]) for t in topics)
 js = ["/* data-topics.js — 话题观点库（由 knowledge/digests/话题思路库.md 生成，Simon《Ideas for IELTS Topics》全 24 话题） */",

@@ -96,7 +96,7 @@
             "zh": "分七个明确阶段（步数前置）"
           }
         ],
-        "guideQ": "流程图你的第一句就报出总步数了吗？"
+        "guideQ": "对照题干，核对本段的对象、时间与指标。改写后是否仍准确？不必为换词改变原意。"
       },
       "3": {
         "why": "概括=起终点+分叉点：句1 from growing to drying and cooling 框住全程；句2点出流程里唯一的分支（收割有两种方式）——分支是这张图区别于普通线性流程的最显著特征，必须进overview。",
@@ -111,7 +111,7 @@
             "zh": "可用两种方式完成（分支特征）"
           }
         ],
-        "guideQ": "这张流程图的「分叉」你找了吗？有分支不点，概括就平庸。"
+        "guideQ": "在原图中指出本段总体特征的依据。是否覆盖主要变化、差异或阶段，而非只描述局部？"
       },
       "4": {
         "why": "细节一=前三步（田间+榨汁）：needs 12 to 18 months 数字纪律；either...or... 并写两种收割；crushing mill 用定语从句 which presses it to explain 机制——步骤、方式、机制三层信息一句不浪费。",
@@ -130,7 +130,7 @@
             "zh": "压榨机榨出原汁（which从句带机制）"
           }
         ],
-        "guideQ": "流程图里的分叉你是并成一句 either...or，还是当成两条流程各写一遍？前者才对。"
+        "guideQ": "本段使用了“needs 12 to 18 months to mature”（需12-18个月成熟（唯一的数字））。核对对应数字、单位、位置或步骤，说明为什么这些信息适合放在同一组。"
       },
       "5": {
         "why": "细节二=后四步：先总后分（Preparing the juice involves the remaining four stages 一句交代段内结构），filtered→heated→syrup→centrifuge→dried and cooled 全被动串联，Next/Finally 两个顺序词就够，结尾 at which point the sugar is ready for sale 收在终点。",
@@ -149,7 +149,7 @@
             "zh": "此时糖即可出售（终点收尾）"
           }
         ],
-        "guideQ": "你的细节段开头有没有「本段管哪几步」的总起句？流程图切两段后，每段都该先报边界。"
+        "guideQ": "检查“before being heated in an evaporator”（之后在蒸发器中加热（before being句型））在本图中的含义。再核对这一段是否补齐重要信息，且没有重复上一组或推测图外原因。"
       }
     }
   },
@@ -246,7 +246,7 @@
             "zh": "从丢弃到新产品（起终点框架）"
           }
         ],
-        "guideQ": "你的流程图开头带了「起点和终点」吗？一句话交代全程，考官立刻知道你读懂了。"
+        "guideQ": "对照题干，核对本段的对象、时间与指标。改写后是否仍准确？不必为换词改变原意。"
       },
       "3": {
         "why": "概括=步数+起终点（句1）+流程的结构特征（句2：公众与机器各承担一半）——第二句跳出步骤细节看「谁参与」，这是这张图比一般流程图深一层的特征。",
@@ -261,7 +261,7 @@
             "zh": "公众与机器缺一不可（参与方特征）"
           }
         ],
-        "guideQ": "除了数步数，你有没有看出流程里「人或机器」的角色分工？第二层特征往往在评分时拉开差距。"
+        "guideQ": "在原图中指出本段总体特征的依据。是否覆盖主要变化、差异或阶段，而非只描述局部？"
       },
       "4": {
         "why": "细节一=工厂前五步：总起句 The first three stages take place before the bottles reach the factory 先报边界；三个 where/from which 定语从句把「收集-分拣」的场景链起来；压缩-破碎-清洗三连动作用一个句子并列完成（体系2.2从中点切两段）。",
@@ -280,7 +280,7 @@
             "zh": "压块、破碎、清洗三步并一句"
           }
         ],
-        "guideQ": "相邻的三个机械动作你会并成一句写吗？一步一句的流程图，句子机械感很重。"
+        "guideQ": "本段使用了“from which the bottles are collected by lorries”（瓶子由此被卡车收走（from which场景链））。核对对应数字、单位、位置或步骤，说明为什么这些信息适合放在同一组。"
       },
       "5": {
         "why": "细节二=后四步：melted→pellets→heated→rolled→end products；these pellets 指代衔接；结尾 What makes this process remarkable 是流程图罕见的「评论句」——点出循环本质，呼应开头 without breaking 客观原则（说的是图内事实而非观点）。",
@@ -299,7 +299,7 @@
             "zh": "循环可以重新开始（点出循环性）"
           }
         ],
-        "guideQ": "写完所有步骤后，你有没有用一句「流程的本质」收尾？循环图尤其需要点破 cycle。"
+        "guideQ": "检查“melted down and formed into pellets”（熔化制成小球粒（关键转化步骤））在本图中的含义。再核对这一段是否补齐重要信息，且没有重复上一组或推测图外原因。"
       }
     }
   }

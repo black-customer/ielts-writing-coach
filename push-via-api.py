@@ -1,96 +1,70 @@
 #!/usr/bin/env python3
-# push-via-api.py — github.com:443 被阻断时，改走 api.github.com 的 Git Data API 推送
-# 用 gh CLI 鉴权；为暂存区每个文件建 blob → 一棵 tree → 一个 commit → 创建/更新 main
-import subprocess, json, base64, os, sys, time
+"""Publish committed source with GitHub Git Data API when Git transport is unavailable."""
+import base64, hashlib, io, json, os, re, subprocess, sys, tarfile, tempfile, time
+from pathlib import Path
 
-OWNER, REPO, BRANCH = "black-customer", "ielts-writing-coach", "main"
-COMMIT_MSG = os.environ.get("COMMIT_MSG", "IELTS Writing Coach — 离线雅思写作训练工具")
+REPOSITORY = 'repos/black-customer/ielts-writing-coach'
+BRANCH = 'main'
+CACHE = Path('models/.blob-cache.json')
 
-_tmp_n = [0]
-def gh(endpoint, method="GET", payload=None):
-    cmd = ["gh", "api", "--method", method, endpoint]
-    tmp = None
-    if payload is not None:
-        _tmp_n[0] += 1
-        tmp = os.path.join(os.environ.get("TEMP", "."), f"_ghapi_{os.getpid()}_{_tmp_n[0]}.json")
-        with open(tmp, "w", encoding="utf-8") as f:
-            json.dump(payload, f, ensure_ascii=False)
-        cmd += ["--input", tmp]
-    r = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8")
-    if tmp and os.path.exists(tmp): os.remove(tmp)
-    if r.returncode != 0:
-        raise RuntimeError(f"gh api {method} {endpoint}: {r.stderr[:400]}")
-    return json.loads(r.stdout) if r.stdout.strip() else {}
+def gh(endpoint, method='GET', payload=None):
+    command = ['gh','api','--method',method,endpoint]
+    temporary = None
+    try:
+        if payload is not None:
+            with tempfile.NamedTemporaryFile(mode='w',encoding='utf-8',suffix='.json',delete=False) as task_file:
+                json.dump(payload,task_file,ensure_ascii=False);temporary=task_file.name
+            command.extend(['--input',temporary])
+        result=subprocess.run(command,capture_output=True,text=True,encoding='utf-8',timeout=45)
+        if result.returncode:raise RuntimeError(f'GitHub {method} {endpoint}: {result.stderr[:400]}')
+        return json.loads(result.stdout) if result.stdout.strip() else {}
+    finally:
+        if temporary:Path(temporary).unlink(missing_ok=True)
 
-def retry(fn, tries=4, wait=8):
-    last = None
-    for i in range(tries):
-        try:
-            return fn()
-        except Exception as e:
-            last = e
-            if "422" in str(e) or "409" in str(e): break
-            print(f"    retry {i+1}: {str(e)[:120]}")
-            time.sleep(wait)
-    raise last
+def retry(operation):
+    for attempt in range(3):
+        try:return operation()
+        except (RuntimeError,subprocess.TimeoutExpired) as error:
+            if attempt==2 or any(code in str(error) for code in ['409','422','401','403']):raise
+            print(f'Retrying request {attempt+1}/2',flush=True);time.sleep(2)
 
-files = [f for f in subprocess.run(["git", "-c", "core.quotepath=false", "ls-files"], capture_output=True, text=True, encoding="utf-8").stdout.split("\n") if f.strip()]
-print(f"staged files: {len(files)}")
+def publish(dry_run=False):
+    if subprocess.check_output(['git','status','--porcelain']).strip():raise RuntimeError('Commit intended project changes before publishing.')
+    local_commit=subprocess.check_output(['git','rev-parse','HEAD']).decode().strip()
+    parent=gh(f'{REPOSITORY}/git/ref/heads/{BRANCH}')['object']['sha']
+    remote_tree=gh(f'{REPOSITORY}/git/trees/{parent}?recursive=1')
+    if remote_tree.get('truncated'):raise RuntimeError('Remote tree is truncated; refusing incomplete comparison.')
+    remote={item['path']:item['sha'] for item in remote_tree['tree'] if item['type']=='blob'}
+    entries=[]
+    committed={}
+    for row in subprocess.check_output(['git','ls-tree','-rz','HEAD']).decode('utf-8').split('\0'):
+        if row:
+            metadata,path=row.split('\t',1);committed[path]=metadata.split()[2]
+    with tarfile.open(fileobj=io.BytesIO(subprocess.check_output(['git','-c','core.autocrlf=false','-c','core.eol=lf','archive','--format=tar','HEAD']))) as tree:
+        for item in tree.getmembers():
+            if not item.isfile():continue
+            content=tree.extractfile(item).read();sha=hashlib.sha1(f'blob {len(content)}\0'.encode()+content).hexdigest()
+            if committed.get(item.name)!=sha:raise RuntimeError(f'Archive differs from committed blob: {item.name}')
+            # A detected credential is reported by filename only, never by value.
+            if re.search(rb'(?<![A-Za-z0-9_/-])(?:sk-(?:proj-)?[A-Za-z0-9_-]{24,}|gh[pousr]_[A-Za-z0-9]{25,})',content):raise RuntimeError(f'Potential credential in committed file: {item.name}')
+            if remote.get(item.name)!=sha:entries.append((item.name,content,sha))
+    print(f'Local commit: {local_commit}\nRemote parent: {parent}\nChanged/new files: {len(entries)}',flush=True)
+    if dry_run:print(json.dumps([entry[0] for entry in entries],ensure_ascii=False,indent=2));return
+    if not entries:print('Committed source already matches remote.');return
+    cache=json.loads(CACHE.read_text(encoding='utf-8')) if CACHE.exists() else {};changes=[]
+    for number,(path,content,expected_sha) in enumerate(entries,1):
+        if cache.get(path,{}).get('sha')==expected_sha:sha=expected_sha
+        else:
+            blob=retry(lambda:gh(f'{REPOSITORY}/git/blobs','POST',{'content':base64.b64encode(content).decode(),'encoding':'base64'}));sha=blob['sha']
+            if sha!=expected_sha:raise RuntimeError(f'Blob verification failed: {path}')
+            cache[path]={'sha':sha,'size':len(content)};CACHE.write_text(json.dumps(cache),encoding='utf-8')
+        changes.append({'path':path,'mode':'100644','type':'blob','sha':sha})
+        if number%20==0 or number==len(entries):print(f'Uploaded/verified {number}/{len(entries)} files',flush=True)
+    tree=retry(lambda:gh(f'{REPOSITORY}/git/trees','POST',{'base_tree':remote_tree['sha'],'tree':changes}))
+    message=os.environ.get('COMMIT_MSG','feat: improve desktop writing experience (v1.4.0)')
+    commit=gh(f'{REPOSITORY}/git/commits','POST',{'message':message+f'\n\nVerified local source: {local_commit}','tree':tree['sha'],'parents':[parent]})
+    if gh(f'{REPOSITORY}/git/ref/heads/{BRANCH}')['object']['sha']!=parent:raise RuntimeError('Remote main changed during upload. Nothing published; review before retrying.')
+    gh(f'{REPOSITORY}/git/refs/heads/{BRANCH}','PATCH',{'sha':commit['sha'],'force':False})
+    print(f'Published: {commit["sha"]}\nhttps://github.com/black-customer/ielts-writing-coach/commit/{commit["sha"]}',flush=True)
 
-# blob 缓存（断点续传；带文件大小校验，文件变化即失效）
-CACHE = "models/.blob-cache.json"
-cache = json.load(open(CACHE, encoding="utf-8")) if os.path.exists(CACHE) else {}
-
-# 0) 空仓库引导：用 Contents API 先放一个文件，让仓库有首个 commit（否则 Git Data API 报 409）
-parent = None
-try:
-    ref = gh(f"repos/{OWNER}/{REPO}/git/refs/heads/{BRANCH}")
-    parent = ref["object"]["sha"]
-    print("existing main at", parent[:10])
-except Exception:
-    print("empty repo — bootstrapping with .gitignore via Contents API ...")
-    with open(".gitignore", "rb") as f:
-        c = base64.b64encode(f.read()).decode("ascii")
-    boot = retry(lambda: gh(f"repos/{OWNER}/{REPO}/contents/.gitignore", "PUT",
-                            {"message": "bootstrap: add .gitignore", "content": c}))
-    parent = boot["commit"]["sha"]
-    print("bootstrapped at", parent[:10])
-
-# 1) blobs
-tree_entries = []
-for i, path in enumerate(files, 1):
-    p = path.replace(os.sep, "/")
-    fsize = os.path.getsize(path)
-    if p in cache and cache[p].get("size") == fsize:
-        tree_entries.append({"path": p, "mode": "100644", "type": "blob", "sha": cache[p]["sha"]})
-        continue
-    with open(path, "rb") as f:
-        b64 = base64.b64encode(f.read()).decode("ascii")
-    def make(p=path, b=b64):
-        return gh(f"repos/{OWNER}/{REPO}/git/blobs", "POST", {"content": b, "encoding": "base64"})
-    blob = retry(make)
-    cache[p] = {"sha": blob["sha"], "size": fsize}
-    json.dump(cache, open(CACHE, "w", encoding="utf-8"))
-    tree_entries.append({"path": p, "mode": "100644", "type": "blob", "sha": blob["sha"]})
-    if i % 25 == 0: print(f"  blobs {i}/{len(files)}")
-
-# 2) tree
-tree = retry(lambda: gh(f"repos/{OWNER}/{REPO}/git/trees", "POST", {"tree": tree_entries}))
-print("tree:", tree["sha"][:10])
-
-# 3) commit（带父提交，保证历史线性）
-payload = {"message": COMMIT_MSG, "tree": tree["sha"]}
-if parent: payload["parents"] = [parent]
-commit = retry(lambda: gh(f"repos/{OWNER}/{REPO}/git/commits", "POST", payload))
-print("commit:", commit["sha"][:10])
-
-# 4) ref：main 已存在则更新，否则创建
-try:
-    retry(lambda: gh(f"repos/{OWNER}/{REPO}/git/refs/heads/{BRANCH}"))
-    retry(lambda: gh(f"repos/{OWNER}/{REPO}/git/refs/heads/{BRANCH}", "PATCH", {"sha": commit["sha"], "force": False}))
-    print("ref updated")
-except Exception:
-    retry(lambda: gh(f"repos/{OWNER}/{REPO}/git/refs", "POST", {"ref": f"refs/heads/{BRANCH}", "sha": commit["sha"]}))
-    print("ref created")
-
-print("DONE — pushed via API")
+if __name__=='__main__':publish('--dry-run' in sys.argv)

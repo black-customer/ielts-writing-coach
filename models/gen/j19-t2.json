@@ -20,7 +20,7 @@
             "zh": "现代复杂成就皆是团队产物（立场主轴）"
           }
         ],
-        "guideQ": "你的立场句后面那句总理由，能当全文的目录吗？"
+        "guideQ": "逐项列出原题要回答的问题，再看本段如何交代回答方向。全文立场应清楚，不要求指定立场短语或让步句。"
       },
       "3": {
         "why": "A方段写足对方三张牌：绩效上推（league tables/名校竞争的自律）+筛选功能（tournaments/job markets 识别强者）+适用条件（simple, measurable tasks with clear winners）——第三张牌「适用条件」最关键，为我方反驳精确画出靶子（体系1.2转述要像转述）。",
@@ -39,7 +39,7 @@
             "zh": "在简单可测、赢家明确的任务中（限定条件收口）"
           }
         ],
-        "guideQ": "你转述对方观点时有没有给出「它在什么条件下成立」？这为你的反驳画出准确靶心。"
+        "guideQ": "找出本段观点、解释和支撑。“Rivals push effort upwards”（对手把努力往上推（机制短句））在这里起什么作用？合上范文，用自己的内容补齐一条推理。"
       },
       "4": {
         "why": "我方段三连证据：职业协作本质（外科/飞行员/工程师+医院部门竞争的致命反例）→创新史（互联网与疫苗的跨国数据共享）→社会尺度（合作产信任、信任降成本）——「trust lowers the cost of every future project」是机制化收口，比喊口号有力（体系1.4）。",
@@ -58,7 +58,7 @@
             "zh": "信任降低每个未来项目的成本（机制化收口）"
           }
         ],
-        "guideQ": "你的反驳有没有一个「对方逻辑走偏后的具体惨案」？医院部门竞争的例子就是这种。"
+        "guideQ": "本段用“does not resemble a sprint with a finish line”（不像一场有终点线的冲刺（反喻主题句））推进了什么内容？检查它如何回应原题、连接前一段，并用具体细节支撑观点。"
       },
       "5": {
         "why": "一句话结论：competition has a place where... 承认对方适用域 + 主张把合作当 primary skill、竞争当 supplement——「主从关系」的定位式结论，比单纯重申更聪明。",
@@ -73,7 +73,7 @@
             "zh": "是有用的补充而非理想本身（定位式收尾）"
           }
         ],
-        "guideQ": "你的结论给两个概念「定了位次」吗？主从定位让讨论题结尾格外清晰。"
+        "guideQ": "将本段结论与前文逐项对应：核心回答是否一致，能否找到支撑？保留准确的关键词，不必强行替换所有词。"
       }
     }
   },
@@ -94,7 +94,7 @@
             "zh": "许多经济体目前无法吸收的产出与灵活性代价（总理由）"
           }
         ],
-        "guideQ": "你反对一个主张时，反对的是「它本身」还是「它全面推行」？后者 precision 更高。"
+        "guideQ": "逐项列出原题要回答的问题，再看本段如何交代回答方向。全文立场应清楚，不要求指定立场短语或让步句。"
       },
       "3": {
         "why": "让步段写满对方三大吸引力：试验数据（four-day weeks 低倦怠不掉产出）+无法用钱买的时间（孩子/老人/社区志愿）+收尾升华（not trivial goods）——对方立场写到最动人，下一段的「但是」才有千钧之力。",
@@ -113,10 +113,10 @@
             "zh": "负担得起的社会应认真考虑（伏笔句：关键词 afford）"
           }
         ],
-        "guideQ": "你的让步段有没有埋一个「afford」式的伏笔词，让下一段的转折顺理成章？"
+        "guideQ": "找出本段观点、解释和支撑。“time that money struggles to buy”（金钱难以买到的时光（点题短语））在这里起什么作用？合上范文，用自己的内容补齐一条推理。"
       },
       "4": {
-        "why": "批判段三连击：产出消失必须被替代（小公司雇不起/压缩工时反增压力）→不可压缩职业（护士/司机/店员——具体职业名词排比）→隐藏不平等（灵活者得利、轮班者减薪）——「谁买单」的分配分析是本段杀器，比单纯喊「效率低」高一档。",
+        "why": "批判段三连击：产出消失必须被替代（小公司雇不起/压缩工时反增压力）→不可压缩职业（护士/司机/店员——具体职业名词排比）→隐藏不平等（灵活者得利、轮班者减薪）——「谁买单」的分配分析是本段杀器，把笼统的效率问题解释为不同人承担的具体影响。",
         "modelPara": "The difficulty is that most cannot afford them yet. Output that simply disappears is output that must be replaced, either by hiring more staff, which small firms with thin margins cannot do, or by squeezing the same work into fewer hours, which usually means more pressure rather than less. Not every job is compressible: a nurse, a train driver or a shop assistant cannot finish the same caring, driving or selling in four days. There is also a hidden inequality in the idea, because the professionals who would gain a long weekend are already the ones who enjoy flexible schedules, while shift workers on lower wages would see pay cut to match hours reduced.",
         "expressions": [
           {
@@ -132,7 +132,7 @@
             "zh": "主张中隐藏的不平等（分配视角）"
           }
         ],
-        "guideQ": "你的批判段问过「谁来买单」吗？分配分析让利弊讨论立刻深刻。"
+        "guideQ": "本段用“Output that simply disappears is output that must be replaced”（消失的产出必须被替代（顶针式主题句））推进了什么内容？检查它如何回应原题、连接前一段，并用具体细节支撑观点。"
       },
       "5": {
         "why": "一句话结论：appealing vision 承认愿景 + shift costs onto those least able to carry them 回收分配论 + at present 时间限定收尾——反对但不永久关门，立场老练。",
@@ -147,7 +147,7 @@
             "zh": "目前不支持（时间限定收尾）"
           }
         ],
-        "guideQ": "你的反对结论加了「at present / in most cases」式的安全阀吗？"
+        "guideQ": "将本段结论与前文逐项对应：核心回答是否一致，能否找到支撑？保留准确的关键词，不必强行替换所有词。"
       }
     }
   },
@@ -168,7 +168,7 @@
             "zh": "储蓄能力分布不均（限定理由一）"
           }
         ],
-        "guideQ": "extent 题你的表态是不是「总态度+边界」两层？只有一层算不上回答了 to what extent。"
+        "guideQ": "逐项列出原题要回答的问题，再看本段如何交代回答方向。全文立场应清楚，不要求指定立场短语或让步句。"
       },
       "3": {
         "why": "理由段三层递进：复利算术（二十岁存的钱数十年增值）→抗风险（三个月备用金 vs 借高息债的具体对比）→习惯本身（teenagers 学会的量入为出受用终身）——算术、风险、习惯，从物到事到人层层落地（体系1.4）。",
@@ -187,7 +187,7 @@
             "zh": "量入为出、略低于收入生活（习惯层词伙）"
           }
         ],
-        "guideQ": "你的理由段有没有「算术、风险、习惯」这样从物到人的层次？平铺三条同级理由是7分写法。"
+        "guideQ": "找出本段观点、解释和支撑。“benefits from decades of compound growth”（享受数十年的复利增长（算术层））在这里起什么作用？合上范文，用自己的内容补齐一条推理。"
       },
       "4": {
         "why": "限定段两条边界：储蓄是收入的奢侈品（低收入年轻人无从指责，说教只添侮辱）+自我投资跑赢银行账户（读证/搬城的例子，defer such spending is poor arithmetic 用对方的算术语言反将一军）——两条限定正好呼应开头 flexibility（体系1.4）。",
@@ -206,7 +206,7 @@
             "zh": "为储蓄推迟这种花费是糟糕的算术（呼应句）"
           }
         ],
-        "guideQ": "你划的边界有没有在结尾被「回收」？qualifications 若不呼应开头表态，结构就散了。"
+        "guideQ": "本段用“saving is a luxury of income”（储蓄是收入带来的奢侈（精辟概括句））推进了什么内容？检查它如何回应原题、连接前一段，并用具体细节支撑观点。"
       },
       "5": {
         "why": "一句话结论：sound advice for those who can afford it 收同意段 + a habit to grow into rather than demanded of those... 收限定段——用 rather than 对仗把「同意+限定」压进一行。",
@@ -221,7 +221,7 @@
             "zh": "对负担得起的人是好建议（同意段回收）"
           }
         ],
-        "guideQ": "extent 题的结论你把「同意的部分」和「保留的部分」各用半句收齐了吗？"
+        "guideQ": "将本段结论与前文逐项对应：核心回答是否一致，能否找到支撑？保留准确的关键词，不必强行替换所有词。"
       }
     }
   },
@@ -242,7 +242,7 @@
             "zh": "环境与社会代价被转嫁给看不见小票的人（主轴句）"
           }
         ],
-        "guideQ": "你的开头有没有一句「具体到看得见的画面」？ Chile莓果比 global food trade 生动十倍。"
+        "guideQ": "逐项列出原题要回答的问题，再看本段如何交代回答方向。全文立场应清楚，不要求指定立场短语或让步句。"
       },
       "3": {
         "why": "让步段双主体：消费者（全年供应/价格亲民/饮食多样）与生产者（发展中地区农民获得出口市场）——For the individual shopper / For producers 的双开头结构清晰对称；benefits are undeniable 的干脆让步为批判攒足信用。",
@@ -261,7 +261,7 @@
             "zh": "本地需求撑不起的高价值出口市场"
           }
         ],
-        "guideQ": "你的让步段按「受益的不同主体」分段内结构了吗？比笼统一句「有好处」清晰得多。"
+        "guideQ": "找出本段观点、解释和支撑。“has ended the preserve-and-scarcity era”（终结了腌制与匮乏的时代（时代定性））在这里起什么作用？合上范文，用自己的内容补齐一条推理。"
       },
       "4": {
         "why": "批判段三链：环境（空运碳足迹远超营养价值+购买时不可见所以持续扩张的机制）→生产国（单一化种植挤掉主粮→粮食安全受威胁的链条）→本国（小农竞争失败离地）——每条链都点到「机制」而非「现象」，invisible at the point of purchase 呼应开头主轴（体系1.4）。",
@@ -280,7 +280,7 @@
             "zh": "代价在远离购物车之处累积（呼应开头主轴）"
           }
         ],
-        "guideQ": "批判段每条害处你都写出了「传导链条」吗？单一化→主粮进口→粮食安全，链条才算论证。"
+        "guideQ": "本段用“a carbon footprint that dwarfs their nutritional value”（碳足迹远超其营养价值（dwarf比较动词））推进了什么内容？检查它如何回应原题、连接前一段，并用具体细节支撑观点。"
       },
       "5": {
         "why": "一句话结论：although 双受益者回收（delights the shopper and rewards some growers）+ true costs borne by others 回收主轴 + negative development overall 定性——结尾是开头主轴的完美回声，结构闭环。",
@@ -295,7 +295,7 @@
             "zh": "排放、农村经济扭曲与粮食安全的真实代价由他人承担（主轴回收）"
           }
         ],
-        "guideQ": "你的结论第一句能让读者想起开头那句主轴吗？首尾回声是利弊题的闭环标志。"
+        "guideQ": "将本段结论与前文逐项对应：核心回答是否一致，能否找到支撑？保留准确的关键词，不必强行替换所有词。"
       }
     }
   }

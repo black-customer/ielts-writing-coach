@@ -1,0 +1,114 @@
+{
+  "checked_on": "2026-10-01",
+  "scope": "首轮官方标准与教学方法调研；并非全网穷尽性审查。原创练习不冒充真题或官方评分范文。",
+  "sources": [
+    {
+      "id": "S01",
+      "title": "IELTS Writing Band Descriptors",
+      "url": "https://ielts.org/cdn/ielts-guides/ielts-writing-band-descriptors.pdf",
+      "authority": "官方量表",
+      "status": "正文核实，文件标注 Updated May 2023",
+      "use": "检验任务回应、信息选择、逻辑推进、表达准确性；不从量表推导固定句数或词伙配额。"
+    },
+    {
+      "id": "S02",
+      "title": "IELTS Academic Writing test format",
+      "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-writing",
+      "authority": "官方考试说明",
+      "status": "正文核实",
+      "use": "任务字数、建议用时、权重、相关支撑与完整成文要求。"
+    },
+    {
+      "id": "S03",
+      "title": "IELTS scoring in detail",
+      "url": "https://ielts.org/take-a-test/your-results/ielts-scoring-in-detail",
+      "authority": "官方评分说明",
+      "status": "搜索返回内容核实",
+      "use": "四项标准的地位；课程不模拟未经确认的官方分数进位过程。"
+    },
+    {
+      "id": "S04",
+      "title": "British Council: Writing Task 2 Developing paragraphs",
+      "url": "https://takeielts.britishcouncil.org/sites/default/files/writing_task_2_developing_paragraphs.pdf",
+      "authority": "官方教学资源",
+      "status": "搜索索引摘要可见，打开现已重定向；未声称完整读取 PDF",
+      "use": "借鉴先辨认句间关系，再独立续写的练习顺序。"
+    },
+    {
+      "id": "S05",
+      "title": "British Council: Essay structure and writing an introduction",
+      "url": "https://takeielts.britishcouncil.org/sites/default/files/writing_task_2_essay_structure_and_writing_an_introduction.pdf",
+      "authority": "官方教学资源",
+      "status": "搜索摘要可见，直链读取失败",
+      "use": "结构须服务论证；摘要中的灵活结构思想与官方量表交叉校验。"
+    },
+    {
+      "id": "S06",
+      "title": "IELTS Simon: Writing Task 2 lesson directory",
+      "url": "https://ielts-simon.study/ielts-writing-task-2/",
+      "authority": "作者网站",
+      "status": "公开目录读取；会员课程正文未访问",
+      "use": "研究课程覆盖与段落训练主题；不声称已学习付费站的全部内容。"
+    },
+    {
+      "id": "S07",
+      "title": "IELTS Advantage: How to Write a Task 2 Main Body Paragraph",
+      "url": "https://www.ieltsadvantage.com/2015/05/21/write-supporting-paragraph-ielts/",
+      "authority": "教学方法对照",
+      "status": "公开正文读取",
+      "use": "借鉴将观点转成主题句，再解释支撑；用原创案例检验迁移。"
+    },
+    {
+      "id": "S08",
+      "title": "IELTS Liz: Essay Structure & Paragraphs",
+      "url": "https://ieltsliz.com/how-many-paragraphs-for-an-ielts-essay/",
+      "authority": "教学方法对照",
+      "status": "公开正文读取",
+      "use": "保留段落功能与可导航性；不把教师的固定句式建议升级为官方硬规则。"
+    },
+    {
+      "id": "S09",
+      "title": "IDP: Academic Writing Task 1 Overview",
+      "url": "https://ielts.idp.com/qatar/prepare/article-overview-task-1-ielts-academic-writing",
+      "authority": "官方教学资源",
+      "status": "搜索摘要可见，正文读取失败",
+      "use": "仅发现线索；关键要求以 S01/S02 复核，未用未读正文支持结论。"
+    },
+    {
+      "id": "S10",
+      "title": "IELTS Academic candidate responses with band scores and examiner comments",
+      "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-writing/ielts-academic-writing-example-responses-to-parts-1-and-2-with-band-scores-and-examiner-comments.pdf",
+      "authority": "官方样卷",
+      "status": "发现并列入后续精读；未逐页完成审查",
+      "use": "后续评分锚点，不能据发现链接宣称校准完成。"
+    },
+    {
+      "id": "L01",
+      "title": "Simon 本地 Main paragraphs worksheet",
+      "path": "extracted/simon writting 9+12讲 写作__Simon Writing PDF__3 Main paragraphs worksheet.pdf.txt",
+      "status": "全文精读",
+      "use": "借鉴列点式和单链展开两种段落；原创课不照搬原例文。"
+    },
+    {
+      "id": "L02",
+      "title": "Simon 本地 Line graph worksheet",
+      "path": "extracted/simon writting 9+12讲 写作__Simon Writing PDF__21 Line graph worksheet.pdf.txt",
+      "status": "全文精读",
+      "use": "借鉴先看全局、按组报告、脱离参考稿重写的教学安排。"
+    },
+    {
+      "id": "L03",
+      "title": "项目现有知识库与校准报告",
+      "path": "knowledge/",
+      "status": "目录盘点，关键方法与评分文件抽查；尚非逐条完成核验",
+      "use": "课程入口与原有学习工具衔接；历史置信度表述列入纠偏清单。"
+    },
+    {
+      "id": "L04",
+      "title": "21 个本地 Simon 原视频",
+      "path": "simon writting 9+12讲 写作/Simon videos Task/",
+      "status": "21 个原视频已完成离线 ASR 草稿，3323 个片段；关键训练与段落内容抽查，尚未逐句校对",
+      "use": "不把 worksheets 当作原视频的无损替代，不把自动转录当作已人工校对。"
+    }
+  ]
+}

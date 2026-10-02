@@ -17,7 +17,7 @@
             "zh": "墨尔本某社区活动中心（对象+地点保留）"
           }
         ],
-        "guideQ": "线有几条，你的开头就数到几了吗？"
+        "guideQ": "对照题干，核对本段的对象、时间与指标。改写后是否仍准确？不必为换词改变原意。"
       },
       "3": {
         "why": "概括两句：句1=film club 始终第一（稳），句2=两条动态线的故事——table tennis 从小项目暴涨、amateur dramatics 锐减。一稳一涨一跌，六条线的命运一句话分完。",
@@ -32,7 +32,7 @@
             "zh": "昔日小项目、如今增速第一（反差句）"
           }
         ],
-        "guideQ": "暴涨的是 table tennis——你的概括押对宝了吗？多线图最忌把「看着眼熟」的线写成主角。"
+        "guideQ": "在原图中指出本段总体特征的依据。是否覆盖主要变化、差异或阶段，而非只描述局部？"
       },
       "4": {
         "why": "细节一=film club（稳）+table tennis（涨）+musical performances（新）：remarkably stable/dip/climbed continuously/overtaking 串起三条线；「2015年前后连超两项」的交叉点与「2005年前不存在」的出生点都点到位（体系2.3）。",
@@ -51,7 +51,7 @@
             "zh": "2005年前尚不存在（出生点从句）"
           }
         ],
-        "guideQ": "「从零开始」的线，你交代它的出生点了 吗？0是它最重要的数字。"
+        "guideQ": "本段使用了“began and ended the period at 64 and 66 participants respectively”（期初期末分别为64和66（respectively配对））。核对对应数字、单位、位置或步骤，说明为什么这些信息适合放在同一组。"
       },
       "5": {
         "why": "细节二=余下两条：amateur dramatics 稳步下滑（25→6，steep decline）；martial arts 窄幅波动（首尾都是36、2010峰值38）——一条写趋势、一条写波动，By contrast 衔接；首尾同值的「回到原点」用 beginning and ending... at 36 一句收。",
@@ -70,7 +70,7 @@
             "zh": "期初期末同为36（回到原点）"
           }
         ],
-        "guideQ": "首尾相同的线（回到原点），你用一句话框住了吗？"
+        "guideQ": "检查“went into steep decline”（急剧衰退（趋势主旨句））在本图中的含义。再核对这一段是否补齐重要信息，且没有重复上一组或推测图外原因。"
       }
     }
   },
@@ -92,7 +92,7 @@
             "zh": "今天的同一海港（现在半句）"
           }
         ],
-        "guideQ": "两图对比题的开头你能压缩到一句话吗？"
+        "guideQ": "对照题干，核对本段的对象、时间与指标。改写后是否仍准确？不必为换词改变原意。"
       },
       "3": {
         "why": "概括两句定性：句1=海港转向旅游休闲（性质定位），句2=新增设施多、但运输要素多是「换位」而非消失——「换位不消失」是这张图最特别的结构，概括就点它。",
@@ -107,7 +107,7 @@
             "zh": "换了位置而非消失（换位特征句）"
           }
         ],
-        "guideQ": "这张图里「消失」的东西多吗？还是只是「搬家」？读准这一点，全篇的结构就定了。"
+        "guideQ": "在原图中指出本段总体特征的依据。是否覆盖主要变化、差异或阶段，而非只描述局部？"
       },
       "4": {
         "why": "细节一=码头大换位：2000年布局一句（北marina游艇+南dock渔船），today the positions are reversed 一句反转；新增的 cafés & shops 与第二处 showers & toilets 补在换位之后——「对照一句+反转一句+新增两句」。",
@@ -126,7 +126,7 @@
             "zh": "南侧新增第二处盥洗室（serves点功能）"
           }
         ],
-        "guideQ": "「A 到了 B 的位置、B 到了 A 的位置」，你用 positions are reversed 一句收拢了吗？"
+        "guideQ": "本段使用了“The most striking swap concerns the two docks”（最醒目的换位是两座码头（主旨句））。核对对应数字、单位、位置或步骤，说明为什么这些信息适合放在同一组。"
       },
       "5": {
         "why": "细节二=旅游开发+保留项：disused castle→hotel（改用途）、public beach→private beach for hotel guests（改性质）；What has not changed is just as clear 引出五项不变（ferry/lifeboat/停车场/main road/东北海滩）——保留项成段，首尾闭合。",
@@ -145,7 +145,7 @@
             "zh": "全部原地保留（保留项收尾）"
           }
         ],
-        "guideQ": "不变项你单独成句收尾了吗？「变化的对照面」让地图答案更完整。"
+        "guideQ": "检查“the conversion of the disused castle into a hotel”（废弃古堡改建为酒店（conversion into改用途））在本图中的含义。再核对这一段是否补齐重要信息，且没有重复上一组或推测图外原因。"
       }
     }
   },
@@ -167,7 +167,7 @@
             "zh": "再用于驱动车辆（使用半环）"
           }
         ],
-        "guideQ": "循环图你的开头就把「生产与使用」两大半框出来了吗？"
+        "guideQ": "对照题干，核对本段的对象、时间与指标。改写后是否仍准确？不必为换词改变原意。"
       },
       "3": {
         "why": "概括=闭环结构+能量来源：句1 closed cycle，首尾相接（CO2 回到植物）；句2 整个循环由阳光驱动——两张图合看才发现的「能量主线」是第二层特征。",
@@ -182,7 +182,7 @@
             "zh": "整个循环由阳光驱动（能量主线）"
           }
         ],
-        "guideQ": "图上标注的「Energy (sunlight + carbon dioxide)」你读出来了吗？它是概括的第二句。"
+        "guideQ": "在原图中指出本段总体特征的依据。是否覆盖主要变化、差异或阶段，而非只描述局部？"
       },
       "4": {
         "why": "细节一=生产半环：absorb→harvested→pre-processing→reduced to cellulose→processed into sugars→fermented into ethanol；自然环节主动（trees absorb / plants grow），工业环节被动（is reduced/is processed/is fermented）——语态切换本身就是对图的理解。",
@@ -201,7 +201,7 @@
             "zh": "发酵成乙醇（关键转化）"
           }
         ],
-        "guideQ": "自然环节主动、工业环节被动——你的语态跟着图的性质切换了吗？"
+        "guideQ": "本段使用了“trees and plants absorb sunlight and carbon dioxide while they grow”（植物生长时吸收阳光与二氧化碳（主动语态））。核对对应数字、单位、位置或步骤，说明为什么这些信息适合放在同一组。"
       },
       "5": {
         "why": "细节二=使用半环+合环：sold as a biofuel→burned in vehicles→CO2 released→available for plants again；The fuel's journey completes the loop 点段旨；allowing the cycle... to begin anew 把环正式合拢，与概括段 closed cycle 首尾呼应。",
@@ -220,7 +220,7 @@
             "zh": "使产生燃料的循环重新开始（分词收尾合环）"
           }
         ],
-        "guideQ": "你的最后一步接回第一步了吗？循环图的结尾必须合环。"
+        "guideQ": "检查“completes the loop”（完成闭环（循环图点睛句））在本图中的含义。再核对这一段是否补齐重要信息，且没有重复上一组或推测图外原因。"
       }
     }
   },
@@ -242,7 +242,7 @@
             "zh": "按年龄组细分（条图结构）"
           }
         ],
-        "guideQ": "条图被分成两组时，你在开头就点明这个结构了吗？"
+        "guideQ": "对照题干，核对本段的对象、时间与指标。改写后是否仍准确？不必为换词改变原意。"
       },
       "3": {
         "why": "概括一句一图：饼图=private studios 遥遥领先（by a wide margin）；条图=两个年龄组口味几乎相反（ballet 主导小学生、modern 主导中学生）——第二句把条图的「镜像结构」说破，是本图真正的一眼结论。",
@@ -257,7 +257,7 @@
             "zh": "两个年龄组口味几乎相反（镜像结构句）"
           }
         ],
-        "guideQ": "条图的「分组对比结构」（谁爱ballet、谁爱modern）你读出来了吗？只报各组人数就是流水账。"
+        "guideQ": "在原图中指出本段总体特征的依据。是否覆盖主要变化、差异或阶段，而非只描述局部？"
       },
       "4": {
         "why": "细节一=饼图：48% 同位语补数（Just under half... 48%），with 分词带出 24%，remaining 10% 收尾凑齐 100%——大项同位语、次项 with、小项 remaining，三步把四块份额收完（体系2.3）。",
@@ -276,7 +276,7 @@
             "zh": "其余10%（凑齐100%收尾）"
           }
         ],
-        "guideQ": "饼图份额加起来是100%，你用 remaining 把「其余」收完了吗？"
+        "guideQ": "本段使用了“Just under half of all young dancers, 48%”（略低于半数，48%（同位语补数））。核对对应数字、单位、位置或步骤，说明为什么这些信息适合放在同一组。"
       },
       "5": {
         "why": "细节二=条图：ballet 最大档（600 vs 300）立标杆→tap 最平均（450/430）→modern 是 ballet 的镜像（510 vs 300），mirror image 一词点破对称结构；Taken together 合读句收尾（小时候传统、长大现代）。",
@@ -295,7 +295,7 @@
             "zh": "两图合看表明（双图合读句式）"
           }
         ],
-        "guideQ": "「镜像」这种结构特征，你用一个词点破了吗？点破即是高分句。"
+        "guideQ": "检查“with around 600 dancers under 11 compared with 300 aged 11 to 16”（11岁以下约600人、对比11-16岁300人（compared with））在本图中的含义。再核对这一段是否补齐重要信息，且没有重复上一组或推测图外原因。"
       }
     }
   }

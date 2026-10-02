@@ -20,7 +20,7 @@
             "zh": "免费在线内容里想读什么就读什么（题目说法的改写）"
           }
         ],
-        "guideQ": "你的立场句有没有预告全文结构？（两段两个理由，考官读完开头就知道你每段写什么）"
+        "guideQ": "逐项列出原题要回答的问题，再看本段如何交代回答方向。全文立场应清楚，不要求指定立场短语或让步句。"
       },
       "3": {
         "why": "理由1（体验）：主题句 → 两个维度展开（深度阅读 vs 碎片干扰、护眼）→ 用需求侧证据收束（畅销书销量、忠实读者）。注意 the notifications and pop-ups that fragment attention 是具体化写法——不说'屏幕不好'，说屏幕上的什么造成了什么问题。",
@@ -47,10 +47,10 @@
             "zh": "无论屏幕变得多先进（让步式收尾）"
           }
         ],
-        "guideQ": "你的展开句有没有从'感觉'落到'机制'？（为什么屏幕会碎片化注意力——因为通知和弹窗）"
+        "guideQ": "找出本段观点、解释和支撑。“a reading experience that screens simply cannot replicate”（屏幕无法复制的阅读体验）在这里起什么作用？合上范文，用自己的内容补齐一条推理。"
       },
       "4": {
-        "why": "理由2（免费=廉价）：把'免费'反转为论证武器——免费恰恰因为廉价生产 → 点击陷阱 vs 专业核实 → 付费支撑调查报道 → 推演尽头（没人付费 → 信息质量崩塌）。'free precisely because it is cheap to produce' 是全段灵魂句；分号连接的推演句是 GRA 高分样板。",
+        "why": "理由2（免费=廉价）：把'免费'反转为论证武器——免费恰恰因为廉价生产 → 点击陷阱 vs 专业核实 → 付费支撑调查报道 → 推演尽头（没人付费 → 信息质量崩塌）。'free precisely because it is cheap to produce' 是全段灵魂句；分号连接的推演句是 连接完整句子的一个示例，仍需检查标点和逻辑。",
         "modelPara": "A second problem with the prediction is that much online content is free precisely because it is cheap to produce. Websites that rely on advertising revenue are rewarded for attracting clicks rather than for accuracy, so clickbait headlines and barely checked stories dominate. Serious newspapers, by contrast, employ trained journalists and editors who verify every claim before publication, and readers willingly pay for a reliable source of information. These professionals cannot work for nothing; publishers must invest time and money in investigating stories, and that money has to come from somewhere. If nobody paid for news or books, this investment would dry up, and the quality of public information would fall with it.",
         "expressions": [
           {
@@ -70,7 +70,7 @@
             "zh": "这种投入将枯竭"
           }
         ],
-        "guideQ": "你的反驳有没有推演到'如果成真会怎样'？（If nobody paid... would fall with it——把对方逻辑推到尽头）"
+        "guideQ": "本段用“free precisely because it is cheap to produce”（免费恰恰因为生产成本低）推进了什么内容？检查它如何回应原题、连接前一段，并用具体细节支撑观点。"
       },
       "5": {
         "why": "一句话结尾：firmly believe 回应立场 + the future of the printed word is secure 换词重申 + because people will always value writing they have paid for 把两个理由压成一句。",
@@ -85,7 +85,7 @@
             "zh": "印刷文字的未来是稳固的"
           }
         ],
-        "guideQ": "你的结论是复述开头，还是把两个理由压进了一句话？后者才是收束。"
+        "guideQ": "将本段结论与前文逐项对应：核心回答是否一致，能否找到支撑？保留准确的关键词，不必强行替换所有词。"
       }
     }
   },
@@ -110,7 +110,7 @@
             "zh": "其他措施同样必要"
           }
         ],
-        "guideQ": "你的开头有没有把双方观点各预告一句？只写一边，讨论题的 TR 就缺一半。"
+        "guideQ": "逐项列出原题要回答的问题，再看本段如何交代回答方向。全文立场应清楚，不要求指定立场短语或让步句。"
       },
       "3": {
         "why": "观点A段（设施的作用）：让步式认可 → 解释便利性如何降低运动门槛 → 真实感例子（免费泳池、老年居民出勤率）→ This suggests 收束并留有余地（'对本来就想动的人'），客观不绝对——讨论题的观点段要像转述而非辩护。",
@@ -133,7 +133,7 @@
             "zh": "至少对本来就想多动的人"
           }
         ],
-        "guideQ": "你的例子有没有具体到'哪座城市/什么设施/哪类人'？泛泛的 for example 等于没有例子。"
+        "guideQ": "找出本段观点、解释和支撑。“Convenience removes a major barrier to exercise”（便利消除了运动的一大障碍）在这里起什么作用？合上范文，用自己的内容补齐一条推理。"
       },
       "4": {
         "why": "观点B段（我方立场，写得更重=暗示倾向）：指出设施管不了主因（烟酒饮食）→ 给出具体措施（烟酒税、食品标签、学校健康教育）→ 亮出组合观点（冒号列举）→ Indeed 收束并升维（政策覆盖所有人 vs 场馆只服务少数特权群体）。'reach everyone / privileged minority' 的对比是本段杀手锏。",
@@ -160,7 +160,7 @@
             "zh": "只服务少数（往往是特权）群体"
           }
         ],
-        "guideQ": "你的措施有没有落实到'谁做什么'？（收税/标签/教育——具体主体+具体手段才算措施）"
+        "guideQ": "本段用“do nothing about the main causes of poor health”（对健康主因毫无作用）推进了什么内容？检查它如何回应原题、连接前一段，并用具体细节支撑观点。"
       },
       "5": {
         "why": "一句话结尾：让步（certainly helpful）+ 重申主论点（lasting improvements require a much broader strategy）——换词重申了'组合措施'的立场，不引入新观点。",
@@ -175,7 +175,7 @@
             "zh": "体育设施确实有用"
           }
         ],
-        "guideQ": "你的结论有没有出现前面没提过的新观点？（不应该有）"
+        "guideQ": "将本段结论与前文逐项对应：核心回答是否一致，能否找到支撑？保留准确的关键词，不必强行替换所有词。"
       }
     }
   },
@@ -200,7 +200,7 @@
             "zh": "利弊并存（纯利弊题的标准开头句）"
           }
         ],
-        "guideQ": "你有没有把利和弊都预告了？纯利弊题开头只说'有利有弊'，不站队。"
+        "guideQ": "逐项列出原题要回答的问题，再看本段如何交代回答方向。全文立场应清楚，不要求指定立场短语或让步句。"
       },
       "3": {
         "why": "好处段：主线=心理机制（信念→坚持→结果）。例子具体到学科（mathematics、exams），并从个人推到背景（protects children from abandoning ambitious careers），In this sense 把好处再推一层。",
@@ -223,7 +223,7 @@
             "zh": "超越出身的限制去争取更高目标"
           }
         ],
-        "guideQ": "你的好处有没有落到具体场景（学校/体育/考试）？抽象的'变得更好'不算展开。"
+        "guideQ": "找出本段观点、解释和支撑。“builds determination and a sense of self-belief”（培养决心与自信）在这里起什么作用？合上范文，用自己的内容补齐一条推理。"
       },
       "4": {
         "why": "坏处段：角度从心理伤害切入（把失败全归咎自己）→ 例子具体（职业球员梦）→ 追加代价（unrealistic ambitions、wasted years）→ 末句让步式收束（an early dose of realism 更好）。'genuinely impossible' 是关键限定词——坏处只在'努力确实没用'时成立，逻辑严谨。",
@@ -246,7 +246,7 @@
             "zh": "及早一点现实感"
           }
         ],
-        "guideQ": "你的坏处有没有区分'努力有用但没努力'和'努力也没用'两种情况？（后者才是这个消息的真正坏处）"
+        "guideQ": "本段用“blame themselves for failures caused by circumstances”（把环境导致的失败归咎自己）推进了什么内容？检查它如何回应原题、连接前一段，并用具体细节支撑观点。"
       },
       "5": {
         "why": "一句话结尾：inspires effort and ambition + should be balanced with honest guidance——把两段各压成半句，不加新观点、不站队。",
@@ -261,7 +261,7 @@
             "zh": "应当用关于真实限度的诚实引导来平衡"
           }
         ],
-        "guideQ": "你的结论有没有出现前面没提过的新观点？（不应该有）"
+        "guideQ": "将本段结论与前文逐项对应：核心回答是否一致，能否找到支撑？保留准确的关键词，不必强行替换所有词。"
       }
     }
   },
@@ -290,7 +290,7 @@
             "zh": "总体上是积极的（一句话亮明评价立场）"
           }
         ],
-        "guideQ": "题目有两个问句——你的开头第二句是否把两个问题都概括回答了？"
+        "guideQ": "逐项列出原题要回答的问题，再看本段如何交代回答方向。全文立场应清楚，不要求指定立场短语或让步句。"
       },
       "3": {
         "why": "原因段用一条主线（安全感）串起三个原因，层层递进：控制权（不被赶、不涨租）→ 经济（月供变资产，租房是替房东打工）→ 文化（根深蒂固的成功标志）。衔接用 The main reason / A second reason / Finally，朴素但清晰。注意 deep-rooted belief、truly settled down 这类文化角度词伙。",
@@ -321,7 +321,7 @@
             "zh": "真正安定下来"
           }
         ],
-        "guideQ": "三个原因分别来自什么角度？（提示：法律/经济/文化——任何'为什么人们想要X'的题都可以这样扫一遍）"
+        "guideQ": "找出本段观点、解释和支撑。“represents security”（代表安全感）在这里起什么作用？合上范文，用自己的内容补齐一条推理。"
       },
       "4": {
         "why": "评价段 = 立场 + 让步。先亮明 On balance... a positive situation，再给两个正面论证：心理层面（安全感→稳定→社区扎根，which 从句把个人好处推到社会层面）+ 经济层面（月供是投资不是开销）。随后 Admittedly 让步承认风险（还不起贷、锁死流动性），Even so 反驳：风险可控、利大于弊。这就是官方 7+ 描述里的 a clear and developed position。",
@@ -348,7 +348,7 @@
             "zh": "利明显大于弊"
           }
         ],
-        "guideQ": "让步（Admittedly）之后，作者是用什么词把立场拉回来的？（Even so——先承认再反驳的经典结构）"
+        "guideQ": "本段用“gives families a stable base”（给家庭一个稳定的基础）推进了什么内容？检查它如何回应原题、连接前一段，并用具体细节支撑观点。"
       },
       "5": {
         "why": "结尾一句话完成两件事：换词概括原因（security, control and a form of saving 分别对应三个原因）+ 重申评价（a positive situation）。绝不出现新观点。'the stability this creates for families and communities' 把收束推到社会层面，格局比复读题目高一层。",
@@ -367,7 +367,7 @@
             "zh": "重申正面评价（呼应开头）"
           }
         ],
-        "guideQ": "你的结论有没有出现范文里没有的新观点？（不应该有——结论只收束，不扩展）"
+        "guideQ": "将本段结论与前文逐项对应：核心回答是否一致，能否找到支撑？保留准确的关键词，不必强行替换所有词。"
       }
     }
   }

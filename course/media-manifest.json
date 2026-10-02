@@ -1,0 +1,409 @@
+{
+  "generated_on": "2026-10-01",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 24,
+  "lessons": [
+    {
+      "id": "01",
+      "title": "听懂了，为什么还是写不出来？",
+      "duration_seconds": 235.346,
+      "bytes": 5644811,
+      "video": "media/lesson-01.mp4",
+      "captions": "media/lesson-01.vtt",
+      "poster": "media/lesson-01-poster.png",
+      "voices": [
+        "zh-CN-XiaoxiaoNeural",
+        "en-GB-SoniaNeural"
+      ],
+      "voice_type": "synthetic neural narration",
+      "renderer_version": 2,
+      "chapters": [
+        {
+          "scene": 0,
+          "title": "先写，再解释",
+          "start": 0
+        },
+        {
+          "scene": 1,
+          "title": "结构齐全，也可能没有展开",
+          "start": 39.292
+        },
+        {
+          "scene": 2,
+          "title": "把四项标准变成四个检查动作",
+          "start": 78.728
+        },
+        {
+          "scene": 3,
+          "title": "一次只修一个瓶颈",
+          "start": 118.524
+        },
+        {
+          "scene": 4,
+          "title": "改写要留下证据",
+          "start": 164.274
+        },
+        {
+          "scene": 5,
+          "title": "换题，检验方法能否留下来",
+          "start": 196.726
+        }
+      ],
+      "sha256": "03c094078cf371939f0d68ed383e432a4a2b0d02287fd0f446f714ab958517a0",
+      "content_sha256": "a05b0eeda94640342eaa462b05a26879040151fbb09ab5aead35ce6b61716868"
+    },
+    {
+      "id": "02",
+      "title": "审题之后，要有一张回答地图",
+      "duration_seconds": 218.09,
+      "bytes": 5281375,
+      "video": "media/lesson-02.mp4",
+      "captions": "media/lesson-02.vtt",
+      "poster": "media/lesson-02-poster.png",
+      "voices": [
+        "zh-CN-XiaoxiaoNeural",
+        "en-GB-SoniaNeural"
+      ],
+      "voice_type": "synthetic neural narration",
+      "renderer_version": 2,
+      "chapters": [
+        {
+          "scene": 0,
+          "title": "同一话题，不是同一道任务",
+          "start": 0
+        },
+        {
+          "scene": 1,
+          "title": "回答地图：对象、动作、程度",
+          "start": 38.644
+        },
+        {
+          "scene": 2,
+          "title": "从空立场到可执行立场",
+          "start": 76.136
+        },
+        {
+          "scene": 3,
+          "title": "先分任务，再分段",
+          "start": 112.094
+        },
+        {
+          "scene": 4,
+          "title": "改一下问句，提纲就必须跟着改",
+          "start": 151.002
+        },
+        {
+          "scene": 5,
+          "title": "90 秒提纲复测",
+          "start": 185.206
+        }
+      ],
+      "sha256": "fa1eb2b68c61cf867a52815d988b0a3263d0c69f211a67ec406c3ea451c3e687",
+      "content_sha256": "772a99d3830e9c5bfac94ca29afe70404bc23d593b7a55e9ce6726747324889f"
+    },
+    {
+      "id": "03",
+      "title": "没有思路时，怎样造出可写的观点",
+      "duration_seconds": 218.583333,
+      "bytes": 5312254,
+      "video": "media/lesson-03.mp4",
+      "captions": "media/lesson-03.vtt",
+      "poster": "media/lesson-03-poster.png",
+      "voices": [
+        "zh-CN-XiaoxiaoNeural",
+        "en-GB-SoniaNeural"
+      ],
+      "voice_type": "synthetic neural narration",
+      "renderer_version": 2,
+      "chapters": [
+        {
+          "scene": 0,
+          "title": "先让一个具体的人进入题目",
+          "start": 0
+        },
+        {
+          "scene": 1,
+          "title": "先拆决策，再选理由",
+          "start": 37.612
+        },
+        {
+          "scene": 2,
+          "title": "把箭头说成完整解释",
+          "start": 75.416
+        },
+        {
+          "scene": 3,
+          "title": "两条理由必须有不同的工作",
+          "start": 111.876
+        },
+        {
+          "scene": 4,
+          "title": "让步不是突然倒向反方",
+          "start": 146.56
+        },
+        {
+          "scene": 5,
+          "title": "不看资料，生成新机制",
+          "start": 183.814
+        }
+      ],
+      "sha256": "764d35b32c891d54ba3390da517bf3aa98529c4b529a7aba65f0735f88d1b43e",
+      "content_sha256": "f6b0cb28c00efcf769a94e2ebd47f1e26aa2edbfdc6745cfb88eb8cc2080d027"
+    },
+    {
+      "id": "04",
+      "title": "把一段空话，改成真正的论证",
+      "duration_seconds": 223.132,
+      "bytes": 5423983,
+      "video": "media/lesson-04.mp4",
+      "captions": "media/lesson-04.vtt",
+      "poster": "media/lesson-04-poster.png",
+      "voices": [
+        "zh-CN-XiaoxiaoNeural",
+        "en-GB-SoniaNeural"
+      ],
+      "voice_type": "synthetic neural narration",
+      "renderer_version": 2,
+      "chapters": [
+        {
+          "scene": 0,
+          "title": "这段话的问题在哪里？",
+          "start": 0
+        },
+        {
+          "scene": 1,
+          "title": "第一刀：收窄主张",
+          "start": 38.956
+        },
+        {
+          "scene": 2,
+          "title": "第二刀：补出中间步骤",
+          "start": 76.57
+        },
+        {
+          "scene": 3,
+          "title": "第三刀：给机制一个可见场景",
+          "start": 113.414
+        },
+        {
+          "scene": 4,
+          "title": "第四刀：回到原来的判断",
+          "start": 152.876
+        },
+        {
+          "scene": 5,
+          "title": "反向测试：每一句新增了什么？",
+          "start": 187.656
+        }
+      ],
+      "sha256": "1552c184f79a5adc9372ba85287387dfda4c4a59247e33a7c71a70aeb9151598",
+      "content_sha256": "18c0cbb9da62d3d6b06c00bd2fbc411d125bed377277708f69303432e90bb9d5"
+    },
+    {
+      "id": "05",
+      "title": "衔接要连接信息，不只是连接词",
+      "duration_seconds": 211.666667,
+      "bytes": 5129987,
+      "video": "media/lesson-05.mp4",
+      "captions": "media/lesson-05.vtt",
+      "poster": "media/lesson-05-poster.png",
+      "voices": [
+        "zh-CN-XiaoxiaoNeural",
+        "en-GB-SoniaNeural"
+      ],
+      "voice_type": "synthetic neural narration",
+      "renderer_version": 2,
+      "chapters": [
+        {
+          "scene": 0,
+          "title": "连接词多，也可能读不顺",
+          "start": 0
+        },
+        {
+          "scene": 1,
+          "title": "先补真实的逻辑桥",
+          "start": 33.46
+        },
+        {
+          "scene": 2,
+          "title": "this 后面加一个准确的名词",
+          "start": 72.634
+        },
+        {
+          "scene": 3,
+          "title": "保留主题词，不必每次换同义词",
+          "start": 108.614
+        },
+        {
+          "scene": 4,
+          "title": "乱序测试：你真的理解段内顺序吗？",
+          "start": 142.05
+        },
+        {
+          "scene": 5,
+          "title": "删掉连接词，关系还在吗？",
+          "start": 177.766
+        }
+      ],
+      "sha256": "2325bffb98651a54c79ef5d16bb695cd8691fc03fdf64069909ca88be96e51b5",
+      "content_sha256": "33104afea6aa84310e5d880436e19121a9b4e3214d72493c007a6ec9410a5b3c"
+    },
+    {
+      "id": "06",
+      "title": "词句升级：先准确，再丰富",
+      "duration_seconds": 216.916667,
+      "bytes": 5247613,
+      "video": "media/lesson-06.mp4",
+      "captions": "media/lesson-06.vtt",
+      "poster": "media/lesson-06-poster.png",
+      "voices": [
+        "zh-CN-XiaoxiaoNeural",
+        "en-GB-SoniaNeural"
+      ],
+      "voice_type": "synthetic neural narration",
+      "renderer_version": 2,
+      "chapters": [
+        {
+          "scene": 0,
+          "title": "大词救不了不准确的意思",
+          "start": 0
+        },
+        {
+          "scene": 1,
+          "title": "先校准主张的强度",
+          "start": 38.668
+        },
+        {
+          "scene": 2,
+          "title": "选词看它在句子里做什么",
+          "start": 80.17
+        },
+        {
+          "scene": 3,
+          "title": "语法修复：一种关系选一种结构",
+          "start": 113.75
+        },
+        {
+          "scene": 4,
+          "title": "从主干到有控制的复杂句",
+          "start": 151.82
+        },
+        {
+          "scene": 5,
+          "title": "编辑顺序要跟着你的错误走",
+          "start": 183.816
+        }
+      ],
+      "sha256": "62538f9012003187518b3e9a045726ca672a635eea0e799da54479c3b40dc38d",
+      "content_sha256": "7c8ac6fec2fda73640e6c0ad090f2bab2630b75e3a8d4d53d68f3bd2687dc3f4"
+    },
+    {
+      "id": "07",
+      "title": "Task 1：先选信息，再找句子",
+      "duration_seconds": 209.666667,
+      "bytes": 5224160,
+      "video": "media/lesson-07.mp4",
+      "captions": "media/lesson-07.vtt",
+      "poster": "media/lesson-07-poster.png",
+      "voices": [
+        "zh-CN-XiaoxiaoNeural",
+        "en-GB-SoniaNeural"
+      ],
+      "voice_type": "synthetic neural narration",
+      "renderer_version": 2,
+      "chapters": [
+        {
+          "scene": 0,
+          "title": "九个数字，哪三个关系最重要？",
+          "start": 0
+        },
+        {
+          "scene": 1,
+          "title": "概述是全局关系，不是数据清单",
+          "start": 35.98
+        },
+        {
+          "scene": 2,
+          "title": "按关系分组，而不是逐格翻译",
+          "start": 74.986
+        },
+        {
+          "scene": 3,
+          "title": "百分点与百分比，别混在一起",
+          "start": 108.878
+        },
+        {
+          "scene": 4,
+          "title": "数据没有提供的原因，不要补进去",
+          "start": 145.554
+        },
+        {
+          "scene": 5,
+          "title": "脱离示范，再写一份新报告",
+          "start": 177.526
+        }
+      ],
+      "sha256": "1b9ee4f37c7860da6a38c3ad206bde434b105eef0bd65771647ebccc430d975d",
+      "content_sha256": "1422449029d1d8354fbf1e7442392852b4c177b20070daaf746ecc2ec6b44b34"
+    },
+    {
+      "id": "08",
+      "title": "把方法带进一篇完整限时作文",
+      "duration_seconds": 247.636,
+      "bytes": 6205452,
+      "video": "media/lesson-08.mp4",
+      "captions": "media/lesson-08.vtt",
+      "poster": "media/lesson-08-poster.png",
+      "voices": [
+        "zh-CN-XiaoxiaoNeural",
+        "en-GB-SoniaNeural"
+      ],
+      "voice_type": "synthetic neural narration",
+      "renderer_version": 2,
+      "chapters": [
+        {
+          "scene": 0,
+          "title": "先进行一次真正的独立作答",
+          "start": 0
+        },
+        {
+          "scene": 1,
+          "title": "全文计划，先保证判断一致",
+          "start": 35.404
+        },
+        {
+          "scene": 2,
+          "title": "开头：直接回答，别写宏大背景",
+          "start": 73.736
+        },
+        {
+          "scene": 3,
+          "title": "主体段：不要把支持与反对写成两篇文",
+          "start": 104.94
+        },
+        {
+          "scene": 4,
+          "title": "结尾：兑现答案，不新增第三条理由",
+          "start": 139.864
+        },
+        {
+          "scene": 5,
+          "title": "检查次序：先任务，再逻辑，再语言",
+          "start": 172.988
+        },
+        {
+          "scene": 6,
+          "title": "7.5 以上，用新题与外部评阅检验",
+          "start": 208.248
+        }
+      ],
+      "sha256": "0303b13ee739e2856391a7039dd25f5ba88b3a52bf473794b30df2025e076538",
+      "content_sha256": "23b56738cb787bd24eaf9161d047f7998660cd34f56b1d27b5c7b2a3854d9502"
+    }
+  ],
+  "total_seconds": 1781.0373339999999,
+  "status": "stream/timing/caption checks passed; sampled frames and PDF layout reviewed; not a full listening audit"
+}

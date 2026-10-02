@@ -72,7 +72,7 @@ pool1521.forEach(q => {
   if (!d) return;
   const t1 = k.endsWith(" T1");
   check(typeof d.typeExplain === "string" && d.typeExplain.length >= 40, `${k}: typeExplain 缺失或过短`);
-  check(Array.isArray(d.stanceOptions) && d.stanceOptions.length >= 3, `${k}: stanceOptions 不足 3 项`);
+  check(Array.isArray(d.stanceOptions) && d.stanceOptions.length >= (t1 ? 1 : 3), `${k}: ${t1 ? '缺少有效的读图分组方案' : 'stanceOptions 不足 3 项'}`);
   (d.stanceOptions || []).forEach((o, oi) => check(o.s && o.why && o.difficulty, `${k}[方案${oi}]: 缺 s/why/difficulty`));
   check(typeof d.recommended === "string" && d.recommended.length >= 2, `${k}: recommended 缺失`);
   check(typeof d.recommendedWhy === "string" && d.recommendedWhy.length >= 10, `${k}: recommendedWhy 过短`);

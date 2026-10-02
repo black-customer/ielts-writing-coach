@@ -1,0 +1,5 @@
+build/
+media/*.wav
+media/*.mp3
+media/*.mp4
+research/source-transcripts/

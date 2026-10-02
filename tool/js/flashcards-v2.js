@@ -50,21 +50,21 @@ function renderFlashcards() {
     const topics = Object.keys(Collocations.BY_TOPIC);
     const due = dueCount(), errDue = errDueCount();
     box.innerHTML = `<div class="card flash-wrap">
-      <h3 style="margin-top:0">⚡ 词伙闪卡 <span class="badge ok">v2 语境填空</span></h3>
+      <h3 style="margin-top:0">词伙闪卡 <span class="badge ok">v2 语境填空</span></h3>
       <p class="hint">每张卡 = 范文语境 + 挖空句。先读语境 → 心里填空 → 对答案看考官原句用法。<br>依据：检索练习（主动回忆比重读记得牢）+ 语境记忆（在语境里学的，考场上遇到类似语境才想得起来）。</p>
       <div class="btn-row" style="justify-content:center">
         <label class="hint" style="margin:0">卡片来源：</label>
         <select id="fcSource" style="width:auto">
-          <option value="due" ${due + errDue ? "selected" : ""}>🔁 今日复习（到期 ${due + errDue} 张）</option>
-          ${errDue ? `<option value="__err">🩹 错因复习（到期 ${errDue} 张）</option>` : `<option value="__err">🩹 错因复习（${errCardsAll().length} 张）</option>`}
+          <option value="due" ${due + errDue ? "selected" : ""}>今日复习（到期 ${due + errDue} 张）</option>
+          ${errDue ? `<option value="__err">错因复习（到期 ${errDue} 张）</option>` : `<option value="__err">错因复习（${errCardsAll().length} 张）</option>`}
           ${topics.map(t => `<option value="${esc(t)}">${esc(t)}</option>`).join("")}
-          <option value="__stars">⭐ 我的词本</option>
+          <option value="__stars">我的词本</option>
         </select>
         <label class="hint" style="margin:0">模式：</label>
         <select id="fcMode" style="width:auto"><option value="context">语境填空（推荐）</option><option value="fast">极速模式（中→英）</option></select>
         <button class="primary" id="fcStart">开始</button>
       </div>
-      <div class="hint" style="margin-top:10px">间隔重复（Leitner）：认识→间隔拉长（1/3/7/14/30 天后再见）；不认识→本轮重现、明天再见。同一词伙每次复习会换不同的语境句（变式编码，促进迁移）。🩹 错因卡来自你在诊断室入库的硬伤句子（认出错误→对答案看改法）。</div>
+      <div class="hint" style="margin-top:10px">间隔重复（Leitner）：认识→间隔拉长（1/3/7/14/30 天后再见）；不认识→本轮重现、明天再见。同一词伙每次复习会换不同的语境句（变式编码，促进迁移）。错因卡来自你在诊断室入库的硬伤句子（认出错误→对答案看改法）。</div>
       <div id="fcStats" class="hint"></div>
     </div>`;
     $("#fcStart").onclick = () => {
@@ -82,7 +82,7 @@ function renderFlashcards() {
       } else {
         cards = (Collocations.BY_TOPIC[src] || []).map(c => ({ ...c, topic: src }));
       }
-      if (!cards.length) { alert("这一组没有卡片。"); return; }
+      if (!cards.length) { UI.notice("这一组没有卡片。"); return; }
       flash = { cards: shuffle(cards), idx: 0, mode, show: false, hint: false, yes: 0, no: 0, retry: [], topic: src };
       renderFlashcards();
     };
@@ -100,22 +100,22 @@ function renderFlashcards() {
     let face;
     if (!flash.show) {
       face = `
-        <div class="flash-ctx-q">🩹 错因卡 · ${esc(tagName)} · 来自${esc(c.from || "诊断")}</div>
+        <div class="flash-ctx-q">错因卡 · ${esc(tagName)} · 来自${esc(c.from || "诊断")}</div>
         <div class="flash-ctx-s en">${esc(c.quote || "（这条没有原句，直接看背面）")}</div>
-        <div class="fc-hint">💡 这句有什么问题？先在心里改出来，再对答案</div>`;
+        <div class="fc-hint">这句有什么问题？先在心里改出来，再对答案</div>`;
     } else {
       face = `
-        <div class="flash-ctx-q">🩹 错因卡 · ${esc(tagName)}</div>
+        <div class="flash-ctx-q">错因卡 · ${esc(tagName)}</div>
         <div class="flash-ctx-s en" style="text-decoration:line-through;opacity:.65">${esc(c.quote || "（无原句）")}</div>
-        ${c.fix ? `<div class="fc-reveal en">✓ ${esc(c.fix)}</div>` : ""}
-        <div class="fc-hint" style="margin-top:8px">⚠️ 错因：${esc(c.problem || "见上方说明")}</div>`;
+        ${c.fix ? `<div class="fc-reveal en">${esc(c.fix)}</div>` : ""}
+        <div class="fc-hint" style="margin-top:8px">错因：${esc(c.problem || "见上方说明")}</div>`;
     }
     const srcLabel2 = flash.topic === "due" ? "今日复习" : "错因复习";
     box.innerHTML = `<div class="card flash-wrap">
-      <div class="flash-meta">${srcLabel2} · 第 ${flash.idx + 1} / ${flash.cards.length} 张 · ✓${flash.yes} ✗${flash.no}</div>
+      <div class="flash-meta">${srcLabel2} · 第 ${flash.idx + 1} / ${flash.cards.length} 张 · ${flash.yes} ${flash.no}</div>
       <div class="flash-card" id="fcCard">${face}</div>
       <div class="flash-btns">
-        ${!flash.show ? `<button class="primary" id="fcFlip">对答案（看改法）</button>` : `<button class="no" id="fcNo">😵 还是会错</button><button class="yes" id="fcYes">😎 已掌握</button>`}
+        ${!flash.show ? `<button class="primary" id="fcFlip">对答案（看改法）</button>` : `<button class="no" id="fcNo">还是会错</button><button class="yes" id="fcYes">已掌握</button>`}
         <button id="fcEnd">结束本组</button>
       </div>
     </div>`;
@@ -153,11 +153,11 @@ function renderFlashcards() {
     const blanked = ctx.sent.replace(rx, () => `<span class="fc-blank">${"＿".repeat(Math.min(14, Math.max(8, c.en.length * 1.2)))}</span>`);
     const firstWord = fcNormKey(c.en).split(" ")[0];
     face = `
-      ${ctx.q ? `<div class="flash-ctx-q">📌 题目背景：<span class="en">${esc(ctx.q)}…</span></div>` : ""}
+      ${ctx.q ? `<div class="flash-ctx-q">题目背景：<span class="en">${esc(ctx.q)}…</span></div>` : ""}
       <div class="flash-ctx-s en">${blanked}</div>
-      <div class="fc-hint">💡 这里要表达：${esc(c.zh)}${flash.hint ? ` · 首词提示：<b>${esc(firstWord)}…</b>` : ""}</div>
+      <div class="fc-hint">这里要表达：${esc(c.zh)}${flash.hint ? ` · 首词提示：<b>${esc(firstWord)}…</b>` : ""}</div>
       ${flash.show
-        ? `<div class="fc-reveal en">✓ ${esc(ctx.sent.replace(rx, m => `<u>${esc(m)}</u>`))}</div>`
+        ? `<div class="fc-reveal en">${esc(ctx.sent.replace(rx, m => `<u>${esc(m)}</u>`))}</div>`
         : `<div class="hint" style="margin-top:10px">对着语境把词伙说出来，再对答案看考官原句</div>`}`;
   } else {
     face = `<div class="zh-big">${esc(c.zh || "（无中文提示）")}</div>
@@ -168,12 +168,12 @@ function renderFlashcards() {
 
   const srcLabel = flash.topic === "due" ? "今日复习" : flash.topic === "__stars" ? "我的词本" : flash.topic === "通用" ? "通用词伙" : esc(flash.topic);
   box.innerHTML = `<div class="card flash-wrap">
-    <div class="flash-meta">${srcLabel} · 第 ${flash.idx + 1} / ${flash.cards.length} 张 · ✓${flash.yes} ✗${flash.no}
+    <div class="flash-meta">${srcLabel} · 第 ${flash.idx + 1} / ${flash.cards.length} 张 · ${flash.yes} ${flash.no}
     ${flash.mode === "context" && ctx ? `<br><span style="font-size:11px">语境来源：${esc(ctx.src)}（${ctx.kind === "t1" ? "Task 1" : "Task 2"} 范文）</span>` : ""}</div>
     <div class="flash-card" id="fcCard">${face}</div>
     <div class="flash-btns">
-      ${useCtx && !flash.show ? `<button id="fcHint">🔤 首词提示</button>` : ""}
-      ${!flash.show ? `<button class="primary" id="fcFlip">对答案</button>` : `<button class="no" id="fcNo">😵 不认识</button><button class="yes" id="fcYes">😎 认识</button>`}
+      ${useCtx && !flash.show ? `<button id="fcHint">首词提示</button>` : ""}
+      ${!flash.show ? `<button class="primary" id="fcFlip">对答案</button>` : `<button class="no" id="fcNo">不认识</button><button class="yes" id="fcYes">认识</button>`}
       <button id="fcEnd">结束本组</button>
     </div>
   </div>`;

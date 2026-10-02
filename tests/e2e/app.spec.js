@@ -20,6 +20,7 @@ async function gotoView(page, view) {
 test.describe("审题室", () => {
   test("贴题 → 生成作战图", async ({ page }) => {
     await page.goto("/");
+    await page.click(NAV("analyze"));
     await page.fill("#questionInput", "Some people think that governments should spend money on public services rather than on the arts. To what extent do you agree or disagree?");
     await page.click("#btnAnalyze");
     await expect(page.locator("#analysisResult")).toBeVisible();
@@ -35,6 +36,7 @@ test.describe("训练营", () => {
     await page.click('.q-task-tabs [data-tf="1"]'); // 小作文分区
     await page.locator('.q-card[data-tq="剑19 Test 1 T1"]').click(); // 有内置范文+原书图
     await expect(page.locator(".chart-fold img.t1img")).toBeVisible(); // 原书图
+    await page.getByText("查看教学与范文（会记录为使用辅助）", { exact: true }).click();
     await expect(page.locator("#tcSkipToModel")).toBeVisible();
     await page.click("#tcSkipToModel");
     await expect(page.locator("#tutorFeed")).toContainText(/范文|essay/i);
@@ -46,6 +48,7 @@ test.describe("训练营", () => {
     await page.click(NAV("train"));
     await page.click('.q-task-tabs [data-tf="2"]');
     await page.locator('.q-card[data-tq="剑15 Test 1 T2"]').click(); // 有内置审题课+范文
+    await page.getByText("查看教学与范文（会记录为使用辅助）", { exact: true }).click();
     await page.click("#tcStage0"); // 预生成审题课
     await expect(page.locator("#tutorFeed")).toContainText(/立场选项|typeExplain|推荐/i);
     await page.click("#tcToModel");
@@ -74,8 +77,10 @@ test.describe("范文库", () => {
   test("56 篇矩阵 → 打开详情（含图表）→ 学习册导出按钮存在", async ({ page }) => {
     await page.goto("/");
     await page.click(NAV("bank"));
-    await expect(page.locator("#mbGrid .q-card")).toHaveCount(56);
+    await expect(page.locator("#mbGrid .q-card")).toHaveCount(12);
+    await expect(page.locator('#mbResults')).toContainText('56');
     await expect(page.locator("#mbFilters [data-mb='2']")).toContainText("大作文 28");
+    await page.selectOption('#mbBook','19');
     await page.locator('#mbGrid [data-mb="剑19 Test 1 T1"]').click();
     await expect(page.locator("#mbDetail img.t1img")).toBeVisible();
     await expect(page.locator("#mbCopy")).toBeVisible();
@@ -102,3 +107,5 @@ test.describe("弹药库·闪卡", () => {
     await assertNoJsError(page);
   });
 });
+
+test.beforeEach(async({page})=>{await page.addInitScript(()=>localStorage.setItem('iwc_trainPickerOpen','true'));});

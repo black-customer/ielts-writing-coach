@@ -1,0 +1,59 @@
+{
+  "result": "pass",
+  "duration_seconds": 1778.333333,
+  "video_audio_delta_seconds": 0.0013329999999314168,
+  "codecs": [
+    "h264",
+    "aac",
+    "mov_text"
+  ],
+  "events": 70,
+  "caption_cues": 222,
+  "essay_words": 273,
+  "ordered_edits": "verified",
+  "no_future_text_in_event_snapshots": "verified",
+  "audible_signal_per_event": "verified",
+  "visual_samples": [
+    {
+      "name": "read",
+      "seconds": 15
+    },
+    {
+      "name": "outline",
+      "seconds": 257.68399999999997
+    },
+    {
+      "name": "typing",
+      "seconds": 808.3319999999999
+    },
+    {
+      "name": "second-paragraph",
+      "seconds": 1139.072
+    },
+    {
+      "name": "revision",
+      "seconds": 1477.6616
+    },
+    {
+      "name": "final",
+      "seconds": 1766.333333
+    }
+  ],
+  "limitations": [
+    "Visual samples must be inspected separately.",
+    "No full human listening review or official band score."
+  ],
+  "visual_review": {
+    "result": "pass",
+    "reviewed": [
+      "read preview",
+      "typing",
+      "revision",
+      "final",
+      "player desktop",
+      "player mobile"
+    ],
+    "findings": "Captions remain below the manuscript; paragraph review focuses on the edited paragraph; no observed clipping in inspected samples."
+  },
+  "completed_on": "2026-10-02"
+}

@@ -38,3 +38,7 @@ models/hi/
 
 # ===== 构建产物 =====
 dist/
+
+# 本地界面复核与临时开发脚本
+.impeccable/review/
+.work/

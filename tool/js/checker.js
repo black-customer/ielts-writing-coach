@@ -67,28 +67,29 @@ const Checker = (() => {
     const add = (sev, crit, msg, evidence) => issues.push({ sev, crit, msg, evidence });
 
     // ===== 结构与字数 =====
-    if (W < 250) add("bad", "TR", `字数只有 ${W} 词，不足 250 —— 字数不足直接扣分，几乎没有回旋余地。`, "");
+    if (W < 250) add("bad", "TR", `字数只有 ${W} 词，未达到 Task 2 至少 250 词的要求。请完成答卷后再检查内容覆盖。`, "");
     else if (W > 380) add("warn", "TR", `字数 ${W} 词偏多。写得长≠分高，挤占检查时间；Simon 建议全文 250-300 词。`, "");
     else add("ok", "TR", `字数 ${W} 词，达标。`, "");
 
-    if (paras.length < 3) add("bad", "CC", `只有 ${paras.length} 段。Task 2 应为 4 段（开头/主体×2/结尾）。`, "");
+    if (paras.length < 3) add("warn", "CC", `共 ${paras.length} 段，请检查观点是否分组清楚。四段是可选写法，官方不规定段数。`, "");
     else if (paras.length > 5) add("warn", "CC", `${paras.length} 段偏多，通常是主体段拆太碎，一个观点应写足一段。`, "");
     else add("ok", "CC", `共 ${paras.length} 段，结构数量正常。`, "");
 
     if (paras.length >= 4) {
       const introS = sentences(paras[0]).length, conclS = sentences(paras[paras.length - 1]).length;
-      if (introS > 3) add("warn", "TR", `开头段有 ${introS} 句——Simon 铁律：2 句足够（改写话题+亮立场），写长了浪费时间。`, paras[0].slice(0, 80) + "...");
+      if (introS > 3) add("warn", "TR", `开头段有 ${introS} 句，请检查是否有可删的重复背景，让篇幅服务于回答题目。没有固定句数要求。`, paras[0].slice(0, 80) + "...");
       if (introS <= 1 && W > 200) add("warn", "TR", `开头段只有 1 句，检查是否漏了“概括回答/立场”。`, "");
-      if (conclS > 3) add("warn", "CC", `结尾段 ${conclS} 句——1 句即可，绝不出现新观点。`, "");
+      if (conclS > 3) add("warn", "CC", `结尾段 ${conclS} 句，请检查是否清楚总结了全文，避免引入来不及展开的新论点。`, "");
       const bodyS = paras.slice(1, -1).map(p => sentences(p).length);
       bodyS.forEach((s, i) => {
-        if (s < 3) add("warn", "TR", `主体段 ${i + 1} 只有 ${s} 句——主体段是得分主战场，目标 5 句 85-110 词。`, "");
+        if (s < 3) add("warn", "TR", `主体段 ${i + 1} 有 ${s} 句，请核对论点是否得到充分解释和支撑；句数本身不能判断展开质量。`, "");
         const pw = words(paras[i + 1]);
-        if (pw < 70) add("warn", "TR", `主体段 ${i + 1} 只有 ${pw} 词——太薄，观点没有展开（explain + example）。`, "");
+        if (pw < 70) add("warn", "TR", `主体段 ${i + 1} 有 ${pw} 词，请核对是否省略了必要的解释或支撑；短段落也可能完整。`, "");
       });
-      const ratio = (words(paras[1]) + words(paras[2] || "")) / W;
-      if (ratio < 0.6) add("warn", "CC", `两个主体段只占全文 ${Math.round(ratio * 100)}%——应约 70%。开头结尾太重、主体太轻是典型低分结构。`, "");
+      const ratio = paras.slice(1, -1).reduce((n,p)=>n+words(p),0) / W;
+      if (ratio < 0.6) add("warn", "CC", `主体段约占全文 ${Math.round(ratio * 100)}%，请核对开头结尾是否重复、论证是否充分；官方没有篇幅比例要求。`, "");
     }
+    issues.forEach(i => { if (i.sev !== 'ok' && !i.msg.startsWith('字数')) i.noscore = true; });
 
     // ===== TR 检查 =====
     const stanceRx = new RegExp([
@@ -103,12 +104,12 @@ const Checker = (() => {
     const stanceHits = (essay.match(stanceRx) || []).length;
     const opinionTypes = ["opinion", "discussion", "adv-disadv-opinion", "two-part"];
     if (opinionTypes.includes(qtype)) {
-      if (stanceHits === 0) add("bad", "TR", "全文找不到明确立场表达（I believe / In my opinion / I agree...）。观点题/讨论题必须多处亮明观点。", "");
+      if (stanceHits === 0) { add("warn", "TR", "未匹配到常见立场表达。请人工核对全文是否明确回答题目；立场不必使用 I believe 等固定短语。", ""); issues[issues.length-1].noscore=true; }
       else {
         const rx1 = new RegExp(stanceRx.source, "i");
         const introHas = rx1.test(paras[0] || "");
         const conclHas = new RegExp(stanceRx.source, "i").test(paras[paras.length - 1] || "");
-        if (!introHas) add("bad", "TR", "开头段没有立场——立场必须出现在开头第二句，不能留到结尾当惊喜。", "");
+        if (!introHas) { add("warn", "TR", "开头未匹配到常见立场表达，请核对自己的回答是否清楚；没有必须放在第二句的规则。", ""); issues[issues.length-1].noscore=true; }
         else if (!conclHas) add("warn", "TR", "结尾没有回扣立场（用换词重申）。", "");
         else add("ok", "TR", `立场表达出现 ${stanceHits} 次，开头结尾均有覆盖。`, "");
       }
@@ -120,9 +121,8 @@ const Checker = (() => {
       add("warn", "TR", "纯利弊讨论题不需要强立场（只有 outweigh 型才需要表态）。检查你是否写成了观点题。", "");
     }
     const exHits = (essay.match(/\b(for example|for instance|such as|as an example|an example of|example of this|a case in point|to illustrate|take [a-z ]{1,40} as an example)/gi) || []).length;
-    if (exHits === 0) add("bad", "TR", "全文没有例子（For example...）。没有展开论证的观点就是“提及”，TR 上不了 7。", "");
-    else if (exHits < 2) add("ok", "TR", `例子出现 ${exHits} 处。提示：考官期望每个主体段都有例子支撑（无标记词的例子也算，请自查第二主体段）。`, "");
-    else add("ok", "TR", `例子出现 ${exHits} 处，主体段有支撑。`, "");
+    if (exHits === 0) { add("warn", "TR", "未匹配到举例标记词。请检查观点是否有相关解释、细节或例子支撑；没有 For example 不等于缺少论证。", ""); issues[issues.length-1].noscore=true; }
+    else add("ok", "TR", `检测到 ${exHits} 处例子标记，请核对内容是否具体、相关并支持观点；标记词数量不能证明论证充分。`, "");
 
     if (questionText) {
       const cov = keywordCoverage(questionText, essay);
@@ -142,9 +142,9 @@ const Checker = (() => {
       if (bothFirstly >= 2) add("warn", "CC", "两个主体段都用了 Firstly, Secondly —— 同一套机械连接词不要用两次（第二段换成 The main reason... / Another argument is... / From a ... perspective）。", "");
     }
     const fancy = mech["moreover"] + mech["furthermore"] + mech["in addition"] + mech["additionally"];
-    if (fancy >= 3) add("warn", "CC", `Moreover/Furthermore/In addition 类连接词出现 ${fancy} 次——Simon 30 篇 9 分范文中 Moreover 出现 0 次、Furthermore 仅 3 次。连接词不在多，段内逻辑推进才值钱。`, "");
+    if (fancy >= 3) { add("warn", "CC", `递进连接词出现 ${fancy} 次，请核对是否表达真实逻辑、是否重复；这些词本身不会导致扣分。`, ""); issues[issues.length-1].noscore=true; }
     const thisChain = (essay.match(/\b(this|these)\s+(kind of|type of|trend|development|situation|approach|view|idea|measure|problem|children|people|young|such)/gi) || []).length;
-    if (thisChain === 0) add("warn", "CC", "没有发现 this/these 指代衔接（如 “This kind of addiction can...”）——隐形衔接是 CC 7 分的关键手段之一。", "");
+    if (thisChain === 0) { add("warn", "CC", "未匹配到常见 this/these 指代。请检查指代与句间联系是否清楚，不必为了衔接强加指定词语。", ""); issues[issues.length-1].noscore=true; }
     else add("ok", "CC", `有 ${thisChain} 处 this/these 指代衔接，继续保持。`, "");
 
     // 句长多样性
@@ -237,27 +237,23 @@ const Checker = (() => {
     const add = (sev, crit, msg, evidence) => issues.push({ sev, crit, msg, evidence });
 
     // ---- 字数 ----
-    if (W < 150) add("bad", "TA", `字数只有 ${W} 词，不足 150——直接扣分。`, "");
+    if (W < 150) add("bad", "TA", `字数只有 ${W} 词，不足 150，未达到 Task 1 的最低要求。请完成答卷并核对关键特征。`, "");
     else if (W > 230) add("warn", "TA", `字数 ${W} 词偏多。Simon 的 band 9 范文多在 160–190 词，写得长不加分。`, "");
     else add("ok", "TA", `字数 ${W} 词，在 160–190 的安全带附近。`, "");
 
     // ---- 段落结构 ----
-    if (paras.length < 3) add("bad", "CC", `只有 ${paras.length} 段——Task 1 固定 4 段：改写开头 / Overview / 细节×2。`, "");
-    else if (paras.length > 4) add("warn", "CC", `${paras.length} 段偏多（标准是 4 段）。`, "");
-    else add("ok", "CC", "4 段结构正确。", "");
+    if (paras.length < 2) { add("warn", "CC", `共 ${paras.length} 段，请检查概括和细节是否有清楚的组织。四段是可选写法，官方不规定段数。`, ""); issues[issues.length-1].noscore=true; }
+    else add("ok", "CC", `共 ${paras.length} 段；请按信息分组检查组织，段数本身不能证明结构正确。`, "");
 
     // ---- Overview 检测（生死线）----
     const ovRx = /\b(it is clear that|it is noticeable|it is also noticeable|overall|we can (also )?see|it can be seen|in general|the main (developments?|features?|trends?))/i;
-    const ovParaIdx = paras.findIndex((p, i) => i > 0 && ovRx.test(p));
+    const ovParaIdx = paras.findIndex(p => ovRx.test(p));
     if (ovParaIdx === -1) {
-      add("bad", "TA", "没有检测到 Overview（概述段）！考官口径：小作文最常见的失分原因就是没有 overview——第 2 段必须写两句总体特征（It is clear that... / Overall,...）。TA 上不了 6。", "");
+      add("warn", "TA", "未匹配到常见 Overview 标记词。请对照原图核验是否概括了主要特征；没有 Overall 不等于缺少概括。", ""); issues[issues.length-1].noscore=true;
     } else {
       const ovText = paras[ovParaIdx];
-      if (ovParaIdx !== 1) add("warn", "TA", `Overview 出现在第 ${ovParaIdx + 1} 段——建议固定放开头段之后（第 2 段）。`, "");
-      else add("ok", "TA", "Overview 存在且位置正确（第 2 段）。", "");
-      if (/(^|[^A-Za-z])\d/.test(ovText)) add("warn", "TA", "Overview 里出现了具体数字——总体特征不带数字，数字留给细节段（CO2 这类代号的数字不算）。", "");
-      const ovSents = sentences(ovText).length;
-      if (ovSents < 2) add("warn", "TA", `Overview 只有 ${ovSents} 句——固定写两句（两个总体特征）。`, "");
+      add("ok", "TA", `第 ${ovParaIdx + 1} 段检测到 Overview 标记，请核对是否准确概括主要特征；不要求固定位置或句数。`, "");
+      if (/(^|[^A-Za-z])\d/.test(ovText)) { add("warn", "TA", "含 Overview 标记的段落出现数字，请核对是否仍突出总体特征；概括与细节也可能在同一段中。", ""); issues[issues.length-1].noscore=true; }
     }
 
     // ---- 开头照抄题目检测 ----
@@ -282,7 +278,7 @@ const Checker = (() => {
     }
 
     // ---- 数字处理 ----
-    if (/-\s?\d+(\.\d+)?\s*%|fell to\s*-\s*\d|decreased to\s*-\s*\d/i.test(essay)) add("bad", "TA", "出现了负百分比写法（如 -5%）——应写 fell by 5%。", "");
+    if (/-\s?\d+(\.\d+)?\s*%|fell to\s*-\s*\d|decreased to\s*-\s*\d/i.test(essay)) {add("warn", "TA", "出现负百分比，请对照原图核对它是数值还是变化量；若指下降幅度，可用 fell by 5%。不能仅凭负号判断数据错误。", "");issues[issues.length-1].noscore=true;}
     const bigNumPlural = (essay.match(/\b\d[\d,.]*\s+(millions|thousands|billions)\b/gi) || []);
     if (bigNumPlural.length) add("bad", "TA", `数字+复数单位：“${bigNumPlural[0]}”——有数字时用单数（10 million）；只有无数字才说 millions of。`, "");
     const digits = (essay.match(/\b\d[\d,.]*\b/g) || []).length;
@@ -341,8 +337,8 @@ const Checker = (() => {
     }
 
     // ---- 用词雷区 ----
-    if (/\b(depicts|indicates|reveals|exhibits|enumerates|portrays|demonstrates)\b/i.test(essay)) add("warn", "LR", "show 的花哨同义词（depicts/exhibits...）考官并不买账——只用 compares / illustrates / gives information about。", "");
-    if (/\b(soar(s|ed|ing)?|rocket(s|ed|ing)?|plummet(s|ed|ing)?|skyrocket\w*)\b/i.test(essay)) add("warn", "LR", "soar/rocket/plummet 过于夸张、新闻化——用 increase/rise/fall + 幅度副词，并用名词动词双句式展示语法控制。", "");
+    if (/\b(depicts|indicates|reveals|exhibits|enumerates|portrays|demonstrates)\b/i.test(essay)) { add("warn", "LR", "检测到 depicts/indicates 等描述词，请核对词义和搭配是否准确；词语本身不构成扣分理由。", "");issues[issues.length-1].noscore=true; }
+    if (/\b(soar(s|ed|ing)?|rocket(s|ed|ing)?|plummet(s|ed|ing)?|skyrocket\w*)\b/i.test(essay)) { add("warn", "LR", "检测到 soar/rocket/plummet 等强幅度表达，请对照原图核验是否准确；没有原图时无法判断是否夸张。", "");issues[issues.length-1].noscore=true; }
     if (/comparing to/i.test(essay)) add("bad", "LR", "没有 comparing to 这种表达——用 compared to / compared with / in comparison with。", "");
     if (/\bthe (number|amount|figure|percentage|proportion)[^.]{0,40}\braised\b/i.test(essay)) add("warn", "GRA", "rise/raise 混用：数据上升用 rose；raise 是及物动词（有人抬起某物）。", "");
     if (/\bin conclusion\b|\bto conclude\b|\bto sum up\b/i.test(essay)) add("warn", "TA", "Task 1 不写结论段（overview 已是总结）——删掉结论句或改为最后一条细节。", "");
