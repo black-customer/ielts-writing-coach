@@ -369,7 +369,10 @@ function openLearningPractice(id) {
     const status=host.querySelector('#learningIndependence');
     if(status)status.textContent='已记录提示使用。自查前已提交的原作答可保留独立性；看提示后再改写需次日换题检验。';
   };
-  host.querySelector('#learningHint').ontoggle=e=>{if(e.target.open)markHelp(false);};
+  const hint=host.querySelector('#learningHint');
+  // Native toggle is queued; persist before a user can immediately reload.
+  hint.querySelector('summary').onclick=()=>{if(!hint.open)markHelp(false);};
+  hint.ontoggle=e=>{if(e.target.open&&!sessionAssisted)markHelp(false);};
   const assisted=host.querySelector('#learningAssisted');
   if(assisted)assisted.onchange=()=>{if(assisted.checked){assisted.disabled=true;markHelp(true);}};
   const skill=host.querySelector('#learningSkill');

@@ -44,7 +44,9 @@ test('证据和标准缺失时阻止通过；保存自查草稿，独立换题�
 test('先看提示会跨刷新保留辅助状态，次日换题，不能刷独立通过次数',async({page})=>{
   await seed(page);await selfCheck(page,rewrite);await page.click('#learningPass');await due(page);
   const first=await page.evaluate(()=>Learning.read().items[0].transferQuestion.question);
-  await page.locator('#learningHint summary').click();await page.reload();await page.click('#learnNext');
+  await page.locator('#learningHint summary').click();
+  expect(await page.evaluate(()=>Learning.read().items[0].attemptAssisted)).toBe(true);
+  await page.reload();await page.click('#learnNext');
   await expect(page.locator('#learningAssisted')).toBeChecked();
   await selfCheck(page,transfer);await page.click('#learningPass');
   await expect(page.locator('#learningHome')).toContainText('本次不增加独立通过次数');
