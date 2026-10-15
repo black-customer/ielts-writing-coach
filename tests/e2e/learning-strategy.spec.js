@@ -1,4 +1,5 @@
 const {test,expect}=require('@playwright/test');
+test.beforeEach(require('./legacy-setup').legacySetup);
 const fs=require('node:fs');
 const rewrite='Reliable public transport can reduce traffic congestion because one bus carries people who would otherwise drive separate cars. When services are frequent and predictable, commuters can leave their cars at home. This reduces demand for road space during rush hour.';
 const transfer='Schools can reduce food waste by allowing pupils to choose smaller portions. Children who are not hungry can take less food while those who need more can return for another serving. This reduces the amount of untouched food thrown away after lunch.';

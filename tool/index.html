@@ -119,7 +119,7 @@
   <section id="view-check" class="view">
     <div class="card">
       <h2>作文诊断</h2>
-      <p class="hint">把写好的作文贴进来（或在写作室点「去诊断与改写」自动带入）。工具自动扫描硬伤并定位到句子，再引导你逐项自评，给出四项分数估计和最优先修复项。</p>
+      <p class="hint">题目与原稿一起保存。可以用基础检查找线索，或请 AI 帮你理解问题，再自己修改。</p>
       <div class="mode-switch" id="checkModeSwitch">
         <button class="mode-btn active" data-mode="t2">Task 2 大作文</button>
         <button class="mode-btn" data-mode="t1">Task 1 小作文</button>
@@ -159,7 +159,7 @@
       <div id="aiSettingsPanel" class="card hidden" style="margin-top:12px">
         <h3>AI 精批设置（DeepSeek API）</h3>
         <div class="check-meta" style="flex-direction:column;align-items:stretch;gap:8px">
-          <label>API Key：<input id="aiKey" type="text" style="width:100%" placeholder="sk-..."></label>
+          <label>API Key：<input id="aiKey" type="password" autocomplete="off" style="width:100%" placeholder="sk-..."></label>
           <label>Base URL：<input id="aiBase" type="text" style="width:100%" placeholder="https://api.deepseek.com"></label>
           <label>模型：
             <select id="aiModel">
@@ -335,6 +335,8 @@
 <script src="js/data-model-essays.js"></script>
 <script src="js/t1charts.js"></script>
 <script src="js/data-t1-charts.js"></script>
+<script src="js/data-chart-evidence.js"></script>
+<script src="js/data-course-help.js"></script>
 <script src="js/data-tutor-precache-t2.js"></script>
 <script src="js/data-tutor-precache-t1.js"></script>
 <script src="js/data-topics.js"></script>
@@ -344,6 +346,7 @@
 <script src="js/data-plan.js"></script>
 <script src="js/store.js"></script>
 <script src="js/config.js"></script>
+<script src="js/works.js"></script>
 <script src="js/ai.js"></script>
 <script src="js/cloze.js"></script>
 <script src="js/analyzer.js"></script>
@@ -358,9 +361,11 @@
 <script src="js/dashboard.js"></script>
 <script src="js/onboarding.js"></script>
 <script src="js/modelbank.js"></script>
+<script src="js/studio.js"></script>
 <script>
 window.IWC_VERSION = "1.4.0";
 UI.init();
+Studio.init();
 goto("train");
 window.addEventListener("error", e => {
   const b = document.getElementById("errBanner");

@@ -56,6 +56,7 @@ function findRealEssay(question) {
 }
 
 async function startTraining(q) {
+  if(typeof Works!=='undefined')Works.exposure({qKey:tKey(q),question:q.question},'逐段教学');
   if(tc&&tc.qKey!==tKey(q)&&!saveSession())return;
   const old=Store.get('trainSession',null);
   if(old&&!old.sentForDiagnosis&&old.qKey!==tKey(q)&&old.paraTexts?.some(t=>t.trim())){
@@ -188,6 +189,7 @@ ${esc(q.question.length > 90 ? q.question.slice(90, 180) : "")}">
     if (q) startTraining(q);
   });
   renderLearningHome(document.getElementById("learningHome"));
+  if(typeof Studio!=='undefined')Studio.home();
 }
 
 // ---------- 会话渲染 ----------

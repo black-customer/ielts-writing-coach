@@ -1,4 +1,40 @@
 /* Desktop writing workbench — shared component and reading system. */
+.continue-work {padding:28px 0 36px;max-width:78ch;}
+.continue-work h2 {font-size:25px;}
+.work-question {font-size:19px;line-height:1.7;}
+.work-excerpt {color:var(--muted);white-space:pre-wrap;}
+.optional-training,.optional-learning,.external-note,.learning-exits {border-top:1px solid var(--line);padding:18px 0;margin-top:20px;}
+#auxiliaryNav {margin-top:20px;}
+#auxiliaryNav summary {padding:10px 12px;color:var(--muted);font-size:13px;}
+.studio-steps,.studio-action-bar {display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 18px;}
+.studio-steps {border-bottom:1px solid var(--line);padding-bottom:14px;}
+.studio-steps [aria-current=step] {background:var(--primary-soft);color:var(--primary-ink);border-color:var(--primary);}
+.work-record {padding:24px 0;border-top:1px solid var(--line);}
+.work-record h3 {margin:8px 0 16px;font-size:17px;max-width:75ch;}
+#worksRecords select {max-width:300px;}
+.revision-diff {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;margin:16px 0;}
+.revision-diff>div {min-width:0;}
+.revision-diff p {white-space:pre-wrap;overflow-wrap:anywhere;padding:8px;}
+.diff-removed {background:var(--bad-bg);border:1px solid var(--bad-border);}
+.diff-added {background:var(--ok-bg);border:1px solid var(--ok-border);}
+.feedback-chat {border-top:1px solid var(--line);margin-top:24px;padding-top:14px;}
+.feedback-chat textarea,.external-note textarea,#chartNotes textarea,.context-help textarea {width:100%;box-sizing:border-box;}
+.chat-message p {white-space:pre-wrap;overflow-wrap:anywhere;}
+.chat-messages {max-height:440px;overflow:auto;}
+.chat-message {padding:14px 0;border-bottom:1px solid var(--line);}
+.chat-message b {font-size:12px;color:var(--muted);}
+.context-help {padding:24px;background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:24px;max-width:90ch;}
+.context-help details {padding:14px 0;border-bottom:1px solid var(--line);}
+.context-help p.en {white-space:pre-wrap;}
+.context-help .box-head {gap:16px;flex-wrap:wrap;}
+.recheck-result {margin-top:18px;border-top:1px solid var(--line);}
+.recheck-result p {white-space:pre-wrap;}
+.annotation-layout.comparing {min-width:0;}
+.annotation-sidebar {min-width:0;}
+.annotation-select,.annotation-item p {overflow-wrap:anywhere;}
+.work-record details>div {margin:14px 0;}
+@media (min-width:1000px) {#view-write .write-header {position:relative;}#view-write .write-main {max-width:100%;}}
+@media (max-width:1000px) {.revision-diff {grid-template-columns:minmax(0,1fr);}#worksRecords select {max-width:220px;}}
 :root {
   --bg:#F3F5F7; --card:#FFFFFF; --ink:#202936; --muted:#647080;
   --primary:#294D73; --primary-dark:#294D73; --primary-soft:#E8EEF4; --primary-ink:#234363;
@@ -217,3 +253,11 @@ footer {color:var(--muted);font-size:11px;background:transparent;border:0;max-wi
 @media(max-width:999px){.write-layout,.annotation-layout{grid-template-columns:minmax(0,1fr);}header{position:relative;}#mainNav{flex-direction:row;flex-wrap:wrap;}.nav-group,.sidebar-foot{display:none;}.nav-btn{width:auto;}.annotation-sidebar{position:static;max-height:none;}.learning-support{grid-template-columns:1fr;}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
 @media print{header,.workspace-tools,#uiNotices,.revision-check,.revision-copy{display:none!important;}main{margin:0;padding:0;}.annotation-sidebar{position:static;max-height:none;}}
+#view-check.has-feedback #essayInput {min-height:110px;height:110px;}
+@media (min-width:1000px) {
+  #view-write.panel-collapsed .write-main {display:grid;grid-template-columns:minmax(240px,.65fr) minmax(0,1.35fr);gap:16px 24px;align-items:start;}
+  #view-write.panel-collapsed .write-main>.card:first-child {grid-column:1;grid-row:1/6;position:sticky;top:24px;max-height:calc(100vh - 64px);overflow:auto;}
+  #view-write.panel-collapsed :is(#writingActions,#practiceState,#paragraphBoxes,#chartNotes,#mockBanner),#view-write.panel-collapsed .write-main>.total-bar {grid-column:2;margin-top:0;margin-bottom:0;}
+  #view-write.expanded-chart .write-main {display:block;}
+  #view-write.expanded-chart .write-main>.card:first-child {position:static;max-height:none;}
+}

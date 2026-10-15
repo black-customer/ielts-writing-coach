@@ -1,4 +1,5 @@
 const {test,expect}=require('@playwright/test');
+test.beforeEach(require('./legacy-setup').legacySetup);
 const fs=require('node:fs');
 const nav=v=>`#mainNav [data-view="${v}"]`;
 const essay='Reliable public transport can reduce traffic congestion because one bus carries people who would otherwise drive separate cars. When services are frequent and predictable, commuters can leave their cars at home. This reduces demand for road space during rush hour.\n\nAffordable fares also help residents who cannot afford a car reach their workplace. This improves access to employment and allows more people to maintain a stable income.';
@@ -110,7 +111,7 @@ test('备份包含题目关联和保留草稿，可导入旧格式',async({page}
 
 test('新手引导使用原生对话框，Escape 退出并保存状态',async({page})=>{
   await page.goto('/');await page.evaluate(()=>localStorage.removeItem('iwc_onboarded'));await page.addScriptTag({url:'/js/onboarding.js'});
-  await expect(page.locator('dialog#onboardModal')).toBeVisible();await expect(page.locator('#onboardModal')).toContainText('今日训练');
+  await page.evaluate(()=>showOptionalOnboarding());await expect(page.locator('dialog#onboardModal')).toBeVisible();await expect(page.locator('#onboardModal')).toContainText('今日训练');
   await page.keyboard.press('Escape');await expect(page.locator('#onboardModal')).toHaveCount(0);expect(await page.evaluate(()=>!!Store.get('onboarded'))).toBe(true);
 });
 

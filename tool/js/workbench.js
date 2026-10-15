@@ -152,6 +152,7 @@ const Annotations = (() => {
   }
   function render(host, context, issues, reference) {
     if (!host || !context) return;
+    if(typeof Works!=='undefined')context=Works.bind(context);
     host.querySelector('.annotation-workbench')?.remove();
     const merged=new Map();
     for(const issue of issues) {
@@ -164,7 +165,8 @@ const Annotations = (() => {
     const state={context:{...context},issues:[...merged.values()].map((i,n)=>({...i,id:n,matches:matches(context.essay,i.quote)})),selected:null};
     sessions.set(host.id,state);
     const key=context.mode+'|'+context.question+'|'+context.essay;
-    const revisions=Store.get('revisions',{}), revision=revisions[key] || '';
+    const revisions=Store.get('revisions',{}),savedRevision=typeof Works!=='undefined'?Works.revisionText(context):null;
+    const revision=savedRevision?savedRevision.text:Object.prototype.hasOwnProperty.call(revisions,key)?revisions[key]:context.essay;
     const node=document.createElement('section');node.className='annotation-workbench';node.setAttribute('aria-label','作文批注与改写');
     node.innerHTML=`<div class="annotation-heading"><div><h2>把反馈写进你的下一版</h2><p class="hint">${context.mode==='t1'?'Task 1':'Task 2'} · 本次诊断原稿 · 点击批注定位原句</p></div><button class="annotation-compare" aria-pressed="false">并排改写</button></div>
       <p class="annotation-stale hidden" role="status">当前输入已修改，下方反馈属于上一版原稿。重新诊断以检查新版本。</p>
@@ -203,14 +205,17 @@ const Annotations = (() => {
     list.querySelectorAll('.annotation-item').forEach(item=>{item.querySelector('button').onclick=()=>select(Number(item.dataset.issue));const s=item.querySelector('select');if(s)s.onchange=()=>select(Number(item.dataset.issue));});
     draw(null);
     const input=node.querySelector('.revision-input'),status=node.querySelector('.save-status');
-    input.oninput=()=>UI.save('revision-'+host.id,()=>{const all=Store.get('revisions',{});all[key]=input.value;return Store.set('revisions',all);},status);
+    const saveRevision=()=>{const all=Store.get('revisions',{});all[key]=input.value;return (typeof Works==='undefined'||Works.revision(context,input.value))&&Store.set('revisions',all);};
+    input.oninput=()=>UI.save('revision-'+host.id,saveRevision,status);
     node.querySelector('.annotation-compare').onclick=e=>{const open=node.classList.toggle('comparing');node.querySelector('.annotation-revision').classList.toggle('hidden',!open);e.currentTarget.setAttribute('aria-pressed',String(open));};
     node.querySelector('.revision-copy').onclick=()=>UI.copy(input.value);
     node.querySelector('.revision-check').onclick=()=>{
       if(!input.value.trim()){UI.errorAt(input,'请先写下你的改写。');return;}
-      if(!UI.save('revision-'+host.id,()=>{const all=Store.get('revisions',{});all[key]=input.value;return Store.set('revisions',all);},status,true))return;
+      if(!UI.save('revision-'+host.id,saveRevision,status,true))return;
+      if(typeof Studio!=='undefined'){Studio.checkRevision(node,context,state);return;}
       TaskFlow.diagnose(input.value,context);stale();document.getElementById('btnCheck').click();
     };
+    if(typeof Studio!=='undefined')Studio.annotate(node,context,state,host,select);
     stale();
   }
   function motion(){return matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth';}
@@ -233,8 +238,9 @@ const TaskFlow = {
       if(!await UI.confirm('当前 Task 已有另一道题的草稿。原稿将保留在首页的“保留的草稿”中，再打开新题。',{label:'保留原稿并换题'}))return false;
       if(!Store.archiveDraft(mode,previous)){UI.notice('原稿保留失败，请复制或备份后重试。',{error:true});return false;}
     }
-    const meta={question:q.question||'',qtype:q.qtype||'',qKey:q.qKey|| (q.src?`${q.src} T${q.task}`:''),chartKey:q.chartKey|| (q.task===1&&q.src?q.src:''),chart:q.task===1?this.chartLabel(q.qtype):''};
+    const meta={question:q.question||'',qtype:q.qtype||'',qKey:q.qKey|| (q.src?`${q.src} T${q.task}`:''),chartKey:q.chartKey|| (q.task===1&&q.src?q.src:''),chart:q.task===1?this.chartLabel(q.qtype):'',practice:q.practice||'',reminder:q.reminder||'',workId:previous?.question===q.question?previous.workId:undefined};
     const text=previous?.question===meta.question?previous.text:'';
+    if(previous?.question===meta.question){meta.chartNotes=previous.chartNotes||'';meta.practice=q.practice||previous.practice||'';meta.reminder=q.reminder||previous.reminder||'';}
     if(!Store.saveDraft(mode,text,meta)){UI.notice('新题保存失败，当前草稿仍保留。',{error:true});return false;}
     // setWriteMode saves the currently mounted editor, so switch before applying the new draft.
     if(effMode()===mode && writeMode!=='mock') {this.writingMeta=meta;buildParagraphBoxes();}
@@ -250,7 +256,8 @@ const TaskFlow = {
     document.getElementById('checkQuestion').value=context.question||'';
     if(context.mode==='t1'&&context.chart)document.getElementById('checkChart').value=this.chartLabel(context.chart);
     if(context.mode==='t2'&&context.qtype)document.getElementById('checkType').value=context.qtype;
-    this.checkMeta={qKey:context.qKey||'',chartKey:context.chartKey||''};this.renderCheckChart();
+    this.checkMeta={...context};delete this.checkMeta.essay;this.renderCheckChart();
+    if(typeof Studio!=='undefined')Studio.checkMounted();
     goto('check');
   },
   renderCheckChart() {

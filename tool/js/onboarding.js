@@ -2,8 +2,8 @@
  * 首开 4 步：认识流程 → 方法知识自测（离线）→ 建议练习起点 → 推荐第一题
  * 判级结果写入 localStorage（placement），学习路线页据此显示起点建议
  */
-(function () {
-  if (typeof Store === "undefined" || Store.get("onboarded")) return;
+window.showOptionalOnboarding = function () {
+  if (typeof Store === "undefined" || document.getElementById('onboardModal')) return;
 
   const QUESTIONS = [
     { q: "“The charts below show the percentage of households with internet access in three countries between 2005 and 2015.” 这道小作文题的概括段（Overview）应该写什么？",
@@ -97,4 +97,4 @@
   }
   function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
   render();overlay.showModal();overlay.querySelector('button')?.focus();
-})();
+};

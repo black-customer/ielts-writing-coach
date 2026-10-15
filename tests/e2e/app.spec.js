@@ -1,6 +1,7 @@
 // tests/e2e/app.spec.js — 六条关键路径的端到端回归
 // 每条测试都断言 errBanner 不出现（JS 错误哨兵）
 const { test, expect } = require("@playwright/test");
+test.beforeEach(require('./legacy-setup').legacySetup);
 
 test.beforeEach(async ({ page }) => {
   // 跳过新手引导（引导本身有独立冒烟验证）

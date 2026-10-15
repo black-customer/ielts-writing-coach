@@ -1,4 +1,5 @@
 const { test, expect } = require('@playwright/test');
+test.beforeEach(require('./legacy-setup').legacySetup);
 const essay = 'Public transport is useful in cities. Although buses can carry many people, but they are often slow. The government should improve services because people need reliable transport to get to work. This can reduce congestion and make daily journeys easier for everyone.';
 const rewrite = 'Reliable public transport can reduce traffic congestion because a single bus carries passengers who would otherwise drive separate cars. When services run frequently and arrive on time, more commuters can leave their cars at home. This reduces demand for road space during rush hour.';
 const nav = v => `#mainNav [data-view="${v}"]`;
@@ -88,6 +89,7 @@ test('新手引导完整答三题，知识自测不报雅思分数', async ({pag
   await page.goto('/'); await page.evaluate(() => localStorage.removeItem('iwc_onboarded'));
   // initScript 会在刷新时重置，因此在独立页面加载脚本测试首次引导。
   await page.addScriptTag({url:'/js/onboarding.js'});
+  await page.evaluate(()=>showOptionalOnboarding());
   await page.click('#obNext');
   for (let n=1;n<=3;n++) {
     await expect(page.locator('#onboardModal')).toContainText(`方法自测 ${n}/3`);

@@ -1,4 +1,5 @@
 const {test,expect}=require('@playwright/test');
+test.beforeEach(require('./legacy-setup').legacySetup);
 const fs=require('fs');
 const nav=v=>`#mainNav [data-view="${v}"]`;
 const text='Reliable public transport can reduce traffic congestion because one bus carries people who would otherwise drive separate cars. When services are frequent and predictable, commuters can leave their cars at home. This reduces demand for road space during rush hour.\n\nA second benefit is that regular buses improve access to employment for people who cannot afford a car. Affordable fares can therefore make it easier for these residents to find work and maintain a stable income.';
@@ -44,7 +45,7 @@ test('专注模式与侧栏折叠不重建编辑器，退出恢复选区',async(
   await page.keyboard.press('Escape');
   expect(await page.evaluate(()=>document.getElementById('fullEssay')===window.editorIdentity)).toBe(true);
   expect(await page.evaluate(()=>document.getElementById('fullEssay').selectionStart)).toBe(5);
-  await page.click('#view-write [data-panel]');await expect(page.locator('#view-write .write-side')).toBeHidden();
+  await expect(page.locator('#view-write .write-side')).toBeHidden();await page.click('#view-write [data-panel]');await expect(page.locator('#view-write .write-side')).toBeVisible();
 });
 test('批注双向定位、重复位置选择、匹配失败与改写恢复',async({page})=>{
   await page.goto('/');await page.click(nav('check'));
@@ -67,7 +68,7 @@ test('批注双向定位、重复位置选择、匹配失败与改写恢复',asy
   await expect(page.locator('#aiResult .revision-input')).toHaveAttribute('id','aiResult-revision');
   await expect(page.locator('#aiResult .save-status')).toContainText('已保存');
   await page.evaluate(()=>Annotations.render(document.getElementById('aiResult'),{essay:'A repeated phrase. A repeated phrase. End.',question:'Q',mode:'t2'},[{quote:'repeated phrase',problem:'Repeated wording'}]));
-  await page.click('#aiResult .annotation-compare');await expect(page.locator('#aiResult .revision-input')).toHaveValue(text);
+  await expect(page.locator('#aiResult .revision-input')).toHaveValue(text);
   await page.fill('#essayInput','Changed essay');
   await expect(page.locator('#errBanner')).toBeHidden();
   await expect(page.locator('#aiResult .annotation-stale')).toBeVisible();
@@ -78,10 +79,10 @@ test('生成时可以编辑，迟到结果保留请求快照；取消后忽略�
   await page.evaluate(()=>{AI.review=opts=>new Promise(resolve=>window.finishReview=()=>resolve({scores:{TR:6,CC:6,LR:6,GRA:6},overall:6,mode:opts.mode,priorityFixes:['Test feedback'],sentenceIssues:[]}));});
   await page.click('#btnAiCheck');await expect(page.locator('#aiCancel')).toBeVisible();
   await page.fill('#essayInput',text+' Changed.');await page.evaluate(()=>window.finishReview());
-  await expect(page.locator('#aiResult .annotation-stale')).toBeVisible();
-  await expect(page.locator('#aiResult .annotation-original')).toHaveText(text);
+  await expect(page.locator('#uiNotices')).toContainText('评阅已保存在原作品');
+  expect(await page.evaluate(essay=>Works.all().some(w=>w.feedback.some(f=>Works.version(w,f.versionId)?.text===essay)),text)).toBe(true);
   await page.click('#btnAiCheck');await page.click('#aiCancel');await page.evaluate(()=>window.finishReview());
-  await expect(page.locator('#aiResult .annotation-original')).toHaveText(text);
+  await expect(page.locator('#essayInput')).toHaveValue(text+' Changed.');
   await expect(page.locator('#btnAiCheck')).toBeEnabled();
 });
 test('确认对话框可用键盘取消，评分记录保留',async({page})=>{

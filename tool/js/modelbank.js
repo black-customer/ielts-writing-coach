@@ -32,6 +32,7 @@ function closeModelDetail(restore=true) {
 }
 
 function renderModelDetail(key) {
+  if(typeof Works!=='undefined')Works.exposure({qKey:key,question:questionOf(key)},'范文与教学');
   const e = ModelEssays[key];
   const box = $("#mbDetail");
   const m = key.match(/剑(\d+) Test (\d+) T(\d)/);

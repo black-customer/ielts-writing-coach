@@ -43,11 +43,13 @@ const Store = {
   importBackup(data) {
     if(!data||Array.isArray(data)||data._app!=='IELTS Writing Coach')throw new Error('不是有效的备份文件。');
     const entries=Object.entries(data).filter(([key])=>!key.startsWith('_'));
-    for(const [key,value] of entries){if(!key||typeof value!=='string')throw new Error('备份数据格式不正确。');JSON.parse(value);}
+    for(const [key,value] of entries){if(!key||typeof value!=='string')throw new Error('备份数据格式不正确。');const parsed=JSON.parse(value);
+      if(key.startsWith('work_')&&(!parsed||parsed.id!==key.slice(5)||parsed.schema!==1||!['versions','feedback','checks','conversations'].every(k=>Array.isArray(parsed[k]))))throw new Error('作品备份格式不完整，尚未导入任何数据。');}
     const previous=entries.map(([key])=>[this.KEY+key,localStorage.getItem(this.KEY+key)]);
     let changed=0;
     try {for(const [key,value] of entries){localStorage.setItem(this.KEY+key,value);changed++;}}
     catch(error){let restored=true;for(const [key,value] of previous.slice(0,changed)){try{if(value===null)localStorage.removeItem(key);else localStorage.setItem(key,value);}catch(_){restored=false;}}
       throw new Error(restored?'导入失败，原有数据已保留。请释放存储空间后重试。':'导入未完成，部分数据可能已更新。请保留备份文件，释放存储空间后重新导入。');}
+    if(typeof Works!=='undefined'){Works.invalidate();Works.migrate();}
   }
 };

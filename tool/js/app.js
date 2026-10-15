@@ -68,6 +68,7 @@ function activateView(view, task = false) {
   if (current !== view) { viewPositions.set(current,window.scrollY); viewSelections.set(current,EssayEditor.captureSelection()); }
   const b=$(`.nav-btn[data-view="${view}"]`);
   $$(".nav-btn").forEach(x => x.classList.remove("active"));
+  if(!b)return;
   b.classList.add("active");
   $$('.nav-btn').forEach(x=>x.setAttribute('aria-current',x===b?'page':'false'));
   $$(".view").forEach(v => v.classList.remove("active"));
@@ -77,6 +78,7 @@ function activateView(view, task = false) {
   else if(view==='train' && current!==view && !tc && !$('#learningPractice')?.childElementCount) renderHome();
   $('#pageTitle').textContent=VIEW_COPY[view][0];$('#pageDescription').textContent=VIEW_COPY[view][1];
   $('#pageMeta').textContent=new Date().toLocaleDateString('zh-CN',{month:'long',day:'numeric'});
+  if(typeof Studio!=='undefined')Studio.view(view);
   if(current!==view) requestAnimationFrame(()=>{window.scrollTo(0,task?0:viewPositions.get(view)||0);if(!task)EssayEditor.restoreSelection(viewSelections.get(view));});
 }
 $$(".nav-btn").forEach(b => b.onclick = () => activateView(b.dataset.view));
@@ -201,10 +203,8 @@ function renderMockBanner() {
 window.abortMock = function () { setWriteMode("t2"); };
 window.recallMockT1 = function () {
   if (!mockT1Text) { UI.notice("第 1 阶段没有内容。"); return; }
-  setCheckMode("t1");
-  $("#essayInput").value = mockT1Text;
-  $("#checkQuestion").value = $("#t1QuestionInput").value || "";
-  goto("check");
+  const draft=Store.getDraft('mock_t1');
+  TaskFlow.diagnose(mockT1Text,{...draft,mode:'t1',question:draft?.question||$('#t1QuestionInput').value||''});
 };
 
 function setWriteMode(mode) {
@@ -242,16 +242,18 @@ function buildParagraphBoxes() {
   renderMockBanner();
   const mode = effMode();
   const draft=Store.getDraft(writeMode==='mock'?'mock_'+mode:mode);
-  TaskFlow.writingMeta={qKey:draft?.qKey||'',chartKey:draft?.chartKey||'',qtype:draft?.qtype||''};
+  const {text:oldText,t:oldTime,...draftMeta}=draft||{};
+  TaskFlow.writingMeta={...draftMeta,qKey:draft?.qKey||'',chartKey:draft?.chartKey||'',qtype:draft?.qtype||''};
   if(mode==='t1' && draft?.chart) $('#t1ChartSelect').value=draft.chart;
   $('#writeTaskChart').innerHTML=mode==='t1'?TaskFlow.writingMeta.chartKey?`<details class="chart-fold" open><summary>本次题目图表</summary><div class="chart-wrap">${T1Charts.render(TaskFlow.writingMeta.chartKey)}</div></details>`:'<p class="hint">未关联原图，请对照自己的题目图表写作。</p>':'';
   $("#paragraphBoxes").innerHTML = `<div class="editor-sheet"><div class="editor-label"><label for="fullEssay">我的作文</label><span>Task ${mode==='t1'?'1':'2'} · 自由分段</span></div><textarea id="fullEssay" rows="15" spellcheck="false" placeholder="从你的第一句话开始。段落之间空一行。">${esc(draft?.text||'')}</textarea></div>`;
   $('#fullEssay').oninput=()=>{updateCounts();saveWritingDraft();};
-  if (draft?.question) { $('#writeQuestionInput').value=draft.question; if(mode==='t1')$('#t1QuestionInput').value=draft.question; }
-  else $('#writeQuestionInput').value=mode==='t2'?currentQuestion:$('#t1QuestionInput').value;
+  if(draft){$('#writeQuestionInput').value=draft.question||'';if(mode==='t1')$('#t1QuestionInput').value=draft.question||'';}
+  else {$('#writeQuestionInput').value=mode==='t2'?currentQuestion:'';if(mode==='t1')$('#t1QuestionInput').value='';}
   $('#writeSaveStatus').textContent=draft?'已恢复本机草稿':'草稿自动保存';
   renderSideGuide();
   updateCounts();
+  if(typeof Studio!=='undefined')Studio.editorMounted();
 }
 
 function updateCounts() {
@@ -273,11 +275,20 @@ function saveWritingDraft(immediate=false) {
   const key=writeMode==='mock'?'mock_'+mode:mode;
   const question=mode==='t1'?$('#t1QuestionInput').value:$('#writeQuestionInput').value;
   const chart=$('#t1ChartSelect').value;
-  const meta={...TaskFlow.writingMeta,question,chart};
-  return UI.save('writing',()=>Store.saveDraft(key,text,meta),$('#writeSaveStatus'),immediate);
+  const meta={...TaskFlow.writingMeta,mode,question,chart,mockGroup:writeMode==='mock'?(TaskFlow.writingMeta.mockGroup||Store.get('activeMockGroup','')||'mock-'+Date.now()):''};
+  if(writeMode==='mock')Store.set('activeMockGroup',meta.mockGroup);
+  return UI.save('writing',()=>{
+    if(typeof Works!=='undefined' && (text||question)) {
+      const captured=Works.capture(meta,text);
+      meta.workId=captured.w.id;TaskFlow.writingMeta.workId=captured.w.id;
+      if(!captured.ok)return false;
+      if($('#view-write').classList.contains('active')&&!Works.resume(meta.workId,{view:'write',selection:EssayEditor.captureSelection(),timerLeft,mockPhase,writeMode}))return false;
+    }
+    return Store.saveDraft(key,text,meta);
+  },$('#writeSaveStatus'),immediate);
 }
-$('#writeQuestionInput').oninput=()=>{currentQuestion=$('#writeQuestionInput').value;TaskFlow.writingMeta={};saveWritingDraft();};
-$('#t1QuestionInput').oninput=()=>{TaskFlow.writingMeta={};$('#writeTaskChart').innerHTML='<p class="hint">题干已修改，请核对原图是否仍对应当前题目。</p>';saveWritingDraft();};
+$('#writeQuestionInput').oninput=()=>{currentQuestion=$('#writeQuestionInput').value;TaskFlow.writingMeta={...TaskFlow.writingMeta,qKey:'',chartKey:'',qtype:''};saveWritingDraft();};
+$('#t1QuestionInput').oninput=()=>{TaskFlow.writingMeta={...TaskFlow.writingMeta,qKey:'',chartKey:''};$('#writeTaskChart').innerHTML='<p class="hint">题干已修改，请核对原图是否仍对应当前题目。</p>';saveWritingDraft();};
 function renderSideGuide() {
   if (effMode() === "t1") {
     const ct = $("#t1ChartSelect").value;
@@ -388,7 +399,9 @@ $("#btnAiCheck").onclick = async () => {
   if (Checker.words(essay) < 60) { UI.errorAt($('#essayInput'),'请至少写 60 个英文词，再请求精批。'); return; }
   UI.errorAt($('#essayInput'),'');
   const requestId = ++aiReviewSeq;
-  const context = { ...TaskFlow.checkMeta, essay, question: $("#checkQuestion").value.trim(), mode: checkMode, qtype: $("#checkType").value, chart: $("#checkChart").value };
+  const rawContext = { ...TaskFlow.checkMeta, essay, question: $("#checkQuestion").value.trim(), mode: checkMode, qtype: $("#checkType").value, chart: $("#checkChart").value };
+  const context = typeof Works==='undefined'?rawContext:Works.bind(rawContext);
+  if(context.workId)TaskFlow.checkMeta={...TaskFlow.checkMeta,workId:context.workId,versionId:context.versionId};
   const btn = $("#btnAiCheck");
   btn.disabled = true;
   btn.innerHTML = `<span class="spinner"></span>精批中…`;
@@ -408,6 +421,7 @@ $("#btnAiCheck").onclick = async () => {
       essay, mode: context.mode, question: questionText,
       type: context.mode === "t2" ? context.qtype : "",
       chart: context.mode === "t1" ? context.chart : "",
+      chartKey:context.chartKey,chartNotes:context.chartNotes,
       onChunk: (delta, full) => {
         if (requestId !== aiReviewSeq || aiAbort.signal.aborted) return;
         acc = full || acc;
@@ -424,7 +438,10 @@ $("#btnAiCheck").onclick = async () => {
     lastAi = r;
     lastAiContext = context;
     r.context = context;
-    renderAiResult(r);
+    const activeContext=document.getElementById('essayInput').value.trim()===context.essay && checkMode===context.mode && document.getElementById('checkQuestion').value.trim()===context.question;
+    if(typeof Works!=='undefined')r.context=Works.feedback(context,'ai',r,activeContext);
+    if(activeContext)renderAiResult(r);
+    else {box.querySelector('.ai-pending')?.remove();UI.notice('评阅已保存在原作品中，当前作文保持不变。');}
   } catch (e) {
     if (requestId !== aiReviewSeq) return;
     if (e && (e.name === "AbortError" || /abort/i.test(e.message || ""))) {
@@ -482,7 +499,7 @@ function renderAiResult(r) {
     $("#btnAiSaveRecord").disabled = true;
   };
   if (context) mountLearningFeedback(box, context, matchingRule, r);
-  if(context) Annotations.render(box,context,(r.sentenceIssues||[]).map(i=>({quote:i.quote,problem:i.problem,fix:i.fix,kind:i.kind})),r.rewrite?.improved);
+  if(context) Annotations.render(box,context,[...(r.learningTarget?.quote?[{quote:r.learningTarget.quote,problem:r.learningTarget.problem,fix:r.learningTarget.instruction,kind:'需要核对'}]:[]),...(r.sentenceIssues||[]).map(i=>({quote:i.quote,problem:i.problem,fix:i.fix,kind:i.kind})),...(r.priorityFixes||[]).map(f=>({problem:f,kind:'可选建议'}))],r.rewrite?.improved);
   UI.foldReport(box,'完整评分、逐段分析与自评');
 }
 
@@ -810,10 +827,11 @@ function errCardsImport(context, result, aiResult, output) {
 
 // ---------------- 全量备份导出/导入 ----------------
 $("#btnExportAll").onclick = () => {
+  if(!UI.flush())return;
   const data = { _app: "IELTS Writing Coach", _version: 3, _date: new Date().toISOString() };
   for (let i = 0; i < localStorage.length; i++) {
     const k = localStorage.key(i);
-    if (k && k.startsWith("iwc_")) data[k.slice(4)] = localStorage.getItem(k);
+    if (k && k.startsWith("iwc_") && k!=='iwc_ai') data[k.slice(4)] = localStorage.getItem(k);
   }
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
   const a = document.createElement("a");
@@ -831,6 +849,7 @@ $("#importFile").onchange = e => {
       const data = JSON.parse(reader.result);
       if (!data._app) { UI.notice("不是有效的备份文件。"); return; }
       if (!(await UI.confirm(`备份日期 ${data._date || '未知'}。导入会覆盖备份中的同名本地数据，包括记录、收藏和草稿。`,{label:'导入并覆盖',danger:true}))) return;
+      if(!UI.flush())return;
       Store.importBackup(data);
       UI.notice("导入完成，页面将刷新。");
       location.reload();
@@ -1056,9 +1075,7 @@ function renderBank() {
   $$("#bankList .q-item").forEach(el => el.onclick = () => {
     const q = bank[+el.dataset.i];
     if(task==='1'){TaskFlow.write({task:1,question:q.t1,qtype:q.t1type,src:q.src});return;}
-    $("#questionInput").value = q.t2;
-    goto("analyze");
-    $("#btnAnalyze").click();
+    TaskFlow.write({task:2,question:q.t2,qtype:q.t2type,src:q.src});
   });
   $$("#bankList .pg-btn").forEach(b => b.onclick = () => { bankPage = +b.dataset.pg; renderBank(); });
 }
@@ -1447,6 +1464,7 @@ function renderCorpus() {
   $$("#corpusList .pg-btn").forEach(b => b.onclick = () => { corpusPage = +b.dataset.pg; renderCorpus(); });
   $$("#corpusList .q-item").forEach(el => el.onclick = () => {
     const e = bank[+el.dataset.ci];
+    if(typeof Works!=='undefined')Works.exposure({mode:corpusKind,question:e.q},'语料范文');
     const returnY=window.scrollY;
     $("#corpusDetail").classList.remove("hidden");
     $("#corpusDetail").innerHTML = `
@@ -1494,5 +1512,5 @@ function init() {
 }
 init();
 
-$('#checkQuestion').addEventListener('input',()=>{TaskFlow.checkMeta={};TaskFlow.renderCheckChart();});
-$('#checkModeSwitch').addEventListener('click',()=>{TaskFlow.checkMeta={};TaskFlow.renderCheckChart();});
+$('#checkQuestion').addEventListener('input',()=>{TaskFlow.checkMeta={workId:TaskFlow.checkMeta.workId};TaskFlow.renderCheckChart();});
+$('#checkModeSwitch').addEventListener('click',()=>{TaskFlow.checkMeta={workId:TaskFlow.checkMeta.workId};TaskFlow.renderCheckChart();});
